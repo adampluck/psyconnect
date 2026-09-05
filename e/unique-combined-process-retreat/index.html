@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <title>Unique Combined Process Retreat — PsyConnect</title>
+  <meta name="description" content="3-day retreat blending family constellations with plant-spirit ceremony for trauma release and spiritual awakening.">
+  <link rel="canonical" href="https://psyconnect.london/e/unique-combined-process-retreat/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Unique Combined Process Retreat — PsyConnect">
+  <meta property="og:description" content="3-day retreat blending family constellations with plant-spirit ceremony for trauma release and spiritual awakening.">
+  <meta property="og:url" content="https://psyconnect.london/e/unique-combined-process-retreat/">
+  <meta property="og:image" content="https://secure.meetupstatic.com/photos/event/8/c/b/7/600_528456023.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "Unique Combined Process Retreat", "startDate": "2026-09-25T08:00:00+00:00", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "London", "address": {"@type": "PostalAddress", "streetAddress": "London", "addressLocality": "London", "addressCountry": "GB"}}, "url": "https://psyconnect.london/e/unique-combined-process-retreat/", "inLanguage": "en-GB", "endDate": "2026-09-27T15:00:00+00:00", "image": ["https://secure.meetupstatic.com/photos/event/8/c/b/7/600_528456023.jpeg"], "description": "Spiritual Vibes **UNIQUE COMBINED PROCESS RETREAT** **March \\| April \\| May \\| June \\| Sept \\| Oct \\| Nov 2026** Dear Constellation Explorer, We\u2019re delighted to invite you to a unique 3-day retreat that brings together two powerful healing modalities: **Systemic & Family Constellations** and **Ceremonial Plant-Spirit Work**. This immersive experience is designed to support deep emotional healing, release of trauma, and reconnection with your inner wisdom. Whether you are seeking **personal growt", "organizer": {"@type": "Organization", "name": "Spiritual Vibes"}}</script>
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <nav class="static-crumbs" aria-label="breadcrumb">
+    <a href="https://psyconnect.london/">PsyConnect</a>
+    <span aria-hidden="true">/</span>
+    <span>event</span>
+  </nav>
+  <article class="static-event">
+    <p class="static-kicker">in person · London</p>
+    <h1 class="static-title">Unique Combined Process Retreat</h1>
+    <p class="static-hook">3-day retreat blending family constellations with plant-spirit ceremony for trauma release and spiritual awakening.</p>
+    <dl class="static-facts"><div class="static-fact"><dt>When</dt><dd>Friday 25 September 2026 · 09:00</dd></div><div class="static-fact"><dt>Where</dt><dd>London</dd></div><div class="static-fact"><dt>Host</dt><dd>Spiritual Vibes</dd></div></dl>
+    <p class="static-chips"><a class="static-chip" href="https://psyconnect.london/t/psychedelics/">psychedelics</a><a class="static-chip" href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><a class="static-chip" href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></p>
+    <figure class="static-figure"><img src="https://wsrv.nl/?url=https%3A%2F%2Fsecure.meetupstatic.com%2Fphotos%2Fevent%2F8%2Fc%2Fb%2F7%2F600_528456023.jpeg&amp;w=1200&amp;output=webp&amp;q=75" alt="Unique Combined Process Retreat" loading="lazy" onerror="this.onerror=null;this.src='https://secure.meetupstatic.com/photos/event/8/c/b/7/600_528456023.jpeg'"></figure>
+    <div class="static-prose"><p>Spiritual Vibes
+**UNIQUE COMBINED PROCESS RETREAT**
+**March \| April \| May \| June \| Sept \| Oct \| Nov 2026**</p><p>Dear Constellation Explorer,
+We’re delighted to invite you to a unique 3-day retreat that brings together two powerful healing modalities: **Systemic &amp; Family Constellations** and **Ceremonial Plant-Spirit Work**. This immersive experience is designed to support deep emotional healing, release of trauma, and reconnection with your inner wisdom.</p><p>Whether you are seeking **personal growth**, **support of your spiritual awakening journey** or **facing emotional challenges**, even if they are life-long, participants in the Combined Process are **reporting major shifts and breakthroughs** in many aspects of life.</p><p>✨ **What Awaits You:**
+• **Healing Fusion** – Masterfully facilitated constellation sessions alongside traditional plant-spirit ceremony
+• **Trauma Release** – Space to address long-held emotional imprints, PTSD, depression, and complex trauma
+• **Small Group Setting** – Intimate circle of max 8 participants held by 4 experienced facilitators
+• **Sacred Integration** – Deeply guided work and personal support throughout the process
+• **Nature Immersion** – Held in beautiful, sun-drenched natural locations across Europe</p><p>This retreat is not just a healing space — it’s an invitation to **transform your life** by reconnecting with what’s real, raw, and ready to be released.</p><p>🌀 **Who is it for?**
+• Those committed to their inner work
+• Seekers ready to open to new levels of self-awareness and growth
+• Professionals looking to deepen their own process in a safe, sacred setting</p><p>📩 **Enrollment is by application only**, to ensure the retreat is aligned with your needs. Attending is subject to a personal interview via Zoom.</p><p>**Retreat Price is €895** (£777) including all **3-day sessions, ceremony, medicine and 3 meals a day** \- not including flights or accommodation\. £200 enrolment deposit is required to reserve your place\, the remaining fee will be paid onsite in Euros\.</p><p>👉 To request full retreat details and apply, email us at: **nature@earth.is**</p><p>Are you ready to take the next step on your healing path?
+We would be honoured to hold space for you.</p></div>
+    <p class="static-cta-wrap">
+      <a class="static-cta" href="https://www.meetup.com/spiritual-vibes/events/313091987/?utm_source=psyconnect.london&amp;utm_medium=referral" rel="noopener"
+         data-goatcounter-click="out/spiritual-vibes"
+         data-goatcounter-title="Unique Combined Process Retreat">
+        tickets &amp; details ↗
+      </a>
+    </p>
+    <p class="static-back">
+      <a href="https://psyconnect.london/">← more in-person gatherings on PsyConnect</a>
+    </p>
+  </article>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+  </footer>
+</body>
+</html>

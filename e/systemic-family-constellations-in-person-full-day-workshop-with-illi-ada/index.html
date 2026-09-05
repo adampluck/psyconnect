@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <title>Systemic &amp; Family Constellations IN-PERSON Full-Day Workshop with Illi Adato — PsyConnect</title>
+  <meta name="description" content="Illi Adato guides family constellations healing to resolve ancestral trauma in the present.">
+  <link rel="canonical" href="https://psyconnect.london/e/systemic-family-constellations-in-person-full-day-workshop-with-illi-ada/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Systemic &amp; Family Constellations IN-PERSON Full-Day Workshop with Illi Adato — PsyConnect">
+  <meta property="og:description" content="Illi Adato guides family constellations healing to resolve ancestral trauma in the present.">
+  <meta property="og:url" content="https://psyconnect.london/e/systemic-family-constellations-in-person-full-day-workshop-with-illi-ada/">
+  <meta property="og:image" content="https://secure.meetupstatic.com/photos/event/6/5/8/c/600_527125996.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "Systemic & Family Constellations IN-PERSON Full-Day Workshop with Illi Adato", "startDate": "2026-09-13T09:00:00+00:00", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "Kailash Centre", "address": {"@type": "PostalAddress", "streetAddress": "7 Newcourt Street, London", "addressLocality": "London", "addressCountry": "GB"}}, "url": "https://psyconnect.london/e/systemic-family-constellations-in-person-full-day-workshop-with-illi-ada/", "inLanguage": "en-GB", "endDate": "2026-09-13T17:00:00+00:00", "image": ["https://secure.meetupstatic.com/photos/event/6/5/8/c/600_527125996.jpeg"], "description": "Spiritual Vibes **You are invited to join a deep healing group process that extends beyond us as individuals into the wider 'field' of historical/ancestral influences, where our family's past traumas are seen, acknowledged, and attended to, so that they do not limit our well-being today.** In these **short videos, our facilitator Illi Adato** explains the key aspects of the Systemic and Family Constellation approach to therapy and healing: [https://www.facebook.com/LondonFamilyConstellations/vid", "organizer": {"@type": "Organization", "name": "Spiritual Vibes"}}</script>
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <nav class="static-crumbs" aria-label="breadcrumb">
+    <a href="https://psyconnect.london/">PsyConnect</a>
+    <span aria-hidden="true">/</span>
+    <span>event</span>
+  </nav>
+  <article class="static-event">
+    <p class="static-kicker">in person · London · north London</p>
+    <h1 class="static-title">Systemic &amp; Family Constellations IN-PERSON Full-Day Workshop with Illi Adato</h1>
+    <p class="static-hook">Illi Adato guides family constellations healing to resolve ancestral trauma in the present.</p>
+    <dl class="static-facts"><div class="static-fact"><dt>When</dt><dd>Sunday 13 September 2026 · 10:00</dd></div><div class="static-fact"><dt>Where</dt><dd>Kailash Centre, 7 Newcourt Street, London</dd></div><div class="static-fact"><dt>Host</dt><dd>Spiritual Vibes</dd></div></dl>
+    <p class="static-chips"><a class="static-chip" href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><a class="static-chip" href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></p>
+    <figure class="static-figure"><img src="https://wsrv.nl/?url=https%3A%2F%2Fsecure.meetupstatic.com%2Fphotos%2Fevent%2F6%2F5%2F8%2Fc%2F600_527125996.jpeg&amp;w=1200&amp;output=webp&amp;q=75" alt="Systemic &amp; Family Constellations IN-PERSON Full-Day Workshop with Illi Adato" loading="lazy" onerror="this.onerror=null;this.src='https://secure.meetupstatic.com/photos/event/6/5/8/c/600_527125996.jpeg'"></figure>
+    <div class="static-prose"><p>Spiritual Vibes
+**You are invited to join a deep healing group process that extends beyond us as individuals into the wider &#x27;field&#x27; of historical/ancestral influences, where our family&#x27;s past traumas are seen, acknowledged, and attended to, so that they do not limit our well-being today.**</p><p>In these **short videos, our facilitator Illi Adato** explains the key aspects of the Systemic and Family Constellation approach to therapy and healing:
+[https://www.facebook.com/LondonFamilyConstellations/videos](https://www.facebook.com/LondonFamilyConstellations/videos)</p><p>We shall meet at The Kailash Centre in St. Johns Wood, London NW8 for this month&#x27;s group session, **open to all**.</p><p>Issue Holder and Representative spaces are available:</p><p>**For Representative (Participant) Booking £45:**
+**[https://calendly.com/illiadato/in-person-constellations-representative](https://calendly.com/illiadato/in-person-constellations-representative)**[ ](https://calendly.com/illiadato/in-person-constellations-representative)</p><p>**For Issue Holder (Client) Booking £175:**
+If you wish to attend as an Issue Holder at this workshop and have your own Constellation done please email your request to: [ih@londonconstellations.uk](ih@londonconstellations.uk)</p><p>**Please Note:** There are limited issue holder spaces available, please book early to avoid disappointment and wait for a confirmation email of your booking.</p><p>This workshop provides a perfect opportunity to experience the deep and insightful Systemic Constellations process. A unique and powerful therapeutic method for self-exploration, understanding core behaviors, removing blocks, and reintroducing movement and growth. It is used as a major resource in working through trauma and it can assist in depression treatment.</p><p>To read comments from participants in previous workshops click this link [https://bit.ly/33Asprs](https://bit.ly/33Asprs)</p><p>**WHAT ARE SYSTEMIC CONSTELLATIONS?**
+The Systemic Constellations method is a unique therapeutic process of exploration of the forces that move us in life. Such forces often appear as difficulties or a sense of being &#x27;stuck&#x27; in life, affecting our behavior, relationships, career, health/wellbeing, or even financial circumstances. This method provides a three-dimensional ‘map’ of one’s life as it is at present. It is a simple yet powerful way to explore entanglements and blockages in our personal life and in our family history. The method brings awareness and clarity into personal challenges by focusing the client on the root cause of such difficulties. Constellations provide an opening for a positive life shift and present ways for deep healing processes to occur.</p><p>**WHAT HAPPENS IN A CONSTELLATION SESSION?**
+In Constellations work the ‘client’ is referred to as the ‘Issue Holder’.
+The method uses workshop participants as ‘Representatives’ to stand in for key people in the client’s life such as family members, colleagues, partners, ex-partners etc., sometimes ‘abstract’ concepts such as an emotion, country of origin, religion, or destiny are also represented. All participants are invited to take part as Representatives. Workshop participants often report (see reviews: [https://bit.ly/33Asprs](https://bit.ly/33Asprs)) experiencing profound insights into their own lives by simply witnessing the process, regardless of how they choose to take part.</p><p>**WHY DOES THIS WORK?**
+Scientific research shows that the experiences of your ancestors can determine your behavior today and affect future generations.\*\* Recent scientific research into DNA reveals that a component named epigenetics is embedding the effect of a traumatic experience by altering the genetic structure. It means that some of our behavior patterns can be attributed to traumatic events in your family history. This notion has always been one of the guiding principles of Systemic / Constellations Therapy, a form of work that is dedicated to exposing and dealing with issues emerging from our family system.</p></div>
+    <p class="static-cta-wrap">
+      <a class="static-cta" href="https://www.meetup.com/spiritual-vibes/events/307062623/?utm_source=psyconnect.london&amp;utm_medium=referral" rel="noopener"
+         data-goatcounter-click="out/spiritual-vibes"
+         data-goatcounter-title="Systemic &amp; Family Constellations IN-PERSON Full-Day Workshop with Illi Adato">
+        tickets &amp; details ↗
+      </a>
+    </p>
+    <p class="static-back">
+      <a href="https://psyconnect.london/">← more in-person gatherings on PsyConnect</a>
+    </p>
+  </article>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+  </footer>
+</body>
+</html>

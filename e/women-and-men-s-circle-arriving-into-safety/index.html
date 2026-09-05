@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <title>Women and Men&#x27;s Circle: Arriving Into Safety — PsyConnect</title>
+  <meta name="description" content="Gender-separated circles at The Threshold to practice vulnerability and arrive into genuine safety together.">
+  <link rel="canonical" href="https://psyconnect.london/e/women-and-men-s-circle-arriving-into-safety/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Women and Men&#x27;s Circle: Arriving Into Safety — PsyConnect">
+  <meta property="og:description" content="Gender-separated circles at The Threshold to practice vulnerability and arrive into genuine safety together.">
+  <meta property="og:url" content="https://psyconnect.london/e/women-and-men-s-circle-arriving-into-safety/">
+  <meta property="og:image" content="https://r2.dandelion.events/2026/08/11/17/26/06/56ccb2dd-60f5-4ce3-a1ce-5a6ca53c179c/58be61b2-240c-4d78-a4a5-fa5a233edbb9.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "Women and Men's Circle: Arriving Into Safety", "startDate": "2026-10-17T12:00:00+00:00", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "Lekdanling - Tibetan Cultural Centre", "address": {"@type": "PostalAddress", "streetAddress": "Collent St, London, UK", "addressLocality": "London", "addressCountry": "GB"}}, "url": "https://psyconnect.london/e/women-and-men-s-circle-arriving-into-safety/", "inLanguage": "en-GB", "endDate": "2026-10-17T15:00:00+00:00", "image": ["https://r2.dandelion.events/2026/08/11/17/26/06/56ccb2dd-60f5-4ce3-a1ce-5a6ca53c179c/58be61b2-240c-4d78-a4a5-fa5a233edbb9.jpg"], "description": "WOMEN'S AND MEN\u2019S CIRCLEAt The Threshold, Arriving Into Safety", "organizer": {"@type": "Organization", "name": "The Psychedelic Society"}, "offers": {"@type": "Offer", "price": "30.0", "priceCurrency": "GBP", "url": "https://dandelion.events/events/6a64d3ef6c18fd52ccb2dc40", "availability": "https://schema.org/InStock"}}</script>
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <nav class="static-crumbs" aria-label="breadcrumb">
+    <a href="https://psyconnect.london/">PsyConnect</a>
+    <span aria-hidden="true">/</span>
+    <span>event</span>
+  </nav>
+  <article class="static-event">
+    <p class="static-kicker">in person · London · central London</p>
+    <h1 class="static-title">Women and Men&#x27;s Circle: Arriving Into Safety</h1>
+    <p class="static-hook">Gender-separated circles at The Threshold to practice vulnerability and arrive into genuine safety together.</p>
+    <dl class="static-facts"><div class="static-fact"><dt>When</dt><dd>Saturday 17 October 2026 · 13:00</dd></div><div class="static-fact"><dt>Where</dt><dd>Lekdanling - Tibetan Cultural Centre, Collent St, London, UK</dd></div><div class="static-fact"><dt>Price</dt><dd>£30–£40</dd></div><div class="static-fact"><dt>Host</dt><dd>The Psychedelic Society</dd></div></dl>
+    <p class="static-chips"><a class="static-chip" href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><a class="static-chip" href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></p>
+    <figure class="static-figure"><img src="https://wsrv.nl/?url=https%3A%2F%2Fr2.dandelion.events%2F2026%2F08%2F11%2F17%2F26%2F06%2F56ccb2dd-60f5-4ce3-a1ce-5a6ca53c179c%2F58be61b2-240c-4d78-a4a5-fa5a233edbb9.jpg&amp;w=1200&amp;output=webp&amp;q=75" alt="Women and Men&#x27;s Circle: Arriving Into Safety" loading="lazy" onerror="this.onerror=null;this.src='https://r2.dandelion.events/2026/08/11/17/26/06/56ccb2dd-60f5-4ce3-a1ce-5a6ca53c179c/58be61b2-240c-4d78-a4a5-fa5a233edbb9.jpg'"></figure>
+    <div class="static-prose"><p>WOMEN&#x27;S AND MEN’S CIRCLEAt The Threshold, Arriving Into Safety</p></div>
+    <p class="static-cta-wrap">
+      <a class="static-cta" href="https://dandelion.events/events/6a64d3ef6c18fd52ccb2dc40?utm_source=psyconnect.london&amp;utm_medium=referral" rel="noopener"
+         data-goatcounter-click="out/the-psychedelic-society"
+         data-goatcounter-title="Women and Men&#x27;s Circle: Arriving Into Safety">
+        tickets &amp; details ↗
+      </a>
+    </p>
+    <p class="static-back">
+      <a href="https://psyconnect.london/">← more in-person gatherings on PsyConnect</a>
+    </p>
+  </article>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <title>ConsciousCafe London Dinner — PsyConnect</title>
+  <meta name="description" content="Meet conscious Londoners over a meal designed for deep conversation and meaningful connection.">
+  <link rel="canonical" href="https://psyconnect.london/e/consciouscafe-london-dinner/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ConsciousCafe London Dinner — PsyConnect">
+  <meta property="og:description" content="Meet conscious Londoners over a meal designed for deep conversation and meaningful connection.">
+  <meta property="og:url" content="https://psyconnect.london/e/consciouscafe-london-dinner/">
+  <meta property="og:image" content="https://consciouscafe.org/wp-content/uploads/2026/07/Events-Listing-27.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "ConsciousCafe London Dinner", "startDate": "2026-09-08T17:30:00+00:00", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "London", "address": {"@type": "PostalAddress", "streetAddress": "Central London", "addressLocality": "London", "addressCountry": "GB"}}, "url": "https://psyconnect.london/e/consciouscafe-london-dinner/", "inLanguage": "en-GB", "endDate": "2026-09-08T20:00:00+00:00", "image": ["https://consciouscafe.org/wp-content/uploads/2026/07/Events-Listing-27.webp"], "description": "ConsciousCafe invites you to join our next London Dinner which will be held in Central London. You will have the opportunity to meet likeminded conscious people and chat over a meal in a relaxed atmosphere. Many beautiful friendships and connections have been created at our London lunches and dinners. We love it when we see people exchanging their contact details as they leave. There is always a special bond when you enjoy deep conversations together. We choose restaurants which are good value f", "organizer": {"@type": "Organization", "name": "ConsciousCafe"}, "offers": {"@type": "Offer", "price": "5.0", "priceCurrency": "GBP", "url": "https://consciouscafe.org/event/consciouscafe-london-dinner-8/", "availability": "https://schema.org/InStock"}}</script>
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <nav class="static-crumbs" aria-label="breadcrumb">
+    <a href="https://psyconnect.london/">PsyConnect</a>
+    <span aria-hidden="true">/</span>
+    <span>event</span>
+  </nav>
+  <article class="static-event">
+    <p class="static-kicker">in person · London · central London</p>
+    <h1 class="static-title">ConsciousCafe London Dinner</h1>
+    <p class="static-hook">Meet conscious Londoners over a meal designed for deep conversation and meaningful connection.</p>
+    <dl class="static-facts"><div class="static-fact"><dt>When</dt><dd>Tuesday 8 September 2026 · 18:30</dd></div><div class="static-fact"><dt>Where</dt><dd>Central London</dd></div><div class="static-fact"><dt>Price</dt><dd>£5</dd></div><div class="static-fact"><dt>Host</dt><dd>ConsciousCafe</dd></div></dl>
+    <p class="static-chips"><a class="static-chip" href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a></p>
+    <figure class="static-figure"><img src="https://wsrv.nl/?url=https%3A%2F%2Fconsciouscafe.org%2Fwp-content%2Fuploads%2F2026%2F07%2FEvents-Listing-27.webp&amp;w=1200&amp;output=webp&amp;q=75" alt="ConsciousCafe London Dinner" loading="lazy" onerror="this.onerror=null;this.src='https://consciouscafe.org/wp-content/uploads/2026/07/Events-Listing-27.webp'"></figure>
+    <div class="static-prose"><p>ConsciousCafe invites you to join our next London Dinner which will be held in Central London. You will have the opportunity to meet likeminded conscious people and chat over a meal in a relaxed atmosphere. Many beautiful friendships and connections have been created at our London lunches and dinners. We love it when we see people exchanging their contact details as they leave. There is always a special bond when you enjoy deep conversations together. We choose restaurants which are good value for money with a selection of dishes to suit all dietary requirements. You will receive your own bill at the end of the meal and will only pay for what you have ordered. We reckon a budget of £20 - £35 should cover your meal. We know we are getting it right when people ask us at the end of the lunch – or dinner – ‘when is the next one?’ So far this has happened every time. If you would like to come to our next dinner please send a non-refundable deposit of £5 per person to book your place. This covers our administration costs for the event. If places are sold out please email Judy@consciouscafe.org to go on the waiting list as sometimes guests cancel at the last moment. Places are limited so please book as soon as you can to reserve your seat at the table. During the meal you will have the chance to move around and meet different people. If you want to invite a conscious friend to come with you of course that’s fine but this is a spiritual networking event so be prepared to connect with other people and not just talk to the person you have come with. If you do make a booking for two tickets please let us know the name and contact details of your friend. ‘I felt really welcome, comfortable, and met many great connections. The place was nice and the food delicious’ ES ‘This lovely leisurely lunch meetup was a great opportunity to connect with likeminded souls around the table. As well as the richness of our conversations, I cam away with some new connections.’ HD ‘I left the lunch feeling uplifted and inspired.’ CR ‘It was such a lovely group.’ SU ‘Interesting people, lovely food and great atmosphere. Looking forward to the next one already.’ TK ‘I love the opportunity to talk about my work with people who understand what I do.’ JS, energy healer ‘I always look forward to your dinners. They are such a treat.’ BD</p></div>
+    <p class="static-cta-wrap">
+      <a class="static-cta" href="https://consciouscafe.org/event/consciouscafe-london-dinner-8/?utm_source=psyconnect.london&amp;utm_medium=referral" rel="noopener"
+         data-goatcounter-click="out/consciouscafe"
+         data-goatcounter-title="ConsciousCafe London Dinner">
+        tickets &amp; details ↗
+      </a>
+    </p>
+    <p class="static-back">
+      <a href="https://psyconnect.london/">← more in-person gatherings on PsyConnect</a>
+    </p>
+  </article>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+  </footer>
+</body>
+</html>

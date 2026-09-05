@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <title>Human connection &amp; intimacy events in London — PsyConnect</title>
+  <meta name="description" content="Spaces for relating with a bit more honesty. Circles, workshops and gatherings about friendship, intimacy and the courage to be seen.">
+  <link rel="canonical" href="https://psyconnect.london/t/connection/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Human connection &amp; intimacy events in London — PsyConnect">
+  <meta property="og:description" content="Spaces for relating with a bit more honesty. Circles, workshops and gatherings about friendship, intimacy and the courage to be seen.">
+  <meta property="og:url" content="https://psyconnect.london/t/connection/">
+  <meta property="og:image" content="https://psyconnect.london/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <nav class="static-crumbs" aria-label="breadcrumb">
+    <a href="https://psyconnect.london/">PsyConnect</a>
+    <span aria-hidden="true">/</span>
+    <span>topic</span>
+  </nav>
+  <header class="static-list-head">
+    <p class="static-kicker">in person · London</p>
+    <h1 class="static-title">Human connection &amp; intimacy events in London</h1>
+    <div class="static-intro">
+      <p class="static-lead">Spaces for relating with a bit more honesty. Circles, workshops and gatherings about friendship, intimacy and the courage to be seen.</p><p class="static-lead">Come as you are. Leave a little less alone in the city.</p><p class="static-lead">48 upcoming right now — times, venues and tickets, refreshed several times a day.</p>
+    </div>
+  </header>
+  <ol class="static-list">
+    
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/what-happens-to-you-around-other-people-authentic-relating-london/">What Happens to You Around Other People? Authentic Relating London</a>
+      <p class="static-list-meta">Sun 6 Sep · 12:45 · Zen Yoga · <span class="static-list-org">Authentic Relating Experience</span></p>
+      <p class="static-list-hook">Explore authentic relating and relational intelligence through circling and embodied awareness.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/song-circle-plot-9/">Song Circle @ Plot 9</a>
+      <p class="static-list-meta">Sun 6 Sep · 15:00 · Plot 9 · <span class="static-list-org">Plot 9 Maze Hill</span></p>
+      <p class="static-list-hook">Monthly song circle in a community garden where voices blend in the open air.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/consciouscafe-london-dinner/">ConsciousCafe London Dinner</a>
+      <p class="static-list-meta">Tue 8 Sep · 18:30 · Central London · <span class="static-list-org">ConsciousCafe</span></p>
+      <p class="static-list-hook">Meet conscious Londoners over a meal designed for deep conversation and meaningful connection.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/nvc-understanding-power/">NVC &amp; Understanding Power</a>
+      <p class="static-list-meta">Sat 12 Sep · 10:30 · The Bridge · <span class="static-list-org">CeriBuckmaster</span></p>
+      <p class="static-list-hook">Learn how NVC navigates power imbalances in conflict, beyond surface-level compassionate communication.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/heart-circle-a-place-to-pause-reconnect-explore-what-it-means-to-be-aliv/">Heart Circle - a place to pause, reconnect &amp; explore what it means to be alive in these changing times</a>
+      <p class="static-list-meta">Sat 12 Sep · 18:30 · Paper Garden · <span class="static-list-org">Social Landscapes</span></p>
+      <p class="static-list-hook">Slow down with Social Landscapes to listen to yourself, each other, and the natural world together.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/london-psychedelic-community-nature-connection-park-picnic-day/">London Psychedelic Community: Nature &amp; Connection - Park &amp; Picnic Day!</a>
+      <p class="static-list-meta">Sun 13 Sep · 14:00 · Sherlock Holmes Statue · <span class="static-list-org">London Psychedelic Community</span></p>
+      <p class="static-list-hook">Connect with London&#x27;s psychedelic community on a sunny picnic exploring nature and friendship.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/psychedelic-speed-dating/">Psychedelic Speed-Dating</a>
+      <p class="static-list-meta">Tue 15 Sep · 18:30 · The Sanctuary &amp;Soul | Sauna &amp; Wellness Studio · <span class="static-list-org">The Psychedelic Society</span></p>
+      <p class="static-list-hook">Speed-dating meets psychedelic community at The Psychedelic Society&#x27;s monthly matchmaking.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/joyn-temple/">JOYN Temple</a>
+      <p class="static-list-meta">Sat 19 Sep · 14:00 · North London · <span class="static-list-org">JOYn: Deeper Intimacy</span></p>
+      <p class="static-list-hook">Somatic practices for deeper intimacy and embodied joy with JOYN&#x27;s conscious sexuality facilitators.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/the-art-of-play-play-fight-contact-improvisation-london-19-sep/">The Art of Play: Play fight &amp; Contact Improvisation (London, 19 Sep)</a>
+      <p class="static-list-meta">Sat 19 Sep · 18:00 · Anatomie Studio London · <span class="static-list-org">playfighting</span></p>
+      <p class="static-list-hook">Combine playful combat with contact improvisation to explore touch, negotiation and spontaneous partner movement.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/hearth-hand-a-monthly-fireside-handcraft-circle-plot-9/">Hearth &amp; Hand: A monthly fireside handcraft circle @ Plot 9</a>
+      <p class="static-list-meta">Sun 20 Sep · 11:00 · Plot 9 Maze Hill · <span class="static-list-org">izzywoo_knits</span></p>
+      <p class="static-list-hook">Monthly fireside crafting circle with crochet, weaving and wool at Plot 9&#x27;s magical garden.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/tantric-sisterhood-a-women-s-only-full-day-tantra-workshop-20th-septembe/">Tantric Sisterhood | A Women&#x27;s-Only Full-Day Tantra Workshop | 20th September</a>
+      <p class="static-list-meta">Sun 20 Sep · 11:00 · Self-Retreat Studio · <span class="static-list-org">Ellinor Madeland</span></p>
+      <p class="static-list-hook">Weekend retreat exploring tantra, cacao ceremony, and authentic connection with women led by Ellinor Madeland.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/love-machines-how-artificial-intelligence-is-transforming-our-relationsh/">Love Machines: How Artificial Intelligence is Transforming Our Relationships</a>
+      <p class="static-list-meta">Wed 23 Sep · 18:30 · Newspeak House (Newspeak Hall) · <span class="static-list-org">Autonomy Institute</span></p>
+      <p class="static-list-hook">James Muldoon on AI companions, digital resurrection, and what our relationships with chatbots reveal about us.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/men-s-circle-killing-the-dragon/">Men&#x27;s Circle: Killing The Dragon</a>
+      <p class="static-list-meta">Wed 23 Sep · 18:45 · Studio 1 · <span class="static-list-org">The Psychedelic Society</span></p>
+      <p class="static-list-hook">Men&#x27;s circle with The Psychedelic Society exploring inner work and shared vulnerability.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/connection-games-night-low-pressure-play-meaningful-conversations-real-c/">Connection Games Night: Low-Pressure Play, Meaningful Conversations + Real Connection</a>
+      <p class="static-list-meta">Wed 23 Sep · 19:00 · The Escapologist · <span class="static-list-org">Unseen</span></p>
+      <p class="static-list-hook">Play guided connection games and have real conversations with strangers in a hosted, supportive space.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/space-club/">Space Club</a>
+      <p class="static-list-meta">Fri 25 Sep · 22:00 · Om Being · <span class="static-list-org">Om Being</span></p>
+      <p class="static-list-hook">Shoe-free, sober dancing with pristine hi-fi sound and space to chat between sets.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/sex-club-london-weekend-retreat-i/">Sex Club: London - Weekend Retreat I</a>
+      <p class="static-list-meta">Sat 26 Sep · 11:00 · Here &amp; Now (N16) · <span class="static-list-org">The Psychedelic Society</span></p>
+      <p class="static-list-hook">Two-day guided journey exploring sexuality, desires and boundaries through embodied inquiry.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/women-who-wield-power-forging-a-different-path/">Women who wield power: Forging a different path</a>
+      <p class="static-list-meta">Sat 26 Sep · 14:00 · Plot 9 · <span class="static-list-org">Women who wield power</span></p>
+      <p class="static-list-hook">Women&#x27;s circle exploring embodied power through drumming and sisterhood at Plot 9.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/tantra-conscious-dating/">Tantra Conscious dating</a>
+      <p class="static-list-meta">Sat 26 Sep · 16:00 · Healing House · <span class="static-list-org">Tantra Conscious Dating</span></p>
+      <p class="static-list-hook">Learn tantra practices for conscious connection and emotional depth in intimate relationships.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/primal-play-london-autumn-edition/">🦁 𝐏𝐑𝐈𝐌𝐀𝐋 𝐏𝐋𝐀𝐘 𝐋𝐎𝐍𝐃𝐎𝐍 - Autumn Edition 🍁🦁</a>
+      <p class="static-list-meta">Sun 27 Sep · 14:00 · Self-Retreat Studio · <span class="static-list-org">Embodied Empathy</span></p>
+      <p class="static-list-hook">Trauma-informed embodied empathy circle with conscious touch and authentic expression in a body-positive space.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/love-psyche-delics-how-psychedelic-experiences-impact-romantic-relations/">Love &amp; Psyche(delics): How Psychedelic Experiences Impact Romantic Relationships</a>
+      <p class="static-list-meta">Mon 28 Sep · 18:30 · Home House Studio, Private Members&#x27; Club · <span class="static-list-org">The Psychedelic Society</span></p>
+      <p class="static-list-hook">The Psychedelic Society explores how psychedelic experiences reshape romantic bonds and intimacy.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/psysoc-social-speed-friending-psychedelic-storytelling/">PsySoc Social: Speed-Friending &amp; Psychedelic Storytelling</a>
+      <p class="static-list-meta">Wed 30 Sep · 18:45 · Love Shack · <span class="static-list-org">The Psychedelic Society</span></p>
+      <p class="static-list-hook">Speed-friending meets psychedelic storytelling with The Psychedelic Society&#x27;s community.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/mocktails-deep-talk-penthouse-rooftop-bar-lightly-hosted-small-groups-re/">Mocktails &amp; Deep Talk: Penthouse Rooftop Bar, Lightly Hosted Small Groups + Real Connection</a>
+      <p class="static-list-meta">Wed 30 Sep · 19:00 · Sabine London Holborn · <span class="static-list-org">Unseen</span></p>
+      <p class="static-list-hook">Sober conversations over craft mocktails in Holborn with Unseen&#x27;s intentional community.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/mantra-lounge-special-book-on-eventbrite/">Mantra Lounge Special | Book on eventbrite</a>
+      <p class="static-list-meta">Fri 2 Oct · 19:00 · Om Being · <span class="static-list-org">Om Being</span></p>
+      <p class="static-list-hook">Candlelit kirtan and mantra singing to shake off the week and meet new friends over tea.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/supper-club/">Supper Club</a>
+      <p class="static-list-meta">Sat 3 Oct · 19:00 · Om Being · <span class="static-list-org">Om Being</span></p>
+      <p class="static-list-hook">Mexican-Indian fusion supper with live DJ set at Om Being&#x27;s intimate table.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/song-circle-plot-9-2026-10-04/">Song Circle @ Plot 9</a>
+      <p class="static-list-meta">Sun 4 Oct · 15:00 · Plot 9 · <span class="static-list-org">Plot 9 Maze Hill</span></p>
+      <p class="static-list-hook">Monthly gathering for communal singing in a south London outdoor space.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/relating-room-london-what-if-connection-could-be-more-than-conversation/">Relating Room London, What if connection could be more than conversation?</a>
+      <p class="static-list-meta">Sat 10 Oct · 11:00 · Bonnington Cafe and Community Centre · <span class="static-list-org">Authentic Relating Experience</span></p>
+      <p class="static-list-hook">Explore what happens when you move beyond talking into embodied authentic relating with strangers.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/embracing-grief-a-one-day-community-journey-london-2026-10-16/">Embracing Grief: A One-Day Community Journey (London)</a>
+      <p class="static-list-meta">Fri 16 Oct · 10:00 · Hackney · <span class="static-list-org">Embracing Grief</span></p>
+      <p class="static-list-hook">A full day of grief tending and ritual with community in Hackney to process loss with others.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/being-a-man-weekend-men-s-retreat/">Being a Man: Weekend Men&#x27;s Retreat</a>
+      <p class="static-list-meta">Sat 17 Oct · 11:00 · soma hOMe · <span class="static-list-org">The Psychedelic Society</span></p>
+      <p class="static-list-hook">A weekend exploring authentic masculinity and relating with other men in depth.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/embodayfest-the-ecstatic-dance-uk-day-festival/">EmboDAYfest - The Ecstatic Dance UK Day Festival</a>
+      <p class="static-list-meta">Sat 17 Oct · 12:00 · Eastway Baths · <span class="static-list-org">Ecstatic Dance UK</span></p>
+      <p class="static-list-hook">Ecstatic Dance UK&#x27;s all-day festival blends live DJs, heart-opening movement, and sauna rituals.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/women-and-men-s-circle-arriving-into-safety/">Women and Men&#x27;s Circle: Arriving Into Safety</a>
+      <p class="static-list-meta">Sat 17 Oct · 13:00 · Lekdanling - Tibetan Cultural Centre · <span class="static-list-org">The Psychedelic Society</span></p>
+      <p class="static-list-hook">Gender-separated circles at The Threshold to practice vulnerability and arrive into genuine safety together.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/authentic-connections-wavekind-partner-breathwork-half-day-retreat/">Authentic Connections: Wavekind Partner Breathwork Half Day Retreat</a>
+      <p class="static-list-meta">Sun 18 Oct · 13:30 · Self-Retreat Studio · <span class="static-list-org">Wavekind</span></p>
+      <p class="static-list-hook">Learn conscious connected breathing and authentic relating with Wavekind in a half-day retreat.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/acid-chess-club/">Acid Chess Club</a>
+      <p class="static-list-meta">Fri 23 Oct · 20:00 · Om Being · <span class="static-list-org">Om Being</span></p>
+      <p class="static-list-hook">Chess, ambient DJ sets and community on a Friday night at Om Being.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/sex-psychedelics-talks-performance-social/">Sex &amp; Psychedelics - Talks, Performance &amp; Social</a>
+      <p class="static-list-meta">Sat 24 Oct · 14:00 · Om Being · <span class="static-list-org">The Psychedelic Society</span></p>
+      <p class="static-list-hook">Explore the intersection of psychedelics and sexuality with The Psychedelic Society in a conscious community setting.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/space-club-2026-10-30/">Space Club</a>
+      <p class="static-list-meta">Fri 30 Oct · 22:00 · Om Being · <span class="static-list-org">Om Being</span></p>
+      <p class="static-list-hook">Shoe-free, sober dance party with hi-fi sound and community vibes at Om Being.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/fool-expression-introduction-weekend-course/">Fool Expression Introduction: WEEKEND COURSE</a>
+      <p class="static-list-meta">Sat 7 Nov · 14:00 · Chisenhale Dance Space · <span class="static-list-org">The Psychedelic Society</span></p>
+      <p class="static-list-hook">Explore clowning and mask work to unlock creative expression and self-discovery over a weekend.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/sex-club-london-weekend-retreat-ii/">Sex Club: London - Weekend Retreat II</a>
+      <p class="static-list-meta">Sat 14 Nov · 11:00 · Soma hŌṃe (N16) · <span class="static-list-org">The Psychedelic Society</span></p>
+      <p class="static-list-hook">Weekend retreat exploring sexuality, intimacy and authentic relating through guided exercises and community.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/space-club-2026-11-27/">Space Club</a>
+      <p class="static-list-meta">Fri 27 Nov · 22:00 · Om Being · <span class="static-list-org">Om Being</span></p>
+      <p class="static-list-hook">Shoe-free dance party with hi-fi sound and zero alcohol—lock in on tripped-out electronic rhythms.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/voice-dna-transformation-collaborative-vocal-improv-series-with-uran-apa/">Voice DNA: Transformation - Collaborative Vocal Improv Series with Uran Apak</a>
+      <p class="static-list-meta">Sun 13 Dec · 15:00 · 51 Barnsbury Street · <span class="static-list-org">The Psychedelic Society</span></p>
+      <p class="static-list-hook">Explore vocal improvisation through Uran Apak&#x27;s collaborative voice practice in this intimate series.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/embracing-grief-a-one-day-community-journey-london-2026-12-19/">Embracing Grief: A One-Day Community Journey (London)</a>
+      <p class="static-list-meta">Sat 19 Dec · 10:00 · Hackney · <span class="static-list-org">Embracing Grief</span></p>
+      <p class="static-list-hook">A full-day grief ritual in Hackney that transforms loss through shared ceremony and community.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/embracing-grief-a-one-day-community-journey-london-2026-12-20/">Embracing Grief: A One-Day Community Journey (London)</a>
+      <p class="static-list-meta">Sun 20 Dec · 10:00 · Hackney · <span class="static-list-org">Embracing Grief</span></p>
+      <p class="static-list-hook">A full-day community circle with Embracing Grief tending to loss through ritual and connection.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/embracing-grief-a-weekend-community-journey-london/">Embracing Grief: A Weekend Community Journey (London)</a>
+      <p class="static-list-meta">Sat 16 Jan · 10:00 · Clapton Square · <span class="static-list-org">Embracing Grief</span></p>
+      <p class="static-list-hook">A weekend ritual circle to collectively tend grief with others who understand loss</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/voice-dna-individuation-collaborative-vocal-improv-series-with-uran-apak/">Voice DNA: Individuation - Collaborative Vocal Improv Series with Uran Apak</a>
+      <p class="static-list-meta">Sun 17 Jan · 15:00 · 51 Barnsbury Street · <span class="static-list-org">The Psychedelic Society</span></p>
+      <p class="static-list-hook">Discover your unique vocal voice through collaborative improv with the Psychedelic Society and Uran Apak.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/embracing-grief-a-one-day-community-journey-london-2027-02-13/">Embracing Grief: A One-Day Community Journey (London)</a>
+      <p class="static-list-meta">Sat 13 Feb · 10:00 · Hackney · <span class="static-list-org">Embracing Grief</span></p>
+      <p class="static-list-hook">A community ritual for tending loss and grief together in ceremony with others who know the weight.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/sex-club-london-weekend-retreat-ii-2027-02-27/">Sex Club: London - Weekend Retreat II</a>
+      <p class="static-list-meta">Sat 27 Feb · 11:00 · Soma hŌṃe (N16) · <span class="static-list-org">The Psychedelic Society</span></p>
+      <p class="static-list-hook">Weekend retreat exploring sexuality, intimacy and liberation through authentic relating exercises.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/tending-the-heart-a-communal-grief-ritual-london-2027-03-06/">Tending the Heart: A Communal Grief Ritual (London)</a>
+      <p class="static-list-meta">Sat 6 Mar · 15:00 · Old School Rooms · <span class="static-list-org">Embracing Grief</span></p>
+      <p class="static-list-hook">A guided grief ceremony with Embracing Grief to honour loss and move through collective sorrow.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/sex-club-london-weekend-retreat-iii/">Sex Club: London - Weekend Retreat III</a>
+      <p class="static-list-meta">Sat 27 Mar · 11:00 · soma hOMe · <span class="static-list-org">The Psychedelic Society</span></p>
+      <p class="static-list-hook">Multi-day retreat exploring sexuality, intimacy and authentic relating through The Psychedelic Society&#x27;s curated framework.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/embracing-grief-a-one-day-community-journey-london-2027-04-17/">Embracing Grief: A One-Day Community Journey (London)</a>
+      <p class="static-list-meta">Sat 17 Apr · 10:00 · Hackney · <span class="static-list-org">Embracing Grief</span></p>
+      <p class="static-list-hook">A full day of grief ritual and collective tending with Embracing Grief in Hackney.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/embracing-grief-a-one-day-community-journey-london-2027-06-12/">Embracing Grief: A One-Day Community Journey (London)</a>
+      <p class="static-list-meta">Sat 12 Jun · 10:00 · Hackney · <span class="static-list-org">Embracing Grief</span></p>
+      <p class="static-list-hook">Day-long grief ritual with community witnessing, led by Embracing Grief in supportive ceremony.</p>
+    </li>
+  </ol>
+  <p class="static-back">
+    <a href="https://psyconnect.london/">← all of PsyConnect</a>
+  </p>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+  </footer>
+</body>
+</html>

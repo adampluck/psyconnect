@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <title>join the community — PsyConnect</title>
+  <meta name="description" content="Join the PsyConnect WhatsApp community.">
+  <link rel="canonical" href="https://psyconnect.london/join-community/">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="join the community — PsyConnect">
+  <meta property="og:description" content="Join the PsyConnect WhatsApp community.">
+  <meta property="og:url" content="https://psyconnect.london/join-community/">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/png" href="../icons/favicon.png">
+  <link rel="stylesheet" href="../fonts/fonts.css">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../theme.css">
+  
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <header class="static-list-head">
+    <p class="static-kicker">community</p>
+    <h1 class="static-title">join the PsyConnect community</h1>
+    <div class="static-intro">
+      <p class="static-lead">A WhatsApp group for people who come to these
+      gatherings — plans, questions, and the odd last-minute ticket.</p>
+      <p class="static-lead">Confirm you're human and the invite link appears.</p>
+    </div>
+  </header>
+  <form class="join-form" id="join-form" novalidate>
+    
+    <div class="join-honeypot" aria-hidden="true">
+      <label for="join-website">leave this empty</label>
+      <input id="join-website" name="website" type="text" tabindex="-1" autocomplete="off">
+    </div>
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAAEG-S32kYG1X6qMl"
+         data-theme="auto" data-appearance="always"></div>
+    <button class="join-submit" id="join-submit" type="submit">show me the invite</button>
+    <p class="join-status" id="join-status" role="status" aria-live="polite"></p>
+  </form>
+  <div class="join-result" id="join-result" hidden></div>
+  <p class="static-back">
+    <a href="https://psyconnect.london/">← all of PsyConnect</a>
+  </p>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <script>
+(function () {
+  var form = document.getElementById("join-form");
+  var button = document.getElementById("join-submit");
+  var status = document.getElementById("join-status");
+  var result = document.getElementById("join-result");
+  var loadedAt = Date.now();
+
+  // Dwell gate: a real person needs a moment to read the page anyway, and
+  // instant submits are the signature of a script.
+  button.disabled = true;
+  setTimeout(function () { button.disabled = false; }, 2500);
+
+  var MESSAGES = {
+    rate: "too many tries. wait a minute, then try again.",
+    passphrase: "that's not the word \u2014 check where you found this link.",
+    token: "the human check didn't pass. try again.",
+    stale: "the human check expired. try again.",
+    fast: "that was too quick. give the page a moment, then try again.",
+    config: "the invite isn't set up right now. try again later.",
+  };
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var token = (form.elements["cf-turnstile-response"] || {}).value || "";
+    if (!token) {
+      status.textContent = "still checking you're human \u2014 one moment, then try again.";
+      return;
+    }
+    button.disabled = true;
+    status.textContent = "checking\u2026";
+
+    fetch("https://psyconnect-join.plucky101.workers.dev", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        token: token,
+        passphrase: (form.elements.passphrase || {}).value || "",
+        website: (form.elements.website || {}).value || "",
+        dwellMs: Date.now() - loadedAt,
+      }),
+    })
+      .then(function (res) {
+        return res.json().then(function (data) { return { ok: res.ok, data: data }; });
+      })
+      .then(function (r) {
+        if (!r.ok || !r.data.url) {
+          throw new Error(r.data.error || "failed");
+        }
+        reveal(r.data.url);
+      })
+      .catch(function (err) {
+        status.textContent =
+          MESSAGES[err.message] || "something went wrong. reload the page and try again.";
+        button.disabled = false;
+        // Turnstile tokens are single-use, so the widget needs a fresh one.
+        if (window.turnstile) window.turnstile.reset();
+      });
+  });
+
+  function reveal(url) {
+    form.hidden = true;
+    status.textContent = "";
+    var link = document.createElement("a");
+    link.className = "join-invite";
+    link.href = url;
+    link.target = "_blank";
+    link.rel = "noopener";
+    link.textContent = url;
+    var copy = document.createElement("button");
+    copy.type = "button";
+    copy.className = "join-copy";
+    copy.textContent = "copy link";
+    copy.addEventListener("click", function () {
+      navigator.clipboard.writeText(url).then(function () {
+        copy.textContent = "copied";
+        setTimeout(function () { copy.textContent = "copy link"; }, 2000);
+      });
+    });
+    result.appendChild(link);
+    result.appendChild(copy);
+    result.hidden = false;
+    link.focus();
+  }
+})();
+</script>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+  </footer>
+</body>
+</html>
