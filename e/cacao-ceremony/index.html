@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <title>Cacao Ceremony — PsyConnect</title>
+  <meta name="description" content="Ceremonial cacao meets Kundalini yoga and shamanic meditation with facilitator Consuelo Cogrossi.">
+  <link rel="canonical" href="https://psyconnect.london/e/cacao-ceremony/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cacao Ceremony — PsyConnect">
+  <meta property="og:description" content="Ceremonial cacao meets Kundalini yoga and shamanic meditation with facilitator Consuelo Cogrossi.">
+  <meta property="og:url" content="https://psyconnect.london/e/cacao-ceremony/">
+  <meta property="og:image" content="https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/16882b85-7ee4-472c-aae0-0385a5a444a9/Cacao-Ceremony-small.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "Cacao Ceremony", "startDate": "2026-09-15T18:00:00+00:00", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "Colet House", "address": {"@type": "PostalAddress", "streetAddress": "151 Talgarth Rd, London W14 9DA", "addressLocality": "London", "addressCountry": "GB"}}, "url": "https://psyconnect.london/e/cacao-ceremony/", "inLanguage": "en-GB", "endDate": "2026-09-15T19:30:00+00:00", "image": ["https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/16882b85-7ee4-472c-aae0-0385a5a444a9/Cacao-Ceremony-small.png"], "description": "Rooted in one of the world\u2019s oldest holistic traditions, this ceremony blends ceremonial-grade Cacao with Kundalini yoga, breathwork, and guided shamanic meditation. Cacao has been used as a sacred plant medicine for centuries. Today, we bring these ancient rituals into the modern world, helping you slow down, soften, and welcome more ease. You\u2019ll experience a gentle yet powerful shift, from stress to stillness, from mind to heart. This safe space invites deep reflection, emotional release, and ", "organizer": {"@type": "Organization", "name": "The Study Society"}}</script>
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <nav class="static-crumbs" aria-label="breadcrumb">
+    <a href="https://psyconnect.london/">PsyConnect</a>
+    <span aria-hidden="true">/</span>
+    <span>event</span>
+  </nav>
+  <article class="static-event">
+    <p class="static-kicker">in person · London · west London</p>
+    <h1 class="static-title">Cacao Ceremony</h1>
+    <p class="static-hook">Ceremonial cacao meets Kundalini yoga and shamanic meditation with facilitator Consuelo Cogrossi.</p>
+    <dl class="static-facts"><div class="static-fact"><dt>When</dt><dd>Tuesday 15 September 2026 · 19:00</dd></div><div class="static-fact"><dt>Where</dt><dd>Colet House, 151 Talgarth Rd, London W14 9DA</dd></div><div class="static-fact"><dt>Host</dt><dd>The Study Society</dd></div></dl>
+    <p class="static-chips"><a class="static-chip" href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a><a class="static-chip" href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><a class="static-chip" href="https://psyconnect.london/t/consciousness/">consciousness</a></p>
+    <figure class="static-figure"><img src="https://wsrv.nl/?url=https%3A%2F%2Ffiles.elfsightcdn.com%2Feafe4a4d-3436-495d-b748-5bdce62d911d%2F16882b85-7ee4-472c-aae0-0385a5a444a9%2FCacao-Ceremony-small.png&amp;w=1200&amp;output=webp&amp;q=75" alt="Cacao Ceremony" loading="lazy" onerror="this.onerror=null;this.src='https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/16882b85-7ee4-472c-aae0-0385a5a444a9/Cacao-Ceremony-small.png'"></figure>
+    <div class="static-prose"><p>Rooted in one of the world’s oldest holistic traditions, this ceremony blends ceremonial-grade Cacao with Kundalini yoga, breathwork, and guided shamanic meditation. Cacao has been used as a sacred plant medicine for centuries. Today, we bring these ancient rituals into the modern world, helping you slow down, soften, and welcome more ease. You’ll experience a gentle yet powerful shift, from stress to stillness, from mind to heart. This safe space invites deep reflection, emotional release, and mind-body connection, leaving you grounded, open, and aligned. What to expect: 18:50–19:00 – Arrival &amp; Welcome 19:00–19:30 – Kundalini Yoga 19:30–19:50 – Cacao Ritual 19:50–20:00 – Breathwork 20:00–20:20 – Guided Shamanic Meditation 20:20–20:30 – Integration &amp; Farewell What to bring: Wear comfortable clothes and bring layers. Also bring a journal and a pen. Do I need any experience? Not at all. You don’t need to be flexible, spiritual, or familiar with cacao. Just bring your curiosity and an open mind. I’ll guide you through each practice in a safe, supportive way. What’s Cacao? A plant-medicine drink made from pure cacao beans and water, no refined sugar. Earthy, warm, and gently bitter, it nourishes the body with natural minerals and invites the mind to soften. Come as you are, straight from a busy day, or with a heart full of curiosity. Leave with ease, slowness, and a renewed sense of possibility. Book your spot today! Host : Consuelo Cogrossi, https://www.houseofsomatics.com/about</p></div>
+    <p class="static-cta-wrap">
+      <a class="static-cta" href="https://www.tickettailor.com/events/thestudysociety/2017914?utm_source=psyconnect.london&amp;utm_medium=referral" rel="noopener"
+         data-goatcounter-click="out/the-study-society"
+         data-goatcounter-title="Cacao Ceremony">
+        tickets &amp; details ↗
+      </a>
+    </p>
+    <p class="static-back">
+      <a href="https://psyconnect.london/">← more in-person gatherings on PsyConnect</a>
+    </p>
+  </article>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+  </footer>
+</body>
+</html>

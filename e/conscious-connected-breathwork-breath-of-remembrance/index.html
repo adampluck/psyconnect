@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <title>Conscious Connected Breathwork - Breath of Remembrance — PsyConnect</title>
+  <meta name="description" content="Three-hour conscious connected breathwork journey to release suppressed emotions and reconnect with forgotten parts of yourself.">
+  <link rel="canonical" href="https://psyconnect.london/e/conscious-connected-breathwork-breath-of-remembrance/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Conscious Connected Breathwork - Breath of Remembrance — PsyConnect">
+  <meta property="og:description" content="Three-hour conscious connected breathwork journey to release suppressed emotions and reconnect with forgotten parts of yourself.">
+  <meta property="og:url" content="https://psyconnect.london/e/conscious-connected-breathwork-breath-of-remembrance/">
+  <meta property="og:image" content="https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/fb056621-25c6-47fa-9cde-8a7330f90ef9/1000056497-jpg.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "Conscious Connected Breathwork - Breath of Remembrance", "startDate": "2026-10-01T17:10:00+00:00", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "Colet House", "address": {"@type": "PostalAddress", "streetAddress": "151 Talgarth Rd, London W14 9DA", "addressLocality": "London", "addressCountry": "GB"}}, "url": "https://psyconnect.london/e/conscious-connected-breathwork-breath-of-remembrance/", "inLanguage": "en-GB", "endDate": "2026-10-01T20:10:00+00:00", "image": ["https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/fb056621-25c6-47fa-9cde-8a7330f90ef9/1000056497-jpg.jpg"], "description": "Welcome to Your Journey of Self Connection and Transformation There is something deeply sacred and extraordinary that unfolds when we come together to breathe in this shared space, and we would be honoured to have you join us on this journey. Welcome to The Breath of Remembrance \u2014 a sacred 3-hour journey through the transformative power of Conscious Connected Breathwork.This is an invitation to return to the parts of yourself that have been forgotten, hidden, or waiting patiently beneath the sur", "organizer": {"@type": "Organization", "name": "The Study Society"}}</script>
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <nav class="static-crumbs" aria-label="breadcrumb">
+    <a href="https://psyconnect.london/">PsyConnect</a>
+    <span aria-hidden="true">/</span>
+    <span>event</span>
+  </nav>
+  <article class="static-event">
+    <p class="static-kicker">in person · London · west London</p>
+    <h1 class="static-title">Conscious Connected Breathwork - Breath of Remembrance</h1>
+    <p class="static-hook">Three-hour conscious connected breathwork journey to release suppressed emotions and reconnect with forgotten parts of yourself.</p>
+    <dl class="static-facts"><div class="static-fact"><dt>When</dt><dd>Thursday 1 October 2026 · 18:10</dd></div><div class="static-fact"><dt>Where</dt><dd>Colet House, 151 Talgarth Rd, London W14 9DA</dd></div><div class="static-fact"><dt>Host</dt><dd>The Study Society</dd></div></dl>
+    <p class="static-chips"><a class="static-chip" href="https://psyconnect.london/t/consciousness/">consciousness</a><a class="static-chip" href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><a class="static-chip" href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></p>
+    <figure class="static-figure"><img src="https://wsrv.nl/?url=https%3A%2F%2Ffiles.elfsightcdn.com%2Feafe4a4d-3436-495d-b748-5bdce62d911d%2Ffb056621-25c6-47fa-9cde-8a7330f90ef9%2F1000056497-jpg.jpg&amp;w=1200&amp;output=webp&amp;q=75" alt="Conscious Connected Breathwork - Breath of Remembrance" loading="lazy" onerror="this.onerror=null;this.src='https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/fb056621-25c6-47fa-9cde-8a7330f90ef9/1000056497-jpg.jpg'"></figure>
+    <div class="static-prose"><p>Welcome to Your Journey of Self Connection and Transformation There is something deeply sacred and extraordinary that unfolds when we come together to breathe in this shared space, and we would be honoured to have you join us on this journey. Welcome to The Breath of Remembrance — a sacred 3-hour journey through the transformative power of Conscious Connected Breathwork.This is an invitation to return to the parts of yourself that have been forgotten, hidden, or waiting patiently beneath the surface — to release what no longer serves, and to remember the truth of who you are. Through the ancient rhythm of circular breath, we enter an altered state of awareness — beyond the thinking mind — where the subconscious speaks, the body reveals, and the soul begins to stir. Here, emotions long held may rise to be felt and freed, while patterns rooted deep in the psyche come into gentle illumination. Or perhaps your body simply longs to rest — to be breathed, held, and nourished in the presence of open hearts. All you need to bring is trust, and a willingness to open your heart to yourself, allowing the breath to take care of the rest. Benefits of Conscious Connected Breathwork: 🌬️ Emotional Release Helps process and release suppressed emotions like grief, anger, or anxiety. Creates a safe space to feel deeply and let go without words. 🧠 Mental Clarity Can quiet the mind and reduce mental chatter. Shifts perspective on limiting beliefs and thought patterns. 🧘‍♀️ Nervous System Regulation Supports moving from a fight-or-flight state to rest-and-digest. Enhances resilience and capacity to handle stress. 🌀 Spiritual Connection Deepens connection with your intuition, higher self, or sense of the Divine. Facilitates mystical, expanded states of awareness. 💠 Embodiment &amp; Presence Reconnects you with your body, breath, and sensations. Cultivates grounded presence and self-awareness. 🌱 Personal Transformation Opens space for insight, healing, and inner change. Invites a sense of “remembering” your wholeness and truth. Conscious Connected Breathwork is not about doing something—it’s about allowing the breath to guide you into what needs to be felt, seen, or released. It&#x27;s a journey inward that meets you exactly where you are. ***Details*** Conscious connected breathwork ceremony Mulitiple dates Colet House, 151 Talgarth Road, London W149DA ***What can I expect?*** Opening circle - short meditation and sharing Movement 1hr Conscious Connected Breathwork Grounding Closing sharing circle ***What to bring*** Please wear loose comfortable clothing Water bottle Yourself, exactly as you are ***After the Event*** A Breathwork Journey is profound and extremely powerful. It can take a while to integrate, so after the event we recommend: Do not plan to do too much. Give yourself some space and time to process what has happened. Eat nourishing food and drink plenty of water. Try and spend some time in nature or familiar and comforting surroundings. Noticing what has changed and journaling your thoughts may help you articulate where you are. About your facilitator Hello, I&#x27;m Barras, and I&#x27;m passionate about introducing people to Conscious Connected Breathwork and its transformative power—just as it continues to transform my own life. I&#x27;ve been weaving breathwork into my personal journey of growth and self-connection, and I’m deeply humbled by the profound experience of witnessing and supporting others on their own breathwork paths—a sacred privilege beyond words. Having completed a 400-hour breathwork facilitator training with Breathing Space , I now have the honour of holding spaces for others to reconnect with themselves through the breath. My heartfelt wish is to create safe, supportive spaces filled with care, gentleness, and love—for those seeking to enhance their well-being through breathwork. Contraindications for Conscious Connected Breathwork Breathwork is a profound practice that can evoke deep physical and emotional responses. While it is very safe, certain conditions may benefit from a more gentle approach to breathing. If you are living alongside any of the following, you are invited to participate using a slower, softer breath rhythm or pausing as needed to honour your body’s wisdom: Cardiovascular conditions including heart conditions, high blood pressure, or a history of heart attack/stroke Asthma, COPD, or other respiratory conditions Epilepsy or a history of seizures Pregnant, or postpartum up to 16 weeks Recent major surgeries or physical injuries Glaucoma or retinal detachment If you experience deep emotional states or conditions such as bipolar, schizophrenia, or psychosis A history of aneurysms If you are uncertain about whether breathwork is suitable for you, please consult your doctor or healthcare provider beforehand. Remember, this is your journey—if at any point you feel discomfort, you are always invited to slow down, return to a natural breath, or rest in stillness. By signing up for this session, you confirm that you have read and understood these invitations and take full responsibility for your participation.</p></div>
+    <p class="static-cta-wrap">
+      <a class="static-cta" href="https://www.eventbrite.com/e/breath-of-remembrance-conscious-connected-breathwork-tickets-1977310248180?aff=ebdssbdestsearch&amp;utm_source=psyconnect.london&amp;utm_medium=referral" rel="noopener"
+         data-goatcounter-click="out/the-study-society"
+         data-goatcounter-title="Conscious Connected Breathwork - Breath of Remembrance">
+        tickets &amp; details ↗
+      </a>
+    </p>
+    <p class="static-back">
+      <a href="https://psyconnect.london/">← more in-person gatherings on PsyConnect</a>
+    </p>
+  </article>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+  </footer>
+</body>
+</html>

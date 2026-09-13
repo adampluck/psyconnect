@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <title>Music As Medicine — PsyConnect</title>
+  <meta name="description" content="Sanskrit kirtan with Sivani Mata Moon: ancient mantras and heartfelt instrumentation for collective healing.">
+  <link rel="canonical" href="https://psyconnect.london/e/music-as-medicine/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Music As Medicine — PsyConnect">
+  <meta property="og:description" content="Sanskrit kirtan with Sivani Mata Moon: ancient mantras and heartfelt instrumentation for collective healing.">
+  <meta property="og:url" content="https://psyconnect.london/e/music-as-medicine/">
+  <meta property="og:image" content="https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/7b559d08-f78e-4cfa-adef-d4fd3bdba2ee/1-Kirtan-with-Sivani-Jan-21-16-by-Thomas-Phillips-1.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "Music As Medicine", "startDate": "2026-09-26T17:00:00+00:00", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "Colet House", "address": {"@type": "PostalAddress", "streetAddress": "151 Talgarth Rd, London W14 9DA", "addressLocality": "London", "addressCountry": "GB"}}, "url": "https://psyconnect.london/e/music-as-medicine/", "inLanguage": "en-GB", "endDate": "2026-09-26T19:00:00+00:00", "image": ["https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/7b559d08-f78e-4cfa-adef-d4fd3bdba2ee/1-Kirtan-with-Sivani-Jan-21-16-by-Thomas-Phillips-1.jpg"], "description": "A heart-centred journey of Kirtan, Poetry, Sound and Silence with Sivani Mata Moon and the Shakti Soul Family. You are invited for an evening exploration of Music as Medicine, a deep dive into the heart through co-created song. It is a conversation with that inner place in each one of us that is ever unified with everything in creation; it is a practice of communion with all that is. In our gathered community we mainly sing together Kirtan in the ancient powerful language of Sanskrit. Repeating ", "organizer": {"@type": "Organization", "name": "The Study Society"}}</script>
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <nav class="static-crumbs" aria-label="breadcrumb">
+    <a href="https://psyconnect.london/">PsyConnect</a>
+    <span aria-hidden="true">/</span>
+    <span>event</span>
+  </nav>
+  <article class="static-event">
+    <p class="static-kicker">in person · London · west London</p>
+    <h1 class="static-title">Music As Medicine</h1>
+    <p class="static-hook">Sanskrit kirtan with Sivani Mata Moon: ancient mantras and heartfelt instrumentation for collective healing.</p>
+    <dl class="static-facts"><div class="static-fact"><dt>When</dt><dd>Saturday 26 September 2026 · 18:00</dd></div><div class="static-fact"><dt>Where</dt><dd>Colet House, 151 Talgarth Rd, London W14 9DA</dd></div><div class="static-fact"><dt>Host</dt><dd>The Study Society</dd></div></dl>
+    <p class="static-chips"><a class="static-chip" href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a><a class="static-chip" href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a></p>
+    <figure class="static-figure"><img src="https://wsrv.nl/?url=https%3A%2F%2Ffiles.elfsightcdn.com%2Feafe4a4d-3436-495d-b748-5bdce62d911d%2F7b559d08-f78e-4cfa-adef-d4fd3bdba2ee%2F1-Kirtan-with-Sivani-Jan-21-16-by-Thomas-Phillips-1.jpg&amp;w=1200&amp;output=webp&amp;q=75" alt="Music As Medicine" loading="lazy" onerror="this.onerror=null;this.src='https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/7b559d08-f78e-4cfa-adef-d4fd3bdba2ee/1-Kirtan-with-Sivani-Jan-21-16-by-Thomas-Phillips-1.jpg'"></figure>
+    <div class="static-prose"><p>A heart-centred journey of Kirtan, Poetry, Sound and Silence with Sivani Mata Moon and the Shakti Soul Family. You are invited for an evening exploration of Music as Medicine, a deep dive into the heart through co-created song. It is a conversation with that inner place in each one of us that is ever unified with everything in creation; it is a practice of communion with all that is. In our gathered community we mainly sing together Kirtan in the ancient powerful language of Sanskrit. Repeating simple mantras which invoke a trance-like state within, as well as evoking the spirit of Bhakti: the mood of love. As well as Sanskrit Kirtan we will explore simple songs in other languages, the poetry of the mystics and moments of silence. Sivani Mata plays the harmonium, leading our journey, accompanied by musicians who support with heartfelt instrumentation and rootsy rhythms as a foundation for our practice. Every time we gather it is unique, as everyone in the space adds their voice, and in doing so contributes their special spice to flavour the collective soup we brew together. All are invited to be at home here to express the truth of themselves, through these songs of freedom. We co-create healing sounds, Music as Medicine, kindling the process of transformation which can move through us as ecstatic or cathartic dancing, sweet tears, deep peaceful stillness, the warmth of an inner joy, or other expressions. After our journey you are invited to join us for a community dinner lovingly cooked by Matanah. Matanah has been serving in the community for over 18 years, using nature’s bountiful gifts: plants, vegetables, fruits, seeds, nuts, grains, herbs, water – with love – for upholding mind, body, spirit, soul, wellness. Love is a Gift. Food is the expression of the gift. Please pre-order your delicious vegan, gluten-free, onion-free meal. No experience necessary – All are welcome All ages, all genders, all ethnicities are welcome, and all are encouraged to treat each other with respect and compassion in our shared space. There will be bolsters and meditations cushions available, but please bring your own cushion/sheepskin/blanket if you prefer so you are comfortable and warm during our time together. Please respect other people’s space, and do not come if you are feeling unwell. Children under 16 can come along for free as long as they&#x27;re with a parent or guardian.</p></div>
+    <p class="static-cta-wrap">
+      <a class="static-cta" href="https://www.tickettailor.com/events/thestudysociety/1014819?utm_source=psyconnect.london&amp;utm_medium=referral" rel="noopener"
+         data-goatcounter-click="out/the-study-society"
+         data-goatcounter-title="Music As Medicine">
+        tickets &amp; details ↗
+      </a>
+    </p>
+    <p class="static-back">
+      <a href="https://psyconnect.london/">← more in-person gatherings on PsyConnect</a>
+    </p>
+  </article>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /join-community/
+Sitemap: https://psyconnect.london/sitemap.xml

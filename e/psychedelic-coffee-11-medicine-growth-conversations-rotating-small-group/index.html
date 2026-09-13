@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <title>Psychedelic Coffee #11: Medicine + Growth Conversations, Rotating Small Groups + Real Connection — PsyConnect</title>
+  <meta name="description" content="Small group conversations about psychedelics and personal growth with real people over coffee.">
+  <link rel="canonical" href="https://psyconnect.london/e/psychedelic-coffee-11-medicine-growth-conversations-rotating-small-group/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Psychedelic Coffee #11: Medicine + Growth Conversations, Rotating Small Groups + Real Connection — PsyConnect">
+  <meta property="og:description" content="Small group conversations about psychedelics and personal growth with real people over coffee.">
+  <meta property="og:url" content="https://psyconnect.london/e/psychedelic-coffee-11-medicine-growth-conversations-rotating-small-group/">
+  <meta property="og:image" content="https://images.lumacdn.com/uploads/pc/92574e64-096d-42a5-b3d8-2c483b758f63.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "Psychedelic Coffee #11: Medicine + Growth Conversations, Rotating Small Groups + Real Connection", "startDate": "2026-09-20T13:00:00+00:00", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "Bubba Oasis", "address": {"@type": "PostalAddress", "streetAddress": "Bubba Oasis, 57-58 Upper St, London N1 0NY, UK", "addressLocality": "London", "addressCountry": "GB"}}, "url": "https://psyconnect.london/e/psychedelic-coffee-11-medicine-growth-conversations-rotating-small-group/", "inLanguage": "en-GB", "endDate": "2026-09-20T15:30:00+00:00", "image": ["https://images.lumacdn.com/uploads/pc/92574e64-096d-42a5-b3d8-2c483b758f63.png"], "description": "\ud83c\udf44 Back again after another sold out event! Join us for our 11th monthly Psychedelic Coffee social to share psychedelic experiences, explore life and make real connections. Limited to 70 seats. Expect: \u2192 Hosted & facilitated experience \u2192 Curated & meaningful conversations \u2192 Groups of 4 with 3 rotations \u2192 30 mins per sitting Plus: \u2192 Private lounge & bar \u2192 Craft drinks & cocktails \u2192 An immersive curated event \u2192 Stay after to socialise \ud83d\ude0a \ud83c\udf44 Each round starts with a new question announced by the host ", "organizer": {"@type": "Organization", "name": "Unseen"}, "offers": {"@type": "Offer", "price": "14.95", "priceCurrency": "GBP", "url": "https://luma.com/87cac8j4", "availability": "https://schema.org/InStock"}}</script>
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <nav class="static-crumbs" aria-label="breadcrumb">
+    <a href="https://psyconnect.london/">PsyConnect</a>
+    <span aria-hidden="true">/</span>
+    <span>event</span>
+  </nav>
+  <article class="static-event">
+    <p class="static-kicker">in person · London · central London</p>
+    <h1 class="static-title">Psychedelic Coffee #11: Medicine + Growth Conversations, Rotating Small Groups + Real Connection</h1>
+    <p class="static-hook">Small group conversations about psychedelics and personal growth with real people over coffee.</p>
+    <dl class="static-facts"><div class="static-fact"><dt>When</dt><dd>Sunday 20 September 2026 · 14:00</dd></div><div class="static-fact"><dt>Where</dt><dd>Bubba Oasis, Bubba Oasis, 57-58 Upper St, London N1 0NY, UK</dd></div><div class="static-fact"><dt>Price</dt><dd>£14.95</dd></div><div class="static-fact"><dt>Host</dt><dd>Unseen</dd></div></dl>
+    <p class="static-chips"><a class="static-chip" href="https://psyconnect.london/t/psychedelics/">psychedelics</a><a class="static-chip" href="https://psyconnect.london/t/consciousness/">consciousness</a><a class="static-chip" href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a></p>
+    <figure class="static-figure"><img src="https://wsrv.nl/?url=https%3A%2F%2Fimages.lumacdn.com%2Fuploads%2Fpc%2F92574e64-096d-42a5-b3d8-2c483b758f63.png&amp;w=1200&amp;output=webp&amp;q=75" alt="Psychedelic Coffee #11: Medicine + Growth Conversations, Rotating Small Groups + Real Connection" loading="lazy" onerror="this.onerror=null;this.src='https://images.lumacdn.com/uploads/pc/92574e64-096d-42a5-b3d8-2c483b758f63.png'"></figure>
+    <div class="static-prose"><p>🍄 Back again after another sold out event!
+Join us for our 11th monthly Psychedelic Coffee social to share psychedelic experiences, explore life and make real connections.
+Limited to 70 seats.</p><p>Expect:
+→ Hosted &amp; facilitated experience
+→ Curated &amp; meaningful conversations
+→ Groups of 4 with 3 rotations
+→ 30 mins per sitting</p><p>Plus:
+→ Private lounge &amp; bar
+→ Craft drinks &amp; cocktails
+→ An immersive curated event
+→ Stay after to socialise 😊</p><p>🍄 Each round starts with a new question announced by the host to spark meaningful conversations.
+🔮 All tables also have unique personal growth-related conversations prompts to go even deeper.
+🦄 Deep-dive into meaningful conversations about personal growth, relationships, consciousness, purpose, and of course… psychedelics.</p><p>🌳 Make real connections and talk about what really matters.</p><p>THE HOST
+Adrian AStar is an integration coach, energy healer, shaman, and hospitality professional passionate about helping people reconnect with themselves through conscious healing, meaningful conversation and authentic human connection.</p><p>FAQs
+Will there be photography?
+Yes. Occasional photos &amp; video, including some flash. To be excluded, tell a team member before we start.
+Where might photos and videos appear?
+Instagram, website, emails/newsletter, press, and occasional promo/partner materials.
+Do I need to come with someone?
+No. Most come alone.
+What&#x27;s the vibe?
+Informal. Social. Not group therapy, an integration circle, or an academic discussion.
+Who&#x27;s it for?
+Everyone’s welcome, whether you’re a seasoned psychonaut or have only had one experience.
+Who&#x27;s it not for?
+People who want surface level performative socialising or cringe networking.
+What kind of people come?
+Curious, thoughtful, down-to-earth people.
+Is this therapy, coaching or networking?
+No. It’s social.
+Is there a specific Psychedelic Coffee WhatsApp group?
+Yes join here (400+ members)
+What&#x27;s the venue like?
+Bubba Oasis is a cosy lounge bar on Upper St in Angel. We have the whole first floor to ourselves, with drinks, hot food and snacks available throughout.
+What&#x27;s the schedule?
+2:00pm: Arrive, grab a drink/food &amp; find a table
+2:30pm: Start (quick welcome + how it works)
+3:00pm: Rotation 1
+3:30pm: Rotation 2
+4.30pm Finish
+→ Stay after to socialise.
+How often is the event?
+Monthly.</p><p>Please note: This event does not involve the use of psychedelics or any illegal substances. It is a facilitated social discussion space only. We do not promote sourcing, sharing, organising, or facilitating illegal activity. Experiences and perspectives may be discussed, but this is not a therapeutic space and does not provide medical or psychological advice.</p></div>
+    <p class="static-cta-wrap">
+      <a class="static-cta" href="https://luma.com/87cac8j4?utm_source=psyconnect.london&amp;utm_medium=referral" rel="noopener"
+         data-goatcounter-click="out/unseen"
+         data-goatcounter-title="Psychedelic Coffee #11: Medicine + Growth Conversations, Rotating Small Groups + Real Connection">
+        tickets &amp; details ↗
+      </a>
+    </p>
+    <p class="static-back">
+      <a href="https://psyconnect.london/">← more in-person gatherings on PsyConnect</a>
+    </p>
+  </article>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+  </footer>
+</body>
+</html>

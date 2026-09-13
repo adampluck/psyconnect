@@ -1,0 +1,269 @@
+<!doctype html>
+<!-- psyconnect shell — a copy of web/index.html with different branding.
+     Keep ALL control markup in sync with web/index.html: controls start
+     hidden and app.js binds them unconditionally (getElementById with no
+     null guards), so a missing element crashes the app. Feature flags in
+     config.js decide what actually appears. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>PsyConnect — psychedelic &amp; consciousness events in London</title>
+  <!-- kept in step with the active theme by theme-boot.js -->
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <meta name="description" content="Breathwork, cacao ceremony, ecstatic dance, plant-medicine integration and authentic relating circles — real, in-person gatherings across London, updated daily.">
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PsyConnect — psychedelic &amp; consciousness events in London">
+  <meta property="og:description" content="Breathwork, cacao ceremony, ecstatic dance, plant-medicine integration and authentic relating circles — real, in-person gatherings across London, updated daily.">
+  <meta property="og:url" content="https://psyconnect.london/">
+  <meta property="og:image" content="https://psyconnect.london/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://psyconnect.london/">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"PsyConnect","alternateName":"psyconnect.london","url":"https://psyconnect.london/","description":"Psychedelic & consciousness events in London — breathwork, cacao ceremony, ecstatic dance, plant-medicine integration and authentic relating, updated daily."}</script>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+  <link rel="icon" type="image/png" href="icons/favicon.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="splash/splash-750x1334.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash/splash-1242x2208.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash/splash-1125x2436.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="splash/splash-828x1792.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash/splash-1242x2688.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash/splash-1170x2532.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash/splash-1284x2778.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash/splash-1179x2556.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash/splash-1290x2796.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash/splash-1206x2622.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash/splash-1320x2868.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <!-- black-translucent: the web view runs edge-to-edge under the status bar
+       so the cream textured background fills the top strip (viewport-fit=cover
+       + body's safe-area-inset padding keep content clear of the clock). Note:
+       iOS forces the status-bar icons white in this mode. -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="PsyConnect">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+  <div class="sky" aria-hidden="true">
+    <div class="blob blob-a"></div>
+    <div class="blob blob-b"></div>
+    <div class="grain"></div>
+  </div>
+
+  <header class="topbar">
+    <div>
+      <!-- the sr-only span gives the page a text h1 (the logo image was the
+           only one); the aria-label still names the link for screen readers -->
+      <h1><a class="home" href="./" aria-label="PsyConnect home"><img src="logo.png" alt="PsyConnect"><span class="sr-only"> — psychedelic &amp; consciousness events in London</span></a></h1>
+      <p class="tagline"><a href="?topic=consciousness">consciousness</a>, <a href="?topic=connection">connection</a>, <a href="?topic=spirituality">ceremony</a> &amp; <a href="?topic=psychedelics">psychedelics</a><span class="tagline-tail"> — in person in london</span></p>
+    </div>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+      <svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+    </button>
+    <nav class="views" id="view-tabs" aria-label="views">
+      <button class="key view-key lit" data-view="browse">browse</button>
+      <button class="key view-key" data-view="tonight">tonight</button>
+      <button class="key view-key" data-view="map">map</button>
+    </nav>
+  </header>
+
+  <div class="controls" id="controls">
+    <div class="controls-row">
+      <input id="search" type="search" placeholder="search…" autocomplete="off" aria-label="search events">
+      <div class="unit unit-inline">
+        <label class="switch" title="free events only">
+          <input type="checkbox" id="free-toggle" aria-label="free events only">
+          <span class="slider"></span>
+        </label>
+        <span class="legend">free</span>
+      </div>
+      <button class="key reset-key" id="reset-filters" title="clear every filter">reset</button>
+    </div>
+
+    <div class="controls-row keys" id="category-pills" hidden>
+      <button class="key cat-key lit" data-category="all">all</button>
+      <button class="key cat-key key-move" data-category="move">move</button>
+      <button class="key cat-key key-connect" data-category="connect">connect</button>
+      <button class="key cat-key key-expand" data-category="expand">expand</button>
+      <button class="key cat-key key-think" data-category="think">think</button>
+      <button class="key cat-key key-make" data-category="make">make</button>
+    </div>
+
+    <div class="controls-row bench">
+      <div class="unit" id="lens-unit" hidden>
+        <div class="lens-toggle" id="lens-toggle" role="radiogroup" aria-label="tech lens">
+          <button class="lens-stop" data-lens="tech" role="radio" aria-checked="false">tech</button>
+          <button class="lens-stop lit" data-lens="all" role="radio" aria-checked="true">tech &amp; beyond</button>
+          <button class="lens-stop" data-lens="beyond" role="radio" aria-checked="false">beyond</button>
+        </div>
+      </div>
+
+      <div class="unit" id="compass-unit" hidden>
+        <div class="areas" role="group" aria-label="london area">
+          <div class="compass" id="compass">
+            <svg viewBox="0 0 100 100" aria-hidden="true">
+              <circle class="dial-face" cx="50" cy="50" r="49.5" />
+              <path class="zone" data-area="north" d="M 40.1 40.1 A 14 14 0 0 1 59.9 40.1 L 81.8 18.2 A 45 45 0 0 0 18.2 18.2 Z"><title>north london</title></path>
+              <path class="zone" data-area="east" d="M 59.9 40.1 A 14 14 0 0 1 59.9 59.9 L 81.8 81.8 A 45 45 0 0 0 81.8 18.2 Z"><title>east london</title></path>
+              <path class="zone" data-area="south" d="M 59.9 59.9 A 14 14 0 0 1 40.1 59.9 L 18.2 81.8 A 45 45 0 0 0 81.8 81.8 Z"><title>south london</title></path>
+              <path class="zone" data-area="west" d="M 40.1 59.9 A 14 14 0 0 1 40.1 40.1 L 18.2 18.2 A 45 45 0 0 0 18.2 81.8 Z"><title>west london</title></path>
+              <circle class="zone" data-area="central" cx="50" cy="50" r="13"><title>central london</title></circle>
+              <g class="dial-pts">
+                <text x="50" y="21">n</text>
+                <text x="79" y="50">e</text>
+                <text x="50" y="79">s</text>
+                <text x="21" y="50">w</text>
+              </g>
+            </svg>
+          </div>
+          <div class="area-labels">
+            <span class="area-readout" id="area-readout">anywhere in london</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="unit unit-grow">
+        <div class="ticker-shell">
+          <div class="ticker" id="week-strip">
+            <!-- day cells rendered from live data -->
+          </div>
+          <div class="ticker-fixed" id="range-ticks">
+            <button class="tick" data-day="7">7<small>days</small></button>
+            <button class="tick" data-day="30">30<small>days</small></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls-row unit" id="topic-unit" hidden>
+      <div class="tape-shell">
+        <div class="tape-fixed" id="topic-anchor">
+          <!-- the "anything" token stays put -->
+        </div>
+        <div class="tape" id="topic-chips">
+          <!-- topic tokens rendered from live data -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- our next event + this week's picks, populated from SITE.featured/SITE.curated -->
+  <div id="spotlight" hidden></div>
+
+  <main id="events">
+    <noscript>
+      <p class="status">PsyConnect lists in-person psychedelic &amp; consciousness
+      gatherings in London — browsing here needs JavaScript, but every event
+      also has its own page:</p>
+      <p class="status">
+        <a href="https://psyconnect.london/t/psychedelics/">psychedelics</a> ·
+        <a href="https://psyconnect.london/t/consciousness/">consciousness</a> ·
+        <a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a> ·
+        <a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a> ·
+        <a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a>
+      </p>
+    </noscript>
+    <div class="status status-loading" id="loading-state" aria-live="polite" aria-busy="true">
+      <div class="loader" aria-hidden="true">
+        <span class="loader-ring r1"></span>
+        <span class="loader-ring r2"></span>
+        <span class="loader-ring r3"></span>
+        <span class="loader-core"></span>
+        <span class="loader-spark s1"></span>
+        <span class="loader-spark s2"></span>
+        <span class="loader-spark s3"></span>
+        <span class="loader-spark s4"></span>
+      </div>
+      <p class="loading-msg" id="loading-msg">gathering events…</p>
+    </div>
+  </main>
+
+  <section id="map-view" hidden>
+    <div id="map"></div>
+  </section>
+
+  <footer>
+    <nav class="seo-nav" id="seo-nav" aria-label="topics"></nav>
+    <p id="last-updated" hidden></p>
+    <p>made in london · <a href="about/">about</a> · <a href="privacy/">privacy</a></p>
+  </footer>
+
+  <nav class="bottom-tabs" id="bottom-tabs" aria-label="views">
+    <button class="key view-key lit" data-view="browse">browse</button>
+    <button class="key view-key" data-view="tonight">tonight</button>
+    <button class="key view-key" data-view="map">map</button>
+  </nav>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
