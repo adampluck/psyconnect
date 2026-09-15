@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <title>RITMO DO SOL: Afro-House/Brazilian infused Saturday Night Dance &amp; Cacao — PsyConnect</title>
+  <meta name="description" content="Afro-house and Brazilian rhythms with live percussion and a cacao ceremony in Hackney.">
+  <link rel="canonical" href="https://psyconnect.london/e/ritmo-do-sol-afro-house-brazilian-infused-saturday-night-dance-cacao/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="RITMO DO SOL: Afro-House/Brazilian infused Saturday Night Dance &amp; Cacao — PsyConnect">
+  <meta property="og:description" content="Afro-house and Brazilian rhythms with live percussion and a cacao ceremony in Hackney.">
+  <meta property="og:url" content="https://psyconnect.london/e/ritmo-do-sol-afro-house-brazilian-infused-saturday-night-dance-cacao/">
+  <meta property="og:image" content="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1192767724%2F82236935953%2F1%2Foriginal.20260905-130309?crop=focalpoint&amp;fit=crop&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.5&amp;fp-y=0.5&amp;s=512c5ec45e7a1285c341290c3190f6bb">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "RITMO DO SOL: Afro-House/Brazilian infused Saturday Night Dance & Cacao", "startDate": "2026-09-19T18:00:00+00:00", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "The Amadeus", "address": {"@type": "PostalAddress", "streetAddress": "50 Shirland Road, London, W9 2JA", "addressLocality": "London", "addressCountry": "GB"}}, "url": "https://psyconnect.london/e/ritmo-do-sol-afro-house-brazilian-infused-saturday-night-dance-cacao/", "inLanguage": "en-GB", "endDate": "2026-09-19T21:30:00+00:00", "image": ["https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1192767724%2F82236935953%2F1%2Foriginal.20260905-130309?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=512c5ec45e7a1285c341290c3190f6bb"], "description": "AFRO-HOUSE/BRAZILIAN/LATIN infused Ecstatic Dance / Sober Rave & Cacao Ceremony +Live Percussion from Romario + Wellness Space + Social", "organizer": {"@type": "Organization", "name": "Ecstatic Dance London & URUBU Wellbeing Events"}, "offers": {"@type": "Offer", "price": "16.96", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "url": "https://www.eventbrite.co.uk/e/ritmo-do-sol-afro-housebrazilian-infused-saturday-night-dance-cacao-tickets-1999616311215"}}</script>
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <nav class="static-crumbs" aria-label="breadcrumb">
+    <a href="https://psyconnect.london/">PsyConnect</a>
+    <span aria-hidden="true">/</span>
+    <span>event</span>
+  </nav>
+  <article class="static-event">
+    <p class="static-kicker">in person · London · west London</p>
+    <h1 class="static-title">RITMO DO SOL: Afro-House/Brazilian infused Saturday Night Dance &amp; Cacao</h1>
+    <p class="static-hook">Afro-house and Brazilian rhythms with live percussion and a cacao ceremony in Hackney.</p>
+    <dl class="static-facts"><div class="static-fact"><dt>When</dt><dd>Saturday 19 September 2026 · 19:00</dd></div><div class="static-fact"><dt>Where</dt><dd>The Amadeus, 50 Shirland Road, London, W9 2JA</dd></div><div class="static-fact"><dt>Price</dt><dd>£16.96–£27.8</dd></div><div class="static-fact"><dt>Host</dt><dd>Ecstatic Dance London &amp; URUBU Wellbeing Events</dd></div></dl>
+    <p class="static-chips"><a class="static-chip" href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></p>
+    <figure class="static-figure"><img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.evbuc.com%2Fhttps%253A%252F%252Fcdn.evbuc.com%252Fimages%252F1192767724%252F82236935953%252F1%252Foriginal.20260905-130309%3Fcrop%3Dfocalpoint%26fit%3Dcrop%26auto%3Dformat%252Ccompress%26q%3D75%26sharp%3D10%26fp-x%3D0.5%26fp-y%3D0.5%26s%3D512c5ec45e7a1285c341290c3190f6bb&amp;w=1200&amp;output=webp&amp;q=75" alt="RITMO DO SOL: Afro-House/Brazilian infused Saturday Night Dance &amp; Cacao" loading="lazy" onerror="this.onerror=null;this.src='https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1192767724%2F82236935953%2F1%2Foriginal.20260905-130309?crop=focalpoint&amp;fit=crop&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.5&amp;fp-y=0.5&amp;s=512c5ec45e7a1285c341290c3190f6bb'"></figure>
+    <div class="static-prose"><p>AFRO-HOUSE/BRAZILIAN/LATIN infused  Ecstatic Dance / Sober Rave &amp; Cacao Ceremony
++Live Percussion from Romario + Wellness Space + Social</p></div>
+    <p class="static-cta-wrap">
+      <a class="static-cta" href="https://www.eventbrite.co.uk/e/ritmo-do-sol-afro-housebrazilian-infused-saturday-night-dance-cacao-tickets-1999616311215?utm_source=psyconnect.london&amp;utm_medium=referral" rel="noopener"
+         data-goatcounter-click="out/ecstatic-dance-london-urubu-wellbeing-events"
+         data-goatcounter-title="RITMO DO SOL: Afro-House/Brazilian infused Saturday Night Dance &amp; Cacao">
+        tickets &amp; details ↗
+      </a>
+    </p>
+    <p class="static-back">
+      <a href="https://psyconnect.london/">← more in-person gatherings on PsyConnect</a>
+    </p>
+  </article>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+  </footer>
+</body>
+</html>
