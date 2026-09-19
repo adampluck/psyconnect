@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <title>HypnoConstellations™ Certified Practitioner Training ONLINE — PsyConnect</title>
+  <meta name="description" content="Learn HypnoConstellations™ from developer Illi Adato: hypnotherapy meets family constellations for systemic healing.">
+  <link rel="canonical" href="https://psyconnect.london/e/hypnoconstellationstm-certified-practitioner-training-online/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="HypnoConstellations™ Certified Practitioner Training ONLINE — PsyConnect">
+  <meta property="og:description" content="Learn HypnoConstellations™ from developer Illi Adato: hypnotherapy meets family constellations for systemic healing.">
+  <meta property="og:url" content="https://psyconnect.london/e/hypnoconstellationstm-certified-practitioner-training-online/">
+  <meta property="og:image" content="https://psyconnect.london/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "HypnoConstellations\u2122 Certified Practitioner Training ONLINE", "startDate": "2026-10-26T18:30:00+00:00", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "London", "address": {"@type": "PostalAddress", "streetAddress": "London, UK", "addressLocality": "London", "addressCountry": "GB"}}, "url": "https://psyconnect.london/e/hypnoconstellationstm-certified-practitioner-training-online/", "inLanguage": "en-GB", "endDate": "2026-10-28T21:00:00+00:00", "description": "Spiritual Vibes **Expand Your Practice with HypnoConstellations\u2122** **A Transformational Training for Coaches, Therapists & Counsellors** Step into the world of **HypnoConstellations\u2122**\u2014an innovative modality that blends the profound insights of Systemic & Family Constellations with the deep inner access of Hypnotherapy. Developed by **Illi Adato**, this method offers a new dimension of therapeutic tools, designed to empower practitioners to work with ancestral, subconscious, and systemic pattern", "organizer": {"@type": "Organization", "name": "Spiritual Vibes"}}</script>
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <nav class="static-crumbs" aria-label="breadcrumb">
+    <a href="https://psyconnect.london/">PsyConnect</a>
+    <span aria-hidden="true">/</span>
+    <span>event</span>
+  </nav>
+  <article class="static-event">
+    <p class="static-kicker">in person · London</p>
+    <h1 class="static-title">HypnoConstellations™ Certified Practitioner Training ONLINE</h1>
+    <p class="static-hook">Learn HypnoConstellations™ from developer Illi Adato: hypnotherapy meets family constellations for systemic healing.</p>
+    <dl class="static-facts"><div class="static-fact"><dt>When</dt><dd>Monday 26 October 2026 · 18:30</dd></div><div class="static-fact"><dt>Where</dt><dd>London, UK</dd></div><div class="static-fact"><dt>Host</dt><dd>Spiritual Vibes</dd></div></dl>
+    <p class="static-chips"><a class="static-chip" href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><a class="static-chip" href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></p>
+    
+    <div class="static-prose"><p>Spiritual Vibes
+**Expand Your Practice with HypnoConstellations™**
+**A Transformational Training for Coaches, Therapists &amp; Counsellors**
+Step into the world of **HypnoConstellations™**—an innovative modality that blends the profound insights of Systemic &amp; Family Constellations with the deep inner access of Hypnotherapy.</p><p>Developed by **Illi Adato**, this method offers a new dimension of therapeutic tools, designed to empower practitioners to work with ancestral, subconscious, and systemic patterns—all without the need for a physical therapy room or external representatives.</p><p>**Why HypnoConstellations™?**</p><p>* Work systemically without a therapy room
+* Integrate subconscious, ancestral, and systemic healing
+* Facilitate deep transformation remotely or in-person
+* Expand your skillset as a coach, therapist, or counsellor</p><p>Whether you’re looking to enhance your existing practice or explore new therapeutic territory, HypnoConstellations™ gives you powerful tools for real, lasting change.</p><p>**Practitioner Training Pathway**
+This certified training is structured across three immersive modules, designed to progressively build your skills and confidence in facilitating HypnoConstellations™ with clients.</p><p>**Module 1: INITIATION**
+*October 26–28, 2026*
+Learn to guide inner constellations using hypnotic and systemic methods. This is the foundation of the Practitioner pathway.</p><p>**Module 2: STRUCTURE &amp; PHENOMENON**
+*November 9–11, 2026*
+Dive deeper into the architecture of systemic healing, and how to read and respond to inner phenomena.</p><p>**Module 3: IN THE REALM OF SPIRIT**
+*December 8–10, 2026*
+Explore transpersonal and spiritual dimensions of the work. This final module brings everything together into a cohesive and grounded practice.</p><p>**CERTIFICATION**
+**Complete all three modules** to become a **Certified HypnoConstellations™ Practitioner**, endorsed by the London School of Systemic &amp; Family Constellations.</p><p>* Live Zoom training
+* Peer practice between modules</p><p>**Ready to Bring Systemic Depth into Your Practice?**
+Join a global community of healing professionals integrating HypnoConstellations™ into their work—and discover a modality that speaks directly to the hidden roots of transformation.</p></div>
+    <p class="static-cta-wrap">
+      <a class="static-cta" href="https://www.meetup.com/spiritual-vibes/events/314188996/?utm_source=psyconnect.london&amp;utm_medium=referral" rel="noopener"
+         data-goatcounter-click="out/spiritual-vibes"
+         data-goatcounter-title="HypnoConstellations™ Certified Practitioner Training ONLINE">
+        tickets &amp; details ↗
+      </a>
+    </p>
+    <p class="static-back">
+      <a href="https://psyconnect.london/">← more in-person gatherings on PsyConnect</a>
+    </p>
+  </article>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+  </footer>
+</body>
+</html>

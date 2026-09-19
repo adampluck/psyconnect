@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <title>Healing &amp; wellbeing events in London — PsyConnect</title>
+  <meta name="description" content="Gentle practices for nervous systems that live in a loud city. Bodywork, breath, rest and care — in person, at a human pace.">
+  <link rel="canonical" href="https://psyconnect.london/t/healing/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Healing &amp; wellbeing events in London — PsyConnect">
+  <meta property="og:description" content="Gentle practices for nervous systems that live in a loud city. Bodywork, breath, rest and care — in person, at a human pace.">
+  <meta property="og:url" content="https://psyconnect.london/t/healing/">
+  <meta property="og:image" content="https://psyconnect.london/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <nav class="static-crumbs" aria-label="breadcrumb">
+    <a href="https://psyconnect.london/">PsyConnect</a>
+    <span aria-hidden="true">/</span>
+    <span>topic</span>
+  </nav>
+  <header class="static-list-head">
+    <p class="static-kicker">in person · London</p>
+    <h1 class="static-title">Healing &amp; wellbeing events in London</h1>
+    <div class="static-intro">
+      <p class="static-lead">Gentle practices for nervous systems that live in a loud city. Bodywork, breath, rest and care — in person, at a human pace.</p><p class="static-lead">166 upcoming right now — times, venues and tickets, refreshed several times a day.</p>
+    </div>
+  </header>
+  <ol class="static-list">
+    
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/all-night-gong-journey/">✨ ALL NIGHT GONG JOURNEY ✨</a>
+      <p class="static-list-meta">Sat 19 Sep · 21:30 · Colet House · <span class="static-list-org">The Study Society</span></p>
+      <p class="static-list-hook">All-night gong immersion with Wiola Diamondheart and Mark Rowland for autumn equinox reset and renewal.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/vortex-energetics-training-learn-the-skill-once-keep-the-tools-for-life/">Vortex Energetics Training: Learn the skill once. Keep the tools for life.</a>
+      <p class="static-list-meta">Sun 20 Sep · 09:30 · Private residence · <span class="static-list-org">Hania Opienski</span></p>
+      <p class="static-list-hook">Learn Hania Opienski&#x27;s quantum tool for releasing emotional charge in minutes—skills you&#x27;ll use for life.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/surrender-to-freedom-half-day-inquiry-and-circling-immersion/">Surrender to Freedom (Half day Inquiry and Circling immersion)</a>
+      <p class="static-list-meta">Sun 20 Sep · 10:30 · Tooting Broadway Station · <span class="static-list-org">majikmoments</span></p>
+      <p class="static-list-hook">Circling practice exploring emotional release and authentic leadership with guided inquiry.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/introduction-to-relational-therapy-workshop/">Introduction to Relational Therapy Workshop</a>
+      <p class="static-list-meta">Sun 20 Sep · 11:00 · SE27 0LH · <span class="static-list-org">Kathy Miller - Family &amp; Dramatherapist</span></p>
+      <p class="static-list-hook">Kathy Miller&#x27;s dramatherapy workshop explores relational depth through creative psychotherapy exercises.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/tantric-sisterhood-a-women-s-only-full-day-tantra-workshop-20th-septembe/">Tantric Sisterhood | A Women&#x27;s-Only Full-Day Tantra Workshop | 20th September</a>
+      <p class="static-list-meta">Sun 20 Sep · 11:00 · Self-Retreat Studio · <span class="static-list-org">Ellinor Madeland</span></p>
+      <p class="static-list-hook">Weekend retreat exploring tantra, cacao ceremony, and authentic connection with women led by Ellinor Madeland.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/tantra-workshop-awaken-the-wild/">Tantra Workshop: Awaken the Wild</a>
+      <p class="static-list-meta">Sun 20 Sep · 11:45 · Surya Hot Yoga · <span class="static-list-org">Pia Ramsay / Tantra LifeWorks</span></p>
+      <p class="static-list-hook">Explore primal energy and reclaim a wilder dimension of sexuality with Pia Ramsay.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/breathe-unwind/">Breathe &amp; Unwind</a>
+      <p class="static-list-meta">Sun 20 Sep · 14:00 · We The Conscious® · <span class="static-list-org">The Psychedelic Society</span></p>
+      <p class="static-list-hook">Release trapped tension with conscious breathwork designed to reset your nervous system.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/outdoor-movement-in-wick-woodland/">Outdoor Movement in Wick Woodland</a>
+      <p class="static-list-meta">Sun 20 Sep · 14:00 · Wick Woodland · <span class="static-list-org">Moving Meditation</span></p>
+      <p class="static-list-hook">Move with Wick Woodland as your co-creator in an attunement practice that dissolves the boundary between body and landscape.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/immersive-neurodynamic-breathwork/">Immersive Neurodynamic Breathwork</a>
+      <p class="static-list-meta">Sun 20 Sep · 18:30 · Colet House · <span class="static-list-org">The Study Society</span></p>
+      <p class="static-list-hook">Release emotional blocks through guided neurodynamic breathwork and curated music with The Study Society.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/neurodynamic-breathwork/">NeuroDynamic Breathwork</a>
+      <p class="static-list-meta">Sun 20 Sep · 18:30 · Colet House · <span class="static-list-org">The Psychedelic Society</span></p>
+      <p class="static-list-hook">Intensive breathwork using neurodynamic techniques to activate deep healing and transformation.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/healing-soundbath-with-reiki/">Healing Soundbath with Reiki</a>
+      <p class="static-list-meta">Sun 20 Sep · 19:30 · Millers Way Project · <span class="static-list-org">Moon Haven</span></p>
+      <p class="static-list-hook">Reiki-infused soundbath at Moon Haven to reset your nervous system through vibration and guided relaxation.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/kundalini-yoga-meditation-monday-morning-weekly-group-class/">Kundalini Yoga &amp; Meditation Monday Morning Weekly Group Class</a>
+      <p class="static-list-meta">Mon 21 Sep · 10:00 · Plot 9 · <span class="static-list-org">YoMedSHealing</span></p>
+      <p class="static-list-hook">Kundalini yoga and gong baths to activate your energy and calm your mind every Monday morning.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/the-return-a-two-facilitator-kundalini-life-force-ceremony/">THE RETURN — A Two-Facilitator Kundalini Life Force Ceremony</a>
+      <p class="static-list-meta">Tue 22 Sep · 19:00 · Self-Retreat Studio · <span class="static-list-org">Enchanted Life by Maia</span></p>
+      <p class="static-list-hook">Maia and Monika reunite to guide a kundalini energy ceremony after six months apart.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/human-garage-fascia-maneuver-workshop/">Human Garage Fascia Maneuver Workshop</a>
+      <p class="static-list-meta">Tue 22 Sep · 19:00 · Colet House · <span class="static-list-org">The Study Society</span></p>
+      <p class="static-list-hook">Release trauma stored in fascia through self-applied movements and breathwork with Human Garage techniques.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/beyond-thinking-embodied-intelligence-experiments/">Beyond Thinking: Embodied Intelligence Experiments</a>
+      <p class="static-list-meta">Tue 22 Sep · 19:00 · Newspeak House (Newspeak Hall) · <span class="static-list-org">Euan McLean</span></p>
+      <p class="static-list-hook">Test whether moving your body unlocks better solutions than pure debate and reasoning.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/healing-soundbath-with-reiki-2026-09-22/">Healing Soundbath with Reiki</a>
+      <p class="static-list-meta">Tue 22 Sep · 20:00 · Millers Way Project · <span class="static-list-org">Moon Haven</span></p>
+      <p class="static-list-hook">Reiki-infused soundbath at Moon Haven to guide your nervous system back into balance.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/jin-mai-gong-qigong-8-week-course/">Jin Mai Gong Qigong (8-Week Course)</a>
+      <p class="static-list-meta">Thu 24 Sep · 18:30 · Colet House · <span class="static-list-org">The Study Society</span></p>
+      <p class="static-list-hook">Learn Jin Mai Gong with Natalia Miralles Huete to restore energy flow through traditional Chinese qigong exercises.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/ecstatic-dance-culture-women-s-dance-sound-healing-shoreditch/">Ecstatic Dance Culture ★ Women&#x27;s Dance ★ Sound Healing ★ Shoreditch</a>
+      <p class="static-list-meta">Thu 24 Sep · 19:00 · The Sanctuary &amp;Soul | Sauna &amp; Wellness Studio · <span class="static-list-org">Ecstatic Dance Culture</span></p>
+      <p class="static-list-hook">Full moon women&#x27;s ecstatic dance with sound healing at The Sanctuary in Shoreditch.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/healing-soundbath-with-reiki-2026-09-24/">Healing Soundbath with Reiki</a>
+      <p class="static-list-meta">Thu 24 Sep · 19:00 · Millers Way Project · <span class="static-list-org">Moon Haven</span></p>
+      <p class="static-list-hook">Sound bath and reiki to guide your nervous system into deep relaxation and restoration.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/expressive-movement/">Expressive Movement</a>
+      <p class="static-list-meta">Thu 24 Sep · 19:00 · St Anne&#x27;s Settlement Hall · <span class="static-list-org">Life Movements Ltd</span></p>
+      <p class="static-list-hook">Release tension through intuitive movement in a supportive community space.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/floating-sound-journey-gong-bath-meditation-in-hammocks-extended-1h-45-m/">Floating Sound Journey Gong Bath Meditation in Hammocks (EXTENDED 1h 45 min session)</a>
+      <p class="static-list-meta">Thu 24 Sep · 19:15 · Skylight Centre · <span class="static-list-org">Ecstatic Dance London</span></p>
+      <p class="static-list-hook">Extended gong bath in suspended hammocks designed to calm your nervous system through healing vibrations.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/evening-reset-somatic-yoga-at-plot-9/">Evening Reset: Somatic Yoga at Plot 9</a>
+      <p class="static-list-meta">Thu 24 Sep · 19:30 · Plot 9 · <span class="static-list-org">Flow State Healing</span></p>
+      <p class="static-list-hook">Somatic yoga in a community garden with nervous system regulation techniques from Flow State Healing.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/unique-combined-process-retreat/">Unique Combined Process Retreat</a>
+      <p class="static-list-meta">Fri 25 Sep · 09:00 · London · <span class="static-list-org">Spiritual Vibes</span></p>
+      <p class="static-list-hook">3-day retreat blending family constellations with plant-spirit ceremony for trauma release and spiritual awakening.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/hobina-community-choir/">HoBina community choir</a>
+      <p class="static-list-meta">Fri 25 Sep · 19:00 · 3A Cazenove Rd · <span class="static-list-org">Catarina Carvalho</span></p>
+      <p class="static-list-hook">Sing medicine music from around the world with Catarina Carvalho&#x27;s multilingual harmony choir.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/full-moon-cacao-rose-ceremony/">FULL MOON CACAO &amp; ROSE CEREMONY</a>
+      <p class="static-list-meta">Fri 25 Sep · 19:00 · The Twelfth House, Chingford Road, London, UK · <span class="static-list-org">Achyuta Priya Devi Dasi</span></p>
+      <p class="static-list-hook">Full moon cacao ceremony with rose, energy healing and sacred sound from Achyuta Priya Devi Dasi.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/gong-bath-healing-circle/">Gong Bath Healing Circle</a>
+      <p class="static-list-meta">Fri 25 Sep · 19:00 · Prana Voice - Holistic Well-Being · <span class="static-list-org">ReikiSoundHealing4All</span></p>
+      <p class="static-list-hook">Immerse in gong vibrations and reiki energy for deep sonic relaxation.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/gong-baths-meditation-sound-healing-events-london-autunm/">Gong Baths - Meditation Sound Healing Events London / Autunm</a>
+      <p class="static-list-meta">Fri 25 Sep · 19:15 · Leytonstone United Free Church · <span class="static-list-org">Mark &amp; Paul Cummings / Gong Meditation</span></p>
+      <p class="static-list-hook">Immersive gong vibrations guide you toward deep meditation and sonic healing.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/drop-in-tai-chi/">Drop-In Tai Chi</a>
+      <p class="static-list-meta">Sat 26 Sep · 10:00 · Colet House · <span class="static-list-org">The Study Society</span></p>
+      <p class="static-list-hook">Learn Cheng Man Ching&#x27;s 37-posture form with focus on meditation, breathing, and body-mind alignment.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/conscious-connected-breathwork/">Conscious Connected Breathwork</a>
+      <p class="static-list-meta">Sat 26 Sep · 11:00 · Plot 9 Maze Hill · <span class="static-list-org">YOUnited_Breath_Space</span></p>
+      <p class="static-list-hook">Guided breathwork in nature at Plot 9 Maze Hill to reset your nervous system and find calm.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/sex-club-london-weekend-retreat-i/">Sex Club: London - Weekend Retreat I</a>
+      <p class="static-list-meta">Sat 26 Sep · 11:00 · Here &amp; Now (N16) · <span class="static-list-org">The Psychedelic Society</span></p>
+      <p class="static-list-hook">Two-day guided journey exploring sexuality, desires and boundaries through embodied inquiry.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/the-golden-metamorphosis-reclaiming-your-metabolism-skin-and-vitality-in/">The Golden Metamorphosis: Reclaiming Your Metabolism, Skin, and Vitality in Your Queen Years</a>
+      <p class="static-list-meta">Sat 26 Sep · 14:00 · Tara Yoga Centre · <span class="static-list-org">Īśvara Temple</span></p>
+      <p class="static-list-hook">A fungi sensory circle exploring medicinal mushrooms and their biological intelligence.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/autumn-inversion-workshop-supporting-nepal-flash-flood-appeal/">Autumn Inversion Workshop supporting Nepal flash flood appeal</a>
+      <p class="static-list-meta">Sat 26 Sep · 14:00 · Harrow Arts Centre · <span class="static-list-org">The Inner Peace Foundation</span></p>
+      <p class="static-list-hook">Two-day yoga workshop raising funds for Nepal flood relief.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/sound-beneath-the-trees/">Sound Beneath the Trees</a>
+      <p class="static-list-meta">Sat 26 Sep · 14:00 · Hampstead Heath, London</p>
+      <p class="static-list-hook">Drum, crystal bowls, and spirit oils guide an autumn equinox ceremony under the full moon on Hampstead Heath.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/special-kundalini-celtic-kirtan/">𝕤𝕡𝕖𝕔𝕚𝕒𝕝 | Kundalini &amp; Celtic Kirtan</a>
+      <p class="static-list-meta">Sat 26 Sep · 15:00 · Om Being · <span class="static-list-org">Om Being</span></p>
+      <p class="static-list-hook">Kundalini kriyas guided by Clara Pople&#x27;s live vocals for deep somatic release and heart opening.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/music-as-medicine/">Music As Medicine</a>
+      <p class="static-list-meta">Sat 26 Sep · 18:00 · Colet House · <span class="static-list-org">The Study Society</span></p>
+      <p class="static-list-hook">Sanskrit kirtan with Sivani Mata Moon: ancient mantras and heartfelt instrumentation for collective healing.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/kundalini-activation-prismtm-deep-darkness-equinox-90-mins/">Kundalini Activation PRISM™ | Deep Darkness - Equinox 90 mins</a>
+      <p class="static-list-meta">Sat 26 Sep · 19:00 · Luv Yourself Space · <span class="static-list-org">Natalia Bareikis</span></p>
+      <p class="static-list-hook">Kundalini activation ceremony with Natalia Bareikis in total darkness during equinox.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/autumn-herbal-workshop/">Autumn Herbal Workshop</a>
+      <p class="static-list-meta">Sun 27 Sep · 13:00 · London · <span class="static-list-org">Richelle Isaacs</span></p>
+      <p class="static-list-hook">Learn to make seasonal herbal remedies with Richelle Isaacs in this hands-on autumn workshop.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/special-beyond-asanas-session-1/">𝕤𝕡𝕖𝕔𝕚𝕒𝕝 | Beyond Asanas (Session 1)</a>
+      <p class="static-list-meta">Sun 27 Sep · 14:00 · Om Being · <span class="static-list-org">Om Being</span></p>
+      <p class="static-list-hook">Lucy Clifton takes yoga teachers beyond asana into mudras, pranayama, and mantra to deepen your instruction.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/breathwork-session-deep-darkness/">Breathwork Session | Deep Darkness</a>
+      <p class="static-list-meta">Sun 27 Sep · 14:00 · Luv Yourself Space · <span class="static-list-org">Natalia Bareikis</span></p>
+      <p class="static-list-hook">Natalia Bareikis guides kundalini activation through deep breathwork in darkness.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/primal-play-london-autumn-edition/">🦁 𝐏𝐑𝐈𝐌𝐀𝐋 𝐏𝐋𝐀𝐘 𝐋𝐎𝐍𝐃𝐎𝐍 - Autumn Edition 🍁🦁</a>
+      <p class="static-list-meta">Sun 27 Sep · 14:00 · Self-Retreat Studio · <span class="static-list-org">Embodied Empathy</span></p>
+      <p class="static-list-hook">Trauma-informed embodied empathy circle with conscious touch and authentic expression in a body-positive space.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/cosmic-craft-circle/">Cosmic Craft Circle</a>
+      <p class="static-list-meta">Sun 27 Sep · 14:00 · HEINMA studio · <span class="static-list-org">Cosmic Creative Events</span></p>
+      <p class="static-list-hook">Women&#x27;s craft circle where you stitch, paint, or journal alongside kindred spirits for 1.5 hours.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/reset-the-nervous-system-with-tre/">Reset The Nervous System With TRE</a>
+      <p class="static-list-meta">Sun 27 Sep · 15:30 · The ARC · <span class="static-list-org">The Psychedelic Society</span></p>
+      <p class="static-list-hook">Tremor-based nervous system reset using TRE somatic practices with The Psychedelic Society.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/september-full-moon-fire-circle/">September Full Moon Fire Circle</a>
+      <p class="static-list-meta">Sun 27 Sep · 16:00 · That Healing Room · <span class="static-list-org">NOMNOY - As I Receive, I Give</span></p>
+      <p class="static-list-hook">Release what no longer serves you under the September full moon in an Aries fire circle.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/lunar-gatherings-a-full-moon-ceremony-to-connect-transform-and-release/">Lunar Gatherings - A full moon ceremony to connect, transform, and release</a>
+      <p class="static-list-meta">Sun 27 Sep · 17:00 · OMUK · <span class="static-list-org">UNI Mindfulness and Wellbeing</span></p>
+      <p class="static-list-hook">Full moon ritual with cacao, fire and ecstatic dance to release what no longer serves.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/human-garage-fascia-maneuver-workshop-2026-09-29/">Human Garage Fascia Maneuver Workshop</a>
+      <p class="static-list-meta">Tue 29 Sep · 19:00 · Colet House · <span class="static-list-org">The Study Society</span></p>
+      <p class="static-list-hook">Release stuck trauma and tension through Human Garage&#x27;s self-applied fascia maneuver techniques.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/healing-soundbath-with-reiki-2026-09-29/">Healing Soundbath with Reiki</a>
+      <p class="static-list-meta">Tue 29 Sep · 20:00 · Millers Way Project · <span class="static-list-org">Moon Haven</span></p>
+      <p class="static-list-hook">Immerse yourself in sound frequencies and reiki touch to reset your nervous system.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/movement-lab-taster/">Movement lab taster</a>
+      <p class="static-list-meta">Wed 30 Sep · 18:30 · 21d Ellingfort Road · <span class="static-list-org">Moving Meditation</span></p>
+      <p class="static-list-hook">Learn somatic movement from Moving Meditation to feel your questions in your body.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/breathing-with-brothers/">Breathing with Brothers</a>
+      <p class="static-list-meta">Wed 30 Sep · 19:00 · London</p>
+      <p class="static-list-hook">Guided breathwork for men seeking deeper presence and emotional connection.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/out-of-your-head-into-your-body-a-12-week-somatic-mindfulness-journey/">Out of Your Head, Into Your Body: a 12-Week Somatic Mindfulness Journey</a>
+      <p class="static-list-meta">Wed 30 Sep · 19:00 · Mayflower TRA Hall · <span class="static-list-org">Dr Alessio Platania</span></p>
+      <p class="static-list-hook">Dr Alessio Platania&#x27;s 12-week somatic journey reconnects you with your body and aliveness through mindfulness.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/conscious-connected-breathwork-breath-of-remembrance/">Conscious Connected Breathwork - Breath of Remembrance</a>
+      <p class="static-list-meta">Thu 1 Oct · 18:10 · Colet House · <span class="static-list-org">The Study Society</span></p>
+      <p class="static-list-hook">Three-hour conscious connected breathwork journey to release suppressed emotions and reconnect with forgotten parts of yourself.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/culture-remix-voice-song-circle/">Culture Remix: Voice &amp; Song Circle</a>
+      <p class="static-list-meta">Thu 1 Oct · 19:00 · Colet House · <span class="static-list-org">The Study Society</span></p>
+      <p class="static-list-hook">Jimi Lyons leads fortnightly voice circles blending song, breath and group harmony with no experience needed.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/expressive-movement-2026-10-01/">Expressive Movement</a>
+      <p class="static-list-meta">Thu 1 Oct · 19:00 · St Anne&#x27;s Settlement Hall · <span class="static-list-org">Life Movements Ltd</span></p>
+      <p class="static-list-hook">Somatic movement and ecstatic dance to release tension and reconnect with your body.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/system-reset-grounding-exercises-guided-meditation-gong-sound-journey-in/">System Reset - Grounding Exercises, Guided Meditation, Gong Sound Journey in Hammocks or on Padded Floor Mats</a>
+      <p class="static-list-meta">Thu 1 Oct · 19:15 · Skylight Centre · <span class="static-list-org">Ecstatic Dance London</span></p>
+      <p class="static-list-hook">Nervous system reset via gong sound bath, guided meditation, and grounding in hammocks.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/ihridaya-taro/">ihridaya &amp; Taro</a>
+      <p class="static-list-meta">Fri 2 Oct · 19:15 · St Lukes Church · <span class="static-list-org">ihridaya and friends</span></p>
+      <p class="static-list-hook">Immersive sound bath with crystal bowls and gong in a sacred church space.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/men-s-breathwork-journey/">Men&#x27;s Breathwork Journey</a>
+      <p class="static-list-meta">Sat 3 Oct · 09:00 · We The Conscious® · <span class="static-list-org">The Psychedelic Society</span></p>
+      <p class="static-list-hook">Conscious connected breathwork for emotional healing and male mental health.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/embodying-life-a-weekend-of-ancestral-connections/">Embodying Life - A weekend of Ancestral Connections</a>
+      <p class="static-list-meta">Sat 3 Oct · 09:30 · St Anne&#x27;s Settlement Hall · <span class="static-list-org">Life Movements Ltd</span></p>
+      <p class="static-list-hook">Explore ancestral healing and embodiment through systemic constellations this weekend.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/drop-in-tai-chi-2026-10-03/">Drop-In Tai Chi</a>
+      <p class="static-list-meta">Sat 3 Oct · 10:00 · Colet House · <span class="static-list-org">The Study Society</span></p>
+      <p class="static-list-hook">Learn Cheng Man Ching&#x27;s 37-posture form with breathing work and Qigong for calm and clarity.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/community-breathwork/">Community Breathwork</a>
+      <p class="static-list-meta">Sat 3 Oct · 11:00 · 4-4-2 Together CIC · <span class="static-list-org">YOUnited_Breath_Space</span></p>
+      <p class="static-list-hook">Guided conscious connected breathwork to release tension and shift your nervous system.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/grandfather-ceremony-the-path-of-the-heart/">Grandfather Ceremony - The Path of the Heart</a>
+      <p class="static-list-meta">Sat 3 Oct · 11:00 · Lambourne End · <span class="static-list-org">Rooted Rise</span></p>
+      <p class="static-list-hook">Ancestral healing ceremony with Rooted Rise at Lambourne End exploring heart medicine and shamanic practice.</p>
+    </li>
+    <li class="static-list-item">
+      <a class="static-list-title" href="https://psyconnect.london/e/monthly-sounding-circle-w-nyx/">𝙢𝙤𝙣𝙩𝙝𝙡𝙮 | Sounding Circle w/ NYX</a>
+      <p class="static-list-meta">Sat 3 Oct · 14:00 · Om Being · <span class="static-list-org">Om Being</span></p>
+      <p class="static-list-hook">Merge your voice with others in Sian O&#x27;Gorman&#x27;s monthly drone choir to synchronise breath and nervous systems.</p>
+    </li>
+  </ol>
+  <p class="static-back">
+    <a href="https://psyconnect.london/">← all of PsyConnect</a>
+  </p>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+  </footer>
+</body>
+</html>

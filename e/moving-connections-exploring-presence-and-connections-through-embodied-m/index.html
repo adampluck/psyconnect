@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <title>Moving Connections - Exploring presence and connections through embodied movement — PsyConnect</title>
+  <meta name="description" content="Freestyle partner dance and embodied movement to explore presence and connection without words.">
+  <link rel="canonical" href="https://psyconnect.london/e/moving-connections-exploring-presence-and-connections-through-embodied-m/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Moving Connections - Exploring presence and connections through embodied movement — PsyConnect">
+  <meta property="og:description" content="Freestyle partner dance and embodied movement to explore presence and connection without words.">
+  <meta property="og:url" content="https://psyconnect.london/e/moving-connections-exploring-presence-and-connections-through-embodied-m/">
+  <meta property="og:image" content="https://uploads.tickettailorassets.com/c_scale,w_800/v1/production/userfiles/vmuofsrqjfmfp2wdzvzv.jpg?_a=BAAHWXDQ">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "Moving Connections - Exploring presence and connections through embodied movement", "startDate": "2026-09-22T17:45:00+00:00", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "Whittington Park Community Centre", "address": {"@type": "PostalAddress", "streetAddress": "Whittington Park Community Centre, N19 4RS", "addressLocality": "London", "addressCountry": "GB"}}, "url": "https://psyconnect.london/e/moving-connections-exploring-presence-and-connections-through-embodied-m/", "inLanguage": "en-GB", "endDate": "2026-09-22T20:30:00+00:00", "image": ["https://uploads.tickettailorassets.com/c_scale,w_800/v1/production/userfiles/vmuofsrqjfmfp2wdzvzv.jpg?_a=BAAHWXDQ"], "description": "Welcome to an evening of embodied movement and heartfelt presence, inviting us to explore deeper connection with ourselves and others, with openness and curiosity.. Everybody welcome! Please Note: New Venue! We are in a new venue this week, exploring how it feels and whether it works for us all - excited to see you there, if you can make it! Whittington Park Community Centre is just 8 mins walk from Upper Holloway Station, with easy parking and buses. Inspired by various freestyle movement and p", "organizer": {"@type": "Organization", "name": "Whittington Park Community Centre"}, "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "url": "https://www.tickettailor.com/events/dancelondon/583732?date=2026-09-22"}}</script>
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <nav class="static-crumbs" aria-label="breadcrumb">
+    <a href="https://psyconnect.london/">PsyConnect</a>
+    <span aria-hidden="true">/</span>
+    <span>event</span>
+  </nav>
+  <article class="static-event">
+    <p class="static-kicker">in person · London · north London</p>
+    <h1 class="static-title">Moving Connections - Exploring presence and connections through embodied movement</h1>
+    <p class="static-hook">Freestyle partner dance and embodied movement to explore presence and connection without words.</p>
+    <dl class="static-facts"><div class="static-fact"><dt>When</dt><dd>Tuesday 22 September 2026 · 18:45</dd></div><div class="static-fact"><dt>Where</dt><dd>Whittington Park Community Centre, Whittington Park Community Centre, N19 4RS</dd></div><div class="static-fact"><dt>Price</dt><dd>Free</dd></div><div class="static-fact"><dt>Host</dt><dd>Whittington Park Community Centre</dd></div></dl>
+    <p class="static-chips"><a class="static-chip" href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a></p>
+    <figure class="static-figure"><img src="https://wsrv.nl/?url=https%3A%2F%2Fuploads.tickettailorassets.com%2Fc_scale%2Cw_800%2Fv1%2Fproduction%2Fuserfiles%2Fvmuofsrqjfmfp2wdzvzv.jpg%3F_a%3DBAAHWXDQ&amp;w=1200&amp;output=webp&amp;q=75" alt="Moving Connections - Exploring presence and connections through embodied movement" loading="lazy" onerror="this.onerror=null;this.src='https://uploads.tickettailorassets.com/c_scale,w_800/v1/production/userfiles/vmuofsrqjfmfp2wdzvzv.jpg?_a=BAAHWXDQ'"></figure>
+    <div class="static-prose"><p>Welcome to an evening of embodied movement and heartfelt presence, inviting us to explore deeper connection with ourselves and others, with openness and curiosity.. Everybody welcome! Please Note: New Venue! We are in a new venue this week, exploring how it feels and whether it works for us all - excited to see you there, if you can make it! Whittington Park Community Centre is just 8 mins walk from Upper Holloway Station, with easy parking and buses. Inspired by various freestyle movement and partner dance practices, Moving Connections is a chance to move and be moved, to relax into our bodies and to explore connections through simple exercises that support us to meet and connect without words, in a light and embodied way. Everyone is welcome! There&#x27;s no skills or experience needed - just an open mind, a little curiosity and the willingness to have a go. Schedule: Please arrive before 7pm so we can share the journey together. We&#x27;ll start with a gentle warm up before being guided through a series of simple exercises that invite us to connect with ourselves and others in a heartfelt and curious way. We&#x27;ll then move into a free-flowing space to explore as we choose, before finishing in a circle with time for sharing and then finally some time after that for snuggles and chilling out together if we feel. 6.45pm : Doors open - Welcome to arrive! 7.00pm : Opening circle - Introductions and guidelines 7.15pm : Guided exercises and movements in pairs, small groups or alone 8.00pm : Free-flow movement space with live violin! 9.00pm : Closing circle 9.15pm : Time to hang out together 9.45pm : Event Ends About Julia Julia&#x27;s work is inspired by various movement systems such as partner dance, 5 Rhythms, Contact Improvisation and Ecstatic Dance through which she has been developing her own experience and understanding of dance, connection and the power of movement to bring us into the present moment and explore our relationship to ourselves and our world. Julia has been holding Moving Connections sessions weekly in London since 2019, and she is the creator and manager of Rumble festival, a conscious dance event that combines many different forms of movement and therapeutic practices that enable us to explore our inner and outer worlds in a safe and supportive environment. Julia has also been teaching partner dancing for over 18 years and is the founder of London&#x27;s Brazilian Forró night, Forró Family . Julia is passionate about creating community in the simplest and most accessible way, welcoming all that we bring and encouraging authentic and open relating in all its forms. Please note: Please arrive before 7pm as it&#x27;s important we are all present for the complete session. We recommend dancing with bare feet or in flat indoor shoes. There are limited places and we cannot guarantee entry at the door - Book in advance to reserve your place. What to bring: Comfy clothes that are easy to move in, including a few layers in case you get hot/cold. Water bottle - we can refill water in the venue. IMPORTANT This event is alcohol, smoke and drug free. Thank-you for your care to hold this safe space together. Please respect everyone&#x27;s choice for physical contact or connection. We are all free to choose with who, when and how we&#x27;d like to connect and we ask everyone to listen carefully and trust each other to say &quot;no&quot;. We appreciate a &quot;no&quot; as a gift of honesty and self-care. Thank-you for being you and for being brave and showing up! Lower priced tickets We can offer a few lower-priced tickets for those who are not in a position to afford the Standard price. Please get in touch if you&#x27;d like more info on those. Thanks so much. Crew! We offer a free event to our invaluable crew who offer 3 x 30mins to help set up from 6pm and pack down at 9.15pm - Please let us know if you&#x27;re interested in joining our crew! Tickets are non -refundable as we are limited on numbers and cannot always resell tickets at short notice.</p></div>
+    <p class="static-cta-wrap">
+      <a class="static-cta" href="https://www.tickettailor.com/events/dancelondon/583732?date=2026-09-22&amp;utm_source=psyconnect.london&amp;utm_medium=referral" rel="noopener"
+         data-goatcounter-click="out/whittington-park-community-centre"
+         data-goatcounter-title="Moving Connections - Exploring presence and connections through embodied movement">
+        tickets &amp; details ↗
+      </a>
+    </p>
+    <p class="static-back">
+      <a href="https://psyconnect.london/">← more in-person gatherings on PsyConnect</a>
+    </p>
+  </article>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+  </footer>
+</body>
+</html>
