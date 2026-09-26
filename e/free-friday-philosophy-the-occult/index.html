@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <title>Free Friday Philosophy: The Occult — PsyConnect</title>
+  <meta name="description" content="Explore magic, mysticism and Neoplatonism with Philosophy Cafe London in Holborn.">
+  <link rel="canonical" href="https://psyconnect.london/e/free-friday-philosophy-the-occult/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free Friday Philosophy: The Occult — PsyConnect">
+  <meta property="og:description" content="Explore magic, mysticism and Neoplatonism with Philosophy Cafe London in Holborn.">
+  <meta property="og:url" content="https://psyconnect.london/e/free-friday-philosophy-the-occult/">
+  <meta property="og:image" content="https://secure.meetupstatic.com/photos/event/2/3/4/9/600_536289033.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "Free Friday Philosophy: The Occult", "startDate": "2026-10-30T18:50:00+00:00", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "London", "address": {"@type": "PostalAddress", "streetAddress": "London, UK", "addressLocality": "London", "addressCountry": "GB"}}, "url": "https://psyconnect.london/e/free-friday-philosophy-the-occult/", "inLanguage": "en-GB", "endDate": "2026-10-30T21:00:00+00:00", "image": ["https://secure.meetupstatic.com/photos/event/2/3/4/9/600_536289033.jpeg"], "description": "Philosophy Cafe London **Free Friday Philosophy** is an experiment jointly hosted by **Veins of London** and **Philosophy Cafe London**. The idea is to bring our two communities together for an evening of philosophy that is completely free to attend. We hope it might lead to further Free Friday Philosophy events, but for now we\u2019re seeing how this first one goes. As our first event falls on the night before Halloween, **The Occult** was an irresistible choice of subject. We normally explore what ", "organizer": {"@type": "Organization", "name": "Philosophy Cafe London", "url": "https://www.meetup.com/the-philosophy-cafe-london/"}, "performer": {"@type": "Organization", "name": "Philosophy Cafe London", "url": "https://www.meetup.com/the-philosophy-cafe-london/"}}</script>
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <nav class="static-crumbs" aria-label="breadcrumb">
+    <a href="https://psyconnect.london/">PsyConnect</a>
+    <span aria-hidden="true">/</span>
+    <a href="https://psyconnect.london/o/philosophy-cafe-london/">Philosophy Cafe London</a>
+    <span aria-hidden="true">/</span>
+    <span>event</span>
+  </nav>
+  <article class="static-event">
+    <p class="static-kicker">in person · London · central London</p>
+    <h1 class="static-title">Free Friday Philosophy: The Occult</h1>
+    <p class="static-hook">Explore magic, mysticism and Neoplatonism with Philosophy Cafe London in Holborn.</p>
+    <dl class="static-facts"><div class="static-fact"><dt>When</dt><dd>Friday 30 October 2026 · 18:50</dd></div><div class="static-fact"><dt>Where</dt><dd>London, UK</dd></div><div class="static-fact"><dt>Host</dt><dd><a href="https://psyconnect.london/o/philosophy-cafe-london/" data-goatcounter-click="host/philosophy-cafe-london">Philosophy Cafe London</a></dd></div></dl>
+    <p class="static-chips"><a class="static-chip" href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></p>
+    <figure class="static-figure"><img src="https://wsrv.nl/?url=https%3A%2F%2Fsecure.meetupstatic.com%2Fphotos%2Fevent%2F2%2F3%2F4%2F9%2F600_536289033.jpeg&amp;w=1200&amp;output=webp&amp;q=75" alt="Free Friday Philosophy: The Occult" loading="lazy" onerror="this.onerror=null;this.src='https://secure.meetupstatic.com/photos/event/2/3/4/9/600_536289033.jpeg'"></figure>
+    <div class="static-prose"><p>Philosophy Cafe London
+**Free Friday Philosophy** is an experiment jointly hosted by **Veins of London** and **Philosophy Cafe London**. The idea is to bring our two communities together for an evening of philosophy that is completely free to attend. We hope it might lead to further Free Friday Philosophy events, but for now we’re seeing how this first one goes.</p><p>As our first event falls on the night before Halloween, **The Occult** was an irresistible choice of subject.</p><p>We normally explore what might be called the official history of Western philosophy. This evening, we will look at its unofficial or shadow history: magic, mysticism, Kabbalah, alchemy and the search for hidden knowledge.</p><p>We will also explore the perhaps surprising links between these traditions and ideas now regarded as part of orthodox philosophy.
+At the centre of the evening will be the influence of Plato and Neoplatonism: the idea that the visible world reflects a higher spiritual reality, and that knowledge can lead us towards it.</p><p>We will follow some of these ideas through the Kabbalah, John Dee, the Hermetic Order of the Golden Dawn and Aleister Crowley, before considering their influence on modern paganism and Wicca.</p><p>After a short introduction, participants will propose and vote on questions to discuss in small groups before sharing their thoughts with the whole room.</p><p>You do not need to have studied philosophy or arrive with specialist knowledge. Curiosity and a willingness to join the dialogue are enough.</p><p>**Where:** Downstairs room, Square Pig, Holborn (private room)</p><p>**NB**: The event begins at 7pm, doors open at 6:50pm. Event ends at 9pm</p><p>**Format:** Participants propose questions → vote on questions → small-group discussions → share insights with the whole room</p><p>**Price: Free**</p></div>
+    <p class="static-cta-wrap">
+      <a class="static-cta" href="https://www.meetup.com/the-philosophy-cafe-london/events/316661716/?utm_source=psyconnect.london&amp;utm_medium=referral" rel="noopener"
+         data-goatcounter-click="out/philosophy-cafe-london"
+         data-goatcounter-title="Free Friday Philosophy: The Occult">
+        tickets &amp; details ↗
+      </a>
+    </p>
+    <p class="static-back">
+      <a href="https://psyconnect.london/">← more in-person gatherings on PsyConnect</a>
+    </p>
+  </article>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/cacao-ceremony/">cacao ceremony</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/breathwork/">breathwork</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/sound-bath/">sound bath</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/somatics/">somatic practice</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/contact-improvisation/">contact improvisation</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/qigong/">qigong</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/o/">hosts</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+    <p class="static-footer-home credit">Made by your friendly <a href="https://www.digitalhandyman.london" rel="noopener">digital handyman</a></p>
+  </footer>
+</body>
+</html>

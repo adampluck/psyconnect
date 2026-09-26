@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <title>T.W.C (Thursday Waves Community) — PsyConnect</title>
+  <meta name="description" content="Jason Rowe&#x27;s 5Rhythms practice at St Luke&#x27;s—move through five dynamic rhythms in sacred community space.">
+  <link rel="canonical" href="https://psyconnect.london/e/t-w-c-thursday-waves-community-2026-10-29/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="T.W.C (Thursday Waves Community) — PsyConnect">
+  <meta property="og:description" content="Jason Rowe&#x27;s 5Rhythms practice at St Luke&#x27;s—move through five dynamic rhythms in sacred community space.">
+  <meta property="og:url" content="https://psyconnect.london/e/t-w-c-thursday-waves-community-2026-10-29/">
+  <meta property="og:image" content="https://rhsilfaimkqlvzrxqjbq.supabase.co/storage/v1/object/public/event-images/38a675095dd040c997ec4d82d09e66420cb678c6708f906339b30ed668362fc3.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "T.W.C (Thursday Waves Community)", "startDate": "2026-10-29T20:00:00+00:00", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "London", "address": {"@type": "PostalAddress", "streetAddress": "St Luke's Holloway Hillmarton Rd, London N7 9JE", "addressLocality": "London", "addressCountry": "GB"}}, "url": "https://psyconnect.london/e/t-w-c-thursday-waves-community-2026-10-29/", "inLanguage": "en-GB", "endDate": "2026-10-29T22:00:00+00:00", "image": ["https://rhsilfaimkqlvzrxqjbq.supabase.co/storage/v1/object/public/event-images/38a675095dd040c997ec4d82d09e66420cb678c6708f906339b30ed668362fc3.jpg"], "description": "T.W.C (Thursday Waves Community) is a weekly 5Rhythms class held by Jason Rowe and Community Teachers - Judit Juhasz and Flow Vulk - 8-10pm in the intimate and graceful space of St Luke's Church, London N7 9RE. Using the dynamic movement practice we will renew and find fresh ways of being with ourselves, with another and in a group. The Wave is a physical practice combining the different energetic rhythms of Flowing, Staccato, Chaos, Lyrical and Stillness. Class & Group guidelines are as follows", "organizer": {"@type": "Organization", "name": "Judit & Sherron"}, "performer": {"@type": "Organization", "name": "Judit & Sherron"}}</script>
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <nav class="static-crumbs" aria-label="breadcrumb">
+    <a href="https://psyconnect.london/">PsyConnect</a>
+    <span aria-hidden="true">/</span>
+    <span>event</span>
+  </nav>
+  <article class="static-event">
+    <p class="static-kicker">in person · London · north London</p>
+    <h1 class="static-title">T.W.C (Thursday Waves Community)</h1>
+    <p class="static-hook">Jason Rowe&#x27;s 5Rhythms practice at St Luke&#x27;s—move through five dynamic rhythms in sacred community space.</p>
+    <dl class="static-facts"><div class="static-fact"><dt>When</dt><dd>Thursday 29 October 2026 · 20:00</dd></div><div class="static-fact"><dt>Where</dt><dd>St Luke&#x27;s Holloway Hillmarton Rd, London N7 9JE</dd></div><div class="static-fact"><dt>Host</dt><dd>Judit &amp; Sherron</dd></div></dl>
+    <p class="static-chips"><a class="static-chip" href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a><a class="static-chip" href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><a class="static-chip" href="https://psyconnect.london/p/5rhythms/">5Rhythms</a></p>
+    <figure class="static-figure"><img src="https://wsrv.nl/?url=https%3A%2F%2Frhsilfaimkqlvzrxqjbq.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fevent-images%2F38a675095dd040c997ec4d82d09e66420cb678c6708f906339b30ed668362fc3.jpg&amp;w=1200&amp;output=webp&amp;q=75" alt="T.W.C (Thursday Waves Community)" loading="lazy" onerror="this.onerror=null;this.src='https://rhsilfaimkqlvzrxqjbq.supabase.co/storage/v1/object/public/event-images/38a675095dd040c997ec4d82d09e66420cb678c6708f906339b30ed668362fc3.jpg'"></figure>
+    <div class="static-prose"><p>T.W.C (Thursday Waves Community) is a weekly 5Rhythms class held by Jason Rowe and Community Teachers - Judit Juhasz and Flow Vulk - 8-10pm in the intimate and graceful space of St Luke&#x27;s Church, London N7 9RE. Using the dynamic movement practice we will renew and find fresh ways of being with ourselves, with another and in a group. The Wave is a physical practice combining the different energetic rhythms of Flowing, Staccato, Chaos, Lyrical and Stillness. Class &amp; Group guidelines are as follows: 1. We create sacred space together 2. ⁠We gather to practice the 5Rhythms 3. ⁠We refrain from talking on the dance floor 4. ⁠We turn our phones off 5. ⁠We are respectful of ourselves, of others and of the space Doors open at 7.45pm and close at 8.15pm Tube: Caledonian Road and Buses 17, 259, 393, 91 stop outside. Price: Sliding scale £20 Inclusion / £16 Standard / £13 Reduced / £11 Concessions. No prebooking and all payment accepted by card or cash on the door The main space has a heated sprung oak floor and great sound system. We suggest you bring a full water bottle, and top ups can be accessed via the kitchen if needed. We also recommend you wear dance clothes underneath where possible and bring an extra layer. Any physical contact inside the church is consensual. This class was founded in 2011 by Jason. 5Rhythms - Connection. Creativity. Community. For any further information please email twc5rhythms@hotmail.com https://www.5rhythms.com/classes/ThursdayWaves-329</p></div>
+    <p class="static-cta-wrap">
+      <a class="static-cta" href="https://soullinkhub.com/event/71b3a691-d405-4e54-ab2e-b78029e51534?utm_source=psyconnect.london&amp;utm_medium=referral" rel="noopener"
+         data-goatcounter-click="out/judit-sherron"
+         data-goatcounter-title="T.W.C (Thursday Waves Community)">
+        tickets &amp; details ↗
+      </a>
+    </p>
+    <p class="static-back">
+      <a href="https://psyconnect.london/">← more in-person gatherings on PsyConnect</a>
+    </p>
+  </article>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/cacao-ceremony/">cacao ceremony</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/breathwork/">breathwork</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/sound-bath/">sound bath</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/somatics/">somatic practice</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/contact-improvisation/">contact improvisation</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/qigong/">qigong</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/o/">hosts</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+    <p class="static-footer-home credit">Made by your friendly <a href="https://www.digitalhandyman.london" rel="noopener">digital handyman</a></p>
+  </footer>
+</body>
+</html>

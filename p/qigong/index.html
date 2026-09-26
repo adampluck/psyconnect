@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <title>Qigong classes in London — PsyConnect</title>
+  <meta name="description" content="Qigong is a Chinese practice of slow, repeated movement coordinated with breath and attention. Sequences are short and undramatic — standing, shifting…">
+  <link rel="canonical" href="https://psyconnect.london/p/qigong/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Qigong classes in London — PsyConnect">
+  <meta property="og:description" content="Qigong is a Chinese practice of slow, repeated movement coordinated with breath and attention. Sequences are short and undramatic — standing, shifting…">
+  <meta property="og:url" content="https://psyconnect.london/p/qigong/">
+  <meta property="og:image" content="https://psyconnect.london/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "CollectionPage", "name": "Qigong classes in London", "description": "Qigong is a Chinese practice of slow, repeated movement coordinated with breath and attention. Sequences are short and undramatic \u2014 standing, shifting\u2026", "url": "https://psyconnect.london/p/qigong/"}, {"@type": "ItemList", "name": "Qigong classes in London", "numberOfItems": 7, "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://psyconnect.london/e/drop-in-tai-chi/", "name": "Drop-In Tai Chi"}, {"@type": "ListItem", "position": 2, "url": "https://psyconnect.london/e/jin-mai-gong-qigong-8-week-course/", "name": "Jin Mai Gong Qigong (8-Week Course)"}, {"@type": "ListItem", "position": 3, "url": "https://psyconnect.london/e/drop-in-tai-chi-2026-10-10/", "name": "Drop-In Tai Chi"}, {"@type": "ListItem", "position": 4, "url": "https://psyconnect.london/e/jin-mai-gong-qigong-8-week-course-2026-10-15/", "name": "Jin Mai Gong Qigong (8-Week Course)"}, {"@type": "ListItem", "position": 5, "url": "https://psyconnect.london/e/drop-in-tai-chi-2026-10-17/", "name": "Drop-In Tai Chi"}, {"@type": "ListItem", "position": 6, "url": "https://psyconnect.london/e/jin-mai-gong-qigong-8-week-course-2026-10-22/", "name": "Jin Mai Gong Qigong (8-Week Course)"}, {"@type": "ListItem", "position": 7, "url": "https://psyconnect.london/e/drop-in-tai-chi-2026-10-24/", "name": "Drop-In Tai Chi"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is qigong?", "acceptedAnswer": {"@type": "Answer", "text": "A practice from Chinese medicine combining gentle movement, breathing and focused attention, usually done standing. Where tai chi is a long martial form, qigong is a set of short repeatable exercises."}}, {"@type": "Question", "name": "Is qigong suitable for beginners or older people?", "acceptedAnswer": {"@type": "Answer", "text": "Yes \u2014 it's low impact, done standing or seated, and can be scaled to almost any level of mobility. Most London classes are mixed ability and welcome complete beginners."}}, {"@type": "Question", "name": "What should I wear to a qigong class?", "acceptedAnswer": {"@type": "Answer", "text": "Loose, warm clothing and flat shoes, or bare feet indoors. Outdoor classes carry on in most weather, so dress for standing still in it."}}]}]}</script>
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page static-listing">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <details class="static-filters"><summary class="key filters-key">filters</summary><div class="filters-panel"><a class="token" href="https://psyconnect.london/">everything on</a><div class="facet-row"><span class="legend facet-legend">what</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/t/psychedelics/">psychedelics</a><a class="token" href="https://psyconnect.london/t/consciousness/">consciousness</a><a class="token" href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><a class="token" href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><a class="token" href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></div></div><div class="facet-row"><span class="legend facet-legend">modality</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/p/cacao-ceremony/">cacao</a><a class="token" href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><a class="token token-child" href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><a class="token" href="https://psyconnect.london/p/breathwork/">breathwork</a><a class="token" href="https://psyconnect.london/p/sound-bath/">sound bath</a><a class="token" href="https://psyconnect.london/p/somatics/">somatic</a><a class="token" href="https://psyconnect.london/p/contact-improvisation/">contact improv</a><a class="token lit" href="https://psyconnect.london/p/qigong/" aria-current="page">qigong</a></div></div><div class="facet-row"><span class="legend facet-legend">who</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/o/">hosts</a></div></div></div></details>
+  <div class="static-ticker"><div class="ticker-shell"><div class="ticker"><span class="tick spent" aria-hidden="true">today<small>26</small></span><span class="tick spent" aria-hidden="true">tmrw<small>27</small></span><span class="tick spent" aria-hidden="true">mon<small>28</small></span><span class="tick spent" aria-hidden="true">tue<small>29</small></span><span class="tick spent" aria-hidden="true">wed<small>30</small></span><span class="tick spent" aria-hidden="true">thu<small>1</small></span><span class="tick spent" aria-hidden="true">fri<small>2</small></span><a class="tick" href="#d-2026-10-03">sat<small>3</small></a><span class="tick spent" aria-hidden="true">sun<small>4</small></span><span class="tick spent" aria-hidden="true">mon<small>5</small></span><span class="tick spent" aria-hidden="true">tue<small>6</small></span><span class="tick spent" aria-hidden="true">wed<small>7</small></span><a class="tick" href="#d-2026-10-08">thu<small>8</small></a><span class="tick spent" aria-hidden="true">fri<small>9</small></span><a class="tick" href="#d-2026-10-10">sat<small>10</small></a><span class="tick spent" aria-hidden="true">sun<small>11</small></span><span class="tick spent" aria-hidden="true">mon<small>12</small></span><span class="tick spent" aria-hidden="true">tue<small>13</small></span><span class="tick spent" aria-hidden="true">wed<small>14</small></span><a class="tick" href="#d-2026-10-15">thu<small>15</small></a><span class="tick spent" aria-hidden="true">fri<small>16</small></span><a class="tick" href="#d-2026-10-17">sat<small>17</small></a><span class="tick spent" aria-hidden="true">sun<small>18</small></span><span class="tick spent" aria-hidden="true">mon<small>19</small></span><span class="tick spent" aria-hidden="true">tue<small>20</small></span><span class="tick spent" aria-hidden="true">wed<small>21</small></span><a class="tick" href="#d-2026-10-22">thu<small>22</small></a><span class="tick spent" aria-hidden="true">fri<small>23</small></span><a class="tick" href="#d-2026-10-24">sat<small>24</small></a><span class="tick spent" aria-hidden="true">sun<small>25</small></span></div><div class="ticker-fixed"><a class="tick" href="https://psyconnect.london/p/qigong/7-days/">7<small>days</small></a><span class="tick cursor" aria-current="page">30<small>days</small></span></div></div></div>
+  <header class="static-list-head">
+    <p class="static-kicker">in person · London</p>
+    <h1 class="static-title">Qigong classes in London</h1>
+    <div class="static-intro">
+      <p class="static-lead">Qigong is a Chinese practice of slow, repeated movement coordinated with breath and attention. Sequences are short and undramatic — standing, shifting weight, opening and closing the arms — and are meant to be repeated rather than perfected.</p><p class="static-lead">London classes run in parks, community halls and studios, often early morning, and many are drop-in. Come in clothes you can move in; nothing more is needed.</p><p class="static-lead">7 on in the next 30 days — times, venues and tickets, refreshed several times a day.</p>
+    </div>
+    
+  </header>
+  <section class="day-group" id="d-2026-10-03"><h2 class="day-heading"><span>Saturday 3 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/drop-in-tai-chi/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Ffiles.elfsightcdn.com%2Feafe4a4d-3436-495d-b748-5bdce62d911d%2F247469c7-bb63-477b-a8e3-3d6e51afba9f%2FOD-Mar23-TaiChi-13.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/247469c7-bb63-477b-a8e3-3d6e51afba9f/OD-Mar23-TaiChi-13.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-morning"></span>10:00 – 11:00</p><h3>Drop-In Tai Chi</h3><p class="hook">Learn Cheng Man Ching&#x27;s 37-posture form with breathing work and Qigong for calm and clarity.</p><p class="venue">Colet House</p><p class="meta">£10–£15 · The Study Society · west</p></div></a></div></section><section class="day-group" id="d-2026-10-08"><h2 class="day-heading"><span>Thursday 8 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/jin-mai-gong-qigong-8-week-course/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Ffiles.elfsightcdn.com%2Feafe4a4d-3436-495d-b748-5bdce62d911d%2F47815b95-bbf0-4c74-b2e3-6bc0364d2344%2FJIn-Mai-Gong-Course_photo-JPG.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/47815b95-bbf0-4c74-b2e3-6bc0364d2344/JIn-Mai-Gong-Course_photo-JPG.jpg'"><span class="pick-mark" title="one of the richer listings this week">✦ pick</span></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>18:30 – 19:30</p><h3>Jin Mai Gong Qigong (8-Week Course)</h3><p class="hook">Learn Jin Mai Gong with Natalia Miralles Huete to unblock Qi and restore energy flow through ancient Chinese practice.</p><p class="venue">Colet House</p><p class="meta">£12.5–£105 · The Study Society · west</p></div></a></div></section><section class="day-group" id="d-2026-10-10"><h2 class="day-heading"><span>Saturday 10 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/drop-in-tai-chi-2026-10-10/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Ffiles.elfsightcdn.com%2Feafe4a4d-3436-495d-b748-5bdce62d911d%2F247469c7-bb63-477b-a8e3-3d6e51afba9f%2FOD-Mar23-TaiChi-13.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/247469c7-bb63-477b-a8e3-3d6e51afba9f/OD-Mar23-TaiChi-13.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-morning"></span>10:00 – 11:00</p><h3>Drop-In Tai Chi</h3><p class="hook">Learn Cheng Man Ching&#x27;s 37-posture form with focus on meditation, breathing, and vital energy.</p><p class="venue">Colet House</p><p class="meta">£10–£15 · The Study Society · west</p></div></a></div></section><section class="day-group" id="d-2026-10-15"><h2 class="day-heading"><span>Thursday 15 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/jin-mai-gong-qigong-8-week-course-2026-10-15/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Ffiles.elfsightcdn.com%2Feafe4a4d-3436-495d-b748-5bdce62d911d%2F47815b95-bbf0-4c74-b2e3-6bc0364d2344%2FJIn-Mai-Gong-Course_photo-JPG.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/47815b95-bbf0-4c74-b2e3-6bc0364d2344/JIn-Mai-Gong-Course_photo-JPG.jpg'"><span class="pick-mark" title="one of the richer listings this week">✦ pick</span></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>18:30 – 19:30</p><h3>Jin Mai Gong Qigong (8-Week Course)</h3><p class="hook">Learn Jin Mai Gong with Natalia Miralles Huete: ancient qigong to unblock energy and restore organ balance.</p><p class="venue">Colet House</p><p class="meta">£12.5–£105 · The Study Society · west</p></div></a></div></section><section class="day-group" id="d-2026-10-17"><h2 class="day-heading"><span>Saturday 17 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/drop-in-tai-chi-2026-10-17/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Ffiles.elfsightcdn.com%2Feafe4a4d-3436-495d-b748-5bdce62d911d%2F247469c7-bb63-477b-a8e3-3d6e51afba9f%2FOD-Mar23-TaiChi-13.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/247469c7-bb63-477b-a8e3-3d6e51afba9f/OD-Mar23-TaiChi-13.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-morning"></span>10:00 – 11:00</p><h3>Drop-In Tai Chi</h3><p class="hook">Learn Cheng Man Ching&#x27;s 37-posture form with breathing, Qigong, and meditation in West London.</p><p class="venue">Colet House</p><p class="meta">£10–£15 · The Study Society · west</p></div></a></div></section><section class="day-group" id="d-2026-10-22"><h2 class="day-heading"><span>Thursday 22 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/jin-mai-gong-qigong-8-week-course-2026-10-22/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Ffiles.elfsightcdn.com%2Feafe4a4d-3436-495d-b748-5bdce62d911d%2F47815b95-bbf0-4c74-b2e3-6bc0364d2344%2FJIn-Mai-Gong-Course_photo-JPG.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/47815b95-bbf0-4c74-b2e3-6bc0364d2344/JIn-Mai-Gong-Course_photo-JPG.jpg'"><span class="pick-mark" title="one of the richer listings this week">✦ pick</span></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>18:30 – 19:30</p><h3>Jin Mai Gong Qigong (8-Week Course)</h3><p class="hook">Learn Jin Mai Gong with Natalia Miralles Huete to unblock Qi and restore organ meridian flow.</p><p class="venue">Colet House</p><p class="meta">£12.5–£105 · The Study Society · west</p></div></a></div></section><section class="day-group" id="d-2026-10-24"><h2 class="day-heading"><span>Saturday 24 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/drop-in-tai-chi-2026-10-24/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Ffiles.elfsightcdn.com%2Feafe4a4d-3436-495d-b748-5bdce62d911d%2F247469c7-bb63-477b-a8e3-3d6e51afba9f%2FOD-Mar23-TaiChi-13.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/247469c7-bb63-477b-a8e3-3d6e51afba9f/OD-Mar23-TaiChi-13.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-morning"></span>10:00 – 11:00</p><h3>Drop-In Tai Chi</h3><p class="hook">Learn Cheng Man Ching&#x27;s 37-posture form with focus on breath, alignment and meditative calm.</p><p class="venue">Colet House</p><p class="meta">£10–£15 · The Study Society · west</p></div></a></div></section>
+  
+  <section class="static-faq"><h2>Common questions</h2><dl><dt>What is qigong?</dt><dd>A practice from Chinese medicine combining gentle movement, breathing and focused attention, usually done standing. Where tai chi is a long martial form, qigong is a set of short repeatable exercises.</dd><dt>Is qigong suitable for beginners or older people?</dt><dd>Yes — it&#x27;s low impact, done standing or seated, and can be scaled to almost any level of mobility. Most London classes are mixed ability and welcome complete beginners.</dd><dt>What should I wear to a qigong class?</dt><dd>Loose, warm clothing and flat shoes, or bare feet indoors. Outdoor classes carry on in most weather, so dress for standing still in it.</dd></dl></section>
+  <p class="static-back">
+    <a href="https://psyconnect.london/">← all of PsyConnect</a>
+  </p>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/cacao-ceremony/">cacao ceremony</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/breathwork/">breathwork</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/sound-bath/">sound bath</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/somatics/">somatic practice</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/contact-improvisation/">contact improvisation</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/qigong/">qigong</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/o/">hosts</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+    <p class="static-footer-home credit">Made by your friendly <a href="https://www.digitalhandyman.london" rel="noopener">digital handyman</a></p>
+  </footer>
+</body>
+</html>

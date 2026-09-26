@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <title>Kat Pugowska events in London — PsyConnect</title>
+  <meta name="description" content="In-person gatherings hosted by Kat Pugowska in London, collected on PsyConnect with the rest of what&#x27;s on.">
+  <link rel="canonical" href="https://psyconnect.london/o/kat-pugowska/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kat Pugowska events in London — PsyConnect">
+  <meta property="og:description" content="In-person gatherings hosted by Kat Pugowska in London, collected on PsyConnect with the rest of what&#x27;s on.">
+  <meta property="og:url" content="https://psyconnect.london/o/kat-pugowska/">
+  <meta property="og:image" content="https://psyconnect.london/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "CollectionPage", "name": "Kat Pugowska events in London", "description": "In-person gatherings hosted by Kat Pugowska in London, collected on PsyConnect with the rest of what's on.", "url": "https://psyconnect.london/o/kat-pugowska/"}, {"@type": "ItemList", "name": "Kat Pugowska events in London", "numberOfItems": 6, "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://psyconnect.london/e/baresouls-5rhythms-with-kat/", "name": "\u2728BareSouls 5Rhythms\u00ae with Kat \u2728"}, {"@type": "ListItem", "position": 2, "url": "https://psyconnect.london/e/baresouls-5rhythms-with-kat-2026-10-09/", "name": "\u2728BareSouls 5Rhythms\u00ae with Kat \u2728"}, {"@type": "ListItem", "position": 3, "url": "https://psyconnect.london/e/baresouls-5rhythms-with-kat-2026-10-16/", "name": "\u2728BareSouls 5Rhythms\u00ae with Kat \u2728"}, {"@type": "ListItem", "position": 4, "url": "https://psyconnect.london/e/baresouls-5rhythms-with-kat-2026-10-23/", "name": "\u2728BareSouls 5Rhythms\u00ae with Kat \u2728"}, {"@type": "ListItem", "position": 5, "url": "https://psyconnect.london/e/baresouls-5rhythms-with-kat-2026-10-30/", "name": "\u2728BareSouls 5Rhythms\u00ae with Kat \u2728"}, {"@type": "ListItem", "position": 6, "url": "https://psyconnect.london/e/baresouls-5rhythms-with-kat-2026-11-06/", "name": "\u2728BareSouls 5Rhythms\u00ae with Kat \u2728"}]}, {"@type": "Organization", "name": "Kat Pugowska"}]}</script>
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page static-listing">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <details class="static-filters"><summary class="key filters-key">filters</summary><div class="filters-panel"><a class="token" href="https://psyconnect.london/">everything on</a><div class="facet-row"><span class="legend facet-legend">what</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/t/psychedelics/">psychedelics</a><a class="token" href="https://psyconnect.london/t/consciousness/">consciousness</a><a class="token" href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><a class="token" href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><a class="token" href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></div></div><div class="facet-row"><span class="legend facet-legend">modality</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/p/cacao-ceremony/">cacao</a><a class="token" href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><a class="token token-child" href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><a class="token" href="https://psyconnect.london/p/breathwork/">breathwork</a><a class="token" href="https://psyconnect.london/p/sound-bath/">sound bath</a><a class="token" href="https://psyconnect.london/p/somatics/">somatic</a><a class="token" href="https://psyconnect.london/p/contact-improvisation/">contact improv</a><a class="token" href="https://psyconnect.london/p/qigong/">qigong</a></div></div><div class="facet-row"><span class="legend facet-legend">who</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/o/">hosts</a><a class="token token-child lit" href="https://psyconnect.london/o/kat-pugowska/" aria-current="page">Kat Pugowska</a></div></div></div></details>
+  
+  <header class="static-list-head">
+    <p class="static-kicker">in person · London</p>
+    <h1 class="static-title">Kat Pugowska events in London</h1>
+    <div class="static-intro">
+      <p class="static-lead">In-person gatherings hosted by Kat Pugowska in London, collected on PsyConnect with the rest of what&#x27;s on.</p><p class="static-lead">6 coming up — times, venues and tickets, refreshed several times a day.</p>
+    </div>
+    
+  </header>
+  <section class="day-group" id="d-2026-10-02"><h2 class="day-heading"><span>Friday 2 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/baresouls-5rhythms-with-kat/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Frhsilfaimkqlvzrxqjbq.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fevent-images%2Fa8a416876b36d045b288e3a541e07f7f0d4d06013e7e07e3390b342df5bc3458.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://rhsilfaimkqlvzrxqjbq.supabase.co/storage/v1/object/public/event-images/a8a416876b36d045b288e3a541e07f7f0d4d06013e7e07e3390b342df5bc3458.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>19:30 – 21:30</p><h3>✨BareSouls 5Rhythms® with Kat ✨</h3><p class="hook">Gabrielle Roth&#x27;s 5Rhythms movement meditation with accredited teacher Kat in a welcoming community space.</p><p class="venue">Haverstock school 24 Haverstock Hill, Chalk Farm / Camden, NW3 2BQ</p><p class="meta">Kat Pugowska Acreditated 5Rhythms Teacher, Heartbeat level; Arts Therapists and Psychologist · north</p></div></a></div></section><section class="day-group" id="d-2026-10-09"><h2 class="day-heading"><span>Friday 9 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/baresouls-5rhythms-with-kat-2026-10-09/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Frhsilfaimkqlvzrxqjbq.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fevent-images%2Fa8a416876b36d045b288e3a541e07f7f0d4d06013e7e07e3390b342df5bc3458.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://rhsilfaimkqlvzrxqjbq.supabase.co/storage/v1/object/public/event-images/a8a416876b36d045b288e3a541e07f7f0d4d06013e7e07e3390b342df5bc3458.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>19:30 – 21:30</p><h3>✨BareSouls 5Rhythms® with Kat ✨</h3><p class="hook">Kat Pugowska leads 5Rhythms dance meditation—movement as medicine for self-discovery.</p><p class="venue">Haverstock school 24 Haverstock Hill, Chalk Farm / Camden, NW3 2BQ</p><p class="meta">Kat Pugowska Acreditated 5Rhythms Teacher, Heartbeat level; Arts Therapists and Psychologist · north</p></div></a></div></section><section class="day-group" id="d-2026-10-16"><h2 class="day-heading"><span>Friday 16 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/baresouls-5rhythms-with-kat-2026-10-16/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Frhsilfaimkqlvzrxqjbq.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fevent-images%2Fa8a416876b36d045b288e3a541e07f7f0d4d06013e7e07e3390b342df5bc3458.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://rhsilfaimkqlvzrxqjbq.supabase.co/storage/v1/object/public/event-images/a8a416876b36d045b288e3a541e07f7f0d4d06013e7e07e3390b342df5bc3458.jpg'"><span class="pick-mark" title="one of the richer listings this week">✦ pick</span></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>19:30 – 21:30</p><h3>✨BareSouls 5Rhythms® with Kat ✨</h3><p class="hook">Gabrielle Roth&#x27;s 5Rhythms movement meditation with accredited teacher Kat Pugowska at Haverstock School.</p><p class="venue">Haverstock school 24 Haverstock Hill, Chalk Farm / Camden, NW3 2BQ</p><p class="meta">Kat Pugowska Acreditated 5Rhythms Teacher, Heartbeat level; Arts Therapists and Psychologist · north</p></div></a></div></section><section class="day-group" id="d-2026-10-23"><h2 class="day-heading"><span>Friday 23 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/baresouls-5rhythms-with-kat-2026-10-23/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Frhsilfaimkqlvzrxqjbq.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fevent-images%2Fa8a416876b36d045b288e3a541e07f7f0d4d06013e7e07e3390b342df5bc3458.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://rhsilfaimkqlvzrxqjbq.supabase.co/storage/v1/object/public/event-images/a8a416876b36d045b288e3a541e07f7f0d4d06013e7e07e3390b342df5bc3458.jpg'"><span class="pick-mark" title="one of the richer listings this week">✦ pick</span></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>19:30 – 21:30</p><h3>✨BareSouls 5Rhythms® with Kat ✨</h3><p class="hook">Gabrielle Roth&#x27;s 5Rhythms practice with accredited teacher Kat at Haverstock School—movement as medicine.</p><p class="venue">Haverstock school 24 Haverstock Hill, Chalk Farm / Camden, NW3 2BQ</p><p class="meta">Kat Pugowska Acreditated 5Rhythms Teacher, Heartbeat level; Arts Therapists and Psychologist · north</p></div></a></div></section><section class="day-group" id="d-2026-10-30"><h2 class="day-heading"><span>Friday 30 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/baresouls-5rhythms-with-kat-2026-10-30/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Frhsilfaimkqlvzrxqjbq.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fevent-images%2Fa8a416876b36d045b288e3a541e07f7f0d4d06013e7e07e3390b342df5bc3458.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://rhsilfaimkqlvzrxqjbq.supabase.co/storage/v1/object/public/event-images/a8a416876b36d045b288e3a541e07f7f0d4d06013e7e07e3390b342df5bc3458.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>19:30 – 21:30</p><h3>✨BareSouls 5Rhythms® with Kat ✨</h3><p class="hook">Dance meditation with accredited 5Rhythms teacher Kat in a welcoming, judgment-free space.</p><p class="venue">Haverstock school 24 Haverstock Hill, Chalk Farm / Camden, NW3 2BQ</p><p class="meta">Kat Pugowska Acreditated 5Rhythms Teacher, Heartbeat level; Arts Therapists and Psychologist · north</p></div></a></div></section><section class="day-group" id="d-2026-11-06"><h2 class="day-heading"><span>Friday 6 November</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/baresouls-5rhythms-with-kat-2026-11-06/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Frhsilfaimkqlvzrxqjbq.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fevent-images%2Fa8a416876b36d045b288e3a541e07f7f0d4d06013e7e07e3390b342df5bc3458.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://rhsilfaimkqlvzrxqjbq.supabase.co/storage/v1/object/public/event-images/a8a416876b36d045b288e3a541e07f7f0d4d06013e7e07e3390b342df5bc3458.jpg'"><span class="pick-mark" title="one of the richer listings this week">✦ pick</span></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>19:30 – 21:30</p><h3>✨BareSouls 5Rhythms® with Kat ✨</h3><p class="hook">Kat Pugowska leads transformative 5Rhythms ecstatic dance for self-discovery and healing in a welcoming community space.</p><p class="venue">Haverstock school 24 Haverstock Hill, Chalk Farm / Camden, NW3 2BQ</p><p class="meta">Kat Pugowska Acreditated 5Rhythms Teacher, Heartbeat level; Arts Therapists and Psychologist · north</p></div></a></div></section>
+  <section class="static-past"><h2>Recently hosted</h2><ul><li><time datetime="2026-09-25">Fri 25 Sep</time> · ✨BareSouls 5Rhythms® with Kat ✨</li></ul></section>
+  
+  <p class="static-back"><a href="https://psyconnect.london/o/">← all hosts on PsyConnect</a></p>
+  <p class="static-back">
+    <a href="https://psyconnect.london/">← all of PsyConnect</a>
+  </p>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/cacao-ceremony/">cacao ceremony</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/breathwork/">breathwork</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/sound-bath/">sound bath</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/somatics/">somatic practice</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/contact-improvisation/">contact improvisation</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/qigong/">qigong</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/o/">hosts</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+    <p class="static-footer-home credit">Made by your friendly <a href="https://www.digitalhandyman.london" rel="noopener">digital handyman</a></p>
+  </footer>
+</body>
+</html>

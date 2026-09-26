@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <title>TEiP HALLOWEEN PARTY • PORTOBELLO | Thought Experiments in Public — PsyConnect</title>
+  <meta name="description" content="Explore darkness through original thought experiments and creative conversation at TEiP&#x27;s community-minded Halloween.">
+  <link rel="canonical" href="https://psyconnect.london/e/teip-halloween-party-portobello-thought-experiments-in-public/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TEiP HALLOWEEN PARTY • PORTOBELLO | Thought Experiments in Public — PsyConnect">
+  <meta property="og:description" content="Explore darkness through original thought experiments and creative conversation at TEiP&#x27;s community-minded Halloween.">
+  <meta property="og:url" content="https://psyconnect.london/e/teip-halloween-party-portobello-thought-experiments-in-public/">
+  <meta property="og:image" content="https://secure.meetupstatic.com/photos/event/5/8/a/e/600_536302702.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "TEiP HALLOWEEN PARTY \u2022 PORTOBELLO | Thought Experiments in Public", "startDate": "2026-10-30T18:30:00+00:00", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "London", "address": {"@type": "PostalAddress", "streetAddress": "London, UK", "addressLocality": "London", "addressCountry": "GB"}}, "url": "https://psyconnect.london/e/teip-halloween-party-portobello-thought-experiments-in-public/", "inLanguage": "en-GB", "endDate": "2026-10-30T21:30:00+00:00", "image": ["https://secure.meetupstatic.com/photos/event/5/8/a/e/600_536302702.jpeg"], "description": "THOUGHT EXPERIMENTS IN PUBLIC (TEiP) A different kind of \"party\".... In the UK, Halloween is often associated with tacky excess, frightening bloodstained costumes, and drunken revelry. I grew up with a different kind of Halloween because I went to an American school. The general vibe was **creativity, comedy, and an excuse for a whole community celebration.** We had a costume parade that everyone, even the teachers, participated in. The costumes were mostly home made, tending towards silliness r", "organizer": {"@type": "Organization", "name": "THOUGHT EXPERIMENTS IN PUBLIC (TEiP)", "url": "https://www.meetup.com/thought-experiments-in-pubs/"}, "performer": {"@type": "Organization", "name": "THOUGHT EXPERIMENTS IN PUBLIC (TEiP)", "url": "https://www.meetup.com/thought-experiments-in-pubs/"}}</script>
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <nav class="static-crumbs" aria-label="breadcrumb">
+    <a href="https://psyconnect.london/">PsyConnect</a>
+    <span aria-hidden="true">/</span>
+    <a href="https://psyconnect.london/o/thought-experiments-in-public-teip/">THOUGHT EXPERIMENTS IN PUBLIC (TEiP)</a>
+    <span aria-hidden="true">/</span>
+    <span>event</span>
+  </nav>
+  <article class="static-event">
+    <p class="static-kicker">in person · London · west London</p>
+    <h1 class="static-title">TEiP HALLOWEEN PARTY • PORTOBELLO | Thought Experiments in Public</h1>
+    <p class="static-hook">Explore darkness through original thought experiments and creative conversation at TEiP&#x27;s community-minded Halloween.</p>
+    <dl class="static-facts"><div class="static-fact"><dt>When</dt><dd>Friday 30 October 2026 · 18:30</dd></div><div class="static-fact"><dt>Where</dt><dd>London, UK</dd></div><div class="static-fact"><dt>Host</dt><dd><a href="https://psyconnect.london/o/thought-experiments-in-public-teip/" data-goatcounter-click="host/thought-experiments-in-public-teip">THOUGHT EXPERIMENTS IN PUBLIC (TEiP)</a></dd></div></dl>
+    <p class="static-chips"><a class="static-chip" href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a></p>
+    <figure class="static-figure"><img src="https://wsrv.nl/?url=https%3A%2F%2Fsecure.meetupstatic.com%2Fphotos%2Fevent%2F5%2F8%2Fa%2Fe%2F600_536302702.jpeg&amp;w=1200&amp;output=webp&amp;q=75" alt="TEiP HALLOWEEN PARTY • PORTOBELLO | Thought Experiments in Public" loading="lazy" onerror="this.onerror=null;this.src='https://secure.meetupstatic.com/photos/event/5/8/a/e/600_536302702.jpeg'"></figure>
+    <div class="static-prose"><p>THOUGHT EXPERIMENTS IN PUBLIC (TEiP)
+A different kind of &quot;party&quot;....</p><p>In the UK, Halloween is often associated with tacky excess, frightening bloodstained costumes, and drunken revelry.</p><p>I grew up with a different kind of Halloween because I went to an American school. The general vibe was **creativity, comedy, and an excuse for a whole community celebration.**</p><p>We had a costume parade that everyone, even the teachers, participated in. The costumes were mostly home made, tending towards silliness rather than horror. For example, one year a group of students made enormous Pac-Man costumes out of cardboard and used the school corridors to enact a life-sized game of Pac-Man.</p><p>It was a fun way to bring everyone together and brighten up rapidly darkening October.</p><p>So I&#x27;d like to bring a similar creative, friendly spirit to this special episode of TEiP.</p><p>As ever, **the aim** of the evening will be to have open-minded, thought-provoking conversations with fellow humans, so we&#x27;ll use the tried and tested TEiP format for the majority of the night (see below for details).</p><p>**The theme will be &quot;DARKNESS&quot;, which we will explore by way of three original thought experiments** (tiny stories that spark big questions) posted in the comments on the day of the event.</p><p>There may be a few twists, and there will definitely be some **(optional) games and Halloween-y activities afterwards**.</p><p>**Dressing up is encouraged, though entirely optional.**
+We will have a **friendly costume competition** with points awarded for:</p><p>* originality
+* homemade components
+* comedy</p><p>So think less generic blood-drenched plastic and more repurposed packaging.
+(I will share some inspo in a [Substack post](https://bonnyastor.substack.com/) in the next week or two)</p></div>
+    <p class="static-cta-wrap">
+      <a class="static-cta" href="https://www.meetup.com/thought-experiments-in-pubs/events/316708168/?utm_source=psyconnect.london&amp;utm_medium=referral" rel="noopener"
+         data-goatcounter-click="out/thought-experiments-in-public-teip"
+         data-goatcounter-title="TEiP HALLOWEEN PARTY • PORTOBELLO | Thought Experiments in Public">
+        tickets &amp; details ↗
+      </a>
+    </p>
+    <p class="static-back">
+      <a href="https://psyconnect.london/">← more in-person gatherings on PsyConnect</a>
+    </p>
+  </article>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/cacao-ceremony/">cacao ceremony</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/breathwork/">breathwork</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/sound-bath/">sound bath</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/somatics/">somatic practice</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/contact-improvisation/">contact improvisation</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/qigong/">qigong</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/o/">hosts</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+    <p class="static-footer-home credit">Made by your friendly <a href="https://www.digitalhandyman.london" rel="noopener">digital handyman</a></p>
+  </footer>
+</body>
+</html>

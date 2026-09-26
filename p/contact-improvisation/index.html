@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <title>Contact improvisation jams &amp; classes in London — PsyConnect</title>
+  <meta name="description" content="Contact improvisation is a movement practice built on a shared point of contact: two people lean, roll, lift and give weight, following momentum rather than…">
+  <link rel="canonical" href="https://psyconnect.london/p/contact-improvisation/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact improvisation jams &amp; classes in London — PsyConnect">
+  <meta property="og:description" content="Contact improvisation is a movement practice built on a shared point of contact: two people lean, roll, lift and give weight, following momentum rather than…">
+  <meta property="og:url" content="https://psyconnect.london/p/contact-improvisation/">
+  <meta property="og:image" content="https://psyconnect.london/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "CollectionPage", "name": "Contact improvisation jams & classes in London", "description": "Contact improvisation is a movement practice built on a shared point of contact: two people lean, roll, lift and give weight, following momentum rather than\u2026", "url": "https://psyconnect.london/p/contact-improvisation/"}, {"@type": "ItemList", "name": "Contact improvisation jams & classes in London", "numberOfItems": 6, "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://psyconnect.london/e/primal-play-london-autumn-edition/", "name": "\ud83e\udd81 \ud835\udc0f\ud835\udc11\ud835\udc08\ud835\udc0c\ud835\udc00\ud835\udc0b \ud835\udc0f\ud835\udc0b\ud835\udc00\ud835\udc18 \ud835\udc0b\ud835\udc0e\ud835\udc0d\ud835\udc03\ud835\udc0e\ud835\udc0d - Autumn Edition \ud83c\udf41\ud83e\udd81"}, {"@type": "ListItem", "position": 2, "url": "https://psyconnect.london/e/human-be-in/", "name": "HUMAN BE:IN"}, {"@type": "ListItem", "position": 3, "url": "https://psyconnect.london/e/contact-improvisation-jam-with-felix-oram-friends/", "name": "CONTACT IMPROVISATION JAM with Felix Oram & Friends"}, {"@type": "ListItem", "position": 4, "url": "https://psyconnect.london/e/tuesday-ci-lab/", "name": "TUESDAY CI LAB"}, {"@type": "ListItem", "position": 5, "url": "https://psyconnect.london/e/tuesday-ci-lab-2026-10-13/", "name": "TUESDAY CI LAB"}, {"@type": "ListItem", "position": 6, "url": "https://psyconnect.london/e/tuesday-ci-lab-2026-10-20/", "name": "TUESDAY CI LAB"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is contact improvisation?", "acceptedAnswer": {"@type": "Answer", "text": "A duet form developed by Steve Paxton in the 1970s in which dancers share weight through a moving point of contact. Nothing is set in advance: the dance follows physics \u2014 momentum, gravity and the surface between two bodies."}}, {"@type": "Question", "name": "Is contact improv a beginner-friendly practice?", "acceptedAnswer": {"@type": "Answer", "text": "Classes are, and are the right place to start: you learn rolling, giving weight and how to keep each other safe. Open jams assume you already have those basics, so check the listing before turning up to one."}}, {"@type": "Question", "name": "Is contact improvisation intimate?", "acceptedAnswer": {"@type": "Answer", "text": "It involves a lot of physical contact but is not romantic or sexual, and consent is explicit throughout \u2014 you can decline a dance or end one at any point without explanation."}}]}]}</script>
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page static-listing">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <details class="static-filters"><summary class="key filters-key">filters</summary><div class="filters-panel"><a class="token" href="https://psyconnect.london/">everything on</a><div class="facet-row"><span class="legend facet-legend">what</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/t/psychedelics/">psychedelics</a><a class="token" href="https://psyconnect.london/t/consciousness/">consciousness</a><a class="token" href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><a class="token" href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><a class="token" href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></div></div><div class="facet-row"><span class="legend facet-legend">modality</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/p/cacao-ceremony/">cacao</a><a class="token" href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><a class="token token-child" href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><a class="token" href="https://psyconnect.london/p/breathwork/">breathwork</a><a class="token" href="https://psyconnect.london/p/sound-bath/">sound bath</a><a class="token" href="https://psyconnect.london/p/somatics/">somatic</a><a class="token lit" href="https://psyconnect.london/p/contact-improvisation/" aria-current="page">contact improv</a><a class="token" href="https://psyconnect.london/p/qigong/">qigong</a></div></div><div class="facet-row"><span class="legend facet-legend">who</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/o/">hosts</a></div></div></div></details>
+  <div class="static-ticker"><div class="ticker-shell"><div class="ticker"><span class="tick spent" aria-hidden="true">today<small>26</small></span><a class="tick" href="#d-2026-09-27">tmrw<small>27</small></a><span class="tick spent" aria-hidden="true">mon<small>28</small></span><a class="tick" href="#d-2026-09-29">tue<small>29</small></a><span class="tick spent" aria-hidden="true">wed<small>30</small></span><span class="tick spent" aria-hidden="true">thu<small>1</small></span><a class="tick" href="#d-2026-10-02">fri<small>2</small></a><span class="tick spent" aria-hidden="true">sat<small>3</small></span><span class="tick spent" aria-hidden="true">sun<small>4</small></span><span class="tick spent" aria-hidden="true">mon<small>5</small></span><a class="tick" href="#d-2026-10-06">tue<small>6</small></a><span class="tick spent" aria-hidden="true">wed<small>7</small></span><span class="tick spent" aria-hidden="true">thu<small>8</small></span><span class="tick spent" aria-hidden="true">fri<small>9</small></span><span class="tick spent" aria-hidden="true">sat<small>10</small></span><span class="tick spent" aria-hidden="true">sun<small>11</small></span><span class="tick spent" aria-hidden="true">mon<small>12</small></span><a class="tick" href="#d-2026-10-13">tue<small>13</small></a><span class="tick spent" aria-hidden="true">wed<small>14</small></span><span class="tick spent" aria-hidden="true">thu<small>15</small></span><span class="tick spent" aria-hidden="true">fri<small>16</small></span><span class="tick spent" aria-hidden="true">sat<small>17</small></span><span class="tick spent" aria-hidden="true">sun<small>18</small></span><span class="tick spent" aria-hidden="true">mon<small>19</small></span><a class="tick" href="#d-2026-10-20">tue<small>20</small></a><span class="tick spent" aria-hidden="true">wed<small>21</small></span><span class="tick spent" aria-hidden="true">thu<small>22</small></span><span class="tick spent" aria-hidden="true">fri<small>23</small></span><span class="tick spent" aria-hidden="true">sat<small>24</small></span><span class="tick spent" aria-hidden="true">sun<small>25</small></span></div><div class="ticker-fixed"><a class="tick" href="https://psyconnect.london/p/contact-improvisation/7-days/">7<small>days</small></a><span class="tick cursor" aria-current="page">30<small>days</small></span></div></div></div>
+  <header class="static-list-head">
+    <p class="static-kicker">in person · London</p>
+    <h1 class="static-title">Contact improvisation jams &amp; classes in London</h1>
+    <div class="static-intro">
+      <p class="static-lead">Contact improvisation is a movement practice built on a shared point of contact: two people lean, roll, lift and give weight, following momentum rather than choreography. It&#x27;s danced barefoot and usually in silence or to quiet music.</p><p class="static-lead">London has weekly jams — open floors where anyone can dance with anyone — plus classes for people who want the technique first. Jams often ask for some prior experience; classes never do.</p><p class="static-lead">6 on in the next 30 days — times, venues and tickets, refreshed several times a day.</p>
+    </div>
+    
+  </header>
+  <section class="day-group" id="d-2026-09-27"><h2 class="day-heading"><span>Sunday 27 September</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/primal-play-london-autumn-edition/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fr2.dandelion.events%2F2026%2F08%2F17%2F11%2F22%2F43%2Ff4382d82-bb19-42d8-a04f-bffbb4f7344c%2F1800c56f-92ac-46b9-a2ff-41176156ac04.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://r2.dandelion.events/2026/08/17/11/22/43/f4382d82-bb19-42d8-a04f-bffbb4f7344c/1800c56f-92ac-46b9-a2ff-41176156ac04.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-afternoon"></span>14:00 – 18:00</p><h3>🦁 𝐏𝐑𝐈𝐌𝐀𝐋 𝐏𝐋𝐀𝐘 𝐋𝐎𝐍𝐃𝐎𝐍 - Autumn Edition 🍁🦁</h3><p class="hook">Trauma-informed embodied empathy circle with conscious touch and authentic expression in a body-positive space.</p><p class="venue">Self-Retreat Studio</p><p class="meta">£44–£54 · Embodied Empathy · north</p></div></a></div></section><section class="day-group" id="d-2026-09-29"><h2 class="day-heading"><span>Tuesday 29 September</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/human-be-in/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Frhsilfaimkqlvzrxqjbq.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fevent-images%2Fd21979af762e11ab457c4912b382263cfb7adf3628c9ac3c9130db8a3bfabaca.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://rhsilfaimkqlvzrxqjbq.supabase.co/storage/v1/object/public/event-images/d21979af762e11ab457c4912b382263cfb7adf3628c9ac3c9130db8a3bfabaca.jpg'"><span class="pick-mark" title="one of the richer listings this week">✦ pick</span></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>19:00 – 21:30</p><h3>HUMAN BE:IN</h3><p class="hook">Weekly Tuesday sanctuary blending meditation, sharing circles, and somatic movement to ambient and house music.</p><p class="venue">OMUK, 22 Pakenham St, London WC1X 0LB</p><p class="meta">Felix Oram · central</p></div></a></div></section><section class="day-group" id="d-2026-10-02"><h2 class="day-heading"><span>Friday 2 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/contact-improvisation-jam-with-felix-oram-friends/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Frhsilfaimkqlvzrxqjbq.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fevent-images%2F541475b2c775e256aa88beaf84b43e4d972d033190fc50a0b6e7825a30505859.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://rhsilfaimkqlvzrxqjbq.supabase.co/storage/v1/object/public/event-images/541475b2c775e256aa88beaf84b43e4d972d033190fc50a0b6e7825a30505859.jpg'"><span class="pick-mark" title="one of the richer listings this week">✦ pick</span></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>19:00 – 21:00</p><h3>CONTACT IMPROVISATION JAM with Felix Oram &amp; Friends</h3><p class="hook">Monthly contact improv jam with Felix Oram—improvised partner dancing for all levels.</p><p class="venue">Old School Rooms, 2a Powerscroft Rd, Lower Clapton, London E5 0PU, UK</p><p class="meta">Felix Oram · east</p></div></a></div></section><section class="day-group" id="d-2026-10-06"><h2 class="day-heading"><span>Tuesday 6 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/tuesday-ci-lab/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fimg.evbuc.com%2Fhttps%253A%252F%252Fcdn.evbuc.com%252Fimages%252F1193052700%252F492779315873%252F1%252Foriginal.20260909-130632%3Fcrop%3Dfocalpoint%26fit%3Dcrop%26auto%3Dformat%252Ccompress%26q%3D75%26sharp%3D10%26fp-x%3D0.472%26fp-y%3D0.591%26s%3Dfac196de51e092bec325a4d3e13eefdf&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193052700%2F492779315873%2F1%2Foriginal.20260909-130632?crop=focalpoint&amp;fit=crop&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.472&amp;fp-y=0.591&amp;s=fac196de51e092bec325a4d3e13eefdf'"></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>19:00 – 21:30</p><h3>TUESDAY CI LAB</h3><p class="hook">Two CI practitioners share embodied research through contact improvisation and experimental movement.</p><p class="venue">Pembroke House</p><p class="meta">Exit Map · south</p></div></a></div></section><section class="day-group" id="d-2026-10-13"><h2 class="day-heading"><span>Tuesday 13 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/tuesday-ci-lab-2026-10-13/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fimg.evbuc.com%2Fhttps%253A%252F%252Fcdn.evbuc.com%252Fimages%252F1193052700%252F492779315873%252F1%252Foriginal.20260909-130632%3Fcrop%3Dfocalpoint%26fit%3Dcrop%26auto%3Dformat%252Ccompress%26q%3D75%26sharp%3D10%26fp-x%3D0.472%26fp-y%3D0.591%26s%3Dfac196de51e092bec325a4d3e13eefdf&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193052700%2F492779315873%2F1%2Foriginal.20260909-130632?crop=focalpoint&amp;fit=crop&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.472&amp;fp-y=0.591&amp;s=fac196de51e092bec325a4d3e13eefdf'"></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>19:00 – 21:30</p><h3>TUESDAY CI LAB</h3><p class="hook">Two CI researchers share embodied questions through contact improvisation practice.</p><p class="venue">Pembroke House</p><p class="meta">Exit Map · south</p></div></a></div></section><section class="day-group" id="d-2026-10-20"><h2 class="day-heading"><span>Tuesday 20 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/tuesday-ci-lab-2026-10-20/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fimg.evbuc.com%2Fhttps%253A%252F%252Fcdn.evbuc.com%252Fimages%252F1193052700%252F492779315873%252F1%252Foriginal.20260909-130632%3Fcrop%3Dfocalpoint%26fit%3Dcrop%26auto%3Dformat%252Ccompress%26q%3D75%26sharp%3D10%26fp-x%3D0.472%26fp-y%3D0.591%26s%3Dfac196de51e092bec325a4d3e13eefdf&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193052700%2F492779315873%2F1%2Foriginal.20260909-130632?crop=focalpoint&amp;fit=crop&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.472&amp;fp-y=0.591&amp;s=fac196de51e092bec325a4d3e13eefdf'"></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>19:00 – 21:30</p><h3>TUESDAY CI LAB</h3><p class="hook">Two CI practitioners share embodied research through contact improvisation experimentation.</p><p class="venue">Pembroke House</p><p class="meta">Exit Map · south</p></div></a></div></section>
+  
+  <section class="static-faq"><h2>Common questions</h2><dl><dt>What is contact improvisation?</dt><dd>A duet form developed by Steve Paxton in the 1970s in which dancers share weight through a moving point of contact. Nothing is set in advance: the dance follows physics — momentum, gravity and the surface between two bodies.</dd><dt>Is contact improv a beginner-friendly practice?</dt><dd>Classes are, and are the right place to start: you learn rolling, giving weight and how to keep each other safe. Open jams assume you already have those basics, so check the listing before turning up to one.</dd><dt>Is contact improvisation intimate?</dt><dd>It involves a lot of physical contact but is not romantic or sexual, and consent is explicit throughout — you can decline a dance or end one at any point without explanation.</dd></dl></section>
+  <p class="static-back">
+    <a href="https://psyconnect.london/">← all of PsyConnect</a>
+  </p>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/cacao-ceremony/">cacao ceremony</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/breathwork/">breathwork</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/sound-bath/">sound bath</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/somatics/">somatic practice</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/contact-improvisation/">contact improvisation</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/qigong/">qigong</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/o/">hosts</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+    <p class="static-footer-home credit">Made by your friendly <a href="https://www.digitalhandyman.london" rel="noopener">digital handyman</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <title>Psychedelics events in London — PsyConnect</title>
+  <meta name="description" content="Talks, integration circles, community nights and careful conversations about plant medicine and psychedelic culture in London — education and connection, in…">
+  <link rel="canonical" href="https://psyconnect.london/t/psychedelics/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Psychedelics events in London — PsyConnect">
+  <meta property="og:description" content="Talks, integration circles, community nights and careful conversations about plant medicine and psychedelic culture in London — education and connection, in…">
+  <meta property="og:url" content="https://psyconnect.london/t/psychedelics/">
+  <meta property="og:image" content="https://psyconnect.london/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../../icons/favicon.png">
+  <link rel="stylesheet" href="../../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="../../../theme.css">
+  
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page static-listing">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <details class="static-filters"><summary class="key filters-key">filters</summary><div class="filters-panel"><a class="token" href="https://psyconnect.london/">everything on</a><div class="facet-row"><span class="legend facet-legend">what</span><div class="facet-chips"><a class="token lit" href="https://psyconnect.london/t/psychedelics/" aria-current="page">psychedelics</a><a class="token" href="https://psyconnect.london/t/consciousness/">consciousness</a><a class="token" href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><a class="token" href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><a class="token" href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></div></div><div class="facet-row"><span class="legend facet-legend">modality</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/p/cacao-ceremony/">cacao</a><a class="token" href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><a class="token token-child" href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><a class="token" href="https://psyconnect.london/p/breathwork/">breathwork</a><a class="token" href="https://psyconnect.london/p/sound-bath/">sound bath</a><a class="token" href="https://psyconnect.london/p/somatics/">somatic</a><a class="token" href="https://psyconnect.london/p/contact-improvisation/">contact improv</a><a class="token" href="https://psyconnect.london/p/qigong/">qigong</a></div></div><div class="facet-row"><span class="legend facet-legend">who</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/o/">hosts</a></div></div></div></details>
+  <div class="static-ticker"><div class="ticker-shell"><div class="ticker"><span class="tick spent" aria-hidden="true">today<small>26</small></span><span class="tick spent" aria-hidden="true">tmrw<small>27</small></span><a class="tick" href="#d-2026-09-28">mon<small>28</small></a><span class="tick spent" aria-hidden="true">tue<small>29</small></span><a class="tick" href="#d-2026-09-30">wed<small>30</small></a><span class="tick spent" aria-hidden="true">thu<small>1</small></span><span class="tick spent" aria-hidden="true">fri<small>2</small></span><span class="tick spent" aria-hidden="true">sat<small>3</small></span><span class="tick spent" aria-hidden="true">sun<small>4</small></span><span class="tick spent" aria-hidden="true">mon<small>5</small></span><span class="tick spent" aria-hidden="true">tue<small>6</small></span><span class="tick spent" aria-hidden="true">wed<small>7</small></span><span class="tick spent" aria-hidden="true">thu<small>8</small></span><span class="tick spent" aria-hidden="true">fri<small>9</small></span><a class="tick" href="#d-2026-10-10">sat<small>10</small></a><span class="tick spent" aria-hidden="true">sun<small>11</small></span><span class="tick spent" aria-hidden="true">mon<small>12</small></span><span class="tick spent" aria-hidden="true">tue<small>13</small></span><span class="tick spent" aria-hidden="true">wed<small>14</small></span><a class="tick" href="#d-2026-10-15">thu<small>15</small></a><span class="tick spent" aria-hidden="true">fri<small>16</small></span><span class="tick spent" aria-hidden="true">sat<small>17</small></span><span class="tick spent" aria-hidden="true">sun<small>18</small></span><a class="tick" href="#d-2026-10-19">mon<small>19</small></a><span class="tick spent" aria-hidden="true">tue<small>20</small></span><span class="tick spent" aria-hidden="true">wed<small>21</small></span><span class="tick spent" aria-hidden="true">thu<small>22</small></span><span class="tick spent" aria-hidden="true">fri<small>23</small></span><a class="tick" href="#d-2026-10-24">sat<small>24</small></a><span class="tick spent" aria-hidden="true">sun<small>25</small></span></div><div class="ticker-fixed"><a class="tick" href="https://psyconnect.london/t/psychedelics/">7<small>days</small></a><span class="tick cursor" aria-current="page">30<small>days</small></span></div></div></div>
+  <header class="static-list-head">
+    <p class="static-kicker">in person · London</p>
+    <h1 class="static-title">Psychedelics events in London</h1>
+    <div class="static-intro">
+      <p class="static-lead">Talks, integration circles, community nights and careful conversations about plant medicine and psychedelic culture in London — education and connection, in person.</p><p class="static-lead">A gentle way in if you&#x27;re curious, and a place to land if you&#x27;ve already been out there.</p><p class="static-lead">9 on in the next 30 days — times, venues and tickets, refreshed several times a day.</p>
+    </div>
+    
+  </header>
+  <section class="day-group" id="d-2026-09-28"><h2 class="day-heading"><span>Monday 28 September</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/love-psyche-delics-how-psychedelic-experiences-impact-romantic-relations/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fr2.dandelion.events%2F2026%2F09%2F01%2F19%2F50%2F05%2Fb39a924c-e268-4eca-b4bb-d372ec619a52%2Fccfe0408-c039-4941-95d1-0f5ed6aa46e3.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://r2.dandelion.events/2026/09/01/19/50/05/b39a924c-e268-4eca-b4bb-d372ec619a52/ccfe0408-c039-4941-95d1-0f5ed6aa46e3.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>18:30 – 21:00</p><h3>Love &amp; Psyche(delics): How Psychedelic Experiences Impact Romantic Relationships</h3><p class="hook">The Psychedelic Society explores how psychedelic experiences reshape romantic bonds and intimacy.</p><p class="venue">Home House Studio, Private Members&#x27; Club</p><p class="meta">£8–£30 · The Psychedelic Society · central</p></div></a></div></section><section class="day-group" id="d-2026-09-30"><h2 class="day-heading"><span>Wednesday 30 September</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/psysoc-social-speed-friending-psychedelic-storytelling/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fr2.dandelion.events%2F2026%2F08%2F27%2F18%2F37%2F12%2F028389db-204a-4c1d-ab3f-8b7ac8abded9%2Fbd445c30-8e07-43ea-bc6d-a0796a82d7e9.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://r2.dandelion.events/2026/08/27/18/37/12/028389db-204a-4c1d-ab3f-8b7ac8abded9/bd445c30-8e07-43ea-bc6d-a0796a82d7e9.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>18:45 – 21:30</p><h3>PsySoc Social: Speed-Friending &amp; Psychedelic Storytelling</h3><p class="hook">Speed-friending meets psychedelic storytelling with The Psychedelic Society&#x27;s community.</p><p class="venue">Love Shack</p><p class="meta">£0–£20 · The Psychedelic Society · east</p></div></a><a class="card instant" href="https://psyconnect.london/e/cognitive-security-meetup-unconference-psychedelics-opening-the-mind-or/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fimages.lumacdn.com%2Fuploads%2Fpq%2Fc8717fa8-6efc-45dc-b4e5-51cf20dad890.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://images.lumacdn.com/uploads/pq/c8717fa8-6efc-45dc-b4e5-51cf20dad890.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>19:00 – 23:45</p><h3>Cognitive Security Meetup &amp; Unconference: &quot;Psychedelics — Opening the Mind or Expanding the Attack Surface?&quot;</h3><p class="hook">Explore how psychedelics reshape cognitive security and mental autonomy with CogSec pioneer Sasha Putilin.</p><p class="venue">Newspeak House (Newspeak Hall)</p><p class="meta">Sasha Putilin · east</p></div></a></div></section><section class="day-group" id="d-2026-10-10"><h2 class="day-heading"><span>Saturday 10 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/monthly-sacred-hedonism/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fimages.momence.com%2Fh%2F35200%2Fsession-banner%2F70730a5e-458e-4499-881a-f9cdf0cbfabd.jpeg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://images.momence.com/h/35200/session-banner/70730a5e-458e-4499-881a-f9cdf0cbfabd.jpeg'"><span class="pick-mark" title="one of the richer listings this week">✦ pick</span></div><div class="card-body"><p class="time"><span class="dot dot-afternoon"></span>14:00 – 16:00</p><h3>𝙢𝙤𝙣𝙩𝙝𝙡𝙮 | Sacred Hedonism</h3><p class="hook">Pedro from Imperial&#x27;s psychedelic research and Viola&#x27;s ceremony work map the middle ground between reckless use and rigid sobriety.</p><p class="venue">Om Being</p><p class="meta">£22 · Om Being · east</p></div></a></div></section><section class="day-group" id="d-2026-10-15"><h2 class="day-heading"><span>Thursday 15 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/unique-combined-process-retreat/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fsecure.meetupstatic.com%2Fphotos%2Fevent%2F8%2Fc%2Fb%2F7%2F600_528456023.jpeg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://secure.meetupstatic.com/photos/event/8/c/b/7/600_528456023.jpeg'"></div><div class="card-body"><p class="time"><span class="dot dot-morning"></span>09:00 – 16:00</p><h3>Unique Combined Process Retreat</h3><p class="hook">Three-day retreat combining family constellations with plant-spirit ceremony for deep trauma release and spiritual awakening.</p><p class="venue">London</p><p class="meta">Spiritual Vibes</p></div></a></div></section><section class="day-group" id="d-2026-10-19"><h2 class="day-heading"><span>Monday 19 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/psychedelics-peacebuilding-collective-liberation-can-expanded-consciousn/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fr2.dandelion.events%2F2026%2F09%2F24%2F10%2F58%2F16%2Fb603f6ca-be81-489a-819d-aa9ca8af3aa7%2Faace4458-d4e5-4146-8bba-48b8f4378eb7.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://r2.dandelion.events/2026/09/24/10/58/16/b603f6ca-be81-489a-819d-aa9ca8af3aa7/aace4458-d4e5-4146-8bba-48b8f4378eb7.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>18:30 – 20:45</p><h3>Psychedelics, Peacebuilding &amp; Collective Liberation: Can expanded consciousness strengthen our capacity to imagine and act toward collective liberation?</h3><p class="hook">The Psychedelic Society explores how expanded consciousness might dissolve entrenched conflict and restore empathy.</p><p class="venue">Home House Studio</p><p class="meta">£8–£30 · The Psychedelic Society · central</p></div></a></div></section><section class="day-group" id="d-2026-10-24"><h2 class="day-heading"><span>Saturday 24 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/master-plant-microdose-breathwork-session/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fimg.evbuc.com%2Fhttps%253A%252F%252Fcdn.evbuc.com%252Fimages%252F1047206303%252F555374796379%252F1%252Foriginal.20250606-051343%3Fh%3D230%26w%3D460%26auto%3Dformat%252Ccompress%26q%3D75%26sharp%3D10%26rect%3D0%252C0%252C2160%252C1080%26s%3Dd2e24c4113f4a462c1372c179775b2aa&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1047206303%2F555374796379%2F1%2Foriginal.20250606-051343?h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;rect=0%2C0%2C2160%2C1080&amp;s=d2e24c4113f4a462c1372c179775b2aa'"></div><div class="card-body"><p class="time"><span class="dot dot-afternoon"></span>12:00 – 13:30</p><h3>Master Plant Microdose &amp; Breathwork Session</h3><p class="hook">Connect with master plant medicine through guided breathwork and live sound healing.</p><p class="venue">Flat 6, 4-5 Torriano Mews</p><p class="meta">£36.46–£54.88 · Numinity · north</p></div></a><a class="card instant" href="https://psyconnect.london/e/sex-psychedelics-talks-performance-social/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fr2.dandelion.events%2F2026%2F07%2F28%2F11%2F09%2F36%2F638da811-ac25-41e0-8066-686a5587c51e%2F43e52d0a-4ffe-4e9c-a8fe-20f3f4968e7b.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://r2.dandelion.events/2026/07/28/11/09/36/638da811-ac25-41e0-8066-686a5587c51e/43e52d0a-4ffe-4e9c-a8fe-20f3f4968e7b.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-afternoon"></span>14:00 – 22:30</p><h3>Sex &amp; Psychedelics - Talks, Performance &amp; Social</h3><p class="hook">Explore the intersection of psychedelics and sexuality with The Psychedelic Society in a conscious community setting.</p><p class="venue">Om Being</p><p class="meta">£25–£70 · The Psychedelic Society</p></div></a><a class="card instant" href="https://psyconnect.london/e/the-psychedelic-society-an-afternoon-of-talks-performances-and-social/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fimages.momence.com%2Fh%2F35200%2Fsession-banner%2F750d9db1-2f72-490a-8d15-662490d77b7c.jpeg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://images.momence.com/h/35200/session-banner/750d9db1-2f72-490a-8d15-662490d77b7c.jpeg'"></div><div class="card-body"><p class="time"><span class="dot dot-afternoon"></span>14:00 – 22:00</p><h3>The Psychedelic Society | An Afternoon of Talks, Performances and Social</h3><p class="hook">Britta Love and others explore how psychedelics and sexuality intersect across culture, ceremony and healing.</p><p class="venue">Om Being</p><p class="meta">£999 · Om Being · east</p></div></a></div></section>
+  
+  
+  <p class="static-back">
+    <a href="https://psyconnect.london/">← all of PsyConnect</a>
+  </p>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/cacao-ceremony/">cacao ceremony</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/breathwork/">breathwork</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/sound-bath/">sound bath</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/somatics/">somatic practice</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/contact-improvisation/">contact improvisation</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/qigong/">qigong</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/o/">hosts</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+    <p class="static-footer-home credit">Made by your friendly <a href="https://www.digitalhandyman.london" rel="noopener">digital handyman</a></p>
+  </footer>
+</body>
+</html>

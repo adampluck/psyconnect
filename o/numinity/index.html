@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <title>Numinity events in London — PsyConnect</title>
+  <meta name="description" content="In-person gatherings hosted by Numinity in London, collected on PsyConnect with the rest of what&#x27;s on.">
+  <link rel="canonical" href="https://psyconnect.london/o/numinity/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Numinity events in London — PsyConnect">
+  <meta property="og:description" content="In-person gatherings hosted by Numinity in London, collected on PsyConnect with the rest of what&#x27;s on.">
+  <meta property="og:url" content="https://psyconnect.london/o/numinity/">
+  <meta property="og:image" content="https://psyconnect.london/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "CollectionPage", "name": "Numinity events in London", "description": "In-person gatherings hosted by Numinity in London, collected on PsyConnect with the rest of what's on.", "url": "https://psyconnect.london/o/numinity/"}, {"@type": "ItemList", "name": "Numinity events in London", "numberOfItems": 4, "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://psyconnect.london/e/root-rise-master-plant-breathwork-live-soundscape-ecstatic-dance/", "name": "Root & Rise: Master Plant Breathwork, Live Soundscape & Ecstatic Dance!"}, {"@type": "ListItem", "position": 2, "url": "https://psyconnect.london/e/rape-sananga-cacao-ceremony/", "name": "Rap\u00e9, Sananga & Cacao Ceremony"}, {"@type": "ListItem", "position": 3, "url": "https://psyconnect.london/e/master-plant-microdose-breathwork-session/", "name": "Master Plant Microdose & Breathwork Session"}, {"@type": "ListItem", "position": 4, "url": "https://psyconnect.london/e/play-together-a-games-social-for-your-inner-child/", "name": "Play Together: A Games Social for your Inner Child"}]}, {"@type": "Organization", "name": "Numinity", "url": "https://www.eventbrite.co.uk/o/33797188771"}]}</script>
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page static-listing">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <details class="static-filters"><summary class="key filters-key">filters</summary><div class="filters-panel"><a class="token" href="https://psyconnect.london/">everything on</a><div class="facet-row"><span class="legend facet-legend">what</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/t/psychedelics/">psychedelics</a><a class="token" href="https://psyconnect.london/t/consciousness/">consciousness</a><a class="token" href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><a class="token" href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><a class="token" href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></div></div><div class="facet-row"><span class="legend facet-legend">modality</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/p/cacao-ceremony/">cacao</a><a class="token" href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><a class="token token-child" href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><a class="token" href="https://psyconnect.london/p/breathwork/">breathwork</a><a class="token" href="https://psyconnect.london/p/sound-bath/">sound bath</a><a class="token" href="https://psyconnect.london/p/somatics/">somatic</a><a class="token" href="https://psyconnect.london/p/contact-improvisation/">contact improv</a><a class="token" href="https://psyconnect.london/p/qigong/">qigong</a></div></div><div class="facet-row"><span class="legend facet-legend">who</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/o/">hosts</a><a class="token token-child lit" href="https://psyconnect.london/o/numinity/" aria-current="page">Numinity</a></div></div></div></details>
+  
+  <header class="static-list-head">
+    <p class="static-kicker">in person · London</p>
+    <h1 class="static-title">Numinity events in London</h1>
+    <div class="static-intro">
+      <p class="static-lead">In-person gatherings hosted by Numinity in London, collected on PsyConnect with the rest of what&#x27;s on.</p><p class="static-lead">4 coming up — times, venues and tickets, refreshed several times a day.</p>
+    </div>
+    <p class="static-back static-org-site"><a href="https://www.eventbrite.co.uk/o/33797188771" rel="noopener" data-goatcounter-click="org-site/numinity">Numinity's own page ↗</a></p>
+  </header>
+  <section class="day-group" id="d-2026-10-10"><h2 class="day-heading"><span>Saturday 10 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/root-rise-master-plant-breathwork-live-soundscape-ecstatic-dance/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fimg.evbuc.com%2Fhttps%253A%252F%252Fcdn.evbuc.com%252Fimages%252F1190692402%252F555374796379%252F1%252Foriginal.20260810-095322%3Fcrop%3Dfocalpoint%26fit%3Dcrop%26h%3D230%26w%3D460%26auto%3Dformat%252Ccompress%26q%3D75%26sharp%3D10%26fp-x%3D0.5%26fp-y%3D0.5%26s%3D8187e06cbac2bcaa0cb196219df5f1ed&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1190692402%2F555374796379%2F1%2Foriginal.20260810-095322?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.5&amp;fp-y=0.5&amp;s=8187e06cbac2bcaa0cb196219df5f1ed'"></div><div class="card-body"><p class="time"><span class="dot dot-morning"></span>11:45 – 15:00</p><h3>Root &amp; Rise: Master Plant Breathwork, Live Soundscape &amp; Ecstatic Dance!</h3><p class="hook">Ecstatic dance with live soundscape and breathwork at Love Shack&#x27;s Numinity takeover.</p><p class="venue">Love Shack</p><p class="meta">£12.74–£16.96 · Numinity · east</p></div></a></div></section><section class="day-group" id="d-2026-10-16"><h2 class="day-heading"><span>Friday 16 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/rape-sananga-cacao-ceremony/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fimg.evbuc.com%2Fhttps%253A%252F%252Fcdn.evbuc.com%252Fimages%252F761515999%252F555374796379%252F1%252Foriginal.20240507-131237%3Fh%3D230%26w%3D460%26auto%3Dformat%252Ccompress%26q%3D75%26sharp%3D10%26rect%3D0%252C0%252C4050%252C2025%26s%3D7888cf869ee99c4082e4aa0e678e8136&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F761515999%2F555374796379%2F1%2Foriginal.20240507-131237?h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;rect=0%2C0%2C4050%2C2025&amp;s=7888cf869ee99c4082e4aa0e678e8136'"></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>19:00 – 21:00</p><h3>Rapé, Sananga &amp; Cacao Ceremony</h3><p class="hook">Shamanic rapé and sananga with live kirtan in an intimate North London flat</p><p class="venue">flat 6, 4 Torriano Mews</p><p class="meta">£30.5–£48.38 · Numinity · north</p></div></a></div></section><section class="day-group" id="d-2026-10-24"><h2 class="day-heading"><span>Saturday 24 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/master-plant-microdose-breathwork-session/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fimg.evbuc.com%2Fhttps%253A%252F%252Fcdn.evbuc.com%252Fimages%252F1047206303%252F555374796379%252F1%252Foriginal.20250606-051343%3Fh%3D230%26w%3D460%26auto%3Dformat%252Ccompress%26q%3D75%26sharp%3D10%26rect%3D0%252C0%252C2160%252C1080%26s%3Dd2e24c4113f4a462c1372c179775b2aa&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1047206303%2F555374796379%2F1%2Foriginal.20250606-051343?h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;rect=0%2C0%2C2160%2C1080&amp;s=d2e24c4113f4a462c1372c179775b2aa'"></div><div class="card-body"><p class="time"><span class="dot dot-afternoon"></span>12:00 – 13:30</p><h3>Master Plant Microdose &amp; Breathwork Session</h3><p class="hook">Connect with master plant medicine through guided breathwork and live sound healing.</p><p class="venue">Flat 6, 4-5 Torriano Mews</p><p class="meta">£36.46–£54.88 · Numinity · north</p></div></a></div></section><section class="day-group" id="d-2026-10-25"><h2 class="day-heading"><span>Sunday 25 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/play-together-a-games-social-for-your-inner-child/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fimg.evbuc.com%2Fhttps%253A%252F%252Fcdn.evbuc.com%252Fimages%252F1194418550%252F555374796379%252F1%252Foriginal.20260926-143158%3Fcrop%3Dfocalpoint%26fit%3Dcrop%26h%3D230%26w%3D460%26auto%3Dformat%252Ccompress%26q%3D75%26sharp%3D10%26fp-x%3D0.265%26fp-y%3D0.44%26s%3De2919f1e4f6e23747646ffbc45cc51f6&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194418550%2F555374796379%2F1%2Foriginal.20260926-143158?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.265&amp;fp-y=0.44&amp;s=e2919f1e4f6e23747646ffbc45cc51f6'"></div><div class="card-body"><p class="time"><span class="dot dot-afternoon"></span>13:00 – 16:00</p><h3>Play Together: A Games Social for your Inner Child</h3><p class="hook">Reconnect with your inner child through games and laughter with like-minded people in community.</p><p class="venue">Never For Ever</p><p class="meta">£6.13–£11.55 · Numinity · north</p></div></a></div></section>
+  <section class="static-past"><h2>Recently hosted</h2><ul><li><time datetime="2026-08-21">Fri 21 Aug</time> · Rapé, Sananga &amp; Cacao Ceremony · flat 6, 4 Torriano Mews</li><li><time datetime="2026-08-09">Sun 9 Aug</time> · Root &amp; Rise: Master Plant Breathwork, Live Soundscape &amp; Ecstatic Dance! · Love Shack</li><li><time datetime="2026-07-17">Fri 17 Jul</time> · Rapé, Sananga &amp; Cacao Ceremony · flat 6, 4 Torriano Mews</li><li><time datetime="2026-06-20">Sat 20 Jun</time> · Master Plant Microdose &amp; Breathwork Session (Marosa - The Plant of Love) · Flat 6, 4-5 Torriano Mews</li><li><time datetime="2026-06-19">Fri 19 Jun</time> · Rapé, Sananga &amp; Cacao Ceremony · flat 6, 4 Torriano Mews</li></ul></section>
+  
+  <p class="static-back"><a href="https://psyconnect.london/o/">← all hosts on PsyConnect</a></p>
+  <p class="static-back">
+    <a href="https://psyconnect.london/">← all of PsyConnect</a>
+  </p>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/cacao-ceremony/">cacao ceremony</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/breathwork/">breathwork</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/sound-bath/">sound bath</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/somatics/">somatic practice</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/contact-improvisation/">contact improvisation</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/qigong/">qigong</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/o/">hosts</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+    <p class="static-footer-home credit">Made by your friendly <a href="https://www.digitalhandyman.london" rel="noopener">digital handyman</a></p>
+  </footer>
+</body>
+</html>

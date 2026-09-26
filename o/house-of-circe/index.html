@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <title>House of Circe events in London — PsyConnect</title>
+  <meta name="description" content="In-person gatherings hosted by House of Circe in London, collected on PsyConnect with the rest of what&#x27;s on.">
+  <link rel="canonical" href="https://psyconnect.london/o/house-of-circe/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="House of Circe events in London — PsyConnect">
+  <meta property="og:description" content="In-person gatherings hosted by House of Circe in London, collected on PsyConnect with the rest of what&#x27;s on.">
+  <meta property="og:url" content="https://psyconnect.london/o/house-of-circe/">
+  <meta property="og:image" content="https://psyconnect.london/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "CollectionPage", "name": "House of Circe events in London", "description": "In-person gatherings hosted by House of Circe in London, collected on PsyConnect with the rest of what's on.", "url": "https://psyconnect.london/o/house-of-circe/"}, {"@type": "ItemList", "name": "House of Circe events in London", "numberOfItems": 4, "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://psyconnect.london/e/embodied-consent-boundaries-desire-consious-touch/", "name": "Embodied Consent: Boundaries, Desire & Consious Touch"}, {"@type": "ListItem", "position": 2, "url": "https://psyconnect.london/e/radical-intimacy/", "name": "Radical Intimacy"}, {"@type": "ListItem", "position": 3, "url": "https://psyconnect.london/e/introduction-to-bd-m-workshop-for-flinta-people/", "name": "Introduction to BD$M (workshop for FLINTA people)"}, {"@type": "ListItem", "position": 4, "url": "https://psyconnect.london/e/qu-intimacy-lounge/", "name": "Qu\u2019intimacy Lounge"}]}, {"@type": "Organization", "name": "House of Circe"}]}</script>
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page static-listing">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <details class="static-filters"><summary class="key filters-key">filters</summary><div class="filters-panel"><a class="token" href="https://psyconnect.london/">everything on</a><div class="facet-row"><span class="legend facet-legend">what</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/t/psychedelics/">psychedelics</a><a class="token" href="https://psyconnect.london/t/consciousness/">consciousness</a><a class="token" href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><a class="token" href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><a class="token" href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></div></div><div class="facet-row"><span class="legend facet-legend">modality</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/p/cacao-ceremony/">cacao</a><a class="token" href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><a class="token token-child" href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><a class="token" href="https://psyconnect.london/p/breathwork/">breathwork</a><a class="token" href="https://psyconnect.london/p/sound-bath/">sound bath</a><a class="token" href="https://psyconnect.london/p/somatics/">somatic</a><a class="token" href="https://psyconnect.london/p/contact-improvisation/">contact improv</a><a class="token" href="https://psyconnect.london/p/qigong/">qigong</a></div></div><div class="facet-row"><span class="legend facet-legend">who</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/o/">hosts</a><a class="token token-child lit" href="https://psyconnect.london/o/house-of-circe/" aria-current="page">House of Circe</a></div></div></div></details>
+  
+  <header class="static-list-head">
+    <p class="static-kicker">in person · London</p>
+    <h1 class="static-title">House of Circe events in London</h1>
+    <div class="static-intro">
+      <p class="static-lead">In-person gatherings hosted by House of Circe in London, collected on PsyConnect with the rest of what&#x27;s on.</p><p class="static-lead">4 coming up — times, venues and tickets, refreshed several times a day.</p>
+    </div>
+    
+  </header>
+  <section class="day-group" id="d-2026-11-21"><h2 class="day-heading"><span>Saturday 21 November</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/embodied-consent-boundaries-desire-consious-touch/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fr2.dandelion.events%2F2026%2F09%2F21%2F10%2F18%2F27%2Fb297f233-f197-4916-95c0-63bcdf67a30c%2F741b27fe-f815-4dc8-841b-ce11bd54bf2c.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://r2.dandelion.events/2026/09/21/10/18/27/b297f233-f197-4916-95c0-63bcdf67a30c/741b27fe-f815-4dc8-841b-ce11bd54bf2c.jpg'"><span class="pick-mark" title="one of the richer listings this week">✦ pick</span></div><div class="card-body"><p class="time"><span class="dot dot-morning"></span>11:00 – 18:00</p><h3>Embodied Consent: Boundaries, Desire &amp; Consious Touch</h3><p class="hook">Learn consent and conscious touch through somatic practice with House of Circe.</p><p class="venue">East London</p><p class="meta">£67–£100 · House of Circe · east</p></div></a></div></section><section class="day-group" id="d-2026-11-26"><h2 class="day-heading"><span>Thursday 26 November</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/radical-intimacy/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fr2.dandelion.events%2F2026%2F09%2F21%2F15%2F29%2F03%2Fef202dda-8965-4b17-98a5-01efefb6e68c%2F7036ce5c-1061-4ca9-82fe-bfcd03d2fe90.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://r2.dandelion.events/2026/09/21/15/29/03/ef202dda-8965-4b17-98a5-01efefb6e68c/7036ce5c-1061-4ca9-82fe-bfcd03d2fe90.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>18:00 – 22:00</p><h3>Radical Intimacy</h3><p class="hook">Reclaim sensuality and intimacy beyond patriarchal norms with House of Circe.</p><p class="venue">Archway</p><p class="meta">£45–£115 · House of Circe · north</p></div></a></div></section><section class="day-group" id="d-2026-12-04"><h2 class="day-heading"><span>Friday 4 December</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/introduction-to-bd-m-workshop-for-flinta-people/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fr2.dandelion.events%2F2026%2F09%2F21%2F16%2F13%2F42%2F8c21b0be-3615-44f7-836f-27908f0140e5%2Ff4cf5959-5db9-4db0-a973-ae1a803ad24f.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://r2.dandelion.events/2026/09/21/16/13/42/8c21b0be-3615-44f7-836f-27908f0140e5/f4cf5959-5db9-4db0-a973-ae1a803ad24f.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>18:00 – 22:30</p><h3>Introduction to BD$M (workshop for FLINTA people)</h3><p class="hook">Learn BDSM basics in a sex-positive space designed for FLINTA people to explore power, pleasure and consent.</p><p class="venue">Archway</p><p class="meta">£45–£115 · House of Circe · north</p></div></a></div></section><section class="day-group" id="d-2026-12-11"><h2 class="day-heading"><span>Friday 11 December</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/qu-intimacy-lounge/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fr2.dandelion.events%2F2026%2F09%2F21%2F22%2F58%2F38%2F5d7d8ecd-9694-4e51-97f1-221f9caf8751%2F11dfcab0-b143-42ed-951e-a1d9cc01fa56.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://r2.dandelion.events/2026/09/21/22/58/38/5d7d8ecd-9694-4e51-97f1-221f9caf8751/11dfcab0-b143-42ed-951e-a1d9cc01fa56.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>18:00 – 22:30</p><h3>Qu’intimacy Lounge</h3><p class="hook">Queer intimacy lounge exploring sensuality and authentic connection through tantra.</p><p class="venue">Archway</p><p class="meta">£45–£115 · House of Circe · north</p></div></a></div></section>
+  
+  
+  <p class="static-back"><a href="https://psyconnect.london/o/">← all hosts on PsyConnect</a></p>
+  <p class="static-back">
+    <a href="https://psyconnect.london/">← all of PsyConnect</a>
+  </p>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/cacao-ceremony/">cacao ceremony</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/breathwork/">breathwork</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/sound-bath/">sound bath</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/somatics/">somatic practice</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/contact-improvisation/">contact improvisation</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/qigong/">qigong</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/o/">hosts</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+    <p class="static-footer-home credit">Made by your friendly <a href="https://www.digitalhandyman.london" rel="noopener">digital handyman</a></p>
+  </footer>
+</body>
+</html>

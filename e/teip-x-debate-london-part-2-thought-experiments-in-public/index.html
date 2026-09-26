@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <title>TEiP X DEBATE LONDON • PART 2 | Thought Experiments in Public — PsyConnect</title>
+  <meta name="description" content="Debate modern dating and relationships through playful thought experiments with Debate London&#x27;s founder Michael Pautsch.">
+  <link rel="canonical" href="https://psyconnect.london/e/teip-x-debate-london-part-2-thought-experiments-in-public/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TEiP X DEBATE LONDON • PART 2 | Thought Experiments in Public — PsyConnect">
+  <meta property="og:description" content="Debate modern dating and relationships through playful thought experiments with Debate London&#x27;s founder Michael Pautsch.">
+  <meta property="og:url" content="https://psyconnect.london/e/teip-x-debate-london-part-2-thought-experiments-in-public/">
+  <meta property="og:image" content="https://secure.meetupstatic.com/photos/event/8/9/b/b/600_536255259.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "TEiP X DEBATE LONDON \u2022 PART 2 | Thought Experiments in Public", "startDate": "2026-10-14T18:00:00+00:00", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "London", "address": {"@type": "PostalAddress", "streetAddress": "London, UK", "addressLocality": "London", "addressCountry": "GB"}}, "url": "https://psyconnect.london/e/teip-x-debate-london-part-2-thought-experiments-in-public/", "inLanguage": "en-GB", "endDate": "2026-10-14T20:00:00+00:00", "image": ["https://secure.meetupstatic.com/photos/event/8/9/b/b/600_536255259.jpeg"], "description": "THOUGHT EXPERIMENTS IN PUBLIC (TEiP) A special collaboration between **TEiP** and **Debate London**... We will explore 'debate' through the lens of philosophy and 'philosophy' through the lens of debate in two special events: PART 1 (held previosuly): On the 14th of September, Debate London came to TEiP and we discussed three thought experiments on the theme of 'DEBATE' PART 2 (this event): On the 14th of October, TEiP will visit Debate London to participate in a series of debate games designed ", "organizer": {"@type": "Organization", "name": "THOUGHT EXPERIMENTS IN PUBLIC (TEiP)", "url": "https://www.meetup.com/thought-experiments-in-pubs/"}, "performer": {"@type": "Organization", "name": "THOUGHT EXPERIMENTS IN PUBLIC (TEiP)", "url": "https://www.meetup.com/thought-experiments-in-pubs/"}}</script>
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <nav class="static-crumbs" aria-label="breadcrumb">
+    <a href="https://psyconnect.london/">PsyConnect</a>
+    <span aria-hidden="true">/</span>
+    <a href="https://psyconnect.london/o/thought-experiments-in-public-teip/">THOUGHT EXPERIMENTS IN PUBLIC (TEiP)</a>
+    <span aria-hidden="true">/</span>
+    <span>event</span>
+  </nav>
+  <article class="static-event">
+    <p class="static-kicker">in person · London · east London</p>
+    <h1 class="static-title">TEiP X DEBATE LONDON • PART 2 | Thought Experiments in Public</h1>
+    <p class="static-hook">Debate modern dating and relationships through playful thought experiments with Debate London&#x27;s founder Michael Pautsch.</p>
+    <dl class="static-facts"><div class="static-fact"><dt>When</dt><dd>Wednesday 14 October 2026 · 19:00</dd></div><div class="static-fact"><dt>Where</dt><dd>London, UK</dd></div><div class="static-fact"><dt>Host</dt><dd><a href="https://psyconnect.london/o/thought-experiments-in-public-teip/" data-goatcounter-click="host/thought-experiments-in-public-teip">THOUGHT EXPERIMENTS IN PUBLIC (TEiP)</a></dd></div></dl>
+    <p class="static-chips"><a class="static-chip" href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a></p>
+    <figure class="static-figure"><img src="https://wsrv.nl/?url=https%3A%2F%2Fsecure.meetupstatic.com%2Fphotos%2Fevent%2F8%2F9%2Fb%2Fb%2F600_536255259.jpeg&amp;w=1200&amp;output=webp&amp;q=75" alt="TEiP X DEBATE LONDON • PART 2 | Thought Experiments in Public" loading="lazy" onerror="this.onerror=null;this.src='https://secure.meetupstatic.com/photos/event/8/9/b/b/600_536255259.jpeg'"></figure>
+    <div class="static-prose"><p>THOUGHT EXPERIMENTS IN PUBLIC (TEiP)
+A special collaboration between **TEiP** and **Debate London**...
+We will explore &#x27;debate&#x27; through the lens of philosophy and &#x27;philosophy&#x27; through the lens of debate in two special events:</p><p>PART 1 (held previosuly): On the 14th of September, Debate London came to TEiP and we discussed three thought experiments on the theme of &#x27;DEBATE&#x27;</p><p>PART 2 (this event): On the 14th of October, TEiP will visit Debate London to participate in a series of debate games designed to provoke light, fun and interesting conversations to bring peoplee together through open dialogue.</p><p>**THIS EVENT**
+We&#x27;ll meet at Debate London&#x27;s Whitechapel Venue, the beautiful White Hart right next to Whitechapel Station.</p><p>We&#x27;ll explore ideas around modern dating &amp; relationships by way of simple questions which invite attendees to discuss their thoughts, experiences and any fun ideas or anecdotes that might pop up along the way!</p><p>The session will be lead by Debate London Founder Michael Pautsch with a few fun topics to kick things off as the night builds to either a fun showcase debate based on the answers you all provide on the night.</p><p>Spaces are limited and tickets are likely to sell out fast, so get your ticket early if you want to be there!</p><p>See what these events are like: [@thoughtexperimentsinpubs](https://www.instagram.com/thoughtexperimentsinpubs &quot;https://www.instagram.com/thoughtexperimentsinpubs&quot;) [@debatelondon](https://www.instagram.com/debatelondon/ &quot;https://www.instagram.com/debatelondon/&quot;)</p><p>**The idea:** A chance to meet and talk meaningfully about thought provoking topics.</p><p>**How we&#x27;ll do it** (timings approximate):</p><p>* 7:00pm - Arrive at The White Hart. You can access the pub from the main road via any of their 3 entrances. We will be upstairs in the private bar space.
+* Organise ourselves into small groups (4-6 people per group)
+* Get to know the people around you and settle in for some light hearted topics.
+* 7:15 - First rotation begins - conversation starters. These topics are designed to get us talking about some light &amp; fun ideas. but feel free to veer off topic if that&#x27;s where the conversation takes you.
+* 7:35 - Optional reshuffle: swap groups, move on to the second &quot;debate&quot;
+* 8:00 - Showcase debate building from the earlier topics or some more table debates depending on how the room feels.
+* 8:45pm - Wrap up - hear about upcoming events, feedback/requests for future meetups.
+* 9:00PM Meetup ‘ends’ and the post event hang-out begins. Feel free to carry on conversations. We have the room until 10pm and usually a lot of us stay until then :-)</p><p>**Notes on the general atmosphere**:</p></div>
+    <p class="static-cta-wrap">
+      <a class="static-cta" href="https://www.meetup.com/thought-experiments-in-pubs/events/316654552/?utm_source=psyconnect.london&amp;utm_medium=referral" rel="noopener"
+         data-goatcounter-click="out/thought-experiments-in-public-teip"
+         data-goatcounter-title="TEiP X DEBATE LONDON • PART 2 | Thought Experiments in Public">
+        tickets &amp; details ↗
+      </a>
+    </p>
+    <p class="static-back">
+      <a href="https://psyconnect.london/">← more in-person gatherings on PsyConnect</a>
+    </p>
+  </article>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/cacao-ceremony/">cacao ceremony</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/breathwork/">breathwork</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/sound-bath/">sound bath</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/somatics/">somatic practice</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/contact-improvisation/">contact improvisation</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/qigong/">qigong</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/o/">hosts</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+    <p class="static-footer-home credit">Made by your friendly <a href="https://www.digitalhandyman.london" rel="noopener">digital handyman</a></p>
+  </footer>
+</body>
+</html>

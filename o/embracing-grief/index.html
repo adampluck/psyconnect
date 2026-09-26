@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <title>Embracing Grief events in London — PsyConnect</title>
+  <meta name="description" content="In-person gatherings hosted by Embracing Grief in London, collected on PsyConnect with the rest of what&#x27;s on.">
+  <link rel="canonical" href="https://psyconnect.london/o/embracing-grief/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Embracing Grief events in London — PsyConnect">
+  <meta property="og:description" content="In-person gatherings hosted by Embracing Grief in London, collected on PsyConnect with the rest of what&#x27;s on.">
+  <meta property="og:url" content="https://psyconnect.london/o/embracing-grief/">
+  <meta property="og:image" content="https://psyconnect.london/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "CollectionPage", "name": "Embracing Grief events in London", "description": "In-person gatherings hosted by Embracing Grief in London, collected on PsyConnect with the rest of what's on.", "url": "https://psyconnect.london/o/embracing-grief/"}, {"@type": "ItemList", "name": "Embracing Grief events in London", "numberOfItems": 10, "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://psyconnect.london/e/embracing-grief-a-one-day-community-journey-london/", "name": "Embracing Grief: A One-Day Community Journey (London)"}, {"@type": "ListItem", "position": 2, "url": "https://psyconnect.london/e/tending-the-heart-a-communal-grief-ritual-london/", "name": "Tending the Heart: A Communal Grief Ritual (London)"}, {"@type": "ListItem", "position": 3, "url": "https://psyconnect.london/e/embracing-grief-a-one-day-community-journey-london-2026-12-19/", "name": "Embracing Grief: A One-Day Community Journey (London)"}, {"@type": "ListItem", "position": 4, "url": "https://psyconnect.london/e/embracing-grief-a-one-day-community-journey-london-2026-12-20/", "name": "Embracing Grief: A One-Day Community Journey (London)"}, {"@type": "ListItem", "position": 5, "url": "https://psyconnect.london/e/embracing-grief-a-weekend-community-journey-london/", "name": "Embracing Grief: A Weekend Community Journey (London)"}, {"@type": "ListItem", "position": 6, "url": "https://psyconnect.london/e/embracing-grief-a-one-day-community-journey-london-2027-02-13/", "name": "Embracing Grief: A One-Day Community Journey (London)"}, {"@type": "ListItem", "position": 7, "url": "https://psyconnect.london/e/tending-the-heart-a-communal-grief-ritual-london-2027-03-06/", "name": "Tending the Heart: A Communal Grief Ritual (London)"}, {"@type": "ListItem", "position": 8, "url": "https://psyconnect.london/e/embracing-grief-a-one-day-community-journey-london-2027-04-17/", "name": "Embracing Grief: A One-Day Community Journey (London)"}, {"@type": "ListItem", "position": 9, "url": "https://psyconnect.london/e/embracing-grief-a-weekend-community-journey-london-2027-05-15/", "name": "Embracing Grief: A Weekend Community Journey (London)"}, {"@type": "ListItem", "position": 10, "url": "https://psyconnect.london/e/embracing-grief-a-one-day-community-journey-london-2027-06-12/", "name": "Embracing Grief: A One-Day Community Journey (London)"}]}, {"@type": "Organization", "name": "Embracing Grief", "url": "https://www.griefsupport.org.uk"}]}</script>
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page static-listing">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <details class="static-filters"><summary class="key filters-key">filters</summary><div class="filters-panel"><a class="token" href="https://psyconnect.london/">everything on</a><div class="facet-row"><span class="legend facet-legend">what</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/t/psychedelics/">psychedelics</a><a class="token" href="https://psyconnect.london/t/consciousness/">consciousness</a><a class="token" href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><a class="token" href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><a class="token" href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></div></div><div class="facet-row"><span class="legend facet-legend">modality</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/p/cacao-ceremony/">cacao</a><a class="token" href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><a class="token token-child" href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><a class="token" href="https://psyconnect.london/p/breathwork/">breathwork</a><a class="token" href="https://psyconnect.london/p/sound-bath/">sound bath</a><a class="token" href="https://psyconnect.london/p/somatics/">somatic</a><a class="token" href="https://psyconnect.london/p/contact-improvisation/">contact improv</a><a class="token" href="https://psyconnect.london/p/qigong/">qigong</a></div></div><div class="facet-row"><span class="legend facet-legend">who</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/o/">hosts</a><a class="token token-child lit" href="https://psyconnect.london/o/embracing-grief/" aria-current="page">Embracing Grief</a></div></div></div></details>
+  
+  <header class="static-list-head">
+    <p class="static-kicker">in person · London</p>
+    <h1 class="static-title">Embracing Grief events in London</h1>
+    <div class="static-intro">
+      <p class="static-lead">In-person gatherings hosted by Embracing Grief in London, collected on PsyConnect with the rest of what&#x27;s on.</p><p class="static-lead">10 coming up — times, venues and tickets, refreshed several times a day.</p>
+    </div>
+    <p class="static-back static-org-site"><a href="https://www.griefsupport.org.uk" rel="noopener" data-goatcounter-click="org-site/embracing-grief">Embracing Grief's own page ↗</a></p>
+  </header>
+  <section class="day-group" id="d-2026-10-16"><h2 class="day-heading"><span>Friday 16 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/embracing-grief-a-one-day-community-journey-london/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fr2.dandelion.events%2F2026%2F08%2F23%2F12%2F32%2F28%2Ff61c3ecf-7d9e-4e12-aca8-771e88cc357f%2Fb539224c-3824-4a4e-994f-822e85aad61a.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://r2.dandelion.events/2026/08/23/12/32/28/f61c3ecf-7d9e-4e12-aca8-771e88cc357f/b539224c-3824-4a4e-994f-822e85aad61a.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-morning"></span>10:00 – 18:00</p><h3>Embracing Grief: A One-Day Community Journey (London)</h3><p class="hook">A full day of grief tending and ritual with community in Hackney to process loss with others.</p><p class="venue">Hackney</p><p class="meta">£0–£130 · Embracing Grief · east</p></div></a></div></section><section class="day-group" id="d-2026-11-28"><h2 class="day-heading"><span>Saturday 28 November</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/tending-the-heart-a-communal-grief-ritual-london/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fr2.dandelion.events%2F2026%2F06%2F22%2F10%2F59%2F30%2F6bc5ba52-846d-4758-b6b3-cb4a0681fad3%2Fa78f61de-60c5-4f4d-94ab-9eddc9f0459e.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://r2.dandelion.events/2026/06/22/10/59/30/6bc5ba52-846d-4758-b6b3-cb4a0681fad3/a78f61de-60c5-4f4d-94ab-9eddc9f0459e.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-afternoon"></span>15:00 – 19:00</p><h3>Tending the Heart: A Communal Grief Ritual (London)</h3><p class="hook">Hold grief together in a guided ceremony designed to honor loss and reconnect with what matters.</p><p class="venue">Old School Rooms</p><p class="meta">£0–£80 · Embracing Grief · central</p></div></a></div></section><section class="day-group" id="d-2026-12-19"><h2 class="day-heading"><span>Saturday 19 December</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/embracing-grief-a-one-day-community-journey-london-2026-12-19/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fr2.dandelion.events%2F2026%2F08%2F22%2F19%2F38%2F12%2Fd10baa55-bdc8-473e-8fdf-85e7163b7354%2F211509af-987c-4a74-a4ec-3ca486999e80.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://r2.dandelion.events/2026/08/22/19/38/12/d10baa55-bdc8-473e-8fdf-85e7163b7354/211509af-987c-4a74-a4ec-3ca486999e80.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-morning"></span>10:00 – 18:00</p><h3>Embracing Grief: A One-Day Community Journey (London)</h3><p class="hook">A full-day grief ritual in Hackney that transforms loss through shared ceremony and community.</p><p class="venue">Hackney</p><p class="meta">£0–£130 · Embracing Grief · east</p></div></a></div></section><section class="day-group" id="d-2026-12-20"><h2 class="day-heading"><span>Sunday 20 December</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/embracing-grief-a-one-day-community-journey-london-2026-12-20/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fr2.dandelion.events%2F2026%2F08%2F22%2F20%2F30%2F00%2Fefcb2c12-41dd-4377-9b75-cd788b3fcc0d%2F84af63dd-f07c-4f15-a94a-b6189fcb2732.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://r2.dandelion.events/2026/08/22/20/30/00/efcb2c12-41dd-4377-9b75-cd788b3fcc0d/84af63dd-f07c-4f15-a94a-b6189fcb2732.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-morning"></span>10:00 – 18:00</p><h3>Embracing Grief: A One-Day Community Journey (London)</h3><p class="hook">A full-day community circle with Embracing Grief tending to loss through ritual and connection.</p><p class="venue">Hackney</p><p class="meta">£0–£130 · Embracing Grief · east</p></div></a></div></section><section class="day-group" id="d-2027-01-16"><h2 class="day-heading"><span>Saturday 16 January</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/embracing-grief-a-weekend-community-journey-london/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fr2.dandelion.events%2F2026%2F08%2F26%2F12%2F15%2F12%2F867d9336-5614-4356-a223-3ebd94336717%2F3edf180c-667e-4bc1-888f-dfd50bff76c7.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://r2.dandelion.events/2026/08/26/12/15/12/867d9336-5614-4356-a223-3ebd94336717/3edf180c-667e-4bc1-888f-dfd50bff76c7.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-morning"></span>10:00 – 18:00</p><h3>Embracing Grief: A Weekend Community Journey (London)</h3><p class="hook">A weekend ritual circle to collectively tend grief with others who understand loss</p><p class="venue">Clapton Square</p><p class="meta">£0–£255 · Embracing Grief · east</p></div></a></div></section><section class="day-group" id="d-2027-02-13"><h2 class="day-heading"><span>Saturday 13 February</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/embracing-grief-a-one-day-community-journey-london-2027-02-13/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fr2.dandelion.events%2F2026%2F08%2F23%2F12%2F13%2F36%2Fa8ebc175-494a-4268-ad8e-7133354c8bce%2F013b79b0-4d1c-4c2d-9d60-464a1c1348d6.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://r2.dandelion.events/2026/08/23/12/13/36/a8ebc175-494a-4268-ad8e-7133354c8bce/013b79b0-4d1c-4c2d-9d60-464a1c1348d6.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-morning"></span>10:00 – 18:00</p><h3>Embracing Grief: A One-Day Community Journey (London)</h3><p class="hook">A community ritual for tending loss and grief together in ceremony with others who know the weight.</p><p class="venue">Hackney</p><p class="meta">£0–£140 · Embracing Grief · east</p></div></a></div></section><section class="day-group" id="d-2027-03-06"><h2 class="day-heading"><span>Saturday 6 March</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/tending-the-heart-a-communal-grief-ritual-london-2027-03-06/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fr2.dandelion.events%2F2026%2F08%2F23%2F12%2F32%2F48%2F099e7d51-a055-4082-83c4-14127a368b28%2Fef044bcc-96d5-45c2-923f-0320eafb4573.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://r2.dandelion.events/2026/08/23/12/32/48/099e7d51-a055-4082-83c4-14127a368b28/ef044bcc-96d5-45c2-923f-0320eafb4573.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-afternoon"></span>15:00 – 19:00</p><h3>Tending the Heart: A Communal Grief Ritual (London)</h3><p class="hook">A guided grief ceremony with Embracing Grief to honour loss and move through collective sorrow.</p><p class="venue">Old School Rooms</p><p class="meta">£0–£80 · Embracing Grief</p></div></a></div></section><section class="day-group" id="d-2027-04-17"><h2 class="day-heading"><span>Saturday 17 April</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/embracing-grief-a-one-day-community-journey-london-2027-04-17/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fr2.dandelion.events%2F2026%2F08%2F22%2F20%2F29%2F49%2F2f91cfd7-abea-4a97-94b6-523804734668%2Fcdbfd2f3-e1ef-4f50-bf82-ef75a36a353a.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://r2.dandelion.events/2026/08/22/20/29/49/2f91cfd7-abea-4a97-94b6-523804734668/cdbfd2f3-e1ef-4f50-bf82-ef75a36a353a.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-morning"></span>10:00 – 18:00</p><h3>Embracing Grief: A One-Day Community Journey (London)</h3><p class="hook">A full day of grief ritual and collective tending with Embracing Grief in Hackney.</p><p class="venue">Hackney</p><p class="meta">£0–£140 · Embracing Grief · east</p></div></a></div></section><section class="day-group" id="d-2027-05-15"><h2 class="day-heading"><span>Saturday 15 May</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/embracing-grief-a-weekend-community-journey-london-2027-05-15/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fr2.dandelion.events%2F2026%2F08%2F27%2F06%2F45%2F11%2F43cf2f37-9c97-4861-824d-11d0b4d298bd%2F54c16a3f-a9ec-4a34-a6b8-a6bbc0696e92.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://r2.dandelion.events/2026/08/27/06/45/11/43cf2f37-9c97-4861-824d-11d0b4d298bd/54c16a3f-a9ec-4a34-a6b8-a6bbc0696e92.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-morning"></span>10:00 – 18:00</p><h3>Embracing Grief: A Weekend Community Journey (London)</h3><p class="hook">A full weekend of guided grief tending with Embracing Grief, held in community.</p><p class="venue">Clapton Square</p><p class="meta">£0–£255 · Embracing Grief · east</p></div></a></div></section><section class="day-group" id="d-2027-06-12"><h2 class="day-heading"><span>Saturday 12 June</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/embracing-grief-a-one-day-community-journey-london-2027-06-12/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fr2.dandelion.events%2F2026%2F08%2F23%2F12%2F35%2F35%2F597a568d-9539-44c4-a7e7-476f09fce782%2F6a0934ef-b7a2-4010-9f0a-994e9e5a30cd.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://r2.dandelion.events/2026/08/23/12/35/35/597a568d-9539-44c4-a7e7-476f09fce782/6a0934ef-b7a2-4010-9f0a-994e9e5a30cd.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-morning"></span>10:00 – 18:00</p><h3>Embracing Grief: A One-Day Community Journey (London)</h3><p class="hook">Day-long grief ritual with community witnessing, led by Embracing Grief in supportive ceremony.</p><p class="venue">Hackney</p><p class="meta">£0–£140 · Embracing Grief · east</p></div></a></div></section>
+  <section class="static-past"><h2>Recently hosted</h2><ul><li><time datetime="2026-09-19">Sat 19 Sep</time> · Embracing Grief: A One-Day Community Journey (London) · Hackney</li></ul></section>
+  
+  <p class="static-back"><a href="https://psyconnect.london/o/">← all hosts on PsyConnect</a></p>
+  <p class="static-back">
+    <a href="https://psyconnect.london/">← all of PsyConnect</a>
+  </p>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/cacao-ceremony/">cacao ceremony</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/breathwork/">breathwork</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/sound-bath/">sound bath</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/somatics/">somatic practice</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/contact-improvisation/">contact improvisation</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/qigong/">qigong</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/o/">hosts</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+    <p class="static-footer-home credit">Made by your friendly <a href="https://www.digitalhandyman.london" rel="noopener">digital handyman</a></p>
+  </footer>
+</body>
+</html>

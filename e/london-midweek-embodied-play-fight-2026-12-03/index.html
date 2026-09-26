@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <title>London Midweek Embodied Play-Fight — PsyConnect</title>
+  <meta name="description" content="Roy Graff guides you through consensual play-fighting to discover what your body wants to express.">
+  <link rel="canonical" href="https://psyconnect.london/e/london-midweek-embodied-play-fight-2026-12-03/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="London Midweek Embodied Play-Fight — PsyConnect">
+  <meta property="og:description" content="Roy Graff guides you through consensual play-fighting to discover what your body wants to express.">
+  <meta property="og:url" content="https://psyconnect.london/e/london-midweek-embodied-play-fight-2026-12-03/">
+  <meta property="og:image" content="https://rhsilfaimkqlvzrxqjbq.supabase.co/storage/v1/object/public/event-images/3f572e182fd4ae85af879b1f283061cc3c12612b4e8ef78a65eea0406363b877.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "London Midweek Embodied Play-Fight", "startDate": "2026-12-03T19:00:00+00:00", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "London", "address": {"@type": "PostalAddress", "streetAddress": "Queens Road Peckham, London", "addressLocality": "London", "addressCountry": "GB"}}, "url": "https://psyconnect.london/e/london-midweek-embodied-play-fight-2026-12-03/", "inLanguage": "en-GB", "endDate": "2026-12-03T22:00:00+00:00", "image": ["https://rhsilfaimkqlvzrxqjbq.supabase.co/storage/v1/object/public/event-images/3f572e182fd4ae85af879b1f283061cc3c12612b4e8ef78a65eea0406363b877.jpg"], "description": "London Midweek Embodied Play-Fight This workshop will offer you an opportunity to explore your body in connection with others. It is a non-sexual, pants-on event where you are invited to explore embodied connection and non-verbal communication through play. All physical abilities are welcomed as are all genders, sexualities and orientations. Workshop information Play fighting is all about connection to your own body and energies flowing through it first. Only from that space you can wrestle and ", "organizer": {"@type": "Organization", "name": "Roy Graff", "url": "https://psyconnect.london/o/roy-graff/"}, "performer": {"@type": "Organization", "name": "Roy Graff", "url": "https://psyconnect.london/o/roy-graff/"}, "offers": {"@type": "Offer", "price": "35.0", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "url": "https://soullinkhub.com/event/fc9f3b93-d3d8-416d-8bfd-a9784b36f369", "validFrom": "2026-09-21T17:13:49.65906+00:00"}}</script>
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <nav class="static-crumbs" aria-label="breadcrumb">
+    <a href="https://psyconnect.london/">PsyConnect</a>
+    <span aria-hidden="true">/</span>
+    <a href="https://psyconnect.london/o/roy-graff/">Roy Graff</a>
+    <span aria-hidden="true">/</span>
+    <span>event</span>
+  </nav>
+  <article class="static-event">
+    <p class="static-kicker">in person · London · east London</p>
+    <h1 class="static-title">London Midweek Embodied Play-Fight</h1>
+    <p class="static-hook">Roy Graff guides you through consensual play-fighting to discover what your body wants to express.</p>
+    <dl class="static-facts"><div class="static-fact"><dt>When</dt><dd>Thursday 3 December 2026 · 19:00</dd></div><div class="static-fact"><dt>Where</dt><dd>Queens Road Peckham, London</dd></div><div class="static-fact"><dt>Price</dt><dd>£35</dd></div><div class="static-fact"><dt>Host</dt><dd><a href="https://psyconnect.london/o/roy-graff/" data-goatcounter-click="host/roy-graff">Roy Graff</a></dd></div></dl>
+    <p class="static-chips"><a class="static-chip" href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><a class="static-chip" href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a></p>
+    <figure class="static-figure"><img src="https://wsrv.nl/?url=https%3A%2F%2Frhsilfaimkqlvzrxqjbq.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fevent-images%2F3f572e182fd4ae85af879b1f283061cc3c12612b4e8ef78a65eea0406363b877.jpg&amp;w=1200&amp;output=webp&amp;q=75" alt="London Midweek Embodied Play-Fight" loading="lazy" onerror="this.onerror=null;this.src='https://rhsilfaimkqlvzrxqjbq.supabase.co/storage/v1/object/public/event-images/3f572e182fd4ae85af879b1f283061cc3c12612b4e8ef78a65eea0406363b877.jpg'"></figure>
+    <div class="static-prose"><p>London Midweek Embodied Play-Fight This workshop will offer you an opportunity to explore your body in connection with others. It is a non-sexual, pants-on event where you are invited to explore embodied connection and non-verbal communication through play. All physical abilities are welcomed as are all genders, sexualities and orientations. Workshop information Play fighting is all about connection to your own body and energies flowing through it first. Only from that space you can wrestle and play in a wholesome, connected, delicious way with other beings. What you discover in this kind of deeply embodied connection with others is likely to surprise you! Perhaps your body, and spirit, crave gentleness and flowing, perhaps there’s a lot of passion, fire and wildness yearning to be expressed. You might awaken your creativity or meet your inner child or feel silly and full of life! You won’t know until you dive into it full in! In the workshop, we will talk through and demonstrate safety aspects of play fighting, demonstrate techniques and go through a series of exercises to warm up and connect with others. Importantly, we will explore boundaries and consent, communicating them in both verbal and nonverbal ways. Everyone who wants to, will have an opportunity to challenge another for a play fight in the circle. Typically, rounds last 2 minutes and can be include 2-4 people, depending on space and skill levels. You are welcome to bring in all your energies - playful, silly, competitive, gentle, caring, soulful or in eros. However, please note that this workshop is not sexual. We will finish by 10 pm. Plan 6:30 Arrival 6:45 Opening circle, body warm-up, stretches and connection games 7:30-8:15 play fight! 8:15-8:30 break 8:30-9:15 play fight! 9:15 closing circle 9:30 end Workshop dates in 2026: 7 October: Venue in SE London (Queen&#x27;s Road Peckham station) 11 November: Venue in SE London (Queen&#x27;s Road Peckham station) 3 December: Venue in Hackney Wick Important information Please do not consume mind altering substances for 24 hours prior to the event This is a non-sexual space Bring snacks to share. Water and tea will be available Venue address will be emailed to all attendees before the event (nearest station is Limehouse, 3 minutes walk) Bring a water bottle (no open drink containers allowed in the space) Wear yoga/gym clothes Avoid strong perfumes or scents Please remove watches, all jewellery and sharp or loose piercings before the workshop No prior skill is necessary, and all body types and abilities are welcome We welcome all genders, sexualities and identities. We do not tolerate any prejudices, biases or othering. Safety This a summary of the safety protocol that we explain and practice each session prior to play-fighting. Universal safety rules and call-outs when we see a safety breach: Neck: no choke-holds (even those that may be accepted in wrestling &amp; martial arts). No interaction above the neck (general wrestling rules). Knee: always keeping one knee on the ground, to keep the centre of gravity low (avoids injuries to ankles). Space: Those sitting around the circle can call out when the sparring people come too close to them. Ways of checking-in or pausing a fight due to concern Check*: calling this is a reminder for the play-fighters to do a mental check-in, coming momentarily from body to mind to ensure they are comfortable with the situation. Can be used when a watcher has a general concern. Pause: Can be called by anyone for a concern about boundary violation or safety risk. Stop/Red: Can be called by anyone for a concern about boundary violation or safety risk. Double tap the floor: by a play fighter who is non-verbal. Energy regulation to prevent overwhelm or getting carried away with the excitement and adrenaline rush Self check-in during warmup, bringing awareness to your present energy levels. Opening ritual and communicating personal boundaries before the play fight. Closing ritual and co-regulation / down-regulation after the round. Pricing Normal: £35 Generous: £45 Reduced: £25 (limited tickets) If you are on low or no income please contact to inquire about reduced and assistant positions. Your facilitator: Roy Graff is a counsellor, life and relationship coach who draws on his training in Psychosynthesis psychotherapy, Radical Honesty, Non-violent Communication and Wheel of Consent training to offer coaching and mentoring to individuals, couples and polycules. He can help you with relationship issues, honesty and authenticity in relating, life transformation and major life crises. Roy has been facilitating play fighting workshops and consent workshops since 2022 in London, Manchester, Brighton, Nottingham and Bristol as well as festivals in the UK and Europe. He has personally used play fighting to process and heal his personal trauma around violence and aggression. Venue details: The exact address will be emailed to guests before the event. We use different venues, please check with the organiser if this impacts your attendance. Accessibility : Everything in the venue is on the same level. Toilet door not wheelchair accessible. Booking conditions Payment can be made by credit or debit card. Full payment is needed to secure a place. Refunds : Available until 2 full weeks before the event, less £10 administration and processing charge. Up to 3 days before the event, you can request to transfer your credit to a future event (the same ticket can only be transferred once). Tickets are transferable up to 6 hours before the workshop, to another person within the Telegram group. An email with venue details and other important information will be sent to you 1-2 days before the event. Testimonials &quot;It was the first time for me participating in the playfighting workshop. I had a really good time and felt comfortable and safe in the space. The session was great fun and was managed in a way that allowed for everyone to participate at their own level. Wonderful way to spend the evening, thanks Leo and Roy for facilitating.&quot; &quot;This was my second session and what struck me this time was the intensity of the male-male fights. The ferocity was there but the energy never shifted into trying to win at any cost. I’ve done a fair bit of boxing sparring and contests of that intensity between men often shift into swinging wildly and no longer truly honoring the safety of the other person. So it’s great that didn’t happen and I think is a testament to the space that was created by Roy and Leo and also all of us observing.&quot; &quot;I had so much fun playing dogs and gorillas! I’m really enjoying the exploration of interacting with people in this way. And the freedom to interact human to human rather than considering gender. I have only been once before but I love how both times have had a different energy and styles of fight making it a new experience each time.&quot; &quot;Play Fighting workshop was everything I had hoped for: well-organised, fun, energetic and intense. It was lovely to witness a variety of play fighting styles from competitive to sensual to almost erotic (had I stayed for the optional Temple, I’m sure eroticism would have been the main energy ingredient). I was pleased to see how quickly a bunch of standers are able to authentically connect with each other on a wide range of levels within the safety of the play space. Kudos to the organisers, for their excellent team work and professionalism. I can highly recommend to anyone to attend it.&quot; Kristina &quot;It was with great anticipation that I went to the Play fighting workshop and temple. I was not disappointed it provided a space for me to be physical, powerful and playful with others. Wrestling, pushing, grabbing, snarling, rolling around - I loved it. A place to let out my inner animal without inhibition. I came away more confident and grateful to experience this part of my erotic nature with others. I learned so much about myself thank you.&quot; Dee &quot;I was quite apprehensive before attending, but it couldn&#x27;t have been a nicer or more welcoming and inclusive experience, with great care taken of every participant and a carefully-structured build-up to the more intense stuff. We were regularly reminded of choice and consent (also safety), but not in a way that interfered with enjoyment. A lovely experience altogether.&quot; Matt &quot;Thank you for providing a safe and welcoming space to explore play fighting for the first time. I felt comfortable throughout to explore movement and touch in the warm up exercises and supported to try a play fight. the rules were easy to follow and everything felt intuitive. Such a warm and supportive group of people to share and try something new.&quot; EJ &quot;I felt the workshop was very well presented and it demonstrated how best we should both control our emotions and desires.&quot; &quot;Roy did an excellent job at explaining the rules and boundaries, as well as giving excellent examples of how to engage into play fighting. He gave rules and boundaries for the group, but also made sure the space was open, welcoming and accepting of personal boundaries. The warm up games were a great way of bringing people into the space and connecting people with each other ahead of the play fights. This really helped to bring some connection before getting physical.&quot; &quot;Exhilarating and fun evening would love to do it again pushing my boundaries and connecting with one’s push pushing. Great friendly group had a lot of fun. Roy was an excellent and very knowledgeable play fighting facilitator who really communicated the guidelines and boundaries well. He created a lovely vibe and safe space to really express ourselves.&quot; Disclaimer - by purchasing a ticket, You agree that you understand and accept the risks of possible injuries resulting from play fighting. You confirm your physical fitness to participate in these activities and will inform the facilitator of any prior injuries or medical conditions. You agree to comply with the safety protocols and guidelines given to you by the facilitator. You agree to not hold liable the organisers, assistants or venue, for any injuries that may be caused by your participation in the activities. You confirm that you are over the age of 18.</p></div>
+    <p class="static-cta-wrap">
+      <a class="static-cta" href="https://soullinkhub.com/event/fc9f3b93-d3d8-416d-8bfd-a9784b36f369?utm_source=psyconnect.london&amp;utm_medium=referral" rel="noopener"
+         data-goatcounter-click="out/roy-graff"
+         data-goatcounter-title="London Midweek Embodied Play-Fight">
+        tickets &amp; details ↗
+      </a>
+    </p>
+    <p class="static-back">
+      <a href="https://psyconnect.london/">← more in-person gatherings on PsyConnect</a>
+    </p>
+  </article>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/cacao-ceremony/">cacao ceremony</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/breathwork/">breathwork</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/sound-bath/">sound bath</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/somatics/">somatic practice</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/contact-improvisation/">contact improvisation</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/qigong/">qigong</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/o/">hosts</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+    <p class="static-footer-home credit">Made by your friendly <a href="https://www.digitalhandyman.london" rel="noopener">digital handyman</a></p>
+  </footer>
+</body>
+</html>

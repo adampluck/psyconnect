@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+})();
+</script>
+  <title>Awaken – Discover Who You Really Really Are – London 23rd October 2026 — PsyConnect</title>
+  <meta name="description" content="Jim Eaton guides a deconstructing inquiry into unconditional loving presence through first-person experience.">
+  <link rel="canonical" href="https://psyconnect.london/e/awaken-discover-who-you-really-really-are-london-23rd-october-2026/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Awaken – Discover Who You Really Really Are – London 23rd October 2026 — PsyConnect">
+  <meta property="og:description" content="Jim Eaton guides a deconstructing inquiry into unconditional loving presence through first-person experience.">
+  <meta property="og:url" content="https://psyconnect.london/e/awaken-discover-who-you-really-really-are-london-23rd-october-2026/">
+  <meta property="og:image" content="https://www.jimeaton.org/wp-content/uploads/2026/06/awaken-comp.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "Awaken \u2013 Discover Who You Really Really Are \u2013 London 23rd October 2026", "startDate": "2026-10-23T18:00:00+00:00", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "North London, N4", "address": {"@type": "PostalAddress", "streetAddress": "North London, N4", "addressLocality": "London", "addressCountry": "GB"}}, "url": "https://psyconnect.london/e/awaken-discover-who-you-really-really-are-london-23rd-october-2026/", "inLanguage": "en-GB", "endDate": "2026-10-23T20:00:00+00:00", "image": ["https://www.jimeaton.org/wp-content/uploads/2026/06/awaken-comp.jpg"], "description": "Together we\u2019ll be deconstructing the rational mind and exploring the power of first-person experience to reveal the unconditional loving presence that radiates at the heart of all experience, that animates not only our human self but the entirety of this here now. Other lines of inquiry may include: what is the impact of this experiential realisation? Does it naturally lead to personal transformation? How does it relate to the Circling and Surrendered Leadership practices? The evening will not h", "organizer": {"@type": "Organization", "name": "Jim Eaton", "url": "https://www.jimeaton.org/"}, "performer": {"@type": "Organization", "name": "Jim Eaton", "url": "https://www.jimeaton.org/"}, "offers": {"@type": "Offer", "price": "20.0", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "url": "https://www.jimeaton.org/item/awaken-discover-who-you-really-really-are-london-23rd-october-2026/", "validFrom": "2026-09-22T10:10:11.445204+00:00"}}</script>
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <nav class="static-crumbs" aria-label="breadcrumb">
+    <a href="https://psyconnect.london/">PsyConnect</a>
+    <span aria-hidden="true">/</span>
+    <span>event</span>
+  </nav>
+  <article class="static-event">
+    <p class="static-kicker">in person · London · north London</p>
+    <h1 class="static-title">Awaken – Discover Who You Really Really Are – London 23rd October 2026</h1>
+    <p class="static-hook">Jim Eaton guides a deconstructing inquiry into unconditional loving presence through first-person experience.</p>
+    <dl class="static-facts"><div class="static-fact"><dt>When</dt><dd>Friday 23 October 2026 · 19:00</dd></div><div class="static-fact"><dt>Where</dt><dd>North London, N4, North London, N4</dd></div><div class="static-fact"><dt>Price</dt><dd>£20</dd></div><div class="static-fact"><dt>Host</dt><dd>Jim Eaton</dd></div></dl>
+    <p class="static-chips"><a class="static-chip" href="https://psyconnect.london/t/consciousness/">consciousness</a><a class="static-chip" href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></p>
+    <figure class="static-figure"><img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.jimeaton.org%2Fwp-content%2Fuploads%2F2026%2F06%2Fawaken-comp.jpg&amp;w=1200&amp;output=webp&amp;q=75" alt="Awaken – Discover Who You Really Really Are – London 23rd October 2026" loading="lazy" onerror="this.onerror=null;this.src='https://www.jimeaton.org/wp-content/uploads/2026/06/awaken-comp.jpg'"></figure>
+    <div class="static-prose"><p>Together we’ll be deconstructing the rational mind and exploring the power of first-person experience to reveal the unconditional loving presence that radiates at the heart of all experience, that animates not only our human self but the entirety of this here now. Other lines of inquiry may include: what is the impact of this experiential realisation? Does it naturally lead to personal transformation? How does it relate to the Circling and Surrendered Leadership practices? The evening will not have a formal structure, but will instead be conducted in the spirit of surrender to what emerges from within the group. Contact: If you have any practical questions contact Sergiusz: sergiuszbleja@gmail.com Cost: £20 Cancellations: Tickets are non-transferable and non-refundable.</p></div>
+    <p class="static-cta-wrap">
+      <a class="static-cta" href="https://www.jimeaton.org/item/awaken-discover-who-you-really-really-are-london-23rd-october-2026/?utm_source=psyconnect.london&amp;utm_medium=referral" rel="noopener"
+         data-goatcounter-click="out/jim-eaton"
+         data-goatcounter-title="Awaken – Discover Who You Really Really Are – London 23rd October 2026">
+        tickets &amp; details ↗
+      </a>
+    </p>
+    <p class="static-back">
+      <a href="https://psyconnect.london/">← more in-person gatherings on PsyConnect</a>
+    </p>
+  </article>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/cacao-ceremony/">cacao ceremony</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/breathwork/">breathwork</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/sound-bath/">sound bath</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/somatics/">somatic practice</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/contact-improvisation/">contact improvisation</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/qigong/">qigong</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/o/">hosts</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+    <p class="static-footer-home credit">Made by your friendly <a href="https://www.digitalhandyman.london" rel="noopener">digital handyman</a></p>
+  </footer>
+</body>
+</html>
