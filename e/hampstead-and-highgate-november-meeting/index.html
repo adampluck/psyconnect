@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+
+  // the backdrop pattern loads once the page has (see .bg-ready in theme.css)
+  window.addEventListener("load", function () {
+    root.classList.add("bg-ready");
+  });
+})();
+</script>
+  <title>Hampstead and Highgate: November Meeting — PsyConnect</title>
+  <meta name="description" content="Explore authenticity in a guided circle with curious Londoners at Waterlow Park&#x27;s historic Lauderdale House.">
+  <link rel="canonical" href="https://psyconnect.london/e/hampstead-and-highgate-november-meeting/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hampstead and Highgate: November Meeting — PsyConnect">
+  <meta property="og:description" content="Explore authenticity in a guided circle with curious Londoners at Waterlow Park&#x27;s historic Lauderdale House.">
+  <meta property="og:url" content="https://psyconnect.london/e/hampstead-and-highgate-november-meeting/">
+  <meta property="og:image" content="https://consciouscafe.org/wp-content/uploads/2024/06/Lauderdale-House.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "Hampstead and Highgate: November Meeting", "startDate": "2026-11-16T18:30:00+00:00", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "Lauderdale House, N6 5HG", "address": {"@type": "PostalAddress", "streetAddress": "Waterlow Park, Highgate Hill, London, N6 5HG", "addressLocality": "London", "addressCountry": "GB"}}, "url": "https://psyconnect.london/e/hampstead-and-highgate-november-meeting/", "inLanguage": "en-GB", "endDate": "2026-11-16T20:45:00+00:00", "image": ["https://consciouscafe.org/wp-content/uploads/2024/06/Lauderdale-House.webp"], "description": "ConsciousCafe invites you to the November meeting of the Hampstead and Highgate ConsciousCafe group. Date: Monday 16 November Time: 6.30 \u2013 8.45 PM (doors open 6:15 pm) Venue: Lauderdale House, Waterlow Park, Highgate Hill, London N6 5HG Admission: \u00a310 includes refreshments If you cancel up to 48 hours before the event we will return your payment or give you a credit. We will be exploring the topic, Authenticity ConsciousCafe is a global network of conversation circles and live and online events ", "organizer": {"@type": "Organization", "name": "ConsciousCafe", "url": "https://consciouscafe.org/"}, "performer": {"@type": "Organization", "name": "ConsciousCafe", "url": "https://consciouscafe.org/"}, "offers": {"@type": "Offer", "price": "10.0", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "url": "https://consciouscafe.org/event/hampstead-and-highgate-november/", "validFrom": "2026-10-09T12:06:22.253843+00:00"}}</script>
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <details class="static-filters"><summary class="key filters-key">filters</summary><div class="filters-panel"><a class="token" href="https://psyconnect.london/">everything on</a><div class="facet-row"><span class="legend facet-legend">what</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/t/psychedelics/">psychedelics</a><a class="token" href="https://psyconnect.london/t/consciousness/">consciousness</a><a class="token" href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><a class="token" href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><a class="token" href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></div></div><div class="facet-row"><span class="legend facet-legend">modality</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/p/cacao-ceremony/">cacao</a><a class="token" href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><a class="token token-child" href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><a class="token" href="https://psyconnect.london/p/breathwork/">breathwork</a><a class="token" href="https://psyconnect.london/p/sound-bath/">sound bath</a><a class="token" href="https://psyconnect.london/p/somatics/">somatic</a><a class="token" href="https://psyconnect.london/p/contact-improvisation/">contact improv</a><a class="token" href="https://psyconnect.london/p/qigong/">qigong</a><a class="token" href="https://psyconnect.london/p/bohm-dialogue/">Bohm dialogue</a></div></div><div class="facet-row"><span class="legend facet-legend">who</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/o/">hosts</a></div></div></div></details>
+  <div class="static-ticker"><div class="ticker-shell"><div class="ticker"><span class="tick spent" aria-hidden="true">today<small>10</small></span><a class="tick" href="https://psyconnect.london/?day=2026-10-11">tmrw<small>11</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-12">mon<small>12</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-13">tue<small>13</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-14">wed<small>14</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-15">thu<small>15</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-16">fri<small>16</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-17">sat<small>17</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-18">sun<small>18</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-19">mon<small>19</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-20">tue<small>20</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-21">wed<small>21</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-22">thu<small>22</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-23">fri<small>23</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-24">sat<small>24</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-25">sun<small>25</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-26">mon<small>26</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-27">tue<small>27</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-28">wed<small>28</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-29">thu<small>29</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-30">fri<small>30</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-31">sat<small>31</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-01">sun<small>1</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-02">mon<small>2</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-03">tue<small>3</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-04">wed<small>4</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-05">thu<small>5</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-06">fri<small>6</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-07">sat<small>7</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-08">sun<small>8</small></a></div><div class="ticker-fixed"><a class="tick" href="https://psyconnect.london/?day=7">7<small>days</small></a><a class="tick" href="https://psyconnect.london/?day=30">30<small>days</small></a></div></div></div>
+  <nav class="static-crumbs" aria-label="breadcrumb">
+    <a href="https://psyconnect.london/">PsyConnect</a>
+    <span aria-hidden="true">/</span>
+    <a href="https://psyconnect.london/o/consciouscafe/">ConsciousCafe</a>
+    <span aria-hidden="true">/</span>
+    <span>event</span>
+  </nav>
+  <article class="static-event">
+    <p class="static-kicker">in person · London · north London</p>
+    <h1 class="static-title">Hampstead and Highgate: November Meeting</h1>
+    <p class="static-hook">Explore authenticity in a guided circle with curious Londoners at Waterlow Park&#x27;s historic Lauderdale House.</p>
+    <dl class="static-facts"><div class="static-fact"><dt>When</dt><dd>Monday 16 November 2026 · 18:30</dd></div><div class="static-fact"><dt>Where</dt><dd>Lauderdale House, N6 5HG, Waterlow Park, Highgate Hill, London, N6 5HG</dd></div><div class="static-fact"><dt>Price</dt><dd>£10</dd></div><div class="static-fact"><dt>Host</dt><dd><a href="https://psyconnect.london/o/consciouscafe/" data-goatcounter-click="host/consciouscafe">ConsciousCafe</a></dd></div></dl>
+    <p class="static-chips"><a class="static-chip" href="https://psyconnect.london/t/consciousness/">consciousness</a></p>
+    <figure class="static-figure"><img src="https://wsrv.nl/?url=https%3A%2F%2Fconsciouscafe.org%2Fwp-content%2Fuploads%2F2024%2F06%2FLauderdale-House.webp&amp;w=1200&amp;output=webp&amp;q=75" alt="Hampstead and Highgate: November Meeting" loading="lazy" onerror="this.onerror=null;this.src='https://consciouscafe.org/wp-content/uploads/2024/06/Lauderdale-House.webp'"></figure>
+    <div class="static-prose"><p>ConsciousCafe invites you to the November meeting of the Hampstead and Highgate ConsciousCafe group. Date: Monday 16 November Time: 6.30 – 8.45 PM (doors open 6:15 pm) Venue: Lauderdale House, Waterlow Park, Highgate Hill, London N6 5HG Admission: £10 includes refreshments If you cancel up to 48 hours before the event we will return your payment or give you a credit. We will be exploring the topic, Authenticity ConsciousCafe is a global network of conversation circles and live and online events where curious, thoughtful people come together to explore life’s bigger questions in a welcoming, non-judgmental space. There are no gurus here – just real people sharing wisdom, experiences and inspiration. Whether you’re passionate about personal growth, spirituality, wellbeing, sustainability, or simply enjoy meaningful conversation over a cup of coffee, you’ll feel at home. What to expect on the night: - A warm welcome and introductions - A short, guided opening to set the tone - Facilitated circle discussion on our chosen topic - Plenty of time to connect with like-minded souls - Tea, coffee, and biscuits ConsciousCafe is run by volunteers so please book ahead on the ConsciousCafe website so that we know how many people to expect and will have enough refreshments for everyone. Together we are creating a supportive community where we can grow, reflect and celebrate conscious living. Feel free to forward this invitation to anyone you think would love to join us – most people hear about ConsciousCafe through word-of-mouth. If you have any questions please email Judy@consciouscafe.org We look forward to meeting you.</p></div>
+    <p class="static-cta-wrap">
+      <a class="static-cta" href="https://consciouscafe.org/event/hampstead-and-highgate-november/?utm_source=psyconnect.london&amp;utm_medium=referral" rel="noopener"
+         data-goatcounter-click="out/consciouscafe"
+         data-goatcounter-title="Hampstead and Highgate: November Meeting">
+        tickets &amp; details ↗
+      </a>
+    </p>
+    <p class="static-back">
+      <a href="https://psyconnect.london/">← more in-person gatherings on PsyConnect</a>
+    </p>
+  </article>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/cacao-ceremony/">cacao ceremony</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/breathwork/">breathwork</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/sound-bath/">sound bath</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/somatics/">somatic practice</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/contact-improvisation/">contact improvisation</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/qigong/">qigong</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/bohm-dialogue/">Bohm dialogue</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/o/">hosts</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+    <p class="static-footer-home credit">Made by your friendly <a href="https://www.digitalhandyman.london" rel="noopener">digital handyman</a></p>
+  </footer>
+</body>
+</html>

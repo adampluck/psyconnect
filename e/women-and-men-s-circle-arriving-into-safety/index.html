@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+
+  // the backdrop pattern loads once the page has (see .bg-ready in theme.css)
+  window.addEventListener("load", function () {
+    root.classList.add("bg-ready");
+  });
+})();
+</script>
+  <title>Women and Men&#x27;s Circle: Arriving Into Safety — PsyConnect</title>
+  <meta name="description" content="Explore what safety means across genders with embodied practices and authentic relating, led by Jozef Popjak.">
+  <link rel="canonical" href="https://psyconnect.london/e/women-and-men-s-circle-arriving-into-safety/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Women and Men&#x27;s Circle: Arriving Into Safety — PsyConnect">
+  <meta property="og:description" content="Explore what safety means across genders with embodied practices and authentic relating, led by Jozef Popjak.">
+  <meta property="og:url" content="https://psyconnect.london/e/women-and-men-s-circle-arriving-into-safety/">
+  <meta property="og:image" content="https://rhsilfaimkqlvzrxqjbq.supabase.co/storage/v1/object/public/event-images/6571a030bccbd1b59ce9d4e7b7ebbca49753e73e53fe60ab2565425c037ade67.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "Women and Men's Circle: Arriving Into Safety", "startDate": "2026-10-17T12:00:00+00:00", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "London", "address": {"@type": "PostalAddress", "streetAddress": "Lekdanling - Tibetan Cultural Centre, Collent St, London, UK", "addressLocality": "London", "addressCountry": "GB"}}, "url": "https://psyconnect.london/e/women-and-men-s-circle-arriving-into-safety/", "inLanguage": "en-GB", "endDate": "2026-10-17T15:00:00+00:00", "image": ["https://rhsilfaimkqlvzrxqjbq.supabase.co/storage/v1/object/public/event-images/6571a030bccbd1b59ce9d4e7b7ebbca49753e73e53fe60ab2565425c037ade67.jpg"], "description": "WOMEN'S AND MEN\u2019S CIRCLE At The Threshold, Arriving Into Safety \u201cSafety is not the absence of threat, it is a presence of connection.\u201d -Gabor Mat\u00e9 This circle is not about the kind of safety that keeps us small, invisible and at home on the sofa. This is about the safety that allows us to step into the unknown, take risks, and be fully present and uncompromisingly ourselves. When we feel safe, there\u2019s more agency, more potential, a sense of possibility and limitlessness, and more space for creat", "organizer": {"@type": "Organization", "name": "Jozef Popjak"}, "performer": {"@type": "Organization", "name": "Jozef Popjak"}}</script>
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <details class="static-filters"><summary class="key filters-key">filters</summary><div class="filters-panel"><a class="token" href="https://psyconnect.london/">everything on</a><div class="facet-row"><span class="legend facet-legend">what</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/t/psychedelics/">psychedelics</a><a class="token" href="https://psyconnect.london/t/consciousness/">consciousness</a><a class="token" href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><a class="token" href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><a class="token" href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></div></div><div class="facet-row"><span class="legend facet-legend">modality</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/p/cacao-ceremony/">cacao</a><a class="token" href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><a class="token token-child" href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><a class="token" href="https://psyconnect.london/p/breathwork/">breathwork</a><a class="token" href="https://psyconnect.london/p/sound-bath/">sound bath</a><a class="token" href="https://psyconnect.london/p/somatics/">somatic</a><a class="token" href="https://psyconnect.london/p/contact-improvisation/">contact improv</a><a class="token" href="https://psyconnect.london/p/qigong/">qigong</a><a class="token" href="https://psyconnect.london/p/bohm-dialogue/">Bohm dialogue</a></div></div><div class="facet-row"><span class="legend facet-legend">who</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/o/">hosts</a></div></div></div></details>
+  <div class="static-ticker"><div class="ticker-shell"><div class="ticker"><span class="tick spent" aria-hidden="true">today<small>10</small></span><a class="tick" href="https://psyconnect.london/?day=2026-10-11">tmrw<small>11</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-12">mon<small>12</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-13">tue<small>13</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-14">wed<small>14</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-15">thu<small>15</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-16">fri<small>16</small></a><a class="tick cursor" href="https://psyconnect.london/?day=2026-10-17" aria-current="date">sat<small>17</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-18">sun<small>18</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-19">mon<small>19</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-20">tue<small>20</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-21">wed<small>21</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-22">thu<small>22</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-23">fri<small>23</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-24">sat<small>24</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-25">sun<small>25</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-26">mon<small>26</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-27">tue<small>27</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-28">wed<small>28</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-29">thu<small>29</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-30">fri<small>30</small></a><a class="tick" href="https://psyconnect.london/?day=2026-10-31">sat<small>31</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-01">sun<small>1</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-02">mon<small>2</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-03">tue<small>3</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-04">wed<small>4</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-05">thu<small>5</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-06">fri<small>6</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-07">sat<small>7</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-08">sun<small>8</small></a></div><div class="ticker-fixed"><a class="tick" href="https://psyconnect.london/?day=7">7<small>days</small></a><a class="tick" href="https://psyconnect.london/?day=30">30<small>days</small></a></div></div></div>
+  <nav class="static-crumbs" aria-label="breadcrumb">
+    <a href="https://psyconnect.london/">PsyConnect</a>
+    <span aria-hidden="true">/</span>
+    <span>event</span>
+  </nav>
+  <article class="static-event">
+    <p class="static-kicker">in person · London · east London</p>
+    <h1 class="static-title">Women and Men&#x27;s Circle: Arriving Into Safety</h1>
+    <p class="static-hook">Explore what safety means across genders with embodied practices and authentic relating, led by Jozef Popjak.</p>
+    <dl class="static-facts"><div class="static-fact"><dt>When</dt><dd>Saturday 17 October 2026 · 13:00</dd></div><div class="static-fact"><dt>Where</dt><dd>Lekdanling - Tibetan Cultural Centre, Collent St, London, UK</dd></div><div class="static-fact"><dt>Host</dt><dd>Jozef Popjak</dd></div></dl>
+    <p class="static-chips"><a class="static-chip" href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><a class="static-chip" href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a></p>
+    <figure class="static-figure"><img src="https://wsrv.nl/?url=https%3A%2F%2Frhsilfaimkqlvzrxqjbq.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fevent-images%2F6571a030bccbd1b59ce9d4e7b7ebbca49753e73e53fe60ab2565425c037ade67.jpg&amp;w=1200&amp;output=webp&amp;q=75" alt="Women and Men&#x27;s Circle: Arriving Into Safety" loading="lazy" onerror="this.onerror=null;this.src='https://rhsilfaimkqlvzrxqjbq.supabase.co/storage/v1/object/public/event-images/6571a030bccbd1b59ce9d4e7b7ebbca49753e73e53fe60ab2565425c037ade67.jpg'"></figure>
+    <div class="static-prose"><p>WOMEN&#x27;S AND MEN’S CIRCLE At The Threshold, Arriving Into Safety “Safety is not the absence of threat, it is a presence of connection.” -Gabor Maté This circle is not about the kind of safety that keeps us small, invisible and at home on the sofa. This is about the safety that allows us to step into the unknown, take risks, and be fully present and uncompromisingly ourselves. When we feel safe, there’s more agency, more potential, a sense of possibility and limitlessness, and more space for creativity and love. When we don&#x27;t feel safe, we withdraw, we fawn, we people-please, we keep ourselves small, and we don&#x27;t step outside our comfort zone. We keep things surface-level. At the same time, many of us quietly crave deeper connection and more from life. However, we don’t know where to find it, or how to create it. Because somewhere along the way, fear got better of us, and this state became our default. What we are going to explore: • Learn what safety means to you, and to us as a group • Understand what safety means to others, and how it may be experienced differently across genders • Learn how to recognise when safety is compromised and how to restore it • Use embodied practices to experience safety on a somatic level • Gain tools that enable you to regulate yourself and create a greater sense of safety within • Recognise and cultivate connection with another as one of the pathways to safety Real safety is about being able to access joy, play, connection and creativity. From this place, authentic relating becomes possible. In a way, safety is an illusion. There is no permanent state of safety, our nervous systems are constantly alert, impacted and overstimulated by today’s world. Our brains continually scan for danger. And yet, if safety is an illusion, how do we create enough inner stability to become agents of our own lives rather than victims of our circumstances? You’ll leave this workshop with a deeper understanding of how to access safety within your body, along with practical tools that enable you to do so. We&#x27;ll explore the topic through embodied movement, spatial constellations, meditation, deep sharing and reflection. REFUNDS POLICY: Please note, we do not arrange refunds or exchanges. When possible we encourage reselling on Ticketswap . ACCESS :  We do our best to include everyone in our events, regardless of health circumstances. If you have access requirements please email the event organiser directly to discuss. Many facilitators are able to offer reduced ticket prices for those truly unable to afford the ticket price. If this applies to you, do please get in touch with the event organiser.</p></div>
+    <p class="static-cta-wrap">
+      <a class="static-cta" href="https://soullinkhub.com/event/6bf43e7d-6162-4638-8472-b94ea39aca75?utm_source=psyconnect.london&amp;utm_medium=referral" rel="noopener"
+         data-goatcounter-click="out/jozef-popjak"
+         data-goatcounter-title="Women and Men&#x27;s Circle: Arriving Into Safety">
+        tickets &amp; details ↗
+      </a>
+    </p>
+    <p class="static-back">
+      <a href="https://psyconnect.london/">← more in-person gatherings on PsyConnect</a>
+    </p>
+  </article>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/cacao-ceremony/">cacao ceremony</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/breathwork/">breathwork</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/sound-bath/">sound bath</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/somatics/">somatic practice</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/contact-improvisation/">contact improvisation</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/qigong/">qigong</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/bohm-dialogue/">Bohm dialogue</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/o/">hosts</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+    <p class="static-footer-home credit">Made by your friendly <a href="https://www.digitalhandyman.london" rel="noopener">digital handyman</a></p>
+  </footer>
+</body>
+</html>

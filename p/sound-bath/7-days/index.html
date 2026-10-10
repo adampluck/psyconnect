@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+
+  // the backdrop pattern loads once the page has (see .bg-ready in theme.css)
+  window.addEventListener("load", function () {
+    root.classList.add("bg-ready");
+  });
+})();
+</script>
+  <title>Sound baths &amp; gong baths in London — PsyConnect</title>
+  <meta name="description" content="A sound bath is an hour lying on the floor while someone plays gongs, singing bowls, chimes and voice around the room. There is nothing to do: the sound is…">
+  <link rel="canonical" href="https://psyconnect.london/p/sound-bath/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sound baths &amp; gong baths in London — PsyConnect">
+  <meta property="og:description" content="A sound bath is an hour lying on the floor while someone plays gongs, singing bowls, chimes and voice around the room. There is nothing to do: the sound is…">
+  <meta property="og:url" content="https://psyconnect.london/p/sound-bath/">
+  <meta property="og:image" content="https://psyconnect.london/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../../icons/favicon.png">
+  <link rel="stylesheet" href="../../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="../../../theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "CollectionPage", "name": "Sound baths & gong baths in London", "description": "A sound bath is an hour lying on the floor while someone plays gongs, singing bowls, chimes and voice around the room. There is nothing to do: the sound is\u2026", "url": "https://psyconnect.london/p/sound-bath/"}, {"@type": "ItemList", "name": "Sound baths & gong baths in London", "numberOfItems": 4, "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://psyconnect.london/e/gong-bath-sound-healing/", "name": "Gong Bath Sound Healing"}, {"@type": "ListItem", "position": 2, "url": "https://psyconnect.london/e/aerial-relaxation-pods-floating-sound-journey-gong-bath-meditation-in-ha/", "name": "Aerial Relaxation Pods\u00ae Floating Sound Journey Gong Bath Meditation in Hammocks or on Padded Floor Mats (1h 15 min session 7pm-8:15pm)"}, {"@type": "ListItem", "position": 3, "url": "https://psyconnect.london/e/aerial-relaxation-pods-sound-journey-gong-bath-meditation-in-hammocks/", "name": "Aerial Relaxation Pods\u00ae- Sound Journey Gong Bath Meditation in Hammocks"}, {"@type": "ListItem", "position": 4, "url": "https://psyconnect.london/e/gong-bath-healing-circle/", "name": "Gong Bath Healing Circle"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a sound bath?", "acceptedAnswer": {"@type": "Answer", "text": "A group session where you lie down and listen to sustained acoustic sound \u2014 usually gongs and crystal or Tibetan bowls \u2014 for forty-five to sixty minutes. 'Bath' refers to being surrounded by sound, not to water; nothing is asked of you beyond lying still."}}, {"@type": "Question", "name": "What should I bring to a sound bath?", "acceptedAnswer": {"@type": "Answer", "text": "Warm layers and socks, and a blanket if the listing doesn't say one is provided. Most venues supply mats, bolsters and eye masks. Arrive early enough to settle, as latecomers are often held at the door once the gongs start."}}, {"@type": "Question", "name": "Is a gong bath the same as a sound bath?", "acceptedAnswer": {"@type": "Answer", "text": "A gong bath is a sound bath led mainly by gongs, which are louder and more physical than bowls \u2014 you feel them in your chest. Sessions billed as sound healing or sound journeys use a wider mix of instruments and often voice."}}]}]}</script>
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page static-listing">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="static-header">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button><a class="static-brand" href="https://psyconnect.london/"><img src="../../../logo.png" alt="PsyConnect" class="static-logo"></a>
+    <p class="static-tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+  </header>
+  <main class="static-main">
+  
+  <details class="static-filters"><summary class="key filters-key">filters</summary><div class="filters-panel"><a class="token" href="https://psyconnect.london/">everything on</a><div class="facet-row"><span class="legend facet-legend">what</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/t/psychedelics/">psychedelics</a><a class="token" href="https://psyconnect.london/t/consciousness/">consciousness</a><a class="token" href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><a class="token" href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><a class="token" href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></div></div><div class="facet-row"><span class="legend facet-legend">modality</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/p/cacao-ceremony/">cacao</a><a class="token" href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><a class="token token-child" href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><a class="token" href="https://psyconnect.london/p/breathwork/">breathwork</a><a class="token lit" href="https://psyconnect.london/p/sound-bath/" aria-current="page">sound bath</a><a class="token" href="https://psyconnect.london/p/somatics/">somatic</a><a class="token" href="https://psyconnect.london/p/contact-improvisation/">contact improv</a><a class="token" href="https://psyconnect.london/p/qigong/">qigong</a><a class="token" href="https://psyconnect.london/p/bohm-dialogue/">Bohm dialogue</a></div></div><div class="facet-row"><span class="legend facet-legend">who</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/o/">hosts</a></div></div></div></details>
+  <div class="static-ticker"><div class="ticker-shell"><div class="ticker"><span class="tick spent" aria-hidden="true">today<small>10</small></span><a class="tick" href="#d-2026-10-11">tmrw<small>11</small></a><span class="tick spent" aria-hidden="true">mon<small>12</small></span><a class="tick" href="#d-2026-10-13">tue<small>13</small></a><span class="tick spent" aria-hidden="true">wed<small>14</small></span><a class="tick" href="#d-2026-10-15">thu<small>15</small></a><a class="tick" href="#d-2026-10-16">fri<small>16</small></a><a class="tick" href="https://psyconnect.london/p/sound-bath/#d-2026-10-17">sat<small>17</small></a><span class="tick spent" aria-hidden="true">sun<small>18</small></span><span class="tick spent" aria-hidden="true">mon<small>19</small></span><span class="tick spent" aria-hidden="true">tue<small>20</small></span><span class="tick spent" aria-hidden="true">wed<small>21</small></span><a class="tick" href="https://psyconnect.london/p/sound-bath/#d-2026-10-22">thu<small>22</small></a><span class="tick spent" aria-hidden="true">fri<small>23</small></span><a class="tick" href="https://psyconnect.london/p/sound-bath/#d-2026-10-24">sat<small>24</small></a><a class="tick" href="https://psyconnect.london/p/sound-bath/#d-2026-10-25">sun<small>25</small></a><span class="tick spent" aria-hidden="true">mon<small>26</small></span><span class="tick spent" aria-hidden="true">tue<small>27</small></span><span class="tick spent" aria-hidden="true">wed<small>28</small></span><span class="tick spent" aria-hidden="true">thu<small>29</small></span><span class="tick spent" aria-hidden="true">fri<small>30</small></span><a class="tick" href="https://psyconnect.london/p/sound-bath/#d-2026-10-31">sat<small>31</small></a><span class="tick spent" aria-hidden="true">sun<small>1</small></span><span class="tick spent" aria-hidden="true">mon<small>2</small></span><span class="tick spent" aria-hidden="true">tue<small>3</small></span><span class="tick spent" aria-hidden="true">wed<small>4</small></span><span class="tick spent" aria-hidden="true">thu<small>5</small></span><a class="tick" href="https://psyconnect.london/p/sound-bath/#d-2026-11-06">fri<small>6</small></a><a class="tick" href="https://psyconnect.london/p/sound-bath/#d-2026-11-07">sat<small>7</small></a><a class="tick" href="https://psyconnect.london/p/sound-bath/#d-2026-11-08">sun<small>8</small></a></div><div class="ticker-fixed"><span class="tick cursor" aria-current="page">7<small>days</small></span><a class="tick" href="https://psyconnect.london/p/sound-bath/">30<small>days</small></a></div></div></div>
+  <header class="static-list-head">
+    <p class="static-kicker">in person · London</p>
+    <h1 class="static-title">Sound baths &amp; gong baths in London</h1>
+    <div class="static-intro">
+      <p class="static-lead">A sound bath is an hour lying on the floor while someone plays gongs, singing bowls, chimes and voice around the room. There is nothing to do: the sound is long and overlapping, and most people drift between waking and sleep.</p><p class="static-lead">London&#x27;s sound baths run in yoga studios, churches and railway arches, often in the early evening. Bring warm socks — you cool down quickly lying still — and expect to leave slightly dazed.</p><p class="static-lead">4 on in the next seven days — times, venues and tickets, refreshed several times a day.</p>
+    </div>
+    
+  </header>
+  <section class="day-group" id="d-2026-10-11"><h2 class="day-heading"><span>Sunday 11 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/gong-bath-sound-healing/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fr2.dandelion.events%2F2026%2F10%2F05%2F12%2F23%2F51%2F42f6e1ef-3eb1-4359-bdbe-dd5e2bc18351%2Febab6d75-c2ed-4732-ae03-f49baf218922.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://r2.dandelion.events/2026/10/05/12/23/51/42f6e1ef-3eb1-4359-bdbe-dd5e2bc18351/ebab6d75-c2ed-4732-ae03-f49baf218922.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>19:00 – 21:00</p><h3>Gong Bath Sound Healing</h3><p class="hook">Immerse yourself in transformative gong vibrations for deep relaxation and inner peace.</p><p class="venue">Social Yoga Fish Island</p><p class="meta">£20–£35 · Holistique · east</p></div></a></div></section><section class="day-group" id="d-2026-10-13"><h2 class="day-heading"><span>Tuesday 13 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/aerial-relaxation-pods-floating-sound-journey-gong-bath-meditation-in-ha/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fr2.dandelion.events%2F2026%2F09%2F08%2F19%2F57%2F01%2Fb7492b0a-cd33-4af5-8f3a-7ca92a40baa3%2F57faf2bc-35e6-439c-864a-098d806fad24.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://r2.dandelion.events/2026/09/08/19/57/01/b7492b0a-cd33-4af5-8f3a-7ca92a40baa3/57faf2bc-35e6-439c-864a-098d806fad24.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>19:00 – 20:15</p><h3>Aerial Relaxation Pods® Floating Sound Journey Gong Bath Meditation in Hammocks or on Padded Floor Mats (1h 15 min session 7pm-8:15pm)</h3><p class="hook">Float in a hammock while gong vibrations melt stress and calm your nervous system in a rare extended sound bath.</p><p class="venue">Skylight Centre</p><p class="meta">£15.5–£24 · Ecstatic Dance London · north</p></div></a></div></section><section class="day-group" id="d-2026-10-15"><h2 class="day-heading"><span>Thursday 15 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/aerial-relaxation-pods-sound-journey-gong-bath-meditation-in-hammocks/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1177742035%2F82236935953%2F1%2Foriginal.20260217-170348&amp;w=600&amp;h=300&amp;fit=cover&amp;a=focal&amp;fpx=0.5&amp;fpy=0.5&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1177742035%2F82236935953%2F1%2Foriginal.20260217-170348?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.5&amp;fp-y=0.5&amp;s=435da509147b783bfb1234ec20fce58b'"></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>19:00 – 20:15</p><h3>Aerial Relaxation Pods®- Sound Journey Gong Bath Meditation in Hammocks</h3><p class="hook">Meditate suspended in hammocks while live gongs and ambient music wash over you.</p><p class="venue">The Skylight Centre</p><p class="meta">£16.76–£39.4 · Ecstatic Dance London &amp; URUBU Wellbeing Events · north</p></div></a></div></section><section class="day-group" id="d-2026-10-16"><h2 class="day-heading"><span>Friday 16 October</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/gong-bath-healing-circle/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fr2.dandelion.events%2F2026%2F10%2F01%2F17%2F08%2F24%2F4d57cf18-ac2a-4fef-a8ac-9a8cda01ec84%2Fffb74a4c-4ffa-4ef4-9206-d4656f0ac7c1.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://r2.dandelion.events/2026/10/01/17/08/24/4d57cf18-ac2a-4fef-a8ac-9a8cda01ec84/ffb74a4c-4ffa-4ef4-9206-d4656f0ac7c1.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>19:00 – 20:10</p><h3>Gong Bath Healing Circle</h3><p class="hook">Immerse yourself in gong vibrations and reiki energy for deep relaxation and healing.</p><p class="venue">Prana Voice - Holistic Well-Being</p><p class="meta">£22 · ReikiSoundHealing4All · east</p></div></a></div></section>
+  
+  <section class="static-faq"><h2>Common questions</h2><dl><dt>What is a sound bath?</dt><dd>A group session where you lie down and listen to sustained acoustic sound — usually gongs and crystal or Tibetan bowls — for forty-five to sixty minutes. &#x27;Bath&#x27; refers to being surrounded by sound, not to water; nothing is asked of you beyond lying still.</dd><dt>What should I bring to a sound bath?</dt><dd>Warm layers and socks, and a blanket if the listing doesn&#x27;t say one is provided. Most venues supply mats, bolsters and eye masks. Arrive early enough to settle, as latecomers are often held at the door once the gongs start.</dd><dt>Is a gong bath the same as a sound bath?</dt><dd>A gong bath is a sound bath led mainly by gongs, which are louder and more physical than bowls — you feel them in your chest. Sessions billed as sound healing or sound journeys use a wider mix of instruments and often voice.</dd></dl></section>
+  <p class="static-back">
+    <a href="https://psyconnect.london/">← all of PsyConnect</a>
+  </p>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/cacao-ceremony/">cacao ceremony</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/breathwork/">breathwork</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/sound-bath/">sound bath</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/somatics/">somatic practice</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/contact-improvisation/">contact improvisation</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/qigong/">qigong</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/bohm-dialogue/">Bohm dialogue</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/o/">hosts</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+    <p class="static-footer-home credit">Made by your friendly <a href="https://www.digitalhandyman.london" rel="noopener">digital handyman</a></p>
+  </footer>
+</body>
+</html>
