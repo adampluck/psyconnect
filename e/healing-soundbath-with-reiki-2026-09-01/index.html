@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+
+  // the backdrop pattern loads once the page has (see .bg-ready in theme.css)
+  window.addEventListener("load", function () {
+    root.classList.add("bg-ready");
+  });
+})();
+</script>
+  <title>Healing Soundbath with Reiki · Tue 1 Sep, Millers Way Project — PsyConnect</title>
+  <meta name="description" content="Took place Tue 1 Sep, 20:00 · Millers Way Project. Immersive soundbath with reiki to reset your nervous system and restore inner balance.">
+  <link rel="canonical" href="https://psyconnect.london/e/healing-soundbath-with-reiki-2026-09-01/">
+  
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Healing Soundbath with Reiki · Tue 1 Sep, Millers Way Project — PsyConnect">
+  <meta property="og:description" content="Took place Tue 1 Sep, 20:00 · Millers Way Project. Immersive soundbath with reiki to reset your nervous system and restore inner balance.">
+  <meta property="og:url" content="https://psyconnect.london/e/healing-soundbath-with-reiki-2026-09-01/">
+  <meta property="og:image" content="https://r2.dandelion.events/2026/08/03/13/25/25/0a35a021-60f9-440b-b3d7-cf3011c5edb3/b1581f64-7a8f-4a49-a517-1d6460f2d1f1.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../icons/favicon.png">
+  <link rel="stylesheet" href="../../fonts/fonts.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "Healing Soundbath with Reiki", "startDate": "2026-09-01T19:00:00+00:00", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "Millers Way Project", "address": {"@type": "PostalAddress", "streetAddress": "Miller's Way, London, UK", "addressLocality": "London", "addressCountry": "GB"}}, "url": "https://psyconnect.london/e/healing-soundbath-with-reiki-2026-09-01/", "inLanguage": "en-GB", "endDate": "2026-09-01T20:00:00+00:00", "image": ["https://r2.dandelion.events/2026/08/03/13/25/25/0a35a021-60f9-440b-b3d7-cf3011c5edb3/b1581f64-7a8f-4a49-a517-1d6460f2d1f1.jpg"], "description": "You\u2019ll be guided into a deeply relaxed state where the nervous system can unwind and the body can return to balance", "organizer": {"@type": "Organization", "name": "Moon Haven", "url": "https://www.moon-haven.com/"}, "performer": {"@type": "Organization", "name": "Moon Haven", "url": "https://www.moon-haven.com/"}}</script>
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="topbar static-topbar">
+    <div>
+      <p class="site-title"><a class="home" href="https://psyconnect.london/" aria-label="PsyConnect home"><img src="../../logo.png" alt="PsyConnect" class="static-logo"></a></p>
+      <p class="tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+    </div>
+    <div class="topbar-actions"><button class="theme-toggle signup-toggle" type="button" data-signup-open="header" aria-label="Get the weekly email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m3.5 7 8.5 6.2L20.5 7"/></svg></button><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button></div>
+  </header>
+  <main class="static-main">
+  
+  <div class="controls static-controls" id="controls">
+    <form class="controls-row" action="https://psyconnect.london/" method="get" role="search">
+      <input id="search" name="q" type="search" placeholder="search…" autocomplete="off" aria-label="search events">
+      <div class="unit unit-inline">
+        <label class="switch" title="free events only">
+          <input type="checkbox" id="free-toggle" name="free" value="1" aria-label="free events only" onchange="this.form.submit()">
+          <span class="slider"></span>
+        </label>
+        <span class="legend">free</span>
+      </div>
+      <button class="key filters-key" id="filters-toggle" type="button" aria-expanded="false" aria-controls="filters-panel">filters</button>
+    </form>
+    <div class="controls-row bench"><div class="unit unit-grow"><div class="static-ticker"><div class="ticker-shell"><div class="ticker"><span class="tick spent" aria-hidden="true">today<small>31</small></span><a class="tick" href="https://psyconnect.london/?day=2026-11-01">tmrw<small>1</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-02">mon<small>2</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-03">tue<small>3</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-04">wed<small>4</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-05">thu<small>5</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-06">fri<small>6</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-07">sat<small>7</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-08">sun<small>8</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-09">mon<small>9</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-10">tue<small>10</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-11">wed<small>11</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-12">thu<small>12</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-13">fri<small>13</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-14">sat<small>14</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-15">sun<small>15</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-16">mon<small>16</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-17">tue<small>17</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-18">wed<small>18</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-19">thu<small>19</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-20">fri<small>20</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-21">sat<small>21</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-22">sun<small>22</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-23">mon<small>23</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-24">tue<small>24</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-25">wed<small>25</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-26">thu<small>26</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-27">fri<small>27</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-28">sat<small>28</small></a><a class="tick" href="https://psyconnect.london/?day=2026-11-29">sun<small>29</small></a></div><div class="ticker-fixed"><a class="tick" href="https://psyconnect.london/?day=7">7<small>days</small></a><a class="tick" href="https://psyconnect.london/?day=30">30<small>days</small></a></div></div></div></div></div>
+    <div class="controls-row filters-panel" id="filters-panel" hidden>
+      <div class="facet-row"><span class="legend facet-legend">what</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/t/psychedelics/">psychedelics</a><a class="token" href="https://psyconnect.london/t/consciousness/">consciousness</a><a class="token" href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><a class="token" href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><a class="token" href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a></div></div><div class="facet-row"><span class="legend facet-legend">modality</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><a class="token token-child" href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><a class="token" href="https://psyconnect.london/p/sound-bath/">sound bath</a><a class="token" href="https://psyconnect.london/p/cacao-ceremony/">cacao</a><a class="token" href="https://psyconnect.london/p/breathwork/">breathwork</a><a class="token" href="https://psyconnect.london/p/somatics/">somatic</a><a class="token" href="https://psyconnect.london/p/qigong/">qigong</a><a class="token" href="https://psyconnect.london/p/tantra/">tantra</a><a class="token" href="https://psyconnect.london/p/family-constellations/">family constellations</a><a class="token" href="https://psyconnect.london/p/authentic-relating/">relating</a><a class="token" href="https://psyconnect.london/p/contact-improvisation/">contact improv</a><a class="token" href="https://psyconnect.london/p/bohm-dialogue/">Bohm dialogue</a><a class="token" href="https://psyconnect.london/p/kirtan/">kirtan</a></div></div><div class="facet-row"><span class="legend facet-legend">where</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/v/">venues</a></div></div><div class="facet-row"><span class="legend facet-legend">who</span><div class="facet-chips"><a class="token" href="https://psyconnect.london/o/">hosts</a></div></div>
+      <div class="filters-foot">
+        <span class="filters-foot-keys">
+          <a class="key reset-key" href="https://psyconnect.london/">everything on</a>
+          <button class="key filters-close" id="filters-close" type="button">close</button>
+        </span>
+      </div>
+    </div>
+  </div>
+  <script>(function(){var b=document.getElementById('filters-toggle'),p=document.getElementById('filters-panel'),c=document.getElementById('filters-close');if(!b||!p)return;function t(o){p.hidden=!o;b.setAttribute('aria-expanded',o);b.classList.toggle('lit',o)}b.addEventListener('click',function(){t(p.hidden)});if(c)c.addEventListener('click',function(){t(false)})})();</script>
+  <article class="static-event">
+    <div class="static-event-head">
+      <nav class="static-crumbs" aria-label="breadcrumb"><a id="crumb-back" href="https://psyconnect.london/" data-goatcounter-click="static/crumb-back">← all events</a><span aria-hidden="true">·</span><a href="https://psyconnect.london/p/sound-bath/">sound bath</a></nav><script>(()=>{const a=document.getElementById('crumb-back');let ours=false;try{ours=new URL(document.referrer).origin===location.origin}catch(_){}if(a&&ours&&history.length>1){a.textContent='← back';a.addEventListener('click',e=>{e.preventDefault();history.back()})}})();</script>
+      <h1 class="static-title">Healing Soundbath with Reiki</h1>
+      <p class="static-hook">Immersive soundbath with reiki to reset your nervous system and restore inner balance.</p>
+      <p class="static-past-note">This took place on Tuesday 1 September. What's on instead is below.</p>
+    </div>
+    <aside class="static-event-aside">
+      <figure class="static-figure"><img src="https://wsrv.nl/?url=https%3A%2F%2Fr2.dandelion.events%2F2026%2F08%2F03%2F13%2F25%2F25%2F0a35a021-60f9-440b-b3d7-cf3011c5edb3%2Fb1581f64-7a8f-4a49-a517-1d6460f2d1f1.jpg&amp;w=1200&amp;output=webp&amp;q=75" alt="Healing Soundbath with Reiki" loading="lazy" onerror="this.onerror=null;this.src='https://r2.dandelion.events/2026/08/03/13/25/25/0a35a021-60f9-440b-b3d7-cf3011c5edb3/b1581f64-7a8f-4a49-a517-1d6460f2d1f1.jpg'"></figure>
+      <dl class="static-facts static-facts-list"><div class="static-fact"><dt>When</dt><dd><span class="fact-main">Tuesday 1 September</span><span class="fact-sub">20:00 – 21:00</span></dd></div><div class="static-fact"><dt>Where</dt><dd><a class="fact-main fact-venue" href="https://psyconnect.london/v/millers-way-project/">Millers Way Project</a><span class="fact-sub">Miller&#x27;s Way, London, UK</span><a class="fact-link" href="https://www.google.com/maps/search/?api=1&amp;query=Millers+Way+Project%2C+Miller%27s+Way%2C+London%2C+UK%2C+London" rel="noopener" target="_blank" data-goatcounter-click="static/map-venue">map ↗</a></dd></div><div class="static-fact"><dt>Host</dt><dd><a href="https://psyconnect.london/o/moon-haven/" data-goatcounter-click="host/moon-haven">Moon Haven</a></dd></div></dl>
+      <p class="static-chips"><a class="static-chip" href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><a class="static-chip" href="https://psyconnect.london/p/sound-bath/">sound bath</a></p>
+    </aside>
+    <div class="static-event-body">
+      <div class="static-prose"><p>You’ll be guided into a deeply relaxed state where the nervous system can unwind and the body can return to balance</p></div>
+      <button class="read-more" type="button" hidden>Read more</button>
+    </div>
+    <script>
+(() => {
+  const body = document.querySelector(".static-event-body");
+  const prose = body && body.querySelector(".static-prose");
+  const btn = body && body.querySelector(".read-more");
+  const aside = document.querySelector(".static-event-aside");
+  const article = document.querySelector(".static-event");
+  if (!prose || !btn) return;
+  const wide = matchMedia("(min-width: 900px)");
+  let open = false;
+  function cap() {
+    const top = prose.getBoundingClientRect().top;
+    if (wide.matches && aside) {
+      // the aside is sticky, so measure its height from the article top,
+      // not where it happens to sit on screen
+      const end = article.getBoundingClientRect().top + aside.offsetHeight;
+      return Math.max(end - top, 160);
+    }
+    const ps = prose.querySelectorAll("p");
+    const p = ps[1] || ps[0];
+    const after = p ? p.getBoundingClientRect().bottom - top : 260;
+    return Math.min(Math.max(after, 160), 260);
+  }
+  function fit() {
+    if (open) return;
+    prose.style.maxHeight = "";
+    body.classList.remove("folded");
+    const limit = cap();
+    const fold = prose.scrollHeight - limit > 110;
+    if (fold) {
+      prose.style.maxHeight = limit + "px";
+      body.classList.add("folded");
+    }
+    btn.hidden = !fold;
+  }
+  btn.addEventListener("click", () => {
+    open = true;
+    prose.style.maxHeight = "";
+    body.classList.remove("folded");
+    btn.hidden = true;
+  });
+  fit();
+  addEventListener("resize", fit);
+  addEventListener("load", fit);
+  if (aside) aside.querySelectorAll("img").forEach((i) => i.addEventListener("load", fit));
+})();
+</script>
+  </article>
+  <section class="day-group static-related"><h2 class="day-heading"><span>Coming up from Moon Haven</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/hunter-s-full-moon-samhain-cacao-ceremony-soundbath-experience/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1119930553%2F2371823582603%2F1%2Foriginal.20250910-130605&amp;w=600&amp;cx=0&amp;cy=568&amp;cw=1512&amp;ch=756&amp;precrop&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1119930553%2F2371823582603%2F1%2Foriginal.20250910-130605?h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;rect=0%2C568%2C1512%2C756&amp;s=32793d2d1faba165e89859f1b2edc03e'"></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>Sun 1 Nov · 18:30 – 20:30</p><h3>Hunter&#x27;s Full Moon &amp; Samhain Cacao Ceremony &amp; Soundbath Experience</h3><p class="hook">Hunter&#x27;s Full Moon cacao ceremony and soundbath with Moon Haven at Millers Way Project.</p><p class="venue">Millers Way Project</p><p class="meta">£39.22–£66.36 · Moon Haven · west</p></div></a><a class="card instant" href="https://psyconnect.london/e/soundbath-for-relaxation-stress-relief/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1196490701%2F2371823582603%2F1%2Foriginal.20251030-211159&amp;w=600&amp;cx=0&amp;cy=742&amp;cw=1512&amp;ch=756&amp;precrop&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1196490701%2F2371823582603%2F1%2Foriginal.20251030-211159?h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;rect=0%2C742%2C1512%2C756&amp;s=52b3c016ab3b93a88d6a9460fbadaca1'"></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>Thu 5 Nov · 19:00 – 20:00</p><h3>Soundbath for Relaxation &amp; Stress Relief</h3><p class="hook">Let crystal bowls and gentle vibrations pull you out of a stressful week at Millers Way Project with Moon Haven.</p><p class="venue">Millers Way Project</p><p class="meta">£24.54–£38.62 · Moon Haven · west</p></div></a><a class="card instant" href="https://psyconnect.london/e/11-11-portal-align-manifest-intention-setting-sound-bath/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1196591783%2F2371823582603%2F1%2Foriginal.20261026-130337&amp;w=600&amp;h=300&amp;fit=cover&amp;a=focal&amp;fpx=0.506&amp;fpy=0.401&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1196591783%2F2371823582603%2F1%2Foriginal.20261026-130337?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.506&amp;fp-y=0.401&amp;s=824d79e3d167894e11248992522392b8'"></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>Wed 11 Nov · 19:00 – 21:00</p><h3>11/11 Portal: Align &amp; Manifest | Intention Setting &amp; Sound Bath</h3><p class="hook">An evening of guided meditation and immersive sound to set intentions and step out of the noise with Moon Haven.</p><p class="venue">Millers Way Project</p><p class="meta">£36.46–£63.08 · Moon Haven · west</p></div></a></div><a class="static-related-more" href="https://psyconnect.london/o/moon-haven/" data-goatcounter-click="static/related-more">everything from Moon Haven →</a></section><section class="day-group static-related"><h2 class="day-heading"><span>More sound bath coming up</span></h2><div class="grid"><a class="card instant" href="https://psyconnect.london/e/aerial-relaxation-pods-floating-sound-journey-gong-bath-meditation-in-ha/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fr2.dandelion.events%2F2026%2F10%2F29%2F12%2F03%2F32%2F3d1f783b-314f-4513-9615-e7cf8bd66ae0%2Fc61b23c4-e01c-4b45-ba9d-23c918aa6a35.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://r2.dandelion.events/2026/10/29/12/03/32/3d1f783b-314f-4513-9615-e7cf8bd66ae0/c61b23c4-e01c-4b45-ba9d-23c918aa6a35.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>Tue 3 Nov · 19:00 – 20:15</p><h3>Aerial Relaxation Pods® Floating Sound Journey Gong Bath Meditation in Hammocks or on Padded Floor Mats (1h 15 min session 7pm-8:15pm)</h3><p class="hook">Lie in a sky-blue hammock while gongs and crystal bowls sway the day&#x27;s stress out of you, with herbal tea after.</p><p class="venue">Skylight Centre</p><p class="meta">£15.50–£24 · Ecstatic Dance London · north</p></div></a><a class="card instant" href="https://psyconnect.london/e/sound-journey-and-relaxation/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fr2.dandelion.events%2F2026%2F10%2F21%2F14%2F43%2F15%2F801160b4-fc5f-4176-984d-1251b3874f79%2F65062ad4-ca95-4e4f-9512-68ee2b43337c.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://r2.dandelion.events/2026/10/21/14/43/15/801160b4-fc5f-4176-984d-1251b3874f79/65062ad4-ca95-4e4f-9512-68ee2b43337c.jpg'"><span class="pick-mark" title="one of the richer listings this week">✦ pick</span></div><div class="card-body"><p class="time"><span class="dot dot-afternoon"></span>Thu 5 Nov · 13:00 – 15:00</p><h3>Sound Journey and Relaxation</h3><p class="hook">Immerse yourself in gong and singing bowl sounds with The Still Point&#x27;s guided sound journey.</p><p class="venue">Tudor Drive Library</p><p class="meta"><span class="free-tag">free</span> · The Still Point · west</p></div></a><a class="card instant" href="https://psyconnect.london/e/gong-bath-healing-circle/"><div class="banner"><img alt="" loading="lazy" src="https://wsrv.nl/?url=https%3A%2F%2Fr2.dandelion.events%2F2026%2F10%2F01%2F17%2F08%2F41%2F61ad92c2-c992-4029-889c-f88b538ed57e%2F340c2aeb-4b5b-4f8f-83b3-421378597fbc.jpg&amp;w=600&amp;output=webp&amp;q=75" onerror="this.onerror=null;this.src='https://r2.dandelion.events/2026/10/01/17/08/41/61ad92c2-c992-4029-889c-f88b538ed57e/340c2aeb-4b5b-4f8f-83b3-421378597fbc.jpg'"></div><div class="card-body"><p class="time"><span class="dot dot-evening"></span>Fri 6 Nov · 19:00 – 20:10</p><h3>Gong Bath Healing Circle</h3><p class="hook">Immersive gong bath with reiki and meditation for deep relaxation and energy work.</p><p class="venue">Prana Voice - Holistic Well-Being</p><p class="meta">£22 · ReikiSoundHealing4All · east</p></div></a></div><a class="static-related-more" href="https://psyconnect.london/p/sound-bath/" data-goatcounter-click="static/related-more">Sound baths &amp; gong baths in London →</a></section>
+  <section class="static-explore"><h2>Explore PsyConnect</h2><div class="explore-grid"><a class="explore-tile" href="https://psyconnect.london/p/ecstatic-dance/" data-goatcounter-click="static/explore-practice"><span class="explore-art explore-tone-0" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="1.8"/><path d="M12 7v6M12 9.5 7.5 6M12 9.5 16.5 6M12 13l-3.5 6.5M12 13l3.5 6"/><path d="M4 11c-1.2 2-.6 4.4.8 5.8M20 11c1.2 2 .6 4.4-.8 5.8"/></svg></span><span class="explore-text"><span class="explore-name">ecstatic dance</span><span class="explore-count">45 this month</span></span></a><a class="explore-tile" href="https://psyconnect.london/p/5rhythms/" data-goatcounter-click="static/explore-practice"><span class="explore-art explore-tone-1" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 13c1-3.5 2.6-3.5 4 0s3 3.5 4 0 2.6-3.5 4 0 3 3.5 4 0 2.6-3.5 4 0"/><circle cx="4" cy="19" r=".6"/><circle cx="8" cy="19" r=".6"/><circle cx="12" cy="19" r=".6"/><circle cx="16" cy="19" r=".6"/><circle cx="20" cy="19" r=".6"/></svg></span><span class="explore-text"><span class="explore-name">5Rhythms</span><span class="explore-count">25 this month</span></span></a><a class="explore-tile" href="https://psyconnect.london/p/sound-bath/" data-goatcounter-click="static/explore-practice"><span class="explore-art explore-tone-2" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5.5"/><circle cx="12" cy="12" r="1.6"/><path d="M3.5 8.5a9.5 9.5 0 0 0 0 7M20.5 8.5a9.5 9.5 0 0 1 0 7"/></svg></span><span class="explore-text"><span class="explore-name">sound bath</span><span class="explore-count">25 this month</span></span></a><a class="explore-tile" href="https://psyconnect.london/p/cacao-ceremony/" data-goatcounter-click="static/explore-practice"><span class="explore-art explore-tone-0" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 10h11v3.5a5.5 5.5 0 0 1-5.5 5.5h0A5.5 5.5 0 0 1 5 13.5z"/><path d="M16 11.5h1.2a2.3 2.3 0 0 1 0 4.6H15.6"/><path d="M8.5 3.5c-1 1.4 1 2.1 0 3.6M12 3.5c-1 1.4 1 2.1 0 3.6"/><path d="M4 21.5h14"/></svg></span><span class="explore-text"><span class="explore-name">cacao</span><span class="explore-count">19 this month</span></span></a><a class="explore-tile" href="https://psyconnect.london/p/breathwork/" data-goatcounter-click="static/explore-practice"><span class="explore-art explore-tone-1" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 8.5h10.5a3 3 0 1 0-3-3"/><path d="M3 12.5h15a3 3 0 1 1-3 3"/><path d="M3 16.5h7"/></svg></span><span class="explore-text"><span class="explore-name">breathwork</span><span class="explore-count">15 this month</span></span></a><a class="explore-tile" href="https://psyconnect.london/p/somatics/" data-goatcounter-click="static/explore-practice"><span class="explore-art explore-tone-2" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 13V7.5a1.5 1.5 0 0 1 3 0V12M10 11.5V5.5a1.5 1.5 0 0 1 3 0v6M13 11.5V6.5a1.5 1.5 0 0 1 3 0V13M16 11a1.5 1.5 0 0 1 3 0v4a6 6 0 0 1-6 6h-.8a6 6 0 0 1-5-2.7L4.6 14.6a1.5 1.5 0 0 1 2.4-1.8L7 13"/></svg></span><span class="explore-text"><span class="explore-name">somatic</span><span class="explore-count">14 this month</span></span></a><a class="explore-tile" href="https://psyconnect.london/p/qigong/" data-goatcounter-click="static/explore-practice"><span class="explore-art explore-tone-0" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a4.25 4.25 0 0 1 0 8.5 4.25 4.25 0 0 0 0 8.5"/><circle cx="12" cy="7.75" r=".9"/><circle cx="12" cy="16.25" r=".9"/></svg></span><span class="explore-text"><span class="explore-name">qigong</span><span class="explore-count">8 this month</span></span></a><a class="explore-tile" href="https://psyconnect.london/p/tantra/" data-goatcounter-click="static/explore-practice"><span class="explore-art explore-tone-1" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 19.5c-2.6-2.6-3.2-6.4 0-11.5 3.2 5.1 2.6 8.9 0 11.5z"/><path d="M12 19.5c-4.4 0-8-2.8-8.5-7 3.6-.2 6.6 2 8.5 7zM12 19.5c4.4 0 8-2.8 8.5-7-3.6-.2-6.6 2-8.5 7z"/></svg></span><span class="explore-text"><span class="explore-name">tantra</span><span class="explore-count">13 this month</span></span></a><a class="explore-tile" href="https://psyconnect.london/p/family-constellations/" data-goatcounter-click="static/explore-practice"><span class="explore-art explore-tone-2" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="1.8"/><circle cx="5" cy="17.5" r="1.8"/><circle cx="19" cy="17.5" r="1.8"/><circle cx="12" cy="12.5" r="1.8"/><path d="M12 6.3v4.4M10.6 13.6 6.4 16.4M13.4 13.6l4.2 2.8M6.8 17.5h10.4"/></svg></span><span class="explore-text"><span class="explore-name">family constellations</span><span class="explore-count">4 this month</span></span></a><a class="explore-tile" href="https://psyconnect.london/p/authentic-relating/" data-goatcounter-click="static/explore-practice"><span class="explore-art explore-tone-0" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4.5h9.5a2 2 0 0 1 2 2V11a2 2 0 0 1-2 2H8.5L5.5 15.5V13H4a2 2 0 0 1-2-2V6.5a2 2 0 0 1 2-2z"/><path d="M18 8.5h2a2 2 0 0 1 2 2V15a2 2 0 0 1-2 2h-1.5v2.5L15.5 17H12a2 2 0 0 1-2-2v-.5"/></svg></span><span class="explore-text"><span class="explore-name">relating</span><span class="explore-count">6 this month</span></span></a><a class="explore-tile" href="https://psyconnect.london/p/contact-improvisation/" data-goatcounter-click="static/explore-practice"><span class="explore-art explore-tone-1" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="7.5" cy="4.5" r="1.7"/><circle cx="16.5" cy="4.5" r="1.7"/><path d="M7.5 7 9 13l-2 7.5M16.5 7 15 13l2 7.5M8.6 10.5 12 12.5l3.4-2"/></svg></span><span class="explore-text"><span class="explore-name">contact improv</span><span class="explore-count">3 this month</span></span></a><a class="explore-tile" href="https://psyconnect.london/p/bohm-dialogue/" data-goatcounter-click="static/explore-practice"><span class="explore-art explore-tone-2" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="1.5"/><circle cx="18.5" cy="8.25" r="1.5"/><circle cx="18.5" cy="15.75" r="1.5"/><circle cx="12" cy="19.5" r="1.5"/><circle cx="5.5" cy="15.75" r="1.5"/><circle cx="5.5" cy="8.25" r="1.5"/></svg></span><span class="explore-text"><span class="explore-name">Bohm dialogue</span><span class="explore-count">1 this month</span></span></a><a class="explore-tile" href="https://psyconnect.london/p/kirtan/" data-goatcounter-click="static/explore-practice"><span class="explore-art explore-tone-0" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 10v4M8 7v10M12 4v16M16 7v10M20 10v4"/></svg></span><span class="explore-text"><span class="explore-name">kirtan</span><span class="explore-count">2 this month</span></span></a><a class="explore-tile" href="https://psyconnect.london/t/psychedelics/" data-goatcounter-click="static/explore-topic"><span class="explore-art explore-tone-1" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3.5 11.5a8.5 6.5 0 0 1 17 0z"/><path d="M10 11.5v6.5a2 2 0 0 0 4 0v-6.5"/><circle cx="9" cy="8.5" r=".8"/><circle cx="14.5" cy="7.5" r=".8"/></svg></span><span class="explore-text"><span class="explore-name">psychedelics</span><span class="explore-count">8 this month</span></span></a><a class="explore-tile" href="https://psyconnect.london/t/consciousness/" data-goatcounter-click="static/explore-topic"><span class="explore-art explore-tone-2" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 12s3.8-6.5 10-6.5S22 12 22 12s-3.8 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><span class="explore-text"><span class="explore-name">consciousness</span><span class="explore-count">35 this month</span></span></a><a class="explore-tile" href="https://psyconnect.london/t/connection/" data-goatcounter-click="static/explore-topic"><span class="explore-art explore-tone-0" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.2 4.2 0 0 1 12 7.2a4.2 4.2 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></svg></span><span class="explore-text"><span class="explore-name">connection &amp; intimacy</span><span class="explore-count">57 this month</span></span></a><a class="explore-tile" href="https://psyconnect.london/t/healing/" data-goatcounter-click="static/explore-topic"><span class="explore-art explore-tone-1" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19c0-8 5.5-14 14.5-14 0 9-6 14-14.5 14z"/><path d="M5 19l8.5-8.5"/></svg></span><span class="explore-text"><span class="explore-name">healing &amp; wellbeing</span><span class="explore-count">115 this month</span></span></a><a class="explore-tile" href="https://psyconnect.london/t/spirituality/" data-goatcounter-click="static/explore-topic"><span class="explore-art explore-tone-2" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3c2.2 3 4 5 4 7.8a4 4 0 0 1-8 0c0-1.9 1-3.1 2-4.1 0 1.9.9 2.9 2 2.9 0-2-1.2-3.8 0-6.6z"/><path d="M7 20.5h10M9 17.5h6"/></svg></span><span class="explore-text"><span class="explore-name">spirituality &amp; ritual</span><span class="explore-count">136 this month</span></span></a></div></section>
+  <p class="static-back">
+    <a href="https://psyconnect.london/">← more in-person gatherings on PsyConnect</a>
+  </p>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/sound-bath/">sound bath</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/cacao-ceremony/">cacao ceremony</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/breathwork/">breathwork</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/somatics/">somatic practice</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/qigong/">qigong</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/tantra/">tantra</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/family-constellations/">family constellations</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/authentic-relating/">authentic relating</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/contact-improvisation/">contact improvisation</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/bohm-dialogue/">Bohm dialogue</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/kirtan/">kirtan &amp; chanting</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/o/">hosts</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/v/">venues</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/tonight/">tonight</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/this-weekend/">this weekend</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a> · <a href="#signup" data-signup-open="footer">weekly email</a></p>
+    <p class="static-footer-home credit">Made by your friendly <a href="https://www.digitalhandyman.london" rel="noopener">digital handyman</a></p>
+  </footer>
+  <script src="../../signup.js" data-kind="event" data-name="Healing Soundbath with Reiki" data-tags="healing" data-endpoint="https://psyconnect-subscribe.plucky101.workers.dev" data-sitekey="0x4AAAAAAEG-S32kYG1X6qMl" data-privacy="https://psyconnect.london/privacy/" defer></script>
+</body>
+</html>

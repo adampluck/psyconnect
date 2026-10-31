@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <script>/* Light/dark boot + toggle for psyconnect.
+
+   build_site.py inlines this into the <head> of every page — the SPA shell
+   at its THEME-BOOT marker, the static /e/ /t/ pages in page() — so the
+   saved choice is on <html> before the first paint and there is no flash of
+   the wrong theme. It is deliberately tiny and dependency-free for that
+   reason; the rest of the theming is CSS (light-dark() in theme.css).
+
+   No stored choice means "follow the system", which is the default. */
+(function () {
+  var KEY = "psyconnect-theme";
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+  // must match --dusk-0's two values in theme.css
+  var LIGHT = "#f6efe4";
+  var DARK = "#191310";
+
+  var saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (e) {
+    /* private mode / storage disabled — system preference still works */
+  }
+  if (saved === "dark" || saved === "light") root.dataset.theme = saved;
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === "dark" : media.matches;
+  }
+
+  function sync() {
+    var dark = isDark();
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? DARK : LIGHT);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.setAttribute(
+        "aria-label",
+        dark ? "Switch to light theme" : "Switch to dark theme"
+      );
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+  }
+
+  function toggle() {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem(KEY, next);
+    } catch (e) {
+      /* the theme still applies for this page view */
+    }
+    sync();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.addEventListener("click", toggle);
+    sync();
+  });
+
+  // while no explicit choice is stored we follow the system live
+  media.addEventListener("change", sync);
+
+  // the backdrop pattern loads once the page has (see .bg-ready in theme.css)
+  window.addEventListener("load", function () {
+    root.classList.add("bg-ready");
+  });
+})();
+</script>
+  <title>Not found — PsyConnect</title>
+  <meta name="description" content="That page isn&#x27;t here any more.">
+  <link rel="canonical" href="https://psyconnect.london/">
+  
+  <meta name="robots" content="noindex">
+  <meta property="og:site_name" content="PsyConnect">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Not found — PsyConnect">
+  <meta property="og:description" content="That page isn&#x27;t here any more.">
+  <meta property="og:url" content="https://psyconnect.london/">
+  <meta property="og:image" content="https://psyconnect.london/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="https://psyconnect.london/icons/favicon.png">
+  <link rel="stylesheet" href="https://psyconnect.london/fonts/fonts.css">
+  <link rel="stylesheet" href="https://psyconnect.london/styles.css">
+  <link rel="stylesheet" href="https://psyconnect.london/theme.css">
+  
+  <script data-goatcounter="https://psyconnect.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body class="static-page">
+  <div class="sky" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="grain"></div></div>
+  <header class="topbar static-topbar">
+    <div>
+      <p class="site-title"><a class="home" href="https://psyconnect.london/" aria-label="PsyConnect home"><img src="https://psyconnect.london/logo.png" alt="PsyConnect" class="static-logo"></a></p>
+      <p class="tagline">consciousness, connection, ceremony &amp; psychedelics — in person in london</p>
+    </div>
+    <div class="topbar-actions"><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button></div>
+  </header>
+  <main class="static-main">
+  
+  <header class="static-list-head">
+    <h1 class="static-title">That page isn't here</h1>
+    <div class="static-intro">
+      <p class="static-lead">If it was an event, it may have been cancelled,
+      renamed or moved to a new date — its organiser's other dates are on
+      their page, and everything on in London is on the
+      <a href="https://psyconnect.london/">front page</a>.</p>
+    </div>
+  </header>
+  <p class="static-chips"><a class="static-chip" href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><a class="static-chip" href="https://psyconnect.london/p/sound-bath/">sound bath</a><a class="static-chip" href="https://psyconnect.london/p/cacao-ceremony/">cacao</a><a class="static-chip" href="https://psyconnect.london/p/breathwork/">breathwork</a><a class="static-chip" href="https://psyconnect.london/p/somatics/">somatic</a><a class="static-chip" href="https://psyconnect.london/p/qigong/">qigong</a><a class="static-chip" href="https://psyconnect.london/p/tantra/">tantra</a><a class="static-chip" href="https://psyconnect.london/p/family-constellations/">family constellations</a><a class="static-chip" href="https://psyconnect.london/p/authentic-relating/">relating</a><a class="static-chip" href="https://psyconnect.london/p/contact-improvisation/">contact improv</a><a class="static-chip" href="https://psyconnect.london/p/bohm-dialogue/">Bohm dialogue</a><a class="static-chip" href="https://psyconnect.london/p/kirtan/">kirtan</a></p>
+  <p class="static-back"><a href="https://psyconnect.london/">← everything on PsyConnect</a></p>
+  </main>
+  <footer class="static-footer">
+    <nav class="seo-nav" aria-label="topics"><a href="https://psyconnect.london/t/psychedelics/">psychedelics</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/consciousness/">consciousness</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/connection/">connection &amp; intimacy</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/healing/">healing &amp; wellbeing</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/t/spirituality/">spirituality &amp; ritual</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/ecstatic-dance/">ecstatic dance</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/5rhythms/">5Rhythms</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/sound-bath/">sound bath</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/cacao-ceremony/">cacao ceremony</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/breathwork/">breathwork</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/somatics/">somatic practice</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/qigong/">qigong</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/tantra/">tantra</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/family-constellations/">family constellations</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/authentic-relating/">authentic relating</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/contact-improvisation/">contact improvisation</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/bohm-dialogue/">Bohm dialogue</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/p/kirtan/">kirtan &amp; chanting</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/o/">hosts</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/v/">venues</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/tonight/">tonight</a><span class="seo-sep" aria-hidden="true">·</span><a href="https://psyconnect.london/this-weekend/">this weekend</a></nav>
+    <p class="static-footer-home"><a href="https://psyconnect.london/">PsyConnect</a> — consciousness, connection, ceremony &amp; psychedelics — in person in london · <a href="https://psyconnect.london/about/">about</a> · <a href="https://psyconnect.london/privacy/">privacy</a></p>
+    <p class="static-footer-home credit">Made by your friendly <a href="https://www.digitalhandyman.london" rel="noopener">digital handyman</a></p>
+  </footer>
+  </body>
+</html>
