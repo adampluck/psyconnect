@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eventbrite-2003000864505@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261130T184500Z
+DTEND:20261130T213000Z
+SUMMARY:Seed Talks' Big Birthday Bash
+LOCATION:21Soho\, 3-5 Sutton Row\,\, London\, W1D 4NR
+DESCRIPTION:Five years of Seed Talks celebrates psychedelics\, neurodiversi
+ ty and wellness through talks and community.\n\nTickets & details: https:/
+ /www.eventbrite.co.uk/e/seed-talks-big-birthday-bash-tickets-2003000864505
+ ?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https:
+ //psyconnect.london/e/seed-talks-big-birthday-bash/
+URL:https://www.eventbrite.co.uk/e/seed-talks-big-birthday-bash-tickets-200
+ 3000864505
+END:VEVENT
+END:VCALENDAR

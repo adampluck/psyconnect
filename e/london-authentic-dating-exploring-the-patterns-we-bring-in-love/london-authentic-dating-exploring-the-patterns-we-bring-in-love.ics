@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6af41cd9eddd5670a38bac1a@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270213T124500Z
+DTEND:20270213T161500Z
+SUMMARY:London Authentic Dating | Exploring the Patterns We Bring In Love
+LOCATION:Zen Yoga\, Camberwell Grove\, London\, UK
+DESCRIPTION:A guided\, interactive look at the patterns you bring into love
+ \, dating and intimacy\, with space to notice what happens when someone ma
+ tters.\n\nTickets & details: https://dandelion.events/events/6af41cd9eddd5
+ 670a38bac1a?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConn
+ ect: https://psyconnect.london/e/london-authentic-dating-exploring-the-pat
+ terns-we-bring-in-love/
+URL:https://dandelion.events/events/6af41cd9eddd5670a38bac1a
+END:VEVENT
+END:VCALENDAR

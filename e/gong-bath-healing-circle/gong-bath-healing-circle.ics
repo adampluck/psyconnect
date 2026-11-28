@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6afde0fcd12cffc53f8d8668@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261211T190000Z
+DTEND:20261211T201000Z
+SUMMARY:Gong Bath Healing Circle
+LOCATION:Prana Voice - Holistic Well-Being\, Orsman Road\, London\, UK
+DESCRIPTION:Lie back as Geraldine Emmanuelle's gongs and voice wash over yo
+ u\, a Reiki-led circle to set intentions and finally let go.\n\nTickets & 
+ details: https://dandelion.events/events/6afde0fcd12cffc53f8d8668?utm_sour
+ ce=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconn
+ ect.london/e/gong-bath-healing-circle/
+URL:https://dandelion.events/events/6afde0fcd12cffc53f8d8668
+END:VEVENT
+END:VCALENDAR

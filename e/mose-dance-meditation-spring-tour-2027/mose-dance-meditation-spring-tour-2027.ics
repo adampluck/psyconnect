@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6afeecde06c2ae81798ecb20@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270516T170000Z
+DTEND:20270516T210000Z
+SUMMARY:Mose: Dance Meditation | Spring Tour 2027
+LOCATION:Village Underground\, Holywell Lane\, London\, UK
+DESCRIPTION:Mose leads a silent-leaning\, fully improvised dance meditation
+  while live looper Murray Kyle weaves vocals into the music in real time.\
+ n\nTickets & details: https://dandelion.events/events/6afeecde06c2ae81798e
+ cb20?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: ht
+ tps://psyconnect.london/e/mose-dance-meditation-spring-tour-2027/
+URL:https://dandelion.events/events/6afeecde06c2ae81798ecb20
+END:VEVENT
+END:VCALENDAR

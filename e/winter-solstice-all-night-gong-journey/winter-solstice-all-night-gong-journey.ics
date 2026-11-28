@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:studysociety-80ce7820-554f-4340-897c-6fe12bdc35bb@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261219T213000Z
+DTEND:20261220T070000Z
+SUMMARY:Winter Solstice - All Night Gong Journey
+LOCATION:Colet House\, 151 Talgarth Rd\, London W14 9DA
+DESCRIPTION:An all-night gong immersion where multiple gongs wash over you 
+ from 10pm until sunrise\, guided by experienced gong masters and healers.\
+ n\nTickets & details: https://www.tickettailor.com/events/thestudysociety/
+ 2504265?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect:
+  https://psyconnect.london/e/winter-solstice-all-night-gong-journey/
+URL:https://www.tickettailor.com/events/thestudysociety/2504265
+END:VEVENT
+END:VCALENDAR

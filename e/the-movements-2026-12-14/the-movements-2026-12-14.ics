@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:studysociety-m35s190b-2026-12-14@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261214T200000Z
+DTEND:20261214T220000Z
+SUMMARY:The Movements
+LOCATION:Colet House\, 151 Talgarth Rd\, London W14 9DA
+DESCRIPTION:Gurdjieff's sacred Movements\, taught in an unbroken line since
+  the 1930s\, turn dance\, prayer and music into moving meditation.\n\nTick
+ ets & details: https://www.studysociety.org/whats-on/?utm_source=psyconnec
+ t.london&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.london/e
+ /the-movements-2026-12-14/
+URL:https://www.studysociety.org/whats-on/
+END:VEVENT
+END:VCALENDAR

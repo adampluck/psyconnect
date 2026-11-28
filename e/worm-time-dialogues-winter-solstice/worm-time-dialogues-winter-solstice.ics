@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6af43712eddd5670a38bf7bc@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261219T130000Z
+DTEND:20261219T160000Z
+SUMMARY:Worm Time Dialogues - Winter Solstice
+LOCATION:Good Shepherd Studios\, Good Shepherd Studios\, 15A Davies Ln\, Bu
+ shwood\, London E11 3DR\, UK
+DESCRIPTION:A Bohm Dialogue held at the Winter Solstice\, slowing down with
+  the year's longest night to explore what nature's rhythms teach us about 
+ time\n\nTickets & details: https://dandelion.events/events/6af43712eddd567
+ 0a38bf7bc?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnec
+ t: https://psyconnect.london/e/worm-time-dialogues-winter-solstice/
+URL:https://dandelion.events/events/6af43712eddd5670a38bf7bc
+END:VEVENT
+END:VCALENDAR

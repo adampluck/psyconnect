@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ae86b72e58b43d0c01943f1@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261212T193000Z
+DTEND:20261212T231500Z
+SUMMARY:Sacred Tobacco Tea Circle
+LOCATION:Willesden Green Station\, Walm Lane\, London\, UK
+DESCRIPTION:Sit in a tobacco and chilli ceremony with Amazonian wisdom keep
+ er Kurikindi Golden Hummingbird\, held in an intimate circle.\n\nTickets &
+  details: https://dandelion.events/events/6ae86b72e58b43d0c01943f1?utm_sou
+ rce=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psycon
+ nect.london/e/sacred-tobacco-tea-circle/
+URL:https://dandelion.events/events/6ae86b72e58b43d0c01943f1
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6b0aca635a63e7a9524585d1@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270530T150000Z
+DTEND:20270530T170000Z
+SUMMARY:Into Stillness: Christian Dimarco Concert (Sound Journey)
+LOCATION:The Amadeus\, 50 Shirland Road\, London W9 2JA\, United Kingdom
+DESCRIPTION:Lie back in a Little Venice chapel while Melbourne's Christian 
+ Dimarco carries you into deep rest with didgeridoo\, flutes and singing bo
+ wls.\n\nTickets & details: https://dandelion.events/events/6b0aca635a63e7a
+ 9524585d1?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnec
+ t: https://psyconnect.london/e/into-stillness-christian-dimarco-concert-so
+ und-journey/
+URL:https://dandelion.events/events/6b0aca635a63e7a9524585d1
+END:VEVENT
+END:VCALENDAR

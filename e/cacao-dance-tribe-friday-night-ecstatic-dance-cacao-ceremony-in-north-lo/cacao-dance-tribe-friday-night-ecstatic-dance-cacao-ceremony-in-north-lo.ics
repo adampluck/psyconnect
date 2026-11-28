@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ad76f6b979c2dd951839a12@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261204T190000Z
+DTEND:20261204T221500Z
+SUMMARY:Cacao Dance Tribe - Friday Night Ecstatic Dance & Cacao Ceremony in
+  North London
+LOCATION:13 Minutes from Gospel Oak Station or 11 minutes from Tufnell Park
+  Station (VENUE ADDRESS in order CONFIRMATION EMAIL\, please SCROLL DOWN i
+ n the email to 'Additional Information')
+DESCRIPTION:Afro House ecstatic dance with live percussion and heart-openin
+ g cacao ceremony in North London.\n\nTickets & details: https://dandelion.
+ events/events/6ad76f6b979c2dd951839a12?utm_source=psyconnect.london&utm_me
+ dium=referral\n\nOn PsyConnect: https://psyconnect.london/e/cacao-dance-tr
+ ibe-friday-night-ecstatic-dance-cacao-ceremony-in-north-lo/
+URL:https://dandelion.events/events/6ad76f6b979c2dd951839a12
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6a89f8e8bf8cdf36807a23f7@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261219T100000Z
+DTEND:20261219T180000Z
+SUMMARY:Embracing Grief: A One-Day Community Journey (London)
+LOCATION:Hackney\, London E5\, UK
+DESCRIPTION:A full-day grief ritual in Hackney that transforms loss through
+  shared ceremony and community.\n\nTickets & details: https://dandelion.ev
+ ents/events/6a89f8e8bf8cdf36807a23f7?utm_source=psyconnect.london&utm_medi
+ um=referral\n\nOn PsyConnect: https://psyconnect.london/e/embracing-grief-
+ a-one-day-community-journey-london/
+URL:https://dandelion.events/events/6a89f8e8bf8cdf36807a23f7
+END:VEVENT
+END:VCALENDAR

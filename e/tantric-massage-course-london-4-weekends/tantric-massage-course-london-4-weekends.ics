@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ac788b12d522980d9388243@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261205T100000Z
+DTEND:20270307T190000Z
+SUMMARY:Tantric Massage Course ~ London (4 weekends)
+LOCATION:Tara Yoga Centre\, Ironmonger Row\, London\, UK
+DESCRIPTION:Learn conscious touch and tantric massage strokes with your par
+ tner over four guided weekends with Ben and Iulia.\n\nTickets & details: h
+ ttps://dandelion.events/events/6ac788b12d522980d9388243?utm_source=psyconn
+ ect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.london
+ /e/tantric-massage-course-london-4-weekends/
+URL:https://dandelion.events/events/6ac788b12d522980d9388243
+END:VEVENT
+END:VCALENDAR

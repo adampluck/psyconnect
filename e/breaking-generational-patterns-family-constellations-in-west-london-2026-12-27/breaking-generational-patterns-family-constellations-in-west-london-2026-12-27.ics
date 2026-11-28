@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6af1d599d1aa1629c8eba8b9@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261227T170000Z
+DTEND:20261227T193000Z
+SUMMARY:Breaking Generational Patterns\, Family Constellations in West Lond
+ on
+LOCATION:Hetley Road\, London W12 8BA\, UK
+DESCRIPTION:Bring one stubborn life pattern and watch it get unpicked throu
+ gh family constellations\, a method that traces it back to the generations
+  bef\n\nTickets & details: https://dandelion.events/events/6af1d599d1aa162
+ 9c8eba8b9?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnec
+ t: https://psyconnect.london/e/breaking-generational-patterns-family-const
+ ellations-in-west-london-2026-12-27/
+URL:https://dandelion.events/events/6af1d599d1aa1629c8eba8b9
+END:VEVENT
+END:VCALENDAR

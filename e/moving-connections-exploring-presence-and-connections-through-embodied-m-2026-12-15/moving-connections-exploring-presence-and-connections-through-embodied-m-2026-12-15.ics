@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-d48a8917-9d6d-4d77-bfe5-0de79892afb3@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261215T190000Z
+DTEND:20261215T214500Z
+SUMMARY:Moving Connections - Exploring presence and connections through emb
+ odied movement
+LOCATION:Whittington Park Community Centre\, N19 4RS
+DESCRIPTION:Move and be moved in pairs and free-flow\, with live violin\, n
+ o experience needed and no words required to connect.\n\nTickets & details
+ : https://soullinkhub.com/event/d48a8917-9d6d-4d77-bfe5-0de79892afb3?utm_s
+ ource=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyc
+ onnect.london/e/moving-connections-exploring-presence-and-connections-thro
+ ugh-embodied-m-2026-12-15/
+URL:https://soullinkhub.com/event/d48a8917-9d6d-4d77-bfe5-0de79892afb3
+END:VEVENT
+END:VCALENDAR

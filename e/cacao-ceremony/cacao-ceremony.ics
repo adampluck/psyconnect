@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:studysociety-0a95c519-a029-4e70-b449-0761edccc575-2026-12-08@psyconnect
+ .london
+DTSTAMP:20261128T152612Z
+DTSTART:20261208T190000Z
+DTEND:20261208T203000Z
+SUMMARY:Cacao Ceremony
+LOCATION:Colet House\, 151 Talgarth Rd\, London W14 9DA
+DESCRIPTION:Sip ceremonial cacao\, then move through Kundalini yoga\, breat
+ hwork and guided shamanic meditation with facilitator Consuelo Cogrossi.\n
+ \nTickets & details: https://www.tickettailor.com/events/thestudysociety/2
+ 017914?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: 
+ https://psyconnect.london/e/cacao-ceremony/
+URL:https://www.tickettailor.com/events/thestudysociety/2017914
+END:VEVENT
+END:VCALENDAR

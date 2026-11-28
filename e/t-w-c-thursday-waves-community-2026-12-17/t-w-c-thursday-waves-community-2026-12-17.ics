@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-19b76ee2-a9f2-49b0-b271-0f657919cb79@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261217T200000Z
+DTEND:20261217T220000Z
+SUMMARY:T.W.C (Thursday Waves Community)
+LOCATION:St Luke's Holloway Hillmarton Rd\, London N7 9JE
+DESCRIPTION:Ninety minutes of 5Rhythms in a candlelit church hall\, where J
+ ason Rowe's Wave takes you from flowing to chaos to stillness.\n\nTickets 
+ & details: https://soullinkhub.com/event/19b76ee2-a9f2-49b0-b271-0f657919c
+ b79?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: htt
+ ps://psyconnect.london/e/t-w-c-thursday-waves-community-2026-12-17/
+URL:https://soullinkhub.com/event/19b76ee2-a9f2-49b0-b271-0f657919cb79
+END:VEVENT
+END:VCALENDAR

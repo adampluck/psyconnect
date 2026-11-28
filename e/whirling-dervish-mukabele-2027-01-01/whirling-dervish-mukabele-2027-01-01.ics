@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:studysociety-db8bdf4e-8c69-43bd-a7b9-0e9e43fb9b86-2027-01-01@psyconnect
+ .london
+DTSTAMP:20261128T152613Z
+DTSTART:20270101T200000Z
+DTEND:20270101T211500Z
+SUMMARY:Whirling Dervish Mukabele
+LOCATION:Colet House\, 151 Talgarth Rd\, London W14 9DA
+DESCRIPTION:Watch and join the Mevlevi Whirling Dervish turning\, a Rumi-ro
+ oted ceremony taught at Colet House since 1963\, open to all beliefs.\n\nT
+ ickets & details: https://www.studysociety.org/whats-on/?utm_source=psycon
+ nect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.londo
+ n/e/whirling-dervish-mukabele-2027-01-01/
+URL:https://www.studysociety.org/whats-on/
+END:VEVENT
+END:VCALENDAR

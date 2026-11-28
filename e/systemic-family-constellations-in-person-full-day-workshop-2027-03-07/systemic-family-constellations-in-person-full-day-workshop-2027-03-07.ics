@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ae17ed62efa7ea8eee7b281@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270307T100000Z
+DTEND:20270307T180000Z
+SUMMARY:Systemic & Family Constellations IN-PERSON Full-Day Workshop
+LOCATION:Kailash Centre\, Newcourt St\, Londra\, Regno Unito
+DESCRIPTION:Watch unspoken family history take shape in a full-day constell
+ ations workshop with facilitator Illi Adato.\n\nTickets & details: https:/
+ /dandelion.events/events/6ae17ed62efa7ea8eee7b281?utm_source=psyconnect.lo
+ ndon&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.london/e/sys
+ temic-family-constellations-in-person-full-day-workshop-2027-03-07/
+URL:https://dandelion.events/events/6ae17ed62efa7ea8eee7b281
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-6c2f8594-a741-45b9-a177-6c3cc26dafeb@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270205T181500Z
+DTEND:20270205T213000Z
+SUMMARY:Serpent & The Dove
+LOCATION:Lekdaling\, Tibetan Cultural Centre\, 14 Collent St\, London E9 6S
+ G
+DESCRIPTION:A three-hour 5Rhythms movement journey for women to reclaim ero
+ s and sensuality as life-force\, held in a Tibetan cultural centre in Hack
+ ney.\n\nTickets & details: https://soullinkhub.com/event/6c2f8594-a741-45b
+ 9-a177-6c3cc26dafeb?utm_source=psyconnect.london&utm_medium=referral\n\nOn
+  PsyConnect: https://psyconnect.london/e/serpent-the-dove/
+URL:https://soullinkhub.com/event/6c2f8594-a741-45b9-a177-6c3cc26dafeb
+END:VEVENT
+END:VCALENDAR

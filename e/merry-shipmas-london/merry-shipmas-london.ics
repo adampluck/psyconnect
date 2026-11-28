@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:luma-evt-R5XwQJgZBuhmng3@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261218T180000Z
+DTEND:20261218T210000Z
+SUMMARY:Merry Shipmas · London
+LOCATION:Ramen Space\, Ramen Space\, Unit 6\, Sledge Tower\, Dalston Square
+ \, London E8 3GP\, UK
+DESCRIPTION:A festive gathering at Ramen Space for Merry Shipmas\, a free n
+ ight of mingling hosted by the organizers behind it.\n\nTickets & details:
+  https://luma.com/287lbg3w?utm_source=psyconnect.london&utm_medium=referra
+ l\n\nOn PsyConnect: https://psyconnect.london/e/merry-shipmas-london/
+URL:https://luma.com/287lbg3w
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ac0c1650a761b3b5f8eec81@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261206T103000Z
+DTEND:20261206T170000Z
+SUMMARY:The Body in the Room - Introduction to Somatic Awareness and Moveme
+ nt as Resource in the Therapeutic Practice
+LOCATION:CCPE (Centre for Counselling & Psychotherapy Education)\, 2 Warwic
+ k Cres\, London W2 6NE\, UK
+DESCRIPTION:Learn somatic awareness and movement as therapeutic tools from 
+ almagaia move with Muriel.\n\nTickets & details: https://dandelion.events/
+ events/6ac0c1650a761b3b5f8eec81?utm_source=psyconnect.london&utm_medium=re
+ ferral\n\nOn PsyConnect: https://psyconnect.london/e/the-body-in-the-room-
+ introduction-to-somatic-awareness-and-movement-as-r/
+URL:https://dandelion.events/events/6ac0c1650a761b3b5f8eec81
+END:VEVENT
+END:VCALENDAR

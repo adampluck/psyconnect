@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-16f018a7-07e4-4dac-be38-26ea82b7218b@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261206T150000Z
+DTEND:20261206T200000Z
+SUMMARY:Sapphic Salon
+LOCATION:London
+DESCRIPTION:Sapphic Salon: an intentional monthly gathering of sensuality a
+ nd soul for femmes and non-binary sapphics.\n\nTickets & details: https://
+ soullinkhub.com/event/16f018a7-07e4-4dac-be38-26ea82b7218b?utm_source=psyc
+ onnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.lon
+ don/e/sapphic-salon/
+URL:https://soullinkhub.com/event/16f018a7-07e4-4dac-be38-26ea82b7218b
+END:VEVENT
+END:VCALENDAR

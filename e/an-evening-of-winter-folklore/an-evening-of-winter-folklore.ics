@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eventbrite-2004954419641@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270118T190000Z
+DTEND:20270118T213000Z
+SUMMARY:An Evening of Winter Folklore
+LOCATION:21 Soho\, 3-5 Sutton Row\, London W1D 4NR\, London\, W1D 4NR
+DESCRIPTION:Meet the gods and goddesses of winter and the rituals people us
+ ed to banish the cold and call back spring.\n\nTickets & details: https://
+ www.eventbrite.co.uk/e/an-evening-of-winter-folklore-tickets-2004954419641
+ ?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https:
+ //psyconnect.london/e/an-evening-of-winter-folklore/
+URL:https://www.eventbrite.co.uk/e/an-evening-of-winter-folklore-tickets-20
+ 04954419641
+END:VEVENT
+END:VCALENDAR

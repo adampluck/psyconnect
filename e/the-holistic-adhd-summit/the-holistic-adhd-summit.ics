@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eventbrite-2002528358226@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270130T100000Z
+DTEND:20270130T173000Z
+SUMMARY:The Holistic ADHD Summit
+LOCATION:Woolwich Works\, 11 No 1 Street\, London\, SE18 6HD
+DESCRIPTION:Holistic approaches to ADHD management from Seed Talks at Woolw
+ ich Works.\n\nTickets & details: https://www.eventbrite.co.uk/e/the-holist
+ ic-adhd-summit-tickets-2002528358226?utm_source=psyconnect.london&utm_medi
+ um=referral\n\nOn PsyConnect: https://psyconnect.london/e/the-holistic-adh
+ d-summit/
+URL:https://www.eventbrite.co.uk/e/the-holistic-adhd-summit-tickets-2002528
+ 358226
+END:VEVENT
+END:VCALENDAR

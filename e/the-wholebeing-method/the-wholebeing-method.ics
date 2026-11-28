@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6aeccb3d0f2c3e1dd5aa4c21@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261210T190000Z
+DTEND:20261210T210000Z
+SUMMARY:The Wholebeing Method
+LOCATION:The Meditatio Centre\, Myddelton Square\, London EC1R 1XX\, UK
+DESCRIPTION:Bring your scattered troubles to your own true nature and let t
+ he steady wholeness beneath them receive what needs healing.\n\nTickets & 
+ details: https://dandelion.events/events/6aeccb3d0f2c3e1dd5aa4c21?utm_sour
+ ce=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconn
+ ect.london/e/the-wholebeing-method/
+URL:https://dandelion.events/events/6aeccb3d0f2c3e1dd5aa4c21
+END:VEVENT
+END:VCALENDAR

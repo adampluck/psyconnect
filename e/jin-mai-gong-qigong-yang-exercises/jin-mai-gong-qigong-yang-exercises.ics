@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:studysociety-f4626937-0e83-4abd-a1af-5559f96c6ac7-2026-12-03@psyconnect
+ .london
+DTSTAMP:20261128T152612Z
+DTSTART:20261203T183000Z
+DTEND:20261203T193000Z
+SUMMARY:Jin Mai Gong Qigong (Yang Exercises)
+LOCATION:Colet House\, 151 Talgarth Rd\, London W14 9DA
+DESCRIPTION:Six Yang-organ qigong exercises from Natalia Miralles Huete\, b
+ uilt to keep your body's Qi flowing\, no experience needed.\n\nTickets & d
+ etails: https://www.tickettailor.com/events/thestudysociety/2476752?utm_so
+ urce=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyco
+ nnect.london/e/jin-mai-gong-qigong-yang-exercises/
+URL:https://www.tickettailor.com/events/thestudysociety/2476752
+END:VEVENT
+END:VCALENDAR

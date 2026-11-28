@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ad0fe624c75e3d802d9524b@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261205T100000Z
+DTEND:20261206T171500Z
+SUMMARY:Nonviolent Communication - Level 1 - Foundation Training - In Perso
+ n
+LOCATION:73-81 Southwark Bridge Rd\, London\, SE1 0NQ\, UK
+DESCRIPTION:Learn Nonviolent Communication with certified trainer Pauline D
+ oohan to transform how you listen and respond in conflict.\n\nTickets & de
+ tails: https://dandelion.events/events/6ad0fe624c75e3d802d9524b?utm_source
+ =psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconnec
+ t.london/e/nonviolent-communication-level-1-foundation-training-in-person/
+URL:https://dandelion.events/events/6ad0fe624c75e3d802d9524b
+END:VEVENT
+END:VCALENDAR

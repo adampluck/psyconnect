@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:numinity-2003913193305@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261213T130000Z
+DTEND:20261213T160000Z
+SUMMARY:Play Together: A Games Social for your Inner Child
+LOCATION:Never For Ever\, 79 Highgate Road\, London\, NW5 1TL
+DESCRIPTION:An afternoon of group games and laughter with Numinity\, built 
+ to reconnect you with your inner child among like-minded people.\n\nTicket
+ s & details: https://www.eventbrite.co.uk/e/play-together-a-games-social-f
+ or-your-inner-child-tickets-2002335511416?utm_source=psyconnect.london&utm
+ _medium=referral\n\nOn PsyConnect: https://psyconnect.london/e/play-togeth
+ er-a-games-social-for-your-inner-child/
+URL:https://www.eventbrite.co.uk/e/play-together-a-games-social-for-your-in
+ ner-child-tickets-2002335511416
+END:VEVENT
+END:VCALENDAR

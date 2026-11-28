@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:studysociety-391c40e8-8b1e-4fd5-bef2-cf616c18b5eb-2026-12-01@psyconnect
+ .london
+DTSTAMP:20261128T152612Z
+DTSTART:20261201T190000Z
+DTEND:20261201T200000Z
+SUMMARY:Vedic Chanting with Sulekh Ruparell
+LOCATION:Colet House\, 151 Talgarth Rd\, London W14 9DA
+DESCRIPTION:Sulekh Ruparell leads a relaxed monthly Vedic chanting circle i
+ n Sanskrit\, tuning the mind to your true nature.\n\nTickets & details: ht
+ tps://buytickets.at/thestudysociety/2443295?utm_source=psyconnect.london&u
+ tm_medium=referral\n\nOn PsyConnect: https://psyconnect.london/e/vedic-cha
+ nting-with-sulekh-ruparell/
+URL:https://buytickets.at/thestudysociety/2443295
+END:VEVENT
+END:VCALENDAR

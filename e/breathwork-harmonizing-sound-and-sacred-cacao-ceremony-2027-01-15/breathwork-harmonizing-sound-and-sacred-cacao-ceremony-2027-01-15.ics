@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ad8e483979c2dd951872dcc@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270115T180000Z
+DTEND:20270115T210000Z
+SUMMARY:Breathwork\, Harmonizing Sound and Sacred Cacao Ceremony
+LOCATION:Here + Now \, Studio 2 & 4\, 231 Stoke Newington Church St\, Londo
+ n N16 9HP\, UK
+DESCRIPTION:Lani Rocillo guides deep breathwork and sound healing with cere
+ monial cacao in a safe container.\n\nTickets & details: https://dandelion.
+ events/events/6ad8e483979c2dd951872dcc?utm_source=psyconnect.london&utm_me
+ dium=referral\n\nOn PsyConnect: https://psyconnect.london/e/breathwork-har
+ monizing-sound-and-sacred-cacao-ceremony-2027-01-15/
+URL:https://dandelion.events/events/6ad8e483979c2dd951872dcc
+END:VEVENT
+END:VCALENDAR

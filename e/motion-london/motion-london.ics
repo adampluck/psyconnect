@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6aeb811478982baf8166a7dd@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261130T183000Z
+DTEND:20261130T210000Z
+SUMMARY:MOTION London
+LOCATION:Goldsmiths Great Hall\, Richard Hoggart Building\, Lewisham Way\, 
+ London\, UK
+DESCRIPTION:Dance the 5Rhythms map with Tim Barnes in Goldsmiths' Great Hal
+ l\, a no-talking floor where you sweat\, let go and arrive in your body.\n
+ \nTickets & details: https://dandelion.events/events/6aeb811478982baf8166a
+ 7dd?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: htt
+ ps://psyconnect.london/e/motion-london/
+URL:https://dandelion.events/events/6aeb811478982baf8166a7dd
+END:VEVENT
+END:VCALENDAR

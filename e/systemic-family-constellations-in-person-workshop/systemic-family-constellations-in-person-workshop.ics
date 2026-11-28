@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6adc6522d01fb42aa4870744@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261207T183000Z
+DTEND:20261207T214500Z
+SUMMARY:Systemic & Family Constellations In-Person Workshop
+LOCATION:Violet Hill Studios\, Violet Hill\, London\, UK
+DESCRIPTION:Illi Adato\, who trains facilitators in the work\, leads a smal
+ l-group constellation evening on how family history shapes your present.\n
+ \nTickets & details: https://dandelion.events/events/6adc6522d01fb42aa4870
+ 744?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: htt
+ ps://psyconnect.london/e/systemic-family-constellations-in-person-workshop
+ /
+URL:https://dandelion.events/events/6adc6522d01fb42aa4870744
+END:VEVENT
+END:VCALENDAR

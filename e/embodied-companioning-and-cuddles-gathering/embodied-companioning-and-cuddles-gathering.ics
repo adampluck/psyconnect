@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-9a07f2dd-dd2a-49b5-bb1b-272c1b3afacf@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261205T100000Z
+DTEND:20261205T173000Z
+SUMMARY:Embodied Companioning and Cuddles Gathering
+LOCATION:20 minutes south of Cambridge\, accessible from London (exact loca
+ tion shared after booking). Cosy covered location in the woods.
+DESCRIPTION:A day in the woods learning to listen to your felt sense and se
+ t boundaries\, with touch offered only if you want it.\n\nTickets & detail
+ s: https://soullinkhub.com/event/9a07f2dd-dd2a-49b5-bb1b-272c1b3afacf?utm_
+ source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psy
+ connect.london/e/embodied-companioning-and-cuddles-gathering/
+URL:https://soullinkhub.com/event/9a07f2dd-dd2a-49b5-bb1b-272c1b3afacf
+END:VEVENT
+END:VCALENDAR

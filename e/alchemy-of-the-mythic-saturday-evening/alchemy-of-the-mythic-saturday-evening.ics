@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ae3f40b9105716352e4ac05@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261212T200000Z
+DTEND:20261213T020000Z
+SUMMARY:Alchemy of the Mythic: Saturday Evening.
+LOCATION:ArtSect Gallery\, 21-23 Sedgwick Street\, London E9 6AA\, UK
+DESCRIPTION:An immersive winter myth night where art\, storytelling\, movem
+ ent meditation and a mythic DJ set hatch an Egg of the Ethereal at ArtSect
+  Gall\n\nTickets & details: https://dandelion.events/events/6ae3f40b910571
+ 6352e4ac05?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConne
+ ct: https://psyconnect.london/e/alchemy-of-the-mythic-saturday-evening/
+URL:https://dandelion.events/events/6ae3f40b9105716352e4ac05
+END:VEVENT
+END:VCALENDAR

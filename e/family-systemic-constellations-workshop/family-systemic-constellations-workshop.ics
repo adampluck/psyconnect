@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ad15132379db2473851d19e@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261212T101500Z
+DTEND:20261212T134500Z
+SUMMARY:Family Systemic Constellations workshop
+LOCATION:Psychosynthesis Trust\, 92-94 Tooley St\, London SE1 2TH
+DESCRIPTION:Heal family patterns and transgenerational wounds through embod
+ ied systemic constellation work in a confidential group.\n\nTickets & deta
+ ils: https://dandelion.events/events/6ad15132379db2473851d19e?utm_source=p
+ syconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.
+ london/e/family-systemic-constellations-workshop/
+URL:https://dandelion.events/events/6ad15132379db2473851d19e
+END:VEVENT
+END:VCALENDAR

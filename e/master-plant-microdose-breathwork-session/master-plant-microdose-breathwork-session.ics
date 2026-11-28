@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:numinity-2004484383751@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261211T190000Z
+DTEND:20261211T203000Z
+SUMMARY:Master Plant Microdose & Breathwork Session
+LOCATION:Flat 6\, 4-5 Torriano Mews\, 4 Torriano Mews #flat 6\, London\, NW
+ 5 2SD
+DESCRIPTION:A master plant microdose paired with conscious connected breath
+ work and live sound healing\, hosted by Numinity in a Torriano flat.\n\nTi
+ ckets & details: https://www.eventbrite.co.uk/e/master-plant-microdose-bre
+ athwork-session-tickets-1300054300409?utm_source=psyconnect.london&utm_med
+ ium=referral\n\nOn PsyConnect: https://psyconnect.london/e/master-plant-mi
+ crodose-breathwork-session/
+URL:https://www.eventbrite.co.uk/e/master-plant-microdose-breathwork-sessio
+ n-tickets-1300054300409
+END:VEVENT
+END:VCALENDAR

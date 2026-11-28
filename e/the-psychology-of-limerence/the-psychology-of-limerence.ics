@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eventbrite-2005548530643@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270202T190000Z
+DTEND:20270202T213000Z
+SUMMARY:The Psychology of Limerence
+LOCATION:The Blues Kitchen Brixton\, 40 Acre Lane\, London\, SW2 5SP
+DESCRIPTION:Dr-led talk on limerence\, the involuntary obsessive state of n
+ ew love\, through social psychology and attachment theory\, with Q&A.\n\nT
+ ickets & details: https://www.eventbrite.co.uk/e/the-psychology-of-limeren
+ ce-tickets-2005548530643?utm_source=psyconnect.london&utm_medium=referral\
+ n\nOn PsyConnect: https://psyconnect.london/e/the-psychology-of-limerence/
+URL:https://www.eventbrite.co.uk/e/the-psychology-of-limerence-tickets-2005
+ 548530643
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:studysociety-d6c62681-70b6-45d3-b9aa-36c59e198c09@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270311T181000Z
+DTEND:20270311T211000Z
+SUMMARY:Conscious Connected Breathwork - Breath of Remembrance
+LOCATION:Colet House\, 151 Talgarth Rd\, London W14 9DA
+DESCRIPTION:A 3-hour circular breathwork journey at Colet House to release 
+ held emotions and drift beyond the thinking mind.\n\nTickets & details: ht
+ tps://www.eventbrite.com/e/breath-of-remembrance-conscious-connected-breat
+ hwork-tickets-1977310248180?aff=ebdssbdestsearch&utm_source=psyconnect.lon
+ don&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.london/e/cons
+ cious-connected-breathwork-breath-of-remembrance-2027-03-11/
+URL:https://www.eventbrite.com/e/breath-of-remembrance-conscious-connected-
+ breathwork-tickets-1977310248180?aff=ebdssbdestsearch
+END:VEVENT
+END:VCALENDAR

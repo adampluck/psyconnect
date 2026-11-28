@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-945a851c-688f-4224-b8b6-65b11df93ad5@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261218T193000Z
+DTEND:20261218T213000Z
+SUMMARY:BareSouls 5Rhythms® with Kat
+LOCATION:Haverstock school 24 Haverstock Hill\, Chalk Farm / Camden\, NW3 2
+ BQ
+DESCRIPTION:Dance the five 5Rhythms® wave with Kat\, a certified teacher\,
+  no experience needed\, just bring an open heart.\n\nTickets & details: ht
+ tps://soullinkhub.com/event/945a851c-688f-4224-b8b6-65b11df93ad5?utm_sourc
+ e=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconne
+ ct.london/e/baresouls-5rhythms-with-kat-2026-12-18/
+URL:https://soullinkhub.com/event/945a851c-688f-4224-b8b6-65b11df93ad5
+END:VEVENT
+END:VCALENDAR

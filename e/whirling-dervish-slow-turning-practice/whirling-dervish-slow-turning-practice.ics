@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:studysociety-15a17b8d-404e-4750-9d31-ee71022f84b4-2026-12-11@psyconnect
+ .london
+DTSTAMP:20261128T152613Z
+DTSTART:20261211T194500Z
+DTEND:20261211T203000Z
+SUMMARY:Whirling Dervish Slow Turning Practice
+LOCATION:Colet House\, 151 Talgarth Rd\, London W14 9DA
+DESCRIPTION:A gentle introduction to slow whirling with the Dervish group a
+ t The Study Society\, with optional shared supper after and socks required
+ .\n\nTickets & details: https://www.studysociety.org/whats-on/?utm_source=
+ psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconnect
+ .london/e/whirling-dervish-slow-turning-practice/
+URL:https://www.studysociety.org/whats-on/
+END:VEVENT
+END:VCALENDAR

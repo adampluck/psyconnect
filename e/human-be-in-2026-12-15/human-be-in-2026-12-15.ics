@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-22a2c32f-f989-407e-bbd9-25a4ce5d01b4@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261215T190000Z
+DTEND:20261215T213000Z
+SUMMARY:HUMAN BE:IN
+LOCATION:OMUK\, 22 Pakenham St\, London WC1X 0LB
+DESCRIPTION:Meditation\, a sharing circle and somatic movement in one Tuesd
+ ay sanctuary in King's Cross\, ending with tea.\n\nTickets & details: http
+ s://soullinkhub.com/event/22a2c32f-f989-407e-bbd9-25a4ce5d01b4?utm_source=
+ psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconnect
+ .london/e/human-be-in-2026-12-15/
+URL:https://soullinkhub.com/event/22a2c32f-f989-407e-bbd9-25a4ce5d01b4
+END:VEVENT
+END:VCALENDAR

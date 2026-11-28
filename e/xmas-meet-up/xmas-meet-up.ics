@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:luma-evt-vtp788aouNZBYiV@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261202T190000Z
+DTEND:20261202T210000Z
+SUMMARY:Xmas Meet Up
+LOCATION:Auberge\, Auberge\, 1 Sandell St\, London SE1 8UH\, UK
+DESCRIPTION:A festive year-end meetup with the Ladies\, Wine & Design Londo
+ n crowd\, where creatives gather to swap stories over drinks in Waterloo.\
+ n\nTickets & details: https://luma.com/4qh4otpn?utm_source=psyconnect.lond
+ on&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.london/e/xmas-
+ meet-up/
+URL:https://luma.com/4qh4otpn
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6b07b548f59421bf7947c9fb@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270407T173000Z
+DTEND:20270407T204500Z
+SUMMARY:In-Person Systemic & Family Constellations Evening Workshop
+LOCATION:9 Broadhurst Mansions\, 97 Broadhurst Gardens\, London NW6 3QP\, R
+ egno Unito
+DESCRIPTION:Step into a family constellation and let a room of strangers ma
+ p the hidden forces keeping you stuck\, in an intimate evening group.\n\nT
+ ickets & details: https://dandelion.events/events/6b07b548f59421bf7947c9fb
+ ?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https:
+ //psyconnect.london/e/in-person-systemic-family-constellations-evening-wor
+ kshop-2027-04-07/
+URL:https://dandelion.events/events/6b07b548f59421bf7947c9fb
+END:VEVENT
+END:VCALENDAR

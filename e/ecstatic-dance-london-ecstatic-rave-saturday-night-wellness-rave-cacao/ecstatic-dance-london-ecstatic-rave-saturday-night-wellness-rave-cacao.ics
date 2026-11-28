@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eventbrite-2003416907902@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261212T190000Z
+DTEND:20261212T221500Z
+SUMMARY:Ecstatic Dance London - Ecstatic Rave: Saturday Night Wellness Rave
+  & Cacao
+LOCATION:11 min walk from Tufnell Park underground or 13 min walk from Gosp
+ el Oak overground (FULL DETAILS IN ORDER CONFIRMATION EMAIL\, scroll down 
+ to 'Additional Info' in the email)\, Entrance between nr 51 & 53 Croftdown
+  Road (follow the signs)\, London\, NW5 1EL
+DESCRIPTION:A sober Saturday night rave with ecstatic dance\, a cacao cerem
+ ony and a fruit social\, no booze and no chit chat required.\n\nTickets & 
+ details: https://www.eventbrite.co.uk/e/ecstatic-dance-london-ecstatic-rav
+ e-saturday-night-wellness-rave-cacao-tickets-120615336719?utm_source=psyco
+ nnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.lond
+ on/e/ecstatic-dance-london-ecstatic-rave-saturday-night-wellness-rave-caca
+ o/
+URL:https://www.eventbrite.co.uk/e/ecstatic-dance-london-ecstatic-rave-satu
+ rday-night-wellness-rave-cacao-tickets-120615336719
+END:VEVENT
+END:VCALENDAR

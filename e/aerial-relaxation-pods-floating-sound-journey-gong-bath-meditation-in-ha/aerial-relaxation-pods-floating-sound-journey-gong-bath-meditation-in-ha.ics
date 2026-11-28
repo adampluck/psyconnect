@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6aa06089a0983f6e6f0bacd3@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261201T190000Z
+DTEND:20261201T201500Z
+SUMMARY:Aerial Relaxation Pods® Floating Sound Journey Gong Bath Meditatio
+ n in Hammocks or on Padded Floor Mats (1h 15 min session 7pm-8:15pm)
+LOCATION:Skylight Centre\, Corsica Street\, London\, UK
+DESCRIPTION:Float in a hammock while gong vibrations melt stress and calm y
+ our nervous system in a rare extended sound bath.\n\nTickets & details: ht
+ tps://dandelion.events/events/6aa06089a0983f6e6f0bacd3?utm_source=psyconne
+ ct.london&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.london/
+ e/aerial-relaxation-pods-floating-sound-journey-gong-bath-meditation-in-ha
+ /
+URL:https://dandelion.events/events/6aa06089a0983f6e6f0bacd3
+END:VEVENT
+END:VCALENDAR

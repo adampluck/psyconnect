@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6aef1d44fa70eeb752a63051@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270120T183000Z
+DTEND:20270120T213000Z
+SUMMARY:Embodied play fighting
+LOCATION:Anatomie Studio London\, Station Passage\, London\, UK
+DESCRIPTION:Wrestle\, giggle and feel your way into non-verbal connection t
+ hrough guided embodied play fighting at Anatomie Studio.\n\nTickets & deta
+ ils: https://dandelion.events/events/6aef1d44fa70eeb752a63051?utm_source=p
+ syconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.
+ london/e/embodied-play-fighting/
+URL:https://dandelion.events/events/6aef1d44fa70eeb752a63051
+END:VEVENT
+END:VCALENDAR

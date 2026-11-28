@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6b0ab97953d11afa84181fb1@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261202T173000Z
+DTEND:20261202T193000Z
+SUMMARY:A Space to be heard: Free Weekly Women's Circle in Greenwich
+LOCATION:Plot 9\, Restell Cl\, London\, UK
+DESCRIPTION:A weekly drop-in women's circle around a fire in Maze Hill wher
+ e you never have to speak\, and listening counts too.\n\nTickets & details
+ : https://dandelion.events/events/6b0ab97953d11afa84181fb1?utm_source=psyc
+ onnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.lon
+ don/e/a-space-to-be-heard-free-weekly-women-s-circle-in-greenwich/
+URL:https://dandelion.events/events/6b0ab97953d11afa84181fb1
+END:VEVENT
+END:VCALENDAR

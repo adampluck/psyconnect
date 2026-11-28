@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:meetup-event_317142592-meetup.com@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261207T183000Z
+DTEND:20261207T214500Z
+SUMMARY:Systemic & Family Constellations Workshop
+LOCATION:6 Violet Hill\, 6 Violet Hill\, London NW8 9EB\, UK\, London
+DESCRIPTION:Illi Adato\, who heads the London School of Systemic & Family C
+ onstellations\, leads a small group through healing family imprints from t
+ he pa\n\nTickets & details: https://www.meetup.com/spiritual-vibes/events/
+ 317142592/?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConne
+ ct: https://psyconnect.london/e/systemic-family-constellations-workshop/
+URL:https://www.meetup.com/spiritual-vibes/events/317142592/
+END:VEVENT
+END:VCALENDAR

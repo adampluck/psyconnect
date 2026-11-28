@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-1f4a7f09-ec69-46e1-8c9b-445f537221ae@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261211T193000Z
+DTEND:20261211T213000Z
+SUMMARY:5Rhythms Dance – Dance Kew
+LOCATION:Kew Community Centre\, TW9 2AJ
+DESCRIPTION:Weekly 5Rhythms dance with Neil Pinnock—no steps\, just prese
+ nce and creative release on the dance floor.\n\nTickets & details: https:/
+ /soullinkhub.com/event/1f4a7f09-ec69-46e1-8c9b-445f537221ae?utm_source=psy
+ connect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.lo
+ ndon/e/5rhythms-dance-dance-kew-2026-12-11/
+URL:https://soullinkhub.com/event/1f4a7f09-ec69-46e1-8c9b-445f537221ae
+END:VEVENT
+END:VCALENDAR

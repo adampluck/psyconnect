@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6adb1c9e979c2dd9518bde1b@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261211T184500Z
+DTEND:20261211T214500Z
+SUMMARY:Vocal Improv Medicine - December Singing Workshop & Sound Journey t
+ o Rewild our Voice with Kat Bonny
+LOCATION:Skylight Centre\, 49 Corsica Street\, London N5 1JT\, UK
+DESCRIPTION:Kat Bonny guides you beyond scales into shamanic vocal improvis
+ ation to rewild your voice and access flow states.\n\nTickets & details: h
+ ttps://dandelion.events/events/6adb1c9e979c2dd9518bde1b?utm_source=psyconn
+ ect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.london
+ /e/vocal-improv-medicine-december-singing-workshop-sound-journey-to-rewild
+ /
+URL:https://dandelion.events/events/6adb1c9e979c2dd9518bde1b
+END:VEVENT
+END:VCALENDAR

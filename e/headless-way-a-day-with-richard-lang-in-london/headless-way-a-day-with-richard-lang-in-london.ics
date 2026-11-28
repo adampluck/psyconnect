@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6aec89da0f2c3e1dd5a96717@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270130T100000Z
+DTEND:20270130T160000Z
+SUMMARY:Headless Way: A day with Richard Lang in London
+LOCATION:Stoke Newington\, London\, UK
+DESCRIPTION:Spend a day with Richard Lang\, Headless Way's foremost teacher
+ \, in his Stoke Newington home\, limited to just 16 people.\n\nTickets & d
+ etails: https://dandelion.events/events/6aec89da0f2c3e1dd5a96717?utm_sourc
+ e=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconne
+ ct.london/e/headless-way-a-day-with-richard-lang-in-london/
+URL:https://dandelion.events/events/6aec89da0f2c3e1dd5a96717
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eventbrite-2002709769833@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261207T190000Z
+DTEND:20261207T213000Z
+SUMMARY:The Psychology of Abandonment
+LOCATION:21Soho\, 3-5 Sutton Row\,\, London\, W1D 4NR
+DESCRIPTION:Understand how abandonment fears shape your attachment patterns
+  and relationships through psychology.\n\nTickets & details: https://www.e
+ ventbrite.co.uk/e/the-psychology-of-abandonment-tickets-2002709769833?utm_
+ source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psy
+ connect.london/e/the-psychology-of-abandonment/
+URL:https://www.eventbrite.co.uk/e/the-psychology-of-abandonment-tickets-20
+ 02709769833
+END:VEVENT
+END:VCALENDAR

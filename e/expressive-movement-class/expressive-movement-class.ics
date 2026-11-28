@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ace2c1c085b061779ab5b02@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261203T190000Z
+DTEND:20261203T210000Z
+SUMMARY:Expressive Movement Class
+LOCATION:St Anne's Settlement Hall\, Vauxhall Grove\, London\, UK
+DESCRIPTION:Weekly ecstatic dance class where somatic practice meets moveme
+ nt meditation.\n\nTickets & details: https://dandelion.events/events/6ace2
+ c1c085b061779ab5b02?utm_source=psyconnect.london&utm_medium=referral\n\nOn
+  PsyConnect: https://psyconnect.london/e/expressive-movement-class/
+URL:https://dandelion.events/events/6ace2c1c085b061779ab5b02
+END:VEVENT
+END:VCALENDAR

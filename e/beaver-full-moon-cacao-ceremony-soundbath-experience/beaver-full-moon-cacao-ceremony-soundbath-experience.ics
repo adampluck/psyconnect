@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eventbrite-2003850041416@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261129T190000Z
+DTEND:20261129T210000Z
+SUMMARY:Beaver Full Moon Cacao Ceremony & Soundbath Experience
+LOCATION:Millers Way Project\, Miller's Way\, London\, W6 7NH
+DESCRIPTION:Beaver Full Moon Cacao Ceremony with soundbath healing led by M
+ oon Haven at Millers Way Project.\n\nTickets & details: https://www.eventb
+ rite.co.uk/e/beaver-full-moon-cacao-ceremony-soundbath-experience-tickets-
+ 2003850041416?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyCo
+ nnect: https://psyconnect.london/e/beaver-full-moon-cacao-ceremony-soundba
+ th-experience/
+URL:https://www.eventbrite.co.uk/e/beaver-full-moon-cacao-ceremony-soundbat
+ h-experience-tickets-2003850041416
+END:VEVENT
+END:VCALENDAR

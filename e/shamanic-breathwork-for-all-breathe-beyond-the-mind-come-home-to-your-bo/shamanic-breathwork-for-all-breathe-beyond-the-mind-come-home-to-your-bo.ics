@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6a478a29433fa1451d0f2480@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261211T183000Z
+DTEND:20261211T210000Z
+SUMMARY:Shamanic Breathwork® For All: Breathe Beyond the Mind\, Come Home 
+ to Your Body
+LOCATION:BPM STUDIOS\, Unit 3 Canterbury Court\, 1-3 Brixton Rd\, Kenningto
+ n Business Park\, London\, SW9 6DE
+DESCRIPTION:Guided shamanic breathwork to release emotional blocks and reco
+ nnect with your authentic power.\n\nTickets & details: https://dandelion.e
+ vents/events/6a478a29433fa1451d0f2480?utm_source=psyconnect.london&utm_med
+ ium=referral\n\nOn PsyConnect: https://psyconnect.london/e/shamanic-breath
+ work-for-all-breathe-beyond-the-mind-come-home-to-your-bo/
+URL:https://dandelion.events/events/6a478a29433fa1451d0f2480
+END:VEVENT
+END:VCALENDAR

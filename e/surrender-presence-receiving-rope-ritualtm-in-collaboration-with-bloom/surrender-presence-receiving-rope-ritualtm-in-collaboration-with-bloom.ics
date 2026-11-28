@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-42498f93-1c4a-44e5-a897-30f3cb6770b0@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261206T094500Z
+DTEND:20261206T164500Z
+SUMMARY:Surrender\, Presence & Receiving – Rope Ritual™ in collaboratio
+ n with Bloom
+LOCATION:N19\, London
+DESCRIPTION:Learn what you hold and what you protect in a rope ritual of br
+ eath\, trust and receiving\, led by Mìaa and Naudia with Bloom.\n\nTicket
+ s & details: https://soullinkhub.com/event/42498f93-1c4a-44e5-a897-30f3cb6
+ 770b0?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: h
+ ttps://psyconnect.london/e/surrender-presence-receiving-rope-ritualtm-in-c
+ ollaboration-with-bloom/
+URL:https://soullinkhub.com/event/42498f93-1c4a-44e5-a897-30f3cb6770b0
+END:VEVENT
+END:VCALENDAR

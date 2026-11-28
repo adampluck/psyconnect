@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6a89fc0bbf8cdf36807a27ff@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270306T150000Z
+DTEND:20270306T190000Z
+SUMMARY:Tending the Heart: A Communal Grief Ritual (London)
+LOCATION:Old School Rooms\, Powerscroft Road\, London\, UK
+DESCRIPTION:A guided grief ceremony with Embracing Grief to honour loss and
+  move through collective sorrow.\n\nTickets & details: https://dandelion.e
+ vents/events/6a89fc0bbf8cdf36807a27ff?utm_source=psyconnect.london&utm_med
+ ium=referral\n\nOn PsyConnect: https://psyconnect.london/e/tending-the-hea
+ rt-a-communal-grief-ritual-london/
+URL:https://dandelion.events/events/6a89fc0bbf8cdf36807a27ff
+END:VEVENT
+END:VCALENDAR

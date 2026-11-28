@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-897b777a-856b-442a-848e-23b8b939ff9b@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261222T190000Z
+DTEND:20261222T213000Z
+SUMMARY:HUMAN BE:IN
+LOCATION:OMUK\, 22 Pakenham St\, London WC1X 0LB
+DESCRIPTION:Meditate\, share in a witnessed circle\, then move through ambi
+ ent to deep house at King's Cross on Tuesdays.\n\nTickets & details: https
+ ://soullinkhub.com/event/897b777a-856b-442a-848e-23b8b939ff9b?utm_source=p
+ syconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.
+ london/e/human-be-in-2026-12-22/
+URL:https://soullinkhub.com/event/897b777a-856b-442a-848e-23b8b939ff9b
+END:VEVENT
+END:VCALENDAR

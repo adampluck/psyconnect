@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6b06eceff59421bf7945f035@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270122T180000Z
+DTEND:20270131T210000Z
+SUMMARY:The Enneagram: Know Your Type\, Awaken Your Soul ~ London
+LOCATION:Tara Yoga Centre\, 25-31 Ironmonger Row\, London EC1V 3QW\, UK
+DESCRIPTION:Two weekends with Chloe unpacking the nine Enneagram types\, an
+ d why the same arguments keep finding you.\n\nTickets & details: https://d
+ andelion.events/events/6b06eceff59421bf7945f035?utm_source=psyconnect.lond
+ on&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.london/e/the-e
+ nneagram-know-your-type-awaken-your-soul-london/
+URL:https://dandelion.events/events/6b06eceff59421bf7945f035
+END:VEVENT
+END:VCALENDAR

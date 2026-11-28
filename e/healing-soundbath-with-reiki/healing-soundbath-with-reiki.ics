@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eventbrite-2003849939110@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261203T190000Z
+DTEND:20261203T200000Z
+SUMMARY:Healing Soundbath with Reiki
+LOCATION:Millers Way Project\, Miller's Way\, London\, W6 7NH
+DESCRIPTION:Let crystal bowls and Reiki guide your nervous system into deep
+  stillness at Moon Haven's healing soundbath.\n\nTickets & details: https:
+ //www.eventbrite.co.uk/e/healing-soundbath-with-reiki-tickets-200384992807
+ 7?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https
+ ://psyconnect.london/e/healing-soundbath-with-reiki/
+URL:https://www.eventbrite.co.uk/e/healing-soundbath-with-reiki-tickets-200
+ 3849928077
+END:VEVENT
+END:VCALENDAR

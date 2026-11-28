@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:luma-evt-5C4gTbIuVQsMYRE@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261218T183000Z
+DTEND:20261218T193000Z
+SUMMARY:445 X Kiss: Night Shift | 5K Run
+LOCATION:Parliament Square\, Parliament Square\, Parliament Sq\, London\, U
+ K
+DESCRIPTION:A late-night 5K loop past Parliament Square\, run as a free nig
+ ht-shift session for anyone who wants to move after dark.\n\nTickets & det
+ ails: https://luma.com/ly15d1py?utm_source=psyconnect.london&utm_medium=re
+ ferral\n\nOn PsyConnect: https://psyconnect.london/e/445-x-kiss-night-shif
+ t-5k-run/
+URL:https://luma.com/ly15d1py
+END:VEVENT
+END:VCALENDAR

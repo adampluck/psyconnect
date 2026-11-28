@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6afad77a71a0808f1e6fd5d7@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261204T180000Z
+DTEND:20261204T200000Z
+SUMMARY:A Space to be heard: Free Monthly Men's Circle in Greenwich
+LOCATION:Plot 9\, Restell Cl\, London\, UK
+DESCRIPTION:An unhurried monthly circle around an outdoor fire in Maze Hill
+  where men speak honestly and get listened to\, no fixing required.\n\nTic
+ kets & details: https://dandelion.events/events/6afad77a71a0808f1e6fd5d7?u
+ tm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://
+ psyconnect.london/e/a-space-to-be-heard-free-monthly-men-s-circle-in-green
+ wich/
+URL:https://dandelion.events/events/6afad77a71a0808f1e6fd5d7
+END:VEVENT
+END:VCALENDAR

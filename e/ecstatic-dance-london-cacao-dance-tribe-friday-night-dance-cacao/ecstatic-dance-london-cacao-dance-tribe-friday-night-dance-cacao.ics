@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eventbrite-2003416851734@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261211T190000Z
+DTEND:20261211T221500Z
+SUMMARY:Ecstatic Dance London - Cacao Dance Tribe: Friday Night Dance & Cac
+ ao
+LOCATION:11 min walk from Tufnell Park underground or 13 min walk from Gosp
+ el Oak overground (FULL DETAILS IN ORDER CONFIRMATION EMAIL\, scroll down 
+ to 'Additional Info' in the email)\, Entrance between nr 51 & 53 Croftdown
+  Road (follow the signs)\, London\, NW5 1EL
+DESCRIPTION:Friday night ecstatic dance with ceremonial cacao\, alcohol-fre
+ e and shoe-free\, with no talking required\, just moving however you wish.
+ \n\nTickets & details: https://www.eventbrite.co.uk/e/ecstatic-dance-londo
+ n-cacao-dance-tribe-friday-night-dance-cacao-tickets-498619222517?utm_sour
+ ce=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconn
+ ect.london/e/ecstatic-dance-london-cacao-dance-tribe-friday-night-dance-ca
+ cao/
+URL:https://www.eventbrite.co.uk/e/ecstatic-dance-london-cacao-dance-tribe-
+ friday-night-dance-cacao-tickets-498619222517
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6afc8785895f415283e79a09@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270123T150000Z
+DTEND:20270123T173000Z
+SUMMARY:Breathwork for Deep Release
+LOCATION:Prana Voice - Holistic Well-Being\, Orsman Road\, London\, UK
+DESCRIPTION:A monthly Hackney session of conscious connected breathwork\, b
+ uilt to loosen emotional blocks and let your body guide the release.\n\nTi
+ ckets & details: https://dandelion.events/events/6afc8785895f415283e79a09?
+ utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https:/
+ /psyconnect.london/e/breathwork-for-deep-release-2027-01-23/
+URL:https://dandelion.events/events/6afc8785895f415283e79a09
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ae8bf58a0fd40de122f8f43@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261206T110000Z
+DTEND:20261206T130000Z
+SUMMARY:Hearth & Hand: A monthly fireside handcraft circle @ Plot 9
+LOCATION:Plot 9 Maze Hill\, Restell Close\, London\, UK
+DESCRIPTION:A monthly fireside circle at Plot 9 Maze Hill where knitters\, 
+ crocheters and weavers craft side by side\, no experience needed.\n\nTicke
+ ts & details: https://dandelion.events/events/6ae8bf58a0fd40de122f8f43?utm
+ _source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://ps
+ yconnect.london/e/hearth-hand-a-monthly-fireside-handcraft-circle-plot-9/
+URL:https://dandelion.events/events/6ae8bf58a0fd40de122f8f43
+END:VEVENT
+END:VCALENDAR

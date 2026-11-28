@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-eb5b42f8-5636-4f52-b86a-b29b1e750d55@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270317T183000Z
+DTEND:20270317T213000Z
+SUMMARY:London Midweek Embodied Play-Fight
+LOCATION:Queens Road Peckham\, London
+DESCRIPTION:Learn to play-fight with consent and curiosity\, discovering wi
+ ld or gentle parts of yourself through structured embodied rounds in Peckh
+ am.\n\nTickets & details: https://soullinkhub.com/event/eb5b42f8-5636-4f52
+ -b86a-b29b1e750d55?utm_source=psyconnect.london&utm_medium=referral\n\nOn 
+ PsyConnect: https://psyconnect.london/e/london-midweek-embodied-play-fight
+ -2027-03-17/
+URL:https://soullinkhub.com/event/eb5b42f8-5636-4f52-b86a-b29b1e750d55
+END:VEVENT
+END:VCALENDAR

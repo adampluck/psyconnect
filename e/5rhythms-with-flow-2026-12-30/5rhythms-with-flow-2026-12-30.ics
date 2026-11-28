@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:studysociety-a7701080-f0c6-49b4-9427-6110cf66b059-2026-12-30@psyconnect
+ .london
+DTSTAMP:20261128T152613Z
+DTSTART:20261230T190000Z
+DTEND:20261230T210000Z
+SUMMARY:5Rhythms with Flow
+LOCATION:Colet House\, 151 Talgarth Rd\, London W14 9DA
+DESCRIPTION:Let your body be the teacher as Flow Vulk guides a 5Rhythms flo
+ or where the beat leads and every level is welcome.\n\nTickets & details: 
+ https://www.tickettailor.com/events/thestudysociety/1506384/select-date?en
+ try_link=%2Fall-tickets%2Fthestudysociety%2F%3F%26entry_link%3D%252Fall-ti
+ ckets%252Fthestudysociety%252F%253F&utm_source=psyconnect.london&utm_mediu
+ m=referral#top\n\nOn PsyConnect: https://psyconnect.london/e/5rhythms-with
+ -flow-2026-12-30/
+URL:https://www.tickettailor.com/events/thestudysociety/1506384/select-date
+ ?entry_link=%2Fall-tickets%2Fthestudysociety%2F%3F%26entry_link%3D%252Fall
+ -tickets%252Fthestudysociety%252F%253F#top
+END:VEVENT
+END:VCALENDAR

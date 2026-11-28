@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eventbrite-2005529194809@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270109T190000Z
+DTEND:20270109T220000Z
+SUMMARY:Tantric Slow Dating (over 40's)
+LOCATION:Skylight Centre\, 49 Corsica Street\, London\, N5 1JT
+DESCRIPTION:A mindful slow-dating evening for over-40s in the Skylight Cent
+ re\, built around conscious\, unhurried conversation rather than swiping.\
+ n\nTickets & details: https://www.eventbrite.co.uk/e/tantric-slow-dating-o
+ ver-40s-tickets-2005529194809?utm_source=psyconnect.london&utm_medium=refe
+ rral\n\nOn PsyConnect: https://psyconnect.london/e/tantric-slow-dating-ove
+ r-40-s/
+URL:https://www.eventbrite.co.uk/e/tantric-slow-dating-over-40s-tickets-200
+ 5529194809
+END:VEVENT
+END:VCALENDAR

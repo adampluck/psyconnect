@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6aafa7c58b1d134dad811234@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270306T180000Z
+DTEND:20270306T200000Z
+SUMMARY:PNEUMA - a collaboration between Echoes X Deep Sym
+LOCATION:Interlude\, 2 Leswin Place\, London\, UK
+DESCRIPTION:Ancient breathwork meets live soundscaping in an immersive even
+ ing with Echoes of the Unknown.\n\nTickets & details: https://dandelion.ev
+ ents/events/6aafa7c58b1d134dad811234?utm_source=psyconnect.london&utm_medi
+ um=referral\n\nOn PsyConnect: https://psyconnect.london/e/pneuma-a-collabo
+ ration-between-echoes-x-deep-sym/
+URL:https://dandelion.events/events/6aafa7c58b1d134dad811234
+END:VEVENT
+END:VCALENDAR

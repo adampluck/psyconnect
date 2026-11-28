@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:luma-evt-hUbK3PFgGXOeLyz@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261213T120000Z
+DTEND:20261213T150000Z
+SUMMARY:F*ck the Small Talk: London #12
+LOCATION:London\, United Kingdom
+DESCRIPTION:A recurring London night built to skip small talk and get stran
+ gers into real conversation from the first minute.\n\nTickets & details: h
+ ttps://luma.com/ftst12london?utm_source=psyconnect.london&utm_medium=refer
+ ral\n\nOn PsyConnect: https://psyconnect.london/e/f-ck-the-small-talk-lond
+ on-12/
+URL:https://luma.com/ftst12london
+END:VEVENT
+END:VCALENDAR

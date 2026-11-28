@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-6343f805-01e8-474b-88d3-f3a0b0c6cf4d@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261222T183000Z
+DTEND:20261222T220000Z
+SUMMARY:Play Fighting Community Social
+LOCATION:London Night Cafe\, 56 Middlesex St\, London E1 7EZ
+DESCRIPTION:Meet experienced play fighters and ask anything at the first co
+ mmunity social\, sober\, with unlimited drinks.\n\nTickets & details: http
+ s://soullinkhub.com/event/6343f805-01e8-474b-88d3-f3a0b0c6cf4d?utm_source=
+ psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconnect
+ .london/e/play-fighting-community-social/
+URL:https://soullinkhub.com/event/6343f805-01e8-474b-88d3-f3a0b0c6cf4d
+END:VEVENT
+END:VCALENDAR

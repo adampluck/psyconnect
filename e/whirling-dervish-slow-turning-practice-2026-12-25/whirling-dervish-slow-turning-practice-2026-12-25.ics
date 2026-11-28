@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:studysociety-ef132b98-a6a8-4af0-baf1-8326c778162d-2026-12-25@psyconnect
+ .london
+DTSTAMP:20261128T152613Z
+DTSTART:20261225T194500Z
+DTEND:20261225T203000Z
+SUMMARY:Whirling Dervish Slow Turning Practice
+LOCATION:Colet House\, 151 Talgarth Rd\, London W14 9DA
+DESCRIPTION:A gentle evening of slow Sufi-style turning at Colet House\, wi
+ th an easy intro to the Dervish practice and an optional shared supper aft
+ er.\n\nTickets & details: https://www.studysociety.org/whats-on/?utm_sourc
+ e=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconne
+ ct.london/e/whirling-dervish-slow-turning-practice-2026-12-25/
+URL:https://www.studysociety.org/whats-on/
+END:VEVENT
+END:VCALENDAR

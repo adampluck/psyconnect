@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:studysociety-115faf19-99bd-41a9-9249-a9ff565d2e75@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261217T190000Z
+DTEND:20261217T203000Z
+SUMMARY:Cosmic Choir with Gaiea Sanskrit
+LOCATION:Colet House\, 151 Talgarth Rd\, London W14 9DA
+DESCRIPTION:Sing Sanskrit with Gaiea to elevate consciousness through ancie
+ nt sound and find peace.\n\nTickets & details: https://www.tickettailor.co
+ m/events/thestudysociety/2474533?utm_source=psyconnect.london&utm_medium=r
+ eferral\n\nOn PsyConnect: https://psyconnect.london/e/cosmic-choir-with-ga
+ iea-sanskrit/
+URL:https://www.tickettailor.com/events/thestudysociety/2474533
+END:VEVENT
+END:VCALENDAR

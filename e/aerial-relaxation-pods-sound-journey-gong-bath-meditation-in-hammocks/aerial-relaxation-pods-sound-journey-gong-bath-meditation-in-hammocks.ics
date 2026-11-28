@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eventbrite-2002676487284@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261203T190000Z
+DTEND:20261203T201500Z
+SUMMARY:Aerial Relaxation Pods®- Sound Journey Gong Bath Meditation in Ham
+ mocks
+LOCATION:The Skylight Centre\, 49 Corsica Street (please arrive only 5 min 
+ before the start of the session as there is no waiting room\, thanks)\, Lo
+ ndon\, N5 1JT
+DESCRIPTION:Lie back in a suspended aerial hammock while live gongs and amb
+ ient sound wash over you in London's first multi-sensory calm.\n\nTickets 
+ & details: https://www.eventbrite.co.uk/e/aerial-relaxation-pods-sound-jou
+ rney-gong-bath-meditation-in-hammocks-tickets-84883457707?utm_source=psyco
+ nnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.lond
+ on/e/aerial-relaxation-pods-sound-journey-gong-bath-meditation-in-hammocks
+ /
+URL:https://www.eventbrite.co.uk/e/aerial-relaxation-pods-sound-journey-gon
+ g-bath-meditation-in-hammocks-tickets-84883457707
+END:VEVENT
+END:VCALENDAR

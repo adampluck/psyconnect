@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6a7c1ba7f2d49c9a8089aea2@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261205T153000Z
+DTEND:20261205T173000Z
+SUMMARY:Kundalini Activation PRISM™ | Planting Seeds in Darkness
+LOCATION:Luv Yourself Space\, Hoy Street\, London\, UK
+DESCRIPTION:Kundalini Activation with Natalia Bareikis: direct experience o
+ f pure energy without traditional teaching.\n\nTickets & details: https://
+ dandelion.events/events/6a7c1ba7f2d49c9a8089aea2?utm_source=psyconnect.lon
+ don&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.london/e/kund
+ alini-activation-prismtm-planting-seeds-in-darkness/
+URL:https://dandelion.events/events/6a7c1ba7f2d49c9a8089aea2
+END:VEVENT
+END:VCALENDAR

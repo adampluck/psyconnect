@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6af49641eddd5670a38d4a19@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261207T184500Z
+DTEND:20261207T210000Z
+SUMMARY:An Introduction to Bohm Dialogue - A journey into collective consci
+ ousness
+LOCATION: Bunhill Fields Quaker Meeting House\, Quaker Court\, London\,  EC
+ 1Y 8QQ
+DESCRIPTION:Learn David Bohm's dialogue method\, a group practice for suspe
+ nding judgement and thinking together\, in a quiet Quaker meeting house.\n
+ \nTickets & details: https://dandelion.events/events/6af49641eddd5670a38d4
+ a19?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: htt
+ ps://psyconnect.london/e/an-introduction-to-bohm-dialogue-a-journey-into-c
+ ollective-consciousness/
+URL:https://dandelion.events/events/6af49641eddd5670a38d4a19
+END:VEVENT
+END:VCALENDAR

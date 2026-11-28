@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:studysociety-249d0523-d711-4bcd-8565-3c659d64a92b@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261208T183000Z
+DTEND:20261208T210000Z
+SUMMARY:Dark Ecstatic Dance: Free Movement & Deep Sound Journeys with Gong
+LOCATION:Colet House\, 151 Talgarth Rd\, London W14 9DA
+DESCRIPTION:Butoh-inspired free movement with curated sound journeys explor
+ ing Hijikata's dance of darkness.\n\nTickets & details: https://www.ticket
+ tailor.com/events/thestudysociety/2026466?utm_source=psyconnect.london&utm
+ _medium=referral\n\nOn PsyConnect: https://psyconnect.london/e/dark-ecstat
+ ic-dance-free-movement-deep-sound-journeys-with-gong/
+URL:https://www.tickettailor.com/events/thestudysociety/2026466
+END:VEVENT
+END:VCALENDAR

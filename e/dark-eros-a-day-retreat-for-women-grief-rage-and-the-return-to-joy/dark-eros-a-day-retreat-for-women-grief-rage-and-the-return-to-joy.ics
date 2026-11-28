@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6af4452aeddd5670a38c23e7@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261129T100000Z
+DTEND:20261129T180000Z
+SUMMARY:Dark Eros - A Day Retreat for Women - Grief\, Rage and the Return t
+ o Joy
+LOCATION:The Heart Space\, Wrentham Avenue\, London\, UK
+DESCRIPTION:A day in a small circle of women to meet buried grief and rage 
+ through somatic movement\, rose and cacao\, and witnessed sharing.\n\nTick
+ ets & details: https://dandelion.events/events/6af4452aeddd5670a38c23e7?ut
+ m_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://p
+ syconnect.london/e/dark-eros-a-day-retreat-for-women-grief-rage-and-the-re
+ turn-to-joy/
+URL:https://dandelion.events/events/6af4452aeddd5670a38c23e7
+END:VEVENT
+END:VCALENDAR

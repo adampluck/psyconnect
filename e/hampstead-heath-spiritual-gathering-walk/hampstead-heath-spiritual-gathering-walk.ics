@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:meetup-event_317329332-meetup.com@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261129T110000Z
+DTEND:20261129T140000Z
+SUMMARY:Hampstead Heath Spiritual Gathering & Walk
+LOCATION:Hampstead Heath Railway Station\, 4 South End Road\, London
+DESCRIPTION:A long walk and talk across Hampstead Heath with Spiritual Crea
+ tives\, ending at Kenwood House for a group drink.\n\nTickets & details: h
+ ttps://www.meetup.com/spiritualcreatives/events/317329332/?utm_source=psyc
+ onnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.lon
+ don/e/hampstead-heath-spiritual-gathering-walk/
+URL:https://www.meetup.com/spiritualcreatives/events/317329332/
+END:VEVENT
+END:VCALENDAR

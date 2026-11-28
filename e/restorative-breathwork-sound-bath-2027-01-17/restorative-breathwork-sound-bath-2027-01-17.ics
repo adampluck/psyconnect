@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ae4d4fe52d2d7cc59fdb19b@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270117T180000Z
+DTEND:20270117T193000Z
+SUMMARY:Restorative Breathwork & Sound Bath
+LOCATION:Prana Voice - Holistic Well-Being\, Orsman Road\, London\, UK
+DESCRIPTION:Gong vibrations and gentle breathwork guided by trauma-informed
+  facilitator Johanna Greenish\, for deep rest after a demanding week.\n\nT
+ ickets & details: https://dandelion.events/events/6ae4d4fe52d2d7cc59fdb19b
+ ?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https:
+ //psyconnect.london/e/restorative-breathwork-sound-bath-2027-01-17/
+URL:https://dandelion.events/events/6ae4d4fe52d2d7cc59fdb19b
+END:VEVENT
+END:VCALENDAR

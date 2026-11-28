@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:numinity-2005128550471@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261215T190000Z
+DTEND:20261215T210000Z
+SUMMARY:Rapé\, Sananga & Cacao Ceremony
+LOCATION:flat 6\, 4 Torriano Mews\, 4 Torriano Mews #flat 6\, London\, NW5 
+ 2SD
+DESCRIPTION:Rapé\, sananga and cacao rounds held with live kirtan\, a sham
+ anic healing evening in a Camden flat.\n\nTickets & details: https://www.e
+ ventbrite.co.uk/e/rape-sananga-cacao-ceremony-tickets-1989226219170?utm_so
+ urce=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyco
+ nnect.london/e/rape-sananga-cacao-ceremony/
+URL:https://www.eventbrite.co.uk/e/rape-sananga-cacao-ceremony-tickets-1989
+ 226219170
+END:VEVENT
+END:VCALENDAR

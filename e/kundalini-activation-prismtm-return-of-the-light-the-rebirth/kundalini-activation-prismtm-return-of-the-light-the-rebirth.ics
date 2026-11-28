@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6a7c1c08f2d49c9a8089af46@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261220T153000Z
+DTEND:20261220T180000Z
+SUMMARY:Kundalini Activation PRISM™ | Return of the Light: The Rebirth
+LOCATION:Luv Yourself Space\, Hoy Street\, London\, UK
+DESCRIPTION:Natalia Bareikis guides kundalini activation for pure energy ex
+ perience and spiritual awakening.\n\nTickets & details: https://dandelion.
+ events/events/6a7c1c08f2d49c9a8089af46?utm_source=psyconnect.london&utm_me
+ dium=referral\n\nOn PsyConnect: https://psyconnect.london/e/kundalini-acti
+ vation-prismtm-return-of-the-light-the-rebirth/
+URL:https://dandelion.events/events/6a7c1c08f2d49c9a8089af46
+END:VEVENT
+END:VCALENDAR

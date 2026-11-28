@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ad49cf07f343d52bc70bbfe@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261219T111500Z
+DTEND:20261219T131500Z
+SUMMARY:Kundalini Activation Process (KAP) Open Class in Wimbledon
+LOCATION:Surya Hot Yoga\, Elm Grove\, London\, UK
+DESCRIPTION:Lie down and let transmitted energy move through you without ef
+ fort or expectation.\n\nTickets & details: https://dandelion.events/events
+ /6ad49cf07f343d52bc70bbfe?utm_source=psyconnect.london&utm_medium=referral
+ \n\nOn PsyConnect: https://psyconnect.london/e/kundalini-activation-proces
+ s-kap-open-class-in-wimbledon/
+URL:https://dandelion.events/events/6ad49cf07f343d52bc70bbfe
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-4d856794-d0d0-4e85-b8e2-062c9173c07d@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261219T150000Z
+DTEND:20261219T200000Z
+SUMMARY:London Embodied Play Fighting – Advanced weekend edition
+LOCATION:Queens Road Peckham\, London
+DESCRIPTION:Advanced play fighting with Roy Graff for those ready to explor
+ e conscious physicality and intimacy.\n\nTickets & details: https://soulli
+ nkhub.com/event/4d856794-d0d0-4e85-b8e2-062c9173c07d?utm_source=psyconnect
+ .london&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.london/e/
+ london-embodied-play-fighting-advanced-weekend-edition/
+URL:https://soullinkhub.com/event/4d856794-d0d0-4e85-b8e2-062c9173c07d
+END:VEVENT
+END:VCALENDAR

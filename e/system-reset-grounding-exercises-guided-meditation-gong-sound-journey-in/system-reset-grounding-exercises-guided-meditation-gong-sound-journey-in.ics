@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6af6f6f1d1e5eccd122748dd@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270114T191500Z
+DTEND:20270114T220000Z
+SUMMARY:System Reset - Grounding Exercises\, Guided Meditation\, Gong Sound
+  Journey in Hammocks or on Padded Floor Mats
+LOCATION:Skylight Centre\, Corsica Street\, London\, UK
+DESCRIPTION:Lie back in a silk hammock while live gong and crystal bowls wa
+ sh through you in a monthly bioenergetic nervous system reset.\n\nTickets 
+ & details: https://dandelion.events/events/6af6f6f1d1e5eccd122748dd?utm_so
+ urce=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyco
+ nnect.london/e/system-reset-grounding-exercises-guided-meditation-gong-sou
+ nd-journey-in/
+URL:https://dandelion.events/events/6af6f6f1d1e5eccd122748dd
+END:VEVENT
+END:VCALENDAR

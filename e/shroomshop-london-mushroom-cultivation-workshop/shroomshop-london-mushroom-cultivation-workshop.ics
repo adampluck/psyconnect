@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ad0be1ad59ebc7f2459ffbb@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261208T180000Z
+DTEND:20261208T213000Z
+SUMMARY:Shroomshop London: Mushroom Cultivation Workshop
+LOCATION:Love Shack\, Cambridge Heath Road\, London\, UK
+DESCRIPTION:Learn to cultivate medicinal mushrooms at home with expert Darr
+ en Le Baron's hands-on workshop.\n\nTickets & details: https://dandelion.e
+ vents/events/6ad0be1ad59ebc7f2459ffbb?utm_source=psyconnect.london&utm_med
+ ium=referral\n\nOn PsyConnect: https://psyconnect.london/e/shroomshop-lond
+ on-mushroom-cultivation-workshop/
+URL:https://dandelion.events/events/6ad0be1ad59ebc7f2459ffbb
+END:VEVENT
+END:VCALENDAR

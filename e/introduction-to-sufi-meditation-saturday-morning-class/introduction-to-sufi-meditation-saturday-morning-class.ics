@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eventbrite-2005310428473@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261205T103000Z
+DTEND:20261205T123000Z
+SUMMARY:Introduction to Sufi Meditation - Saturday morning class
+LOCATION:School of Sufi Teaching\, 253 Globe Road\, London\, E2 0JD
+DESCRIPTION:A gentle Saturday morning taste of silent Sufi meditation\, fre
+ e to try\, for anyone curious about stilling the mind.\n\nTickets & detail
+ s: https://www.eventbrite.co.uk/e/introduction-to-sufi-meditation-saturday
+ -morning-class-tickets-2005310428473?utm_source=psyconnect.london&utm_medi
+ um=referral\n\nOn PsyConnect: https://psyconnect.london/e/introduction-to-
+ sufi-meditation-saturday-morning-class/
+URL:https://www.eventbrite.co.uk/e/introduction-to-sufi-meditation-saturday
+ -morning-class-tickets-2005310428473
+END:VEVENT
+END:VCALENDAR

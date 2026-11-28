@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:studysociety-4e41ae2e-8a76-411b-ac72-58068dcb66db@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261218T193000Z
+DTEND:20261218T203000Z
+SUMMARY:Whirling Dervish Shebi Arus
+LOCATION:Colet House\, 151 Talgarth Rd\, London W14 9DA
+DESCRIPTION:Watch whirling dervishes mark Rumi's 'wedding night'\, the Sheb
+ i Arus ceremony honouring his union with the Beloved.\n\nTickets & details
+ : https://www.studysociety.org/whats-on/?utm_source=psyconnect.london&utm_
+ medium=referral\n\nOn PsyConnect: https://psyconnect.london/e/whirling-der
+ vish-shebi-arus/
+URL:https://www.studysociety.org/whats-on/
+END:VEVENT
+END:VCALENDAR

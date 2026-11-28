@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:studysociety-e4f2ad6b-75db-4090-9a9b-b02e1abd5940@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270228T110000Z
+DTEND:20270228T153000Z
+SUMMARY:Daylong Meeting with Amoda Maa
+LOCATION:Colet House\, 151 Talgarth Rd\, London W14 9DA
+DESCRIPTION:Sit with Amoda Maa for a day of questions and silence\, pointin
+ g straight at the awareness already here before thought begins.\n\nTickets
+  & details: https://www.amodamaa.com/events/2027-february-28/london?utm_so
+ urce=psyconnect.london&utm_medium=referral#register\n\nOn PsyConnect: http
+ s://psyconnect.london/e/daylong-meeting-with-amoda-maa/
+URL:https://www.amodamaa.com/events/2027-february-28/london#register
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eventbrite-2004214442349@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261201T200000Z
+DTEND:20261201T210000Z
+SUMMARY:Deep Relaxation: Infrared Soundbath Experience
+LOCATION:Millers Way Project\, Miller's Way\, London\, W6 7NH
+DESCRIPTION:Lie back in infrared warmth while singing bowls wash over you\,
+  a restful hour built to help you soften and exhale.\n\nTickets & details:
+  https://www.eventbrite.co.uk/e/deep-relaxation-infrared-soundbath-experie
+ nce-tickets-2004214336031?utm_source=psyconnect.london&utm_medium=referral
+ \n\nOn PsyConnect: https://psyconnect.london/e/deep-relaxation-infrared-so
+ undbath-experience/
+URL:https://www.eventbrite.co.uk/e/deep-relaxation-infrared-soundbath-exper
+ ience-tickets-2004214336031
+END:VEVENT
+END:VCALENDAR

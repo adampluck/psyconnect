@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ae17f432efa7ea8eee7b45d@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270613T090000Z
+DTEND:20270613T170000Z
+SUMMARY:Systemic & Family Constellations IN-PERSON Full-Day Workshop
+LOCATION:Kailash Centre\, Newcourt St\, Londra\, Regno Unito
+DESCRIPTION:Have your family's buried history seen and acknowledged in a sy
+ stemic constellation day led by facilitator Illi Adato in St John's Wood.\
+ n\nTickets & details: https://dandelion.events/events/6ae17f432efa7ea8eee7
+ b45d?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: ht
+ tps://psyconnect.london/e/systemic-family-constellations-in-person-full-da
+ y-workshop-2027-06-13/
+URL:https://dandelion.events/events/6ae17f432efa7ea8eee7b45d
+END:VEVENT
+END:VCALENDAR

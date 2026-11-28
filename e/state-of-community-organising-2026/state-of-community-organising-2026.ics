@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:newspeak-luma-v9gxeiyt@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261130T180000Z
+DTEND:20261130T210000Z
+SUMMARY:State of Community Organising 2026
+LOCATION:Newspeak House (Terrace)\, 133-135 Bethnal Green Road\, London E2 
+ 7DG
+DESCRIPTION:Community organisers share strategies for building belonging in
+  2026 at Newspeak House.\n\nTickets & details: https://newspeak.house/even
+ ts?id=1774&utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConne
+ ct: https://psyconnect.london/e/state-of-community-organising-2026/
+URL:https://newspeak.house/events?id=1774
+END:VEVENT
+END:VCALENDAR

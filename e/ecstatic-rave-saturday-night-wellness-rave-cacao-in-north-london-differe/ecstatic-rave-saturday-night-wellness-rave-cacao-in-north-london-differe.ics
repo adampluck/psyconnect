@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6b09d60b53d11afa8416a864@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261128T190000Z
+DTEND:20261128T221500Z
+SUMMARY:Ecstatic Rave: Saturday Night Wellness Rave & Cacao in North London
+  (Different Music Genres Each Week)
+LOCATION:13 Minutes from Gospel Oak Station or 11 minutes from Tufnell Park
+  Station (VENUE ADDRESS in order CONFIRMATION EMAIL\, please SCROLL DOWN i
+ n the email to 'Additional Information')
+DESCRIPTION:A sober Saturday rave that rises through a cacao ceremony\, liv
+ e percussion and genre-shifting ecstatic dance journeys across North Londo
+ n.\n\nTickets & details: https://dandelion.events/events/6b09d60b53d11afa8
+ 416a864?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect:
+  https://psyconnect.london/e/ecstatic-rave-saturday-night-wellness-rave-ca
+ cao-in-north-london-differe/
+URL:https://dandelion.events/events/6b09d60b53d11afa8416a864
+END:VEVENT
+END:VCALENDAR

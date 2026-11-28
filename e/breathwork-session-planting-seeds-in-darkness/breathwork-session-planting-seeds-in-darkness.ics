@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6a7c1b31f2d49c9a8089add0@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261205T130000Z
+DTEND:20261205T150000Z
+SUMMARY:Breathwork Session | Planting Seeds in Darkness
+LOCATION:Luv Yourself Space\, Hoy Street\, London\, UK
+DESCRIPTION:Natalia Bareikis guides kundalini breathwork to unlock dormant 
+ energy and spiritual awakening.\n\nTickets & details: https://dandelion.ev
+ ents/events/6a7c1b31f2d49c9a8089add0?utm_source=psyconnect.london&utm_medi
+ um=referral\n\nOn PsyConnect: https://psyconnect.london/e/breathwork-sessi
+ on-planting-seeds-in-darkness/
+URL:https://dandelion.events/events/6a7c1b31f2d49c9a8089add0
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-7e3ab0dd-a2e6-4cff-b7a9-dd77807e7d33@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270124T150000Z
+DTEND:20270124T200000Z
+SUMMARY:UNINHIBITED
+LOCATION:Central London (venue to be announced when secured)
+DESCRIPTION:Five hours of deep\, dark bass from ritual DJs Our Echo and Bil
+ l Tribble\, in a sober space built for losing yourself on the dance floor.
+ \n\nTickets & details: https://soullinkhub.com/event/7e3ab0dd-a2e6-4cff-b7
+ a9-dd77807e7d33?utm_source=psyconnect.london&utm_medium=referral\n\nOn Psy
+ Connect: https://psyconnect.london/e/uninhibited/
+URL:https://soullinkhub.com/event/7e3ab0dd-a2e6-4cff-b7a9-dd77807e7d33
+END:VEVENT
+END:VCALENDAR

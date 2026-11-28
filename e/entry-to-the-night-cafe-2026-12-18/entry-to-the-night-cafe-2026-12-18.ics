@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eventbrite-2000054422618@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261218T180000Z
+DTEND:20261218T235900Z
+SUMMARY:Entry to the Night Cafe
+LOCATION:London Night Cafe\, 56 Middlesex Street\, London\, E1 7EZ
+DESCRIPTION:Step into London's most intimate Friday night gathering for str
+ angers becoming friends.\n\nTickets & details: https://www.eventbrite.com/
+ e/entry-to-the-night-cafe-tickets-2000054422618?utm_source=psyconnect.lond
+ on&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.london/e/entry
+ -to-the-night-cafe-2026-12-18/
+URL:https://www.eventbrite.com/e/entry-to-the-night-cafe-tickets-2000054422
+ 618
+END:VEVENT
+END:VCALENDAR

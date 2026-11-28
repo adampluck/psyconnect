@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6a71b8081feee28574816997@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261212T140000Z
+DTEND:20261212T160000Z
+SUMMARY:Reset The Nervous System With TRE
+LOCATION:The ARC\, 98b St Paul St\, London N1 7DF\, United Kingdom
+DESCRIPTION:TRE (Trauma Release Exercises) teaches your body to discharge s
+ tress held in your nervous system.\n\nTickets & details: https://dandelion
+ .events/events/6a71b8081feee28574816997?utm_source=psyconnect.london&utm_m
+ edium=referral\n\nOn PsyConnect: https://psyconnect.london/e/reset-the-ner
+ vous-system-with-tre/
+URL:https://dandelion.events/events/6a71b8081feee28574816997
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6aeca7930f2c3e1dd5a9b7f3@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270313T100000Z
+DTEND:20270313T170000Z
+SUMMARY:Love Your Rage: A Day for Womxn to Embody the Wild Within
+LOCATION:A beautiful venue near Alexandra Palace\, London
+DESCRIPTION:A full day in a women-only circle to turn suppressed anger into
+  clarity\, power and creative fire through movement and sound.\n\nTickets 
+ & details: https://dandelion.events/events/6aeca7930f2c3e1dd5a9b7f3?utm_so
+ urce=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyco
+ nnect.london/e/love-your-rage-a-day-for-womxn-to-embody-the-wild-within/
+URL:https://dandelion.events/events/6aeca7930f2c3e1dd5a9b7f3
+END:VEVENT
+END:VCALENDAR

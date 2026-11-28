@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6aeb6f3478982baf816674c2@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261129T123000Z
+DTEND:20261129T163000Z
+SUMMARY:Journey of Tea - Earth Pearls NW4
+LOCATION:42 Allington Road\, London NW4 3DE\, UK
+DESCRIPTION:Gongfu tea and chalk-table painting in an open-eyed meditation 
+ that mines your unconscious and grounds you in the body.\n\nTickets & deta
+ ils: https://dandelion.events/events/6aeb6f3478982baf816674c2?utm_source=p
+ syconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.
+ london/e/journey-of-tea-earth-pearls-nw4/
+URL:https://dandelion.events/events/6aeb6f3478982baf816674c2
+END:VEVENT
+END:VCALENDAR

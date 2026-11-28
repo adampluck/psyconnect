@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-5a7cd8b7-eb09-4fbb-92b2-25f7ddc9671c@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270125T201500Z
+DTEND:20270125T221500Z
+SUMMARY:5 Rhythms - a KC DC dance
+LOCATION:The Hall\, Kingston Quaker Centre\, 28 Fairfield E\, Kingston upon
+  Thames\, KT1 2PT
+DESCRIPTION:Felix Oram of Temenos leads 90 minutes of 5Rhythms and ecstatic
+  dance in a small Kingston Quaker room\, capped at 16 dancers.\n\nTickets 
+ & details: https://soullinkhub.com/event/5a7cd8b7-eb09-4fbb-92b2-25f7ddc96
+ 71c?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: htt
+ ps://psyconnect.london/e/5-rhythms-a-kc-dc-dance/
+URL:https://soullinkhub.com/event/5a7cd8b7-eb09-4fbb-92b2-25f7ddc9671c
+END:VEVENT
+END:VCALENDAR

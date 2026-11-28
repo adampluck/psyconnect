@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6a7c1be6f2d49c9a8089aefc@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261220T130000Z
+DTEND:20261220T150000Z
+SUMMARY:Breathwork Session | Return of the Light: The Rebirth
+LOCATION:Luv Yourself Space\, Hoy Street\, London\, UK
+DESCRIPTION:Natalia Bareikis guides you through kundalini breathwork to rec
+ onnect with your body's primal energy.\n\nTickets & details: https://dande
+ lion.events/events/6a7c1be6f2d49c9a8089aefc?utm_source=psyconnect.london&u
+ tm_medium=referral\n\nOn PsyConnect: https://psyconnect.london/e/breathwor
+ k-session-return-of-the-light-the-rebirth/
+URL:https://dandelion.events/events/6a7c1be6f2d49c9a8089aefc
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6b04ad12ac570a560d5301df@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261212T120000Z
+DTEND:20261212T140000Z
+SUMMARY:Vocal Ecologies: Grow Trees From Seeds
+LOCATION:Hampstead Heath\, London\, UK | https://maps.app.goo.gl/cTocezdyp9
+ uJps778 | what three words: hurray.phones.spoke
+DESCRIPTION:Sing with the trees on Hampstead Heath with vocal guide Henriet
+ ta Bewley\, then plant a seed to grow your own tree. No experience needed.
+ \n\nTickets & details: https://dandelion.events/events/6b04ad12ac570a560d5
+ 301df?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: h
+ ttps://psyconnect.london/e/vocal-ecologies-grow-trees-from-seeds/
+URL:https://dandelion.events/events/6b04ad12ac570a560d5301df
+END:VEVENT
+END:VCALENDAR

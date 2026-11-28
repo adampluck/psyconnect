@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:numinity-2003526502703@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261205T114500Z
+DTEND:20261205T150000Z
+SUMMARY:Root & Rise: Master Plant Breathwork\, Ecstatic Dance & More!
+LOCATION:Love Shack\, 299 Cambridge Heath Road #Arch 298\, London\, E2 9HA
+DESCRIPTION:Ecstatic dance with breathwork and sound healing in one immersi
+ ve day party.\n\nTickets & details: https://www.eventbrite.co.uk/e/root-ri
+ se-master-plant-breathwork-ecstatic-dance-more-tickets-2003526502703?utm_s
+ ource=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyc
+ onnect.london/e/root-rise-master-plant-breathwork-ecstatic-dance-more/
+URL:https://www.eventbrite.co.uk/e/root-rise-master-plant-breathwork-ecstat
+ ic-dance-more-tickets-2003526502703
+END:VEVENT
+END:VCALENDAR

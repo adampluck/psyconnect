@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6afc844f895f415283e78efb@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261206T180000Z
+DTEND:20261206T193000Z
+SUMMARY:Restorative Breathwork & Sound Bath
+LOCATION:Prana Voice - Holistic Well-Being\, Orsman Road\, London\, UK
+DESCRIPTION:Sunday dusk in Hackney: gong-washed breathwork that lets your n
+ ervous system finally switch off\, no experience needed.\n\nTickets & deta
+ ils: https://dandelion.events/events/6afc844f895f415283e78efb?utm_source=p
+ syconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.
+ london/e/restorative-breathwork-sound-bath/
+URL:https://dandelion.events/events/6afc844f895f415283e78efb
+END:VEVENT
+END:VCALENDAR

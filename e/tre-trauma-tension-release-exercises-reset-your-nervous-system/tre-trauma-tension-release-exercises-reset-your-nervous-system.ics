@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6af638469e686425bb5c646a@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261129T140000Z
+DTEND:20261129T160000Z
+SUMMARY:TRE (Trauma/Tension Release Exercises) - Reset Your Nervous System
+LOCATION:ARC Collective - Coffee\, Community\, Wellness\, St Paul St\, Lond
+ on N1 7DF\, UK
+DESCRIPTION:Learn how TRE's therapeutic tremors can help your body release 
+ stress you've been carrying\, guided by kinesiologist Luke Mullen.\n\nTick
+ ets & details: https://dandelion.events/events/6af638469e686425bb5c646a?ut
+ m_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://p
+ syconnect.london/e/tre-trauma-tension-release-exercises-reset-your-nervous
+ -system/
+URL:https://dandelion.events/events/6af638469e686425bb5c646a
+END:VEVENT
+END:VCALENDAR

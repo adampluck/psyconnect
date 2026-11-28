@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6a907448f44ffd766d9ddeaf@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261213T150000Z
+DTEND:20261213T173000Z
+SUMMARY:Voice DNA: Transformation - Collaborative Vocal Improv Series with 
+ Uran Apak
+LOCATION:51 Barnsbury Street\, London N1 1TP\, UK
+DESCRIPTION:Explore vocal improvisation through Uran Apak's collaborative v
+ oice practice in this intimate series.\n\nTickets & details: https://dande
+ lion.events/events/6a907448f44ffd766d9ddeaf?utm_source=psyconnect.london&u
+ tm_medium=referral\n\nOn PsyConnect: https://psyconnect.london/e/voice-dna
+ -transformation-collaborative-vocal-improv-series-with-uran-apa/
+URL:https://dandelion.events/events/6a907448f44ffd766d9ddeaf
+END:VEVENT
+END:VCALENDAR

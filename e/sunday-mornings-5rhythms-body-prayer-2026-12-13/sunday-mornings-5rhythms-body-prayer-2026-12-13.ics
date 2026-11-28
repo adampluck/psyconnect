@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-e8781a09-60c7-4280-88b0-24cd2e516b0a@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261213T113000Z
+DTEND:20261213T133000Z
+SUMMARY:Sunday Mornings 5Rhythms Body Prayer
+LOCATION:Acland Burghley School\, Entrance on Churchill Road\, Tufnell Park
+ \, London\, NW5 1AN
+DESCRIPTION:Ruth Hirst's Sunday 5Rhythms BODY PRAYER lets your body lead th
+ rough Breathe\, Move\, Express\, Let Go\, with no steps to learn.\n\nTicke
+ ts & details: https://soullinkhub.com/event/e8781a09-60c7-4280-88b0-24cd2e
+ 516b0a?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: 
+ https://psyconnect.london/e/sunday-mornings-5rhythms-body-prayer-2026-12-1
+ 3/
+URL:https://soullinkhub.com/event/e8781a09-60c7-4280-88b0-24cd2e516b0a
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6aec87bd0f2c3e1dd5a960b8@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261206T163000Z
+DTEND:20261206T183000Z
+SUMMARY:Stillness Within: A Winter Breathwork Journey
+LOCATION:Zenw2 Wellness Space\, Walm Lane\, London\, UK
+DESCRIPTION:An afternoon of conscious connected breathwork\, guided meditat
+ ion and homemade winter tea to slow down before December rushes in.\n\nTic
+ kets & details: https://dandelion.events/events/6aec87bd0f2c3e1dd5a960b8?u
+ tm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://
+ psyconnect.london/e/stillness-within-a-winter-breathwork-journey/
+URL:https://dandelion.events/events/6aec87bd0f2c3e1dd5a960b8
+END:VEVENT
+END:VCALENDAR

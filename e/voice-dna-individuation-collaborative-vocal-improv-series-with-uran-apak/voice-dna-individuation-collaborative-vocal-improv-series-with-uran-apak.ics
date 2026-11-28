@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6a90754901228a29682d2e3a@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270117T150000Z
+DTEND:20270117T173000Z
+SUMMARY:Voice DNA: Individuation - Collaborative Vocal Improv Series with U
+ ran Apak
+LOCATION:51 Barnsbury Street\, London N1 1TP\, UK
+DESCRIPTION:Discover your unique vocal voice through collaborative improv w
+ ith the Psychedelic Society and Uran Apak.\n\nTickets & details: https://d
+ andelion.events/events/6a90754901228a29682d2e3a?utm_source=psyconnect.lond
+ on&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.london/e/voice
+ -dna-individuation-collaborative-vocal-improv-series-with-uran-apak/
+URL:https://dandelion.events/events/6a90754901228a29682d2e3a
+END:VEVENT
+END:VCALENDAR

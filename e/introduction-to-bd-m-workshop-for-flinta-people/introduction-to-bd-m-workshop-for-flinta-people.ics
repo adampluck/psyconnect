@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ab15536b35b3173727c3c9b@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261204T180000Z
+DTEND:20261204T223000Z
+SUMMARY:Introduction to BD$M (workshop for FLINTA people)
+LOCATION:Archway\, London\, UK
+DESCRIPTION:Learn BDSM basics in a sex-positive space designed for FLINTA p
+ eople to explore power\, pleasure and consent.\n\nTickets & details: https
+ ://dandelion.events/events/6ab15536b35b3173727c3c9b?utm_source=psyconnect.
+ london&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.london/e/i
+ ntroduction-to-bd-m-workshop-for-flinta-people/
+URL:https://dandelion.events/events/6ab15536b35b3173727c3c9b
+END:VEVENT
+END:VCALENDAR

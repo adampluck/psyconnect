@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6adb2cd1d6b1f01a7c18532a@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270423T174500Z
+DTEND:20270423T204500Z
+SUMMARY:Vocal Improv Medicine - April Singing Workshop & Sound Journey to R
+ ewild our Voice with Kat Bonny
+LOCATION:Skylight Centre\, 49 Corsica Street\, London N5 1JT\, UK
+DESCRIPTION:Kat Bonny leads vocal improv and sound journey to rewild your v
+ oice and unlock spontaneous creativity.\n\nTickets & details: https://dand
+ elion.events/events/6adb2cd1d6b1f01a7c18532a?utm_source=psyconnect.london&
+ utm_medium=referral\n\nOn PsyConnect: https://psyconnect.london/e/vocal-im
+ prov-medicine-april-singing-workshop-sound-journey-to-rewild-our/
+URL:https://dandelion.events/events/6adb2cd1d6b1f01a7c18532a
+END:VEVENT
+END:VCALENDAR

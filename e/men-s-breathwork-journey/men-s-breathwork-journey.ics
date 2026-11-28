@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6a735ef6d3bd861dc84b401a@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261205T090000Z
+DTEND:20261205T113000Z
+SUMMARY:Men's Breathwork Journey
+LOCATION:We The Conscious®\, 17 Amhurst Terrace\, studio 72 London\, UK
+DESCRIPTION:Conscious connected breathwork designed specifically for men's 
+ emotional healing and somatic release.\n\nTickets & details: https://dande
+ lion.events/events/6a735ef6d3bd861dc84b401a?utm_source=psyconnect.london&u
+ tm_medium=referral\n\nOn PsyConnect: https://psyconnect.london/e/men-s-bre
+ athwork-journey/
+URL:https://dandelion.events/events/6a735ef6d3bd861dc84b401a
+END:VEVENT
+END:VCALENDAR

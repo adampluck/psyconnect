@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eventbrite-2004011299744@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261212T140000Z
+DTEND:20261212T170000Z
+SUMMARY:Tantra Masterclass: Unapologetic Desires
+LOCATION:OMNOM Islington\, 116N Upper Street\, London\, N1 1QP
+DESCRIPTION:Demystify tantra with the London School of Tantra and leave won
+ dering why everyone isn't exploring desire this way.\n\nTickets & details:
+  https://www.eventbrite.co.uk/e/tantra-masterclass-unapologetic-desires-ti
+ ckets-2004011299744?utm_source=psyconnect.london&utm_medium=referral\n\nOn
+  PsyConnect: https://psyconnect.london/e/tantra-masterclass-unapologetic-d
+ esires/
+URL:https://www.eventbrite.co.uk/e/tantra-masterclass-unapologetic-desires-
+ tickets-2004011299744
+END:VEVENT
+END:VCALENDAR

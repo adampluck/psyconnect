@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6a9eb5a3a0983f6e6f0a8a75@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270112T190000Z
+DTEND:20270112T213000Z
+SUMMARY:Psychedelics & Chaos Magic: The Fluidity of Reality & Weird Happeni
+ ngs - Talk & Q&A with Julian Vayne
+LOCATION:London\, UK
+DESCRIPTION:Julian Vayne on chaos magic: how belief becomes a tool to resha
+ pe reality.\n\nTickets & details: https://dandelion.events/events/6a9eb5a3
+ a0983f6e6f0a8a75?utm_source=psyconnect.london&utm_medium=referral\n\nOn Ps
+ yConnect: https://psyconnect.london/e/psychedelics-chaos-magic-the-fluidit
+ y-of-reality-weird-happenings-talk-q/
+URL:https://dandelion.events/events/6a9eb5a3a0983f6e6f0a8a75
+END:VEVENT
+END:VCALENDAR

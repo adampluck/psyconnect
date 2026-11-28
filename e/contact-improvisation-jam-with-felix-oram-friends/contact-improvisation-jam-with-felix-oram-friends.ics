@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-a3e0b19a-56ff-4a68-b1c4-de0cb1f09cb2@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261204T190000Z
+DTEND:20261204T210000Z
+SUMMARY:Contact Improvisation Jam with Felix Oram & Friends
+LOCATION:Old School Rooms\, 2a Powerscroft Rd\, Lower Clapton\, London E5 0
+ PU\, UK
+DESCRIPTION:Monthly contact improv jam with Felix Oram—improvised partner
+  dancing on a shared breath.\n\nTickets & details: https://soullinkhub.com
+ /event/a3e0b19a-56ff-4a68-b1c4-de0cb1f09cb2?utm_source=psyconnect.london&u
+ tm_medium=referral\n\nOn PsyConnect: https://psyconnect.london/e/contact-i
+ mprovisation-jam-with-felix-oram-friends/
+URL:https://soullinkhub.com/event/a3e0b19a-56ff-4a68-b1c4-de0cb1f09cb2
+END:VEVENT
+END:VCALENDAR

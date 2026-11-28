@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-5e83f897-113e-4f98-ac07-89425fe89b12@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261206T110000Z
+DTEND:20261206T133000Z
+SUMMARY:Women's Circle: The Body's Own Fire | No Hands
+LOCATION:North London N11
+DESCRIPTION:Learn to generate your own arousal through breath\, sound and m
+ ovement with somatic sex educator Melanie Knight.\n\nTickets & details: ht
+ tps://soullinkhub.com/event/5e83f897-113e-4f98-ac07-89425fe89b12?utm_sourc
+ e=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconne
+ ct.london/e/women-s-circle-the-body-s-own-fire-no-hands/
+URL:https://soullinkhub.com/event/5e83f897-113e-4f98-ac07-89425fe89b12
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-ee57fb91-5b15-4412-b3ed-d050ac5bf073@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261212T140000Z
+DTEND:20261212T200000Z
+SUMMARY:Love & Devotion Temple
+LOCATION:Stoke Newington\, Here+Now\, 231 Stoke Newington Church St\, Stoke
+  Newington\, N16 9HP\, Stoke Newington
+DESCRIPTION:A sober six-hour Temple afternoon in Stoke Newington blending b
+ reath\, sound and movement with conscious sensuality\, led by Shivani Soar
+ es.\n\nTickets & details: https://soullinkhub.com/event/ee57fb91-5b15-4412
+ -b3ed-d050ac5bf073?utm_source=psyconnect.london&utm_medium=referral\n\nOn 
+ PsyConnect: https://psyconnect.london/e/love-devotion-temple/
+URL:https://soullinkhub.com/event/ee57fb91-5b15-4412-b3ed-d050ac5bf073
+END:VEVENT
+END:VCALENDAR

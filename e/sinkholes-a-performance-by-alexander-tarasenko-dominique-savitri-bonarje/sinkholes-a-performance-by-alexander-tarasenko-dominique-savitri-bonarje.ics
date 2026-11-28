@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:studysociety-c534e4be-050c-422b-94f4-ea331bcf8b1f@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261210T200000Z
+DTEND:20261210T213000Z
+SUMMARY:Sinkholes: A Performance by Alexander Tarasenko & Dominique Savitri
+  Bonarjee
+LOCATION:Colet House\, 151 Talgarth Rd\, London W14 9DA
+DESCRIPTION:Premiere rituals on heartbreak and metamorphosis\, one channell
+ ing a childhood nutria totem\, scored by a live soundscape.\n\nTickets & d
+ etails: https://www.studysociety.org/whats-on/?utm_source=psyconnect.londo
+ n&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.london/e/sinkho
+ les-a-performance-by-alexander-tarasenko-dominique-savitri-bonarje/
+URL:https://www.studysociety.org/whats-on/
+END:VEVENT
+END:VCALENDAR

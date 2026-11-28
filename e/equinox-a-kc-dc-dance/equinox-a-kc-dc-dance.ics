@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-acc7e192-52e5-4d42-917f-a682348b38bc@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270308T201500Z
+DTEND:20270308T221500Z
+SUMMARY:Equinox - a KC DC dance
+LOCATION:The Hall\, Kingston Quaker Centre\, 28 Fairfield E\, Kingston upon
+  Thames\, KT1 2PT
+DESCRIPTION:Felix Oram of Temenos leads 90 minutes of 5Rhythms and ecstatic
+  dance in a small Kingston Quaker room\, capped at 16 dancers.\n\nTickets 
+ & details: https://soullinkhub.com/event/acc7e192-52e5-4d42-917f-a682348b3
+ 8bc?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: htt
+ ps://psyconnect.london/e/equinox-a-kc-dc-dance/
+URL:https://soullinkhub.com/event/acc7e192-52e5-4d42-917f-a682348b38bc
+END:VEVENT
+END:VCALENDAR

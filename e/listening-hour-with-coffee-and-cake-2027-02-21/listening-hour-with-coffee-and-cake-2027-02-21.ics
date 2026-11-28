@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eventbrite-1994659312699@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270221T120000Z
+DTEND:20270221T141500Z
+SUMMARY:Listening Hour with coffee and cake
+LOCATION:Courtyard Cafe Jamyang Buddhist centre\, 43 Renfrew Road\, London\
+ , SE11 4NA
+DESCRIPTION:An hour of deep listening over coffee and cake\, practising non
+ -violent communication with Justyna at Jamyang's courtyard cafe.\n\nTicket
+ s & details: https://www.eventbrite.co.uk/e/listening-hour-with-coffee-and
+ -cake-tickets-622959638047?utm_source=psyconnect.london&utm_medium=referra
+ l\n\nOn PsyConnect: https://psyconnect.london/e/listening-hour-with-coffee
+ -and-cake-2027-02-21/
+URL:https://www.eventbrite.co.uk/e/listening-hour-with-coffee-and-cake-tick
+ ets-622959638047
+END:VEVENT
+END:VCALENDAR

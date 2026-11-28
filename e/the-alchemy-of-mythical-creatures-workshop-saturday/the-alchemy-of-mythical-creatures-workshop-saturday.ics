@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ae3e6559105716352e49c49@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261212T113000Z
+DTEND:20261212T183000Z
+SUMMARY:The Alchemy of Mythical Creatures Workshop: Saturday.
+LOCATION:ArtSect Gallery\, 21-23 Sedgwick St\, London\, E9 6AA\, UK
+DESCRIPTION:A day of mythic workshops\, tarot-led archetype work and dance 
+ at ArtSect Gallery\, hatching an 'Egg of the Ethereal' with Isabelle Fae a
+ nd Wi\n\nTickets & details: https://dandelion.events/events/6ae3e655910571
+ 6352e49c49?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConne
+ ct: https://psyconnect.london/e/the-alchemy-of-mythical-creatures-workshop
+ -saturday/
+URL:https://dandelion.events/events/6ae3e6559105716352e49c49
+END:VEVENT
+END:VCALENDAR

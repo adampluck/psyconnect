@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-140daeac-b31c-4284-951c-bc1b3cef58e2@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261218T193000Z
+DTEND:20261218T213000Z
+SUMMARY:5Rhythms Dance – Dance Kew
+LOCATION:Kew Community Centre\, TW9 2AJ
+DESCRIPTION:Irem's weekly 5Rhythms practice guides you through flowing\, ch
+ aotic\, and still states to find presence and connection.\n\nTickets & det
+ ails: https://soullinkhub.com/event/140daeac-b31c-4284-951c-bc1b3cef58e2?u
+ tm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://
+ psyconnect.london/e/5rhythms-dance-dance-kew-2026-12-18/
+URL:https://soullinkhub.com/event/140daeac-b31c-4284-951c-bc1b3cef58e2
+END:VEVENT
+END:VCALENDAR

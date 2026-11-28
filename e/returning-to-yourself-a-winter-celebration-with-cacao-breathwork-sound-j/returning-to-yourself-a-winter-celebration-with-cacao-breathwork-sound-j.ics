@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6acf972b3e3113e26086368d@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261205T140000Z
+DTEND:20261205T170000Z
+SUMMARY:Returning to Yourself · A Winter Celebration with Cacao\, Breathwo
+ rk & Sound journey
+LOCATION:Millers Way Project\, Miller's Way\, London\, UK
+DESCRIPTION:Three-hour winter ceremony combining cacao\, breathwork and sou
+ nd with Maia to reconnect with your body and inner truth.\n\nTickets & det
+ ails: https://dandelion.events/events/6acf972b3e3113e26086368d?utm_source=
+ psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconnect
+ .london/e/returning-to-yourself-a-winter-celebration-with-cacao-breathwork
+ -sound-j/
+URL:https://dandelion.events/events/6acf972b3e3113e26086368d
+END:VEVENT
+END:VCALENDAR

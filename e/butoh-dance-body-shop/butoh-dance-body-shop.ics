@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:studysociety-c1c98250-8e82-4286-8450-a177b82fd80b@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261213T103000Z
+DTEND:20261213T173000Z
+SUMMARY:Butoh Dance Body Shop
+LOCATION:Colet House\, 151 Talgarth Rd\, London W14 9DA
+DESCRIPTION:Explore Butoh as rehabilitation of collective consciousness thr
+ ough Tatsumi Hijikata's radical Japanese dance practice.\n\nTickets & deta
+ ils: https://www.tickettailor.com/events/thestudysociety/2025925?utm_sourc
+ e=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconne
+ ct.london/e/butoh-dance-body-shop/
+URL:https://www.tickettailor.com/events/thestudysociety/2025925
+END:VEVENT
+END:VCALENDAR

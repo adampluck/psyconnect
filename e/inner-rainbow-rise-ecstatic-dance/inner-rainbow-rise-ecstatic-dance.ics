@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ada81a0979c2dd9518ad014@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261212T130000Z
+DTEND:20261212T153000Z
+SUMMARY:Inner Rainbow Rise Ecstatic Dance
+LOCATION:North London\, UK- TBC
+DESCRIPTION:Ecstatic dance with Nadia Glebovetsa and DJ Inner Light in a ba
+ refoot\, tech-free ceremony.\n\nTickets & details: https://dandelion.event
+ s/events/6ada81a0979c2dd9518ad014?utm_source=psyconnect.london&utm_medium=
+ referral\n\nOn PsyConnect: https://psyconnect.london/e/inner-rainbow-rise-
+ ecstatic-dance/
+URL:https://dandelion.events/events/6ada81a0979c2dd9518ad014
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6afad82271a0808f1e6fd908@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261205T103000Z
+DTEND:20261205T123000Z
+SUMMARY:Free monthly circle: The Space In Between - Men and Women in Circle
+LOCATION:Plot 9\, Restell Cl\, London\, UK
+DESCRIPTION:A monthly fire circle where men and women finally sit facing ea
+ ch other and speak honestly about the hurt between them.\n\nTickets & deta
+ ils: https://dandelion.events/events/6afad82271a0808f1e6fd908?utm_source=p
+ syconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.
+ london/e/free-monthly-circle-the-space-in-between-men-and-women-in-circle/
+URL:https://dandelion.events/events/6afad82271a0808f1e6fd908
+END:VEVENT
+END:VCALENDAR

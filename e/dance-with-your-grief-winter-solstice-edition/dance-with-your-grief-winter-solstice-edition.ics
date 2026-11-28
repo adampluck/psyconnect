@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6b020a009b90412930657d45@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261220T110000Z
+DTEND:20261220T130000Z
+SUMMARY:Dance with Your Grief - Winter Solstice Edition
+LOCATION:Jacksons Lane\, Archway Road\, London\, UK
+DESCRIPTION:A winter solstice dance journey through grief\, shadow and rele
+ ase\, with guided somatic practice and ritual cacao at Jacksons Lane.\n\nT
+ ickets & details: https://dandelion.events/events/6b020a009b90412930657d45
+ ?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https:
+ //psyconnect.london/e/dance-with-your-grief-winter-solstice-edition/
+URL:https://dandelion.events/events/6b020a009b90412930657d45
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ad4ada17f343d52bc70ea14@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270111T190000Z
+DTEND:20270215T203000Z
+SUMMARY:A Farewell to Screen Addictions - A Six Week Course
+LOCATION:Firepit Art Gallery and Studios CIC\, Cutter Lane\, London\, UK
+DESCRIPTION:Six weeks with Boe Huntress to reclaim your attention from scre
+ ens\, using neuroscience\, nervous system work and a creative project of y
+ our o\n\nTickets & details: https://dandelion.events/events/6ad4ada17f343d
+ 52bc70ea14?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConne
+ ct: https://psyconnect.london/e/a-farewell-to-screen-addictions-a-six-week
+ -course/
+URL:https://dandelion.events/events/6ad4ada17f343d52bc70ea14
+END:VEVENT
+END:VCALENDAR

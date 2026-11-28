@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:luma-evt-C2Xe4zHqLjwEFxW@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261205T150000Z
+DTEND:20261205T173000Z
+SUMMARY:Unchrtd & friends: Wine Tasting
+LOCATION:London\, United Kingdom
+DESCRIPTION:An informal wine tasting with the Unchrtd crowd\, a low-key nig
+ ht to meet people over a glass.\n\nTickets & details: https://luma.com/z05
+ y6smv?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: h
+ ttps://psyconnect.london/e/unchrtd-friends-wine-tasting/
+URL:https://luma.com/z05y6smv
+END:VEVENT
+END:VCALENDAR

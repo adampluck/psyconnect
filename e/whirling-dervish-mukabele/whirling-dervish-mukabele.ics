@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:studysociety-db8bdf4e-8c69-43bd-a7b9-0e9e43fb9b86-2026-12-04@psyconnect
+ .london
+DTSTAMP:20261128T152612Z
+DTSTART:20261204T200000Z
+DTEND:20261204T211500Z
+SUMMARY:Whirling Dervish Mukabele
+LOCATION:Colet House\, 151 Talgarth Rd\, London W14 9DA
+DESCRIPTION:Watch and join a Mevlevi Mukabele at Colet House\, where Whirli
+ ng Dervish turning opens the heart and stills the mind.\n\nTickets & detai
+ ls: https://www.studysociety.org/whats-on/?utm_source=psyconnect.london&ut
+ m_medium=referral\n\nOn PsyConnect: https://psyconnect.london/e/whirling-d
+ ervish-mukabele/
+URL:https://www.studysociety.org/whats-on/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-511277e3-f878-4ad4-a697-93941c47c3c2@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261231T203000Z
+DTEND:20270101T003000Z
+SUMMARY:NEW YEAR'S EVE - 5Rhythms Extended Dance With Irem Luqman & LIVE Rh
+ ythms (Live Band) - Dance Kew
+LOCATION:Kew Community Centre\, TW9 2AJ
+DESCRIPTION:Irem Luqman guides a 5Rhythms wave with a live four-piece band\
+ , then a midnight pause to let go of the year and welcome 2027.\n\nTickets
+  & details: https://soullinkhub.com/event/511277e3-f878-4ad4-a697-93941c47
+ c3c2?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: ht
+ tps://psyconnect.london/e/new-year-s-eve-5rhythms-extended-dance-with-irem
+ -luqman-live-rhythms-liv/
+URL:https://soullinkhub.com/event/511277e3-f878-4ad4-a697-93941c47c3c2
+END:VEVENT
+END:VCALENDAR

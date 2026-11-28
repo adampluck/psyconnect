@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-99c2a765-11ca-4ce2-aa00-cc5681b4bdcc@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261210T200000Z
+DTEND:20261210T220000Z
+SUMMARY:T.W.C (Thursday Waves Community)
+LOCATION:St Luke's Holloway Hillmarton Rd\, London N7 9JE
+DESCRIPTION:Jason Rowe's weekly 5Rhythms wave in a candlelit-feel church ha
+ ll\, with a heated sprung oak floor and a serious sound system since 2011.
+ \n\nTickets & details: https://soullinkhub.com/event/99c2a765-11ca-4ce2-aa
+ 00-cc5681b4bdcc?utm_source=psyconnect.london&utm_medium=referral\n\nOn Psy
+ Connect: https://psyconnect.london/e/t-w-c-thursday-waves-community-2026-1
+ 2-10/
+URL:https://soullinkhub.com/event/99c2a765-11ca-4ce2-aa00-cc5681b4bdcc
+END:VEVENT
+END:VCALENDAR

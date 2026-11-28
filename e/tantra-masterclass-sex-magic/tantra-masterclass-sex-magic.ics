@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eventbrite-2003706538194@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261129T130000Z
+DTEND:20261129T160000Z
+SUMMARY:Tantra Masterclass: Sex Magic
+LOCATION:Akasa\, Prince Edward Road\, London\, E9 5LX
+DESCRIPTION:A London School of Tantra masterclass on turning sexual energy 
+ into intention\, held at Akasa.\n\nTickets & details: https://www.eventbri
+ te.co.uk/e/tantra-masterclass-sex-magic-tickets-2003706538194?utm_source=p
+ syconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.
+ london/e/tantra-masterclass-sex-magic/
+URL:https://www.eventbrite.co.uk/e/tantra-masterclass-sex-magic-tickets-200
+ 3706538194
+END:VEVENT
+END:VCALENDAR

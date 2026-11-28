@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-fbf5db1f-5a8b-4e88-80c2-18841a24d47a@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261204T183000Z
+DTEND:20261204T192500Z
+SUMMARY:5Rhythms Dance – Dance Kew
+LOCATION:Kew Community Centre\, TW9 2AJ
+DESCRIPTION:Weekly 5Rhythms ecstatic dance with Flow Vulk\, from flowing to
+  chaos to stillness.\n\nTickets & details: https://soullinkhub.com/event/f
+ bf5db1f-5a8b-4e88-80c2-18841a24d47a?utm_source=psyconnect.london&utm_mediu
+ m=referral\n\nOn PsyConnect: https://psyconnect.london/e/5rhythms-dance-da
+ nce-kew/
+URL:https://soullinkhub.com/event/fbf5db1f-5a8b-4e88-80c2-18841a24d47a
+END:VEVENT
+END:VCALENDAR

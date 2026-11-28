@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eventbrite-2003915563394@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261213T190000Z
+DTEND:20261213T210000Z
+SUMMARY:12/12 Portal: Manifest Your Next Chapter & Soundbath Experience
+LOCATION:Millers Way Project\, Miller's Way\, London\, W6 7NH
+DESCRIPTION:Set down the noise of the week and let guided meditation and im
+ mersive sound bath work help you find what you actually want next.\n\nTick
+ ets & details: https://www.eventbrite.co.uk/e/1212-portal-manifest-your-ne
+ xt-chapter-soundbath-experience-tickets-2003915563394?utm_source=psyconnec
+ t.london&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.london/e
+ /12-12-portal-manifest-your-next-chapter-soundbath-experience/
+URL:https://www.eventbrite.co.uk/e/1212-portal-manifest-your-next-chapter-s
+ oundbath-experience-tickets-2003915563394
+END:VEVENT
+END:VCALENDAR

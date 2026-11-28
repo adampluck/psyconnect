@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ad7cbef979c2dd95184c839@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261129T150000Z
+DTEND:20261129T180000Z
+SUMMARY:London Psychedelic Community – Sunday Social: Conversations\, Cur
+ iosity & Connection
+LOCATION:Sir Richard Steele Pub\, Haverstock Hill\, London\, UK
+DESCRIPTION:Sunday afternoon conversations with London's psychedelic commun
+ ity at Belsize Park's Sir Richard Steele.\n\nTickets & details: https://da
+ ndelion.events/events/6ad7cbef979c2dd95184c839?utm_source=psyconnect.londo
+ n&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.london/e/london
+ -psychedelic-community-sunday-social-conversations-curiosity-conne/
+URL:https://dandelion.events/events/6ad7cbef979c2dd95184c839
+END:VEVENT
+END:VCALENDAR

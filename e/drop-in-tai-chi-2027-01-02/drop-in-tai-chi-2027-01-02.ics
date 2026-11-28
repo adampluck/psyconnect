@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:studysociety-36932a05-f734-4304-866a-bb23582380b4-2027-01-02@psyconnect
+ .london
+DTSTAMP:20261128T152613Z
+DTSTART:20270102T100000Z
+DTEND:20270102T110000Z
+SUMMARY:Drop-In Tai Chi
+LOCATION:Colet House\, 151 Talgarth Rd\, London W14 9DA
+DESCRIPTION:Learn Cheng Man Ching's 37-posture Tai Chi form\, with Qigong b
+ reathing\, to leave feeling calmer and more focused.\n\nTickets & details:
+  https://www.tickettailor.com/events/thestudysociety/1773801?utm_source=ps
+ yconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.l
+ ondon/e/drop-in-tai-chi-2027-01-02/
+URL:https://www.tickettailor.com/events/thestudysociety/1773801
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6a9a7f9159f6b821df89769d@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270504T090000Z
+DTEND:20270508T170000Z
+SUMMARY:Mapping the Dream in the Field – Dream Constellation Facilitator 
+ Training
+LOCATION:Violet Hill Studios\, Violet Hill\, London\, Regno Unito
+DESCRIPTION:Learn to map ancestral and subconscious patterns through dream 
+ constellation facilitation with systemic constellations expertise.\n\nTick
+ ets & details: https://dandelion.events/events/6a9a7f9159f6b821df89769d?ut
+ m_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://p
+ syconnect.london/e/mapping-the-dream-in-the-field-dream-constellation-faci
+ litator-training/
+URL:https://dandelion.events/events/6a9a7f9159f6b821df89769d
+END:VEVENT
+END:VCALENDAR

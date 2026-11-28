@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-a4d7d054-2728-48f6-93da-4e7890723eeb@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261212T103000Z
+DTEND:20261212T130000Z
+SUMMARY:5Rhythms® with Judit Juhasz — Saturday mornings at Eastway Baths
+LOCATION:Eastway Baths\, 80 Eastway\, Hackney Wick\, London E9 5JH
+DESCRIPTION:Dance through the five 5Rhythms with Judit Juhasz at Eastway Ba
+ ths\, no steps to learn\, just listening to your body on a Saturday mornin
+ g.\n\nTickets & details: https://soullinkhub.com/event/a4d7d054-2728-48f6-
+ 93da-4e7890723eeb?utm_source=psyconnect.london&utm_medium=referral\n\nOn P
+ syConnect: https://psyconnect.london/e/5rhythms-with-judit-juhasz-saturday
+ -mornings-at-eastway-baths/
+URL:https://soullinkhub.com/event/a4d7d054-2728-48f6-93da-4e7890723eeb
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-0737c2e8-e4dc-46f0-8e75-e161f760d619@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270108T193000Z
+DTEND:20270108T213000Z
+SUMMARY:5Rhythms Dance – Dance Kew
+LOCATION:Kew Community Centre\, TW9 2AJ
+DESCRIPTION:Five waves of the 5Rhythms\, no steps to learn\, and a warm Kew
+  crowd to move with until you feel present again.\n\nTickets & details: ht
+ tps://soullinkhub.com/event/0737c2e8-e4dc-46f0-8e75-e161f760d619?utm_sourc
+ e=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconne
+ ct.london/e/5rhythms-dance-dance-kew-2027-01-08/
+URL:https://soullinkhub.com/event/0737c2e8-e4dc-46f0-8e75-e161f760d619
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6adcb0e4d01fb42aa48804af@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261128T180000Z
+DTEND:20261128T200000Z
+SUMMARY:Contact Improvisation & Sound Bath
+LOCATION:Walworth Town Hall by General People\, Walworth Road\, London\, UK
+DESCRIPTION:Contact improv\, meditation and sound bath in one 2-hour sessio
+ n\, with a 22-year contact improviser guiding partner dances that emerge t
+ hroug\n\nTickets & details: https://dandelion.events/events/6adcb0e4d01fb4
+ 2aa48804af?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConne
+ ct: https://psyconnect.london/e/contact-improvisation-sound-bath/
+URL:https://dandelion.events/events/6adcb0e4d01fb42aa48804af
+END:VEVENT
+END:VCALENDAR

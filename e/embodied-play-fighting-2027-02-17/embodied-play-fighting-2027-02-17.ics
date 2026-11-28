@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6aef1f24fa70eeb752a6353f@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270217T183000Z
+DTEND:20270217T213000Z
+SUMMARY:Embodied play fighting
+LOCATION:Anatomie Studio London\, Station Passage\, London\, UK
+DESCRIPTION:Learn consent-led play fighting with a circle of strangers and 
+ discover how wrestling can be wholesome\, connected and surprisingly silly
+ .\n\nTickets & details: https://dandelion.events/events/6aef1f24fa70eeb752
+ a6353f?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: 
+ https://psyconnect.london/e/embodied-play-fighting-2027-02-17/
+URL:https://dandelion.events/events/6aef1f24fa70eeb752a6353f
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:studysociety-cb75261e-eccf-4d96-b1c0-0f4893fe32f2@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261205T183000Z
+DTEND:20261205T213000Z
+SUMMARY:5Rhythms Deep Dive with Flow
+LOCATION:Colet House\, 151 Talgarth Rd\, London W14 9DA
+DESCRIPTION:Three-and-a-half hours of 5Rhythms with Gabrielle Roth's wavefo
+ rm: from fluid to chaos to stillness.\n\nTickets & details: https://www.ti
+ ckettailor.com/events/thestudysociety/1974276?utm_source=psyconnect.london
+ &utm_medium=referral\n\nOn PsyConnect: https://psyconnect.london/e/5rhythm
+ s-deep-dive-with-flow/
+URL:https://www.tickettailor.com/events/thestudysociety/1974276
+END:VEVENT
+END:VCALENDAR

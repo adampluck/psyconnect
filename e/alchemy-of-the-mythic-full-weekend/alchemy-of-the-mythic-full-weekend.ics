@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ae382533f8dd18fa4d01395@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261211T080000Z
+DTEND:20261213T160000Z
+SUMMARY:Alchemy Of The Mythic: Full Weekend.
+LOCATION:ArtSect Gallery\, 21-23 Sedgwick St\, London E9 6AA\, UK
+DESCRIPTION:A weekend of mythic art\, storytelling and ritual dance at ArtS
+ ect Gallery to awaken your inner archetype this winter solstice.\n\nTicket
+ s & details: https://dandelion.events/events/6ae382533f8dd18fa4d01395?utm_
+ source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psy
+ connect.london/e/alchemy-of-the-mythic-full-weekend/
+URL:https://dandelion.events/events/6ae382533f8dd18fa4d01395
+END:VEVENT
+END:VCALENDAR

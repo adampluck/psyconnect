@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ad0ae2ba85df724f3a2ba65@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261205T180000Z
+DTEND:20261205T210000Z
+SUMMARY:Luminous (Marlon's Bday and EP release special)
+LOCATION:St Mary's Hornsey Rise\, Ashley Road\, London\, UK
+DESCRIPTION:DJ Gumbo spins Afro-inspired world beats while you dance sober 
+ under the New Moon with Luminous's heart-centered community.\n\nTickets & 
+ details: https://dandelion.events/events/6ad0ae2ba85df724f3a2ba65?utm_sour
+ ce=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconn
+ ect.london/e/luminous-marlon-s-bday-and-ep-release-special/
+URL:https://dandelion.events/events/6ad0ae2ba85df724f3a2ba65
+END:VEVENT
+END:VCALENDAR

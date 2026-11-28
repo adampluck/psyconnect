@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6afaaffd2b0670eb553477da@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261203T100000Z
+DTEND:20261205T160000Z
+SUMMARY:London Unique Combined Process Retreat
+LOCATION:London\, UK
+DESCRIPTION:Family constellations meet plant-spirit ceremony in a small-gro
+ up day retreat for untangling inherited patterns and personal blocks.\n\nT
+ ickets & details: https://dandelion.events/events/6afaaffd2b0670eb553477da
+ ?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https:
+ //psyconnect.london/e/london-unique-combined-process-retreat/
+URL:https://dandelion.events/events/6afaaffd2b0670eb553477da
+END:VEVENT
+END:VCALENDAR

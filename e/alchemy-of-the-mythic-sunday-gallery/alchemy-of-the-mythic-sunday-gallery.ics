@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ae3eb619105716352e4a22c@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261213T120000Z
+DTEND:20261213T170000Z
+SUMMARY:Alchemy of the Mythic Sunday Gallery
+LOCATION:ArtSect Gallery\, 21-23 Sedgwick Street\, London E9 6AA\, UK
+DESCRIPTION:Tea\, soulful sounds and tarot cards on the final day of The Al
+ chemy of the Mythic\, with art to view and a themed marketplace to browse.
+ \n\nTickets & details: https://dandelion.events/events/6ae3eb619105716352e
+ 4a22c?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: h
+ ttps://psyconnect.london/e/alchemy-of-the-mythic-sunday-gallery/
+URL:https://dandelion.events/events/6ae3eb619105716352e4a22c
+END:VEVENT
+END:VCALENDAR

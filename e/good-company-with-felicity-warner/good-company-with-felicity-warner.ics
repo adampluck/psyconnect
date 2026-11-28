@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:studysociety-1669dcec-d548-40da-8634-b61a9eff40eb@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261130T180000Z
+DTEND:20261130T200000Z
+SUMMARY:Good Company with Felicity Warner
+LOCATION:Colet House\, 151 Talgarth Rd\, London W14 9DA
+DESCRIPTION:Felicity Warner\, author of three bestselling books on dying\, 
+ unpacks what consciousness does at life's threshold\, then leads a talk on
+  letti\n\nTickets & details: https://www.tickettailor.com/events/thestudys
+ ociety/996871/select-date?utm_source=psyconnect.london&utm_medium=referral
+ \n\nOn PsyConnect: https://psyconnect.london/e/good-company-with-felicity-
+ warner/
+URL:https://www.tickettailor.com/events/thestudysociety/996871/select-date
+END:VEVENT
+END:VCALENDAR

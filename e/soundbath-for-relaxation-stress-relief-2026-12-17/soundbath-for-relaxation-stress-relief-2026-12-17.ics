@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eventbrite-2003850015338@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261217T190000Z
+DTEND:20261217T200000Z
+SUMMARY:Soundbath for Relaxation & Stress Relief
+LOCATION:Millers Way Project\, Miller's Way\, London\, W6 7NH
+DESCRIPTION:Lie back and let crystal bowls and gongs wash the week out of y
+ ou at Moon Haven's restorative soundbath.\n\nTickets & details: https://ww
+ w.eventbrite.co.uk/e/soundbath-for-relaxation-stress-relief-tickets-200385
+ 0015338?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect:
+  https://psyconnect.london/e/soundbath-for-relaxation-stress-relief-2026-1
+ 2-17/
+URL:https://www.eventbrite.co.uk/e/soundbath-for-relaxation-stress-relief-t
+ ickets-2003850015338
+END:VEVENT
+END:VCALENDAR

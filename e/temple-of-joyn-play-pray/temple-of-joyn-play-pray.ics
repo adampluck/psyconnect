@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6b0028f649b5f1b8c7e4e770@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261228T130000Z
+DTEND:20261228T200000Z
+SUMMARY:Temple of JOYn: PLAY & PRAY
+LOCATION:Here + Now N16\, Stoke Newington Church Street\, London\, UK
+DESCRIPTION:A festive Temple where play meets prayer: use your body and ero
+ s to pray for yourself\, your loved ones and the collective.\n\nTickets & 
+ details: https://dandelion.events/events/6b0028f649b5f1b8c7e4e770?utm_sour
+ ce=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconn
+ ect.london/e/temple-of-joyn-play-pray/
+URL:https://dandelion.events/events/6b0028f649b5f1b8c7e4e770
+END:VEVENT
+END:VCALENDAR

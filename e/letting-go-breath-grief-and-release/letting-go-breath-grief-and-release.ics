@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6afe29443be2f48cfd95ae29@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261213T093000Z
+DTEND:20261213T110000Z
+SUMMARY:Letting go\; Breath\, grief and release
+LOCATION:London N3\, UK
+DESCRIPTION:A breathwork session for grief\, built on Francis Weller's five
+  gates\, where you can finally let the stale air and the sorrow out.\n\nTi
+ ckets & details: https://dandelion.events/events/6afe29443be2f48cfd95ae29?
+ utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https:/
+ /psyconnect.london/e/letting-go-breath-grief-and-release/
+URL:https://dandelion.events/events/6afe29443be2f48cfd95ae29
+END:VEVENT
+END:VCALENDAR

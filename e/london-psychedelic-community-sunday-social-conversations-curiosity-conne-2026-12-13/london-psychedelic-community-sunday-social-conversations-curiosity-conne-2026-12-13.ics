@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ad7cc91979c2dd95184c99a@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261213T150000Z
+DTEND:20261213T180000Z
+SUMMARY:London Psychedelic Community – Sunday Social: Conversations\, Cur
+ iosity & Connection
+LOCATION:Sir Richard Steele Pub\, Haverstock Hill\, London\, UK
+DESCRIPTION:Sunday afternoon gathering for psychedelic-curious Londoners to
+  explore consciousness\, harm reduction and philosophy over drinks.\n\nTic
+ kets & details: https://dandelion.events/events/6ad7cc91979c2dd95184c99a?u
+ tm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://
+ psyconnect.london/e/london-psychedelic-community-sunday-social-conversatio
+ ns-curiosity-conne-2026-12-13/
+URL:https://dandelion.events/events/6ad7cc91979c2dd95184c99a
+END:VEVENT
+END:VCALENDAR

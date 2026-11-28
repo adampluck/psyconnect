@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6aaffb8f8b1d134dad815aec@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261205T113000Z
+DTEND:20261205T133000Z
+SUMMARY:PsySoc Community Walks\, Speed-Friending & Nature Connection
+LOCATION:Hampstead Heath\, London\, UK
+DESCRIPTION:Speed-friend through Hampstead Heath's ancient trees with guide
+ d meditation and meaningful conversation.\n\nTickets & details: https://da
+ ndelion.events/events/6aaffb8f8b1d134dad815aec?utm_source=psyconnect.londo
+ n&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.london/e/psysoc
+ -community-walks-speed-friending-nature-connection/
+URL:https://dandelion.events/events/6aaffb8f8b1d134dad815aec
+END:VEVENT
+END:VCALENDAR

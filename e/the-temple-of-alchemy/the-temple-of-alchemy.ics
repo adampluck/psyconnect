@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-d1982b72-dd6e-4e3d-bb81-4b0f14afb07f@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261129T140000Z
+DTEND:20261129T200000Z
+SUMMARY:The Temple of Alchemy
+LOCATION:Stoke Newington\, N16\, London
+DESCRIPTION:Robbie Griffin's immersive retreats explore intimacy and presen
+ ce through embodiment\, archetypal play\, and conscious relating.\n\nTicke
+ ts & details: https://soullinkhub.com/event/d1982b72-dd6e-4e3d-bb81-4b0f14
+ afb07f?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: 
+ https://psyconnect.london/e/the-temple-of-alchemy/
+URL:https://soullinkhub.com/event/d1982b72-dd6e-4e3d-bb81-4b0f14afb07f
+END:VEVENT
+END:VCALENDAR

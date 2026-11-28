@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6a4788c0433fa1451d0f2315@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270122T183000Z
+DTEND:20270122T210000Z
+SUMMARY:Women’s Shamanic Breathwork®: An Embodied Journey Back to Yourse
+ lf
+LOCATION:BPM STUDIOS\, Unit 3 Canterbury Court\, 1-3 Brixton Rd\, Kenningto
+ n Business Park\, London\, SW9 6DE\, UK
+DESCRIPTION:Shamanic breathwork journey designed to release emotions and re
+ connect with your authentic self.\n\nTickets & details: https://dandelion.
+ events/events/6a4788c0433fa1451d0f2315?utm_source=psyconnect.london&utm_me
+ dium=referral\n\nOn PsyConnect: https://psyconnect.london/e/women-s-shaman
+ ic-breathwork-an-embodied-journey-back-to-yourself/
+URL:https://dandelion.events/events/6a4788c0433fa1451d0f2315
+END:VEVENT
+END:VCALENDAR

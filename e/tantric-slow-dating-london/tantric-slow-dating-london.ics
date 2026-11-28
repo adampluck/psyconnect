@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eventbrite-2003971544836@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261128T190000Z
+DTEND:20261128T220000Z
+SUMMARY:Tantric Slow Dating (London)
+LOCATION:Old Street\, Full details given upon booking\, London\, EC1V 3QW
+DESCRIPTION:Slow-paced tantra-inspired dating at Old Street\, built for mea
+ ningful conversation over quick swipes.\n\nTickets & details: https://www.
+ eventbrite.co.uk/e/tantric-slow-dating-london-tickets-2003971544836?utm_so
+ urce=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyco
+ nnect.london/e/tantric-slow-dating-london/
+URL:https://www.eventbrite.co.uk/e/tantric-slow-dating-london-tickets-20039
+ 71544836
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-896de52f-3309-48b5-be36-77e6a9c49b7d@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261201T190000Z
+DTEND:20261201T213000Z
+SUMMARY:HUMAN BE:IN
+LOCATION:OMUK\, 22 Pakenham St\, London WC1X 0LB
+DESCRIPTION:A weekly Tuesday sanctuary at OMUK blending meditation\, sharin
+ g circles and somatic movement\, with music from ambient to deep house.\n\
+ nTickets & details: https://soullinkhub.com/event/896de52f-3309-48b5-be36-
+ 77e6a9c49b7d?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyCon
+ nect: https://psyconnect.london/e/human-be-in/
+URL:https://soullinkhub.com/event/896de52f-3309-48b5-be36-77e6a9c49b7d
+END:VEVENT
+END:VCALENDAR

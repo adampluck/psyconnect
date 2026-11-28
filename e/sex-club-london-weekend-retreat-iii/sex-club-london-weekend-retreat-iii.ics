@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-698dbc60779d9f5469289844@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270403T100000Z
+DTEND:20270404T153000Z
+SUMMARY:Sex Club: London - Weekend Retreat III
+LOCATION:soma hOMe\, Stoke Newington Church Street\, London
+DESCRIPTION:Multi-day retreat exploring sexuality\, intimacy and authentic 
+ relating through The Psychedelic Society's curated framework.\n\nTickets &
+  details: https://dandelion.events/events/698dbc60779d9f5469289844?utm_sou
+ rce=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psycon
+ nect.london/e/sex-club-london-weekend-retreat-iii/
+URL:https://dandelion.events/events/698dbc60779d9f5469289844
+END:VEVENT
+END:VCALENDAR

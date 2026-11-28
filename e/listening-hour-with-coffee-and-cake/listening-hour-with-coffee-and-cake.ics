@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eventbrite-1994659310693@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261220T120000Z
+DTEND:20261220T141500Z
+SUMMARY:Listening Hour with coffee and cake
+LOCATION:Courtyard Cafe Jamyang Buddhist centre\, 43 Renfrew Road\, London\
+ , SE11 4NA
+DESCRIPTION:An empathy circle in Greenwich Park using nonviolent communicat
+ ion to deepen listening and understanding.\n\nTickets & details: https://w
+ ww.eventbrite.co.uk/e/listening-hour-with-coffee-and-cake-tickets-62295963
+ 8047?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: ht
+ tps://psyconnect.london/e/listening-hour-with-coffee-and-cake/
+URL:https://www.eventbrite.co.uk/e/listening-hour-with-coffee-and-cake-tick
+ ets-622959638047
+END:VEVENT
+END:VCALENDAR

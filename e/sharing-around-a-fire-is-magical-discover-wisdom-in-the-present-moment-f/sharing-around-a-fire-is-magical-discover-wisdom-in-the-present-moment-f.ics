@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6af6f817d1e5eccd12274ff4@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261201T190000Z
+DTEND:20261201T210000Z
+SUMMARY:Sharing around a fire is magical. Discover Wisdom in the present mo
+ ment. Fall in love with yourself again. Come back home to the circle of li
+ fe.
+LOCATION:Plot 9\,  Leamington Court\, Restell Close\, Greenwich\, London SE
+ 3 7RD
+DESCRIPTION:An open fire\, a compassionate sharing circle and an invitation
+  to speak honestly\, held outdoors at Plot 9 in the woods.\n\nTickets & de
+ tails: https://dandelion.events/events/6af6f817d1e5eccd12274ff4?utm_source
+ =psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconnec
+ t.london/e/sharing-around-a-fire-is-magical-discover-wisdom-in-the-present
+ -moment-f/
+URL:https://dandelion.events/events/6af6f817d1e5eccd12274ff4
+END:VEVENT
+END:VCALENDAR

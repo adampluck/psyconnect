@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eventbrite-2002676068030@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261210T193000Z
+DTEND:20261210T211500Z
+SUMMARY:Floating Sound Journey Gong Bath Meditation in Hammocks (EXTENDED s
+ essions)
+LOCATION:The Skylight Centre\, 49 Corsica Street (please arrive only 5 min 
+ before the start of the session as there is no waiting room\, thanks)\, Lo
+ ndon\, N5 1JT
+DESCRIPTION:Floating in hammocks while crystal bowls and gongs wash over yo
+ u in extended meditation sessions.\n\nTickets & details: https://www.event
+ brite.co.uk/e/floating-sound-journey-gong-bath-meditation-in-hammocks-exte
+ nded-sessions-tickets-1059692642219?utm_source=psyconnect.london&utm_mediu
+ m=referral\n\nOn PsyConnect: https://psyconnect.london/e/floating-sound-jo
+ urney-gong-bath-meditation-in-hammocks-extended-session/
+URL:https://www.eventbrite.co.uk/e/floating-sound-journey-gong-bath-meditat
+ ion-in-hammocks-extended-sessions-tickets-1059692642219
+END:VEVENT
+END:VCALENDAR

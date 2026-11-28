@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6b00ae753fcce8dfc847a8ff@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261129T160000Z
+DTEND:20261129T190000Z
+SUMMARY:Kirtan and energy healing
+LOCATION:Southwark\, London\, UK
+DESCRIPTION:Kirtan chanting and handpan music carry you into a theta-state 
+ energy healing on a Sunday evening in Southwark.\n\nTickets & details: htt
+ ps://dandelion.events/events/6b00ae753fcce8dfc847a8ff?utm_source=psyconnec
+ t.london&utm_medium=referral\n\nOn PsyConnect: https://psyconnect.london/e
+ /kirtan-and-energy-healing/
+URL:https://dandelion.events/events/6b00ae753fcce8dfc847a8ff
+END:VEVENT
+END:VCALENDAR

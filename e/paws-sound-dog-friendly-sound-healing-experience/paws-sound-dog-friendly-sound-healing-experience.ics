@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ad13756379db2473851818c@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261128T190000Z
+DTEND:20261128T210000Z
+SUMMARY:Paws & Sound: Dog-Friendly Sound Healing Experience
+LOCATION:St Philip's Church\, Earls Court Road\, London W8 6QH
+DESCRIPTION:Sound bath with crystal bowls while your dog settles beside you
+  in a London church.\n\nTickets & details: https://dandelion.events/events
+ /6ad13756379db2473851818c?utm_source=psyconnect.london&utm_medium=referral
+ \n\nOn PsyConnect: https://psyconnect.london/e/paws-sound-dog-friendly-sou
+ nd-healing-experience/
+URL:https://dandelion.events/events/6ad13756379db2473851818c
+END:VEVENT
+END:VCALENDAR

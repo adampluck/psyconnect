@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:studysociety-bfc4f603-d40b-4652-9eac-e4fd73a25419@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261212T143000Z
+DTEND:20261212T173000Z
+SUMMARY:Kirtan Reggae Fusion with Emma Goldie\, Jimi Lyons & Sulekh Ruparel
+ l
+LOCATION:Colet House\, 151 Talgarth Rd\, London W14 9DA
+DESCRIPTION:Emma Goldie and Jimi Lyons blend devotional kirtan call-and-res
+ ponse with reggae roots and live tabla for an afternoon of open-hearted so
+ ng.\n\nTickets & details: https://www.tickettailor.com/events/thestudysoci
+ ety/2534702?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConn
+ ect: https://psyconnect.london/e/kirtan-reggae-fusion-with-emma-goldie-jim
+ i-lyons-sulekh-ruparell/
+URL:https://www.tickettailor.com/events/thestudysociety/2534702
+END:VEVENT
+END:VCALENDAR

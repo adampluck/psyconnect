@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6a368b57b37c2c87e8e1d270@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270130T090000Z
+DTEND:20270131T180000Z
+SUMMARY:Introduction to Myofascial Energetic Release (MER) London: JANUARY
+LOCATION:Millers Way Project\, Miller's Way\, London\, UK
+DESCRIPTION:Learn myofascial release techniques from True North Bodywork in
+  this hands-on two-day intensive.\n\nTickets & details: https://dandelion.
+ events/events/6a368b57b37c2c87e8e1d270?utm_source=psyconnect.london&utm_me
+ dium=referral\n\nOn PsyConnect: https://psyconnect.london/e/introduction-t
+ o-myofascial-energetic-release-mer-london-january/
+URL:https://dandelion.events/events/6a368b57b37c2c87e8e1d270
+END:VEVENT
+END:VCALENDAR

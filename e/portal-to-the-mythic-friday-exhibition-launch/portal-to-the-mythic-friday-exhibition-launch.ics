@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ae3e61d9105716352e49be9@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261211T200000Z
+DTEND:20261212T000000Z
+SUMMARY:Portal to the Mythic: Friday Exhibition Launch
+LOCATION:ArtSect Gallery\, 21-23 Sedgwick Street\, London E9 6AA\, UK
+DESCRIPTION:A fae and a dragon open the Portal to the Mythic at ArtSect\, t
+ hen the music jam and DJ take over.\n\nTickets & details: https://dandelio
+ n.events/events/6ae3e61d9105716352e49be9?utm_source=psyconnect.london&utm_
+ medium=referral\n\nOn PsyConnect: https://psyconnect.london/e/portal-to-th
+ e-mythic-friday-exhibition-launch/
+URL:https://dandelion.events/events/6ae3e61d9105716352e49be9
+END:VEVENT
+END:VCALENDAR

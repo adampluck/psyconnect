@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:studysociety-ae0f3b82-ce99-45fd-b3d9-99c9a14922b1-2026-12-11@psyconnect
+ .london
+DTSTAMP:20261128T152612Z
+DTSTART:20261211T180000Z
+DTEND:20261211T193000Z
+SUMMARY:Masnavi Inner Reading
+LOCATION:Colet House\, 151 Talgarth Rd\, London W14 9DA
+DESCRIPTION:Sohrab Kavir reads Rumi's Masnavi stories in Persian and Englis
+ h\, then unpacks their inner\, symbolic meaning week by week.\n\nTickets &
+  details: https://us06web.zoom.us/j/88109841264?pwd=bMjuwBDxw37cqHeIvTrZ1u
+ 1KE4N5Ma.1&utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConne
+ ct: https://psyconnect.london/e/masnavi-inner-reading/
+URL:https://us06web.zoom.us/j/88109841264?pwd=bMjuwBDxw37cqHeIvTrZ1u1KE4N5M
+ a.1
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ae0b2deab2f5914d54eeeda@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261213T140000Z
+DTEND:20261213T183000Z
+SUMMARY:Primal Play London - Live Music End of Year Special
+LOCATION:Here + Now (ex-Soma H0me)\, 231 Stoke Newington Church St London N
+ 16 9HP\, UK
+DESCRIPTION:Seven minutes face to face on a mat\, moving in sync with a str
+ anger\, with live soundscapes from Oliver Sandham carrying the room.\n\nTi
+ ckets & details: https://dandelion.events/events/6ae0b2deab2f5914d54eeeda?
+ utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https:/
+ /psyconnect.london/e/primal-play-london-live-music-end-of-year-special/
+URL:https://dandelion.events/events/6ae0b2deab2f5914d54eeeda
+END:VEVENT
+END:VCALENDAR

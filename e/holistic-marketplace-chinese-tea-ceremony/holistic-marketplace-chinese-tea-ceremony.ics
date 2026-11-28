@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6b0ac9f85a63e7a952458488@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270530T140000Z
+DTEND:20270530T180000Z
+SUMMARY:Holistic Marketplace & Chinese Tea Ceremony
+LOCATION:The Amadeus\, 50 Shirland Road\, London W9 2JA\, United Kingdom
+DESCRIPTION:Learn Gongfu Cha\, the art of making tea with skill\, then wand
+ er a holistic market of crystals\, astrology readings and vegan food.\n\nT
+ ickets & details: https://dandelion.events/events/6b0ac9f85a63e7a952458488
+ ?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https:
+ //psyconnect.london/e/holistic-marketplace-chinese-tea-ceremony/
+URL:https://dandelion.events/events/6b0ac9f85a63e7a952458488
+END:VEVENT
+END:VCALENDAR

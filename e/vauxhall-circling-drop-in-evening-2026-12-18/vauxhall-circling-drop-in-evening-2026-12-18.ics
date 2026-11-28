@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eventbrite-2005135942581@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261218T190000Z
+DTEND:20261218T210000Z
+SUMMARY:Vauxhall Circling drop in evening
+LOCATION:Bonnington Cafe and Community Centre\, 11 Vauxhall Grove\, London\
+ , SW8 1TD
+DESCRIPTION:A drop-in circling evening with Robyn Wilford at Bonnington Caf
+ e\, a low-pressure way to practise authentic conversation near Vauxhall St
+ atio\n\nTickets & details: https://www.eventbrite.co.uk/e/vauxhall-circlin
+ g-drop-in-evening-tickets-2005135942581?utm_source=psyconnect.london&utm_m
+ edium=referral\n\nOn PsyConnect: https://psyconnect.london/e/vauxhall-circ
+ ling-drop-in-evening-2026-12-18/
+URL:https://www.eventbrite.co.uk/e/vauxhall-circling-drop-in-evening-ticket
+ s-2005135942581
+END:VEVENT
+END:VCALENDAR

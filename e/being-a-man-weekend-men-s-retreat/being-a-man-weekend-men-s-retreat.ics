@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6af6e23ea57afe6209df519c@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270320T110000Z
+DTEND:20270321T173000Z
+SUMMARY:Being a Man: Weekend Men's Retreat
+LOCATION:Here and Now\, Stoke Newington Church Street\, London\, UK
+DESCRIPTION:A weekend with other men to find out what healthy masculinity l
+ ooks like now\, facilitated by Conor with real depth and humour.\n\nTicket
+ s & details: https://dandelion.events/events/6af6e23ea57afe6209df519c?utm_
+ source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psy
+ connect.london/e/being-a-man-weekend-men-s-retreat/
+URL:https://dandelion.events/events/6af6e23ea57afe6209df519c
+END:VEVENT
+END:VCALENDAR

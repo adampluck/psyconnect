@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6a95bfd70d3c6c2817ceee24@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261206T100000Z
+DTEND:20261206T180000Z
+SUMMARY:Meetings Without Masks
+LOCATION:Alexander Technique\, The Boulevard\, London\, UK
+DESCRIPTION:Step past small talk with Jan Day's relationship methods and Ro
+ sie Kae's facilitation in a day of conversation\, movement and play.\n\nTi
+ ckets & details: https://dandelion.events/events/6a95bfd70d3c6c2817ceee24?
+ utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https:/
+ /psyconnect.london/e/meetings-without-masks/
+URL:https://dandelion.events/events/6a95bfd70d3c6c2817ceee24
+END:VEVENT
+END:VCALENDAR

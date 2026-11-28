@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ae883aabbebd6c86b3046b9@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270404T100000Z
+DTEND:20270404T150000Z
+SUMMARY:KAP One-Day Intensive in Wimbledon
+LOCATION:Surya Hot Yoga\, Elm Grove\, London\, UK
+DESCRIPTION:A full day of Kundalini Activation Process transmissions in a W
+ imbledon hot yoga studio\, with rest built between two long sessions.\n\nT
+ ickets & details: https://dandelion.events/events/6ae883aabbebd6c86b3046b9
+ ?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https:
+ //psyconnect.london/e/kap-one-day-intensive-in-wimbledon/
+URL:https://dandelion.events/events/6ae883aabbebd6c86b3046b9
+END:VEVENT
+END:VCALENDAR

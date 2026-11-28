@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:studysociety-57a42054-e2bf-45d0-9da8-cdfb054c811b@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261128T180000Z
+DTEND:20261128T200000Z
+SUMMARY:Music As Medicine
+LOCATION:Colet House\, 151 Talgarth Rd\, London W14 9DA
+DESCRIPTION:Kirtan with Sivani Mata Moon: Sanskrit mantras and collective s
+ ong healing in a gathered community.\n\nTickets & details: https://www.tic
+ kettailor.com/events/thestudysociety/1014819?utm_source=psyconnect.london&
+ utm_medium=referral\n\nOn PsyConnect: https://psyconnect.london/e/music-as
+ -medicine/
+URL:https://www.tickettailor.com/events/thestudysociety/1014819
+END:VEVENT
+END:VCALENDAR

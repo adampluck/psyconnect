@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6b08ac6853d11afa84145db3@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261206T163000Z
+DTEND:20261206T183000Z
+SUMMARY:Grief Circle
+LOCATION:Spirelight Studios Islington\, Spirelight Studios Islington\, Park
+ hurst Road\, London\, UK
+DESCRIPTION:A monthly grief circle built around a single tree\, blending so
+ matic voice\, dance movement therapy and an altar to hold what you've lost
+ .\n\nTickets & details: https://dandelion.events/events/6b08ac6853d11afa84
+ 145db3?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: 
+ https://psyconnect.london/e/grief-circle/
+URL:https://dandelion.events/events/6b08ac6853d11afa84145db3
+END:VEVENT
+END:VCALENDAR

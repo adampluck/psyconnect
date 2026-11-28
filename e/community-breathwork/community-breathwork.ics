@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6a57902cb1519f7b2a0ea0e1@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261205T110000Z
+DTEND:20261205T123000Z
+SUMMARY:Community Breathwork
+LOCATION:4-4-2 Together CIC\, 101 Hartforde Road\, Borehamwood\, UK
+DESCRIPTION:Learn conscious connected breathwork with YOUnited Breath Space
+  to shift your nervous system.\n\nTickets & details: https://dandelion.eve
+ nts/events/6a57902cb1519f7b2a0ea0e1?utm_source=psyconnect.london&utm_mediu
+ m=referral\n\nOn PsyConnect: https://psyconnect.london/e/community-breathw
+ ork/
+URL:https://dandelion.events/events/6a57902cb1519f7b2a0ea0e1
+END:VEVENT
+END:VCALENDAR

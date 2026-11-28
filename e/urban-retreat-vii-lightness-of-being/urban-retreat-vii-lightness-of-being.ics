@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:studysociety-61406f9d-e1c8-44b6-8e80-060ac6bd93cd@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261206T100000Z
+DTEND:20261206T170000Z
+SUMMARY:Urban Retreat VII: Lightness of Being
+LOCATION:Colet House\, 151 Talgarth Rd\, London W14 9DA
+DESCRIPTION:A full day of shamanic journeying\, Mercaba light body activati
+ on and sound\, hosted at Colet House by The Study Society.\n\nTickets & de
+ tails: https://www.eventbrite.co.uk/e/create-life-you-want-in-the-lightnes
+ s-of-being-reset-relax-enjoy-tickets-2005487727780?aff=ebdsshcopyurl&utm-c
+ ampaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-source=c
+ p&utm-term=listing&utm_source=psyconnect.london&utm_medium=referral\n\nOn 
+ PsyConnect: https://psyconnect.london/e/urban-retreat-vii-lightness-of-bei
+ ng/
+URL:https://www.eventbrite.co.uk/e/create-life-you-want-in-the-lightness-of
+ -being-reset-relax-enjoy-tickets-2005487727780?aff=ebdsshcopyurl&utm-campa
+ ign=social&utm-content=attendeeshare&utm-medium=discovery&utm-source=cp&ut
+ m-term=listing
+END:VEVENT
+END:VCALENDAR

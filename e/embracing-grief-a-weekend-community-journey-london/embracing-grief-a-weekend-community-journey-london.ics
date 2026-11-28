@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6a8a06a0bf8cdf36807a3212@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270116T100000Z
+DTEND:20270117T180000Z
+SUMMARY:Embracing Grief: A Weekend Community Journey (London)
+LOCATION:Clapton Square\, London E5 8HP\, UK
+DESCRIPTION:A weekend ritual circle to collectively tend grief with others 
+ who understand loss\n\nTickets & details: https://dandelion.events/events/
+ 6a8a06a0bf8cdf36807a3212?utm_source=psyconnect.london&utm_medium=referral\
+ n\nOn PsyConnect: https://psyconnect.london/e/embracing-grief-a-weekend-co
+ mmunity-journey-london/
+URL:https://dandelion.events/events/6a8a06a0bf8cdf36807a3212
+END:VEVENT
+END:VCALENDAR

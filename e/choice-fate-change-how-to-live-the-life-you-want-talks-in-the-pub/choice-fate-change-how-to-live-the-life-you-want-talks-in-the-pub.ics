@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eventbrite-2005141683753@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270111T180000Z
+DTEND:20270111T193000Z
+SUMMARY:Choice\, Fate & Change: How to live the life you want - Talks in th
+ e Pub
+LOCATION:The Star By Liverpool Street\, 94 Middlesex Street\, London\, E1 7
+ EZ
+DESCRIPTION:A pub talk from Seed Talks on reclaiming agency over your own l
+ ife\, with a pint and snacks in hand.\n\nTickets & details: https://www.ev
+ entbrite.co.uk/e/choice-fate-change-how-to-live-the-life-you-want-talks-in
+ -the-pub-tickets-2005141683753?utm_source=psyconnect.london&utm_medium=ref
+ erral\n\nOn PsyConnect: https://psyconnect.london/e/choice-fate-change-how
+ -to-live-the-life-you-want-talks-in-the-pub/
+URL:https://www.eventbrite.co.uk/e/choice-fate-change-how-to-live-the-life-
+ you-want-talks-in-the-pub-tickets-2005141683753
+END:VEVENT
+END:VCALENDAR

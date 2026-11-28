@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-e089cd6e-87b1-44c9-9f15-f77433bcc0d0@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261129T120000Z
+DTEND:20261129T180000Z
+SUMMARY:Sound & Sensuality - A Mini Retreat to discover the magic of Sound
+LOCATION:That Healing Room\, That Healing Room\, Queensbury\, Edgware\, HA8
+  5PX\, Edgware
+DESCRIPTION:A full day of sound\, vibration and conscious touch to discover
+  how frequency shapes your mood\, body and senses.\n\nTickets & details: h
+ ttps://soullinkhub.com/event/e089cd6e-87b1-44c9-9f15-f77433bcc0d0?utm_sour
+ ce=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://psyconn
+ ect.london/e/sound-sensuality-a-mini-retreat-to-discover-the-magic-of-soun
+ d/
+URL:https://soullinkhub.com/event/e089cd6e-87b1-44c9-9f15-f77433bcc0d0
+END:VEVENT
+END:VCALENDAR

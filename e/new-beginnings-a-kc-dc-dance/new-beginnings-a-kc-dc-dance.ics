@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soullinkhub-4fade9cb-ea7d-47fc-9c29-f15fc2ffc8ef@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270111T201500Z
+DTEND:20270111T221500Z
+SUMMARY:New beginnings - a KC DC dance
+LOCATION:The Hall\, Kingston Quaker Centre\, 28 Fairfield E\, Kingston upon
+  Thames\, KT1 2PT
+DESCRIPTION:Felix Oram of Temenos leads 90 minutes of 5Rhythms and ecstatic
+  dance as Kingston's KC DC community returns after a two-month break.\n\nT
+ ickets & details: https://soullinkhub.com/event/4fade9cb-ea7d-47fc-9c29-f1
+ 5fc2ffc8ef?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConne
+ ct: https://psyconnect.london/e/new-beginnings-a-kc-dc-dance/
+URL:https://soullinkhub.com/event/4fade9cb-ea7d-47fc-9c29-f15fc2ffc8ef
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ad38d6f7f343d52bc6ed713@psyconnect.london
+DTSTAMP:20261128T152612Z
+DTSTART:20261129T110000Z
+DTEND:20261129T160000Z
+SUMMARY:Practice Inquiry: Depth & Lightness — A Day of Inquiry
+LOCATION:The Space London\, Park Hill\, London\, UK
+DESCRIPTION:A full day of somatic movement\, sound and inquiry on depth and
+  lightness\, held unrecorded so you can simply arrive as you are.\n\nTicke
+ ts & details: https://dandelion.events/events/6ad38d6f7f343d52bc6ed713?utm
+ _source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: https://ps
+ yconnect.london/e/practice-inquiry-depth-lightness-a-day-of-inquiry/
+URL:https://dandelion.events/events/6ad38d6f7f343d52bc6ed713
+END:VEVENT
+END:VCALENDAR

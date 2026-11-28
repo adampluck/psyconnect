@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eventbrite-2004010456221@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261212T110000Z
+DTEND:20261212T130000Z
+SUMMARY:Tantra Fundamentals
+LOCATION:OMNOM Islington\, 116N Upper Street\, London\, N1 1QP
+DESCRIPTION:A foundational Tantra series at OMNOM Islington\, led by The Lo
+ ndon School of Tantra\, for deeper connection with yourself and others.\n\
+ nTickets & details: https://www.eventbrite.co.uk/e/tantra-fundamentals-tic
+ kets-2004010456221?utm_source=psyconnect.london&utm_medium=referral\n\nOn 
+ PsyConnect: https://psyconnect.london/e/tantra-fundamentals/
+URL:https://www.eventbrite.co.uk/e/tantra-fundamentals-tickets-200401045622
+ 1
+END:VEVENT
+END:VCALENDAR

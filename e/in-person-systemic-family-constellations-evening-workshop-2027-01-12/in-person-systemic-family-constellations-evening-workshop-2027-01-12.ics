@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6b07b406f59421bf7947c812@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270112T183000Z
+DTEND:20270112T214500Z
+SUMMARY:In-Person Systemic & Family Constellations Evening Workshop
+LOCATION:9 Broadhurst Mansions\, 97 Broadhurst Gardens\, London NW6 3QP\, R
+ egno Unito
+DESCRIPTION:Step into a systemic constellation and watch your family's hidd
+ en patterns take shape in a living\, three-dimensional map of your life.\n
+ \nTickets & details: https://dandelion.events/events/6b07b406f59421bf7947c
+ 812?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConnect: htt
+ ps://psyconnect.london/e/in-person-systemic-family-constellations-evening-
+ workshop-2027-01-12/
+URL:https://dandelion.events/events/6b07b406f59421bf7947c812
+END:VEVENT
+END:VCALENDAR

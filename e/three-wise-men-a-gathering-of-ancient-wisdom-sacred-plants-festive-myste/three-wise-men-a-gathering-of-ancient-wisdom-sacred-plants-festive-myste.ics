@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6ae9a136a0fd40de12316a07@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20261214T180000Z
+DTEND:20261214T213000Z
+SUMMARY:Three Wise Men: A Gathering of Ancient Wisdom\, Sacred Plants & Fes
+ tive Mysteries
+LOCATION:Love Shack\, Cambridge Heath Road\, London\, UK
+DESCRIPTION:Three speakers\, including Darren Le Baron\, unwrap the psyched
+ elic and plant stories hiding behind Christmas\, from frankincense to Sant
+ a's sa\n\nTickets & details: https://dandelion.events/events/6ae9a136a0fd4
+ 0de12316a07?utm_source=psyconnect.london&utm_medium=referral\n\nOn PsyConn
+ ect: https://psyconnect.london/e/three-wise-men-a-gathering-of-ancient-wis
+ dom-sacred-plants-festive-myste/
+URL:https://dandelion.events/events/6ae9a136a0fd40de12316a07
+END:VEVENT
+END:VCALENDAR

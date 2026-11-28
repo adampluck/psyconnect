@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PsyConnect//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dandelion-6aa5155761c781a60d6b2417@psyconnect.london
+DTSTAMP:20261128T152613Z
+DTSTART:20270116T100000Z
+DTEND:20270117T170000Z
+SUMMARY:Sound Healing Facilitation Training London
+LOCATION:Here + Now \, Studio 2 & 4\, 231 Stoke Newington Church St\, Londo
+ n N16 9HP\, UK
+DESCRIPTION:Learn gong and voice activation from The Psychedelic Society's 
+ comprehensive sound healing training.\n\nTickets & details: https://dandel
+ ion.events/events/6aa5155761c781a60d6b2417?utm_source=psyconnect.london&ut
+ m_medium=referral\n\nOn PsyConnect: https://psyconnect.london/e/sound-heal
+ ing-facilitation-training-london/
+URL:https://dandelion.events/events/6aa5155761c781a60d6b2417
+END:VEVENT
+END:VCALENDAR
